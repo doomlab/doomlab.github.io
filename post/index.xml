@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dr. Erin Buchanan</title>
+    <link>https://doomlab.github.io/post/</link>
+    <description>Recent content in Posts on Dr. Erin Buchanan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
+    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://doomlab.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learn About MOTE</title>
+      <link>https://doomlab.github.io/post/learn-about-mote/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/learn-about-mote/</guid>
+      <description>The APA Task Force on Statistical Inference (Wilkinson &amp;amp; TFSI, 1999) has advocated the inclusion of effect sizes in journal articles as an important source of information. The fifth and current edition of the APA publication manual (2001, 2010) emphasized these findings from the task force, along with requirement of effect sizes to publish in their journals. However, Fidler et al. (2005) have conveyed that only slight increases in report rates have been found in popular journals.</description>
+    </item>
+    
+    <item>
+      <title>Research Statement</title>
+      <link>https://doomlab.github.io/post/research-statement/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/research-statement/</guid>
+      <description>Upon arriving at Missouri State University, I founded the Deciphering Outrageous Observations and Modeling (DOOM) lab which has included more than ten graduate and thirty undergraduate students. My research mission has been in two primary domains described in detail below and includes many collaborative efforts throughout the years.
+Psycholinguistics. My cognitive research focuses broadly on psycholinguistics and memory, particularly on the statistical properties of word relationships. Overall, I seek to understand how language is represented in memory by adding to and examining available linguistic database information (i.</description>
+    </item>
+    
+    <item>
+      <title>Teaching Statement</title>
+      <link>https://doomlab.github.io/post/teaching-statement/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/teaching-statement/</guid>
+      <description>Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.</description>
+    </item>
+    
+  </channel>
+</rss>

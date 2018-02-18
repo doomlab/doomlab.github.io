@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dr. Erin Buchanan</title>
+    <link>https://doomlab.github.io/tags/</link>
+    <description>Recent content in Tags on Dr. Erin Buchanan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
+    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://doomlab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mote</title>
+      <link>https://doomlab.github.io/tags/mote/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/mote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://doomlab.github.io/tags/research/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stats</title>
+      <link>https://doomlab.github.io/tags/stats/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/stats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://doomlab.github.io/tags/teaching/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vita</title>
+      <link>https://doomlab.github.io/tags/vita/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/vita/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
