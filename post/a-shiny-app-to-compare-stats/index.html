@@ -213,7 +213,7 @@
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 9 minutes (1774 words)
+  <i class="fa fa-clock-o"></i> 5 minutes (905 words)
   
   
 </span>
@@ -267,72 +267,15 @@ htmlOutput(&#34;slider_selector&#34;)</pre></div>
   })</pre></div>
 <p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
 
-<p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://96.242.30.151:3838/altnhst/">here</a>. It&rsquo;s a lot of plots, so please ask questions if you have them!</p>
+<p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://96.242.30.151:3838/altnhst/">here</a>. The code is pretty long due to the sheer number of graphs, so it&rsquo;s edited down to just the shiny parts - when you see ####GRAPH#### that&rsquo;s some kicking ggplot2 graphs you can view in our github repo.</p>
 
 <p>Check out the project OSF page <a href="https://osf.io/u9hf4/">here</a>. You can download the entire app from our <a href="https://github.com/doomlab/shiny-server">github repo</a> (also other shiny apps!).</p>
 <div class="highlight"><pre class="chroma">library(shiny)
 library(ggplot2)
 library(reshape)
 library(plotly)
-cleanup = theme(panel.grid.major = element_blank(), 
-                panel.grid.minor = element_blank(), 
-                panel.background = element_blank(), 
-                axis.line.x = element_line(color = &#34;black&#34;),
-                axis.line.y = element_line(color = &#34;black&#34;),
-                legend.key = element_rect(fill = &#34;white&#34;),
-                text = element_text(size = 13))
 
-####load the data for significant and non sig effects####
-#load graph data
-Graph_05 = read.csv(&#34;Graph_data.05.csv&#34;)
-Graph_005 = read.csv(&#34;Graph_data.005.csv&#34;)
-
-Graph_data = cbind(Graph_05, Graph_005[ , 4:5])
-colnames(Graph_data) = c(&#34;Effect&#34;,&#34;Significance&#34;, &#34;N&#34;, &#34;Parametric.05&#34;, &#34;Non.Parametric.05&#34;, &#34;Bayes&#34;, &#34;OOM&#34;, &#34;Parametric.005&#34;, &#34;Non.Parametric.005&#34;)
-
-##delete duplicate NS values, they don&#39;t change
-Graph_data[ Graph_data$Significance == &#34;Non&#34;, &#34;Parametric.005&#34; ] = NA
-Graph_data[ Graph_data$Significance == &#34;Non&#34;, &#34;Non.Parametric.005&#34; ] = NA
-
-##drop NP because results are same as P, all results can been found online if you are interested
-Graph_data = Graph_data[ , -c(5,9)]
-
-##melt the data
-long_graph = melt(Graph_data,
-                  id = c(&#34;Effect&#34;,&#34;Significance&#34;,&#34;N&#34;))
-colnames(long_graph) = c(&#34;Effect&#34;,&#34;Significance&#34;, &#34;N&#34;,&#34;Analysis&#34;,&#34;value&#34;)
-
-long_graph = na.omit(long_graph)
-long_graph$Analysis = factor(long_graph$Analysis,
-                             levels = c(&#34;Parametric.05&#34;, 
-                                        &#34;Parametric.005&#34;,
-                                        &#34;Bayes&#34;,&#34;OOM&#34;),
-                             labels = c(&#34;NHST .05&#34;,
-                                        &#34;NHST .005&#34;,
-                                        &#34;Bayes Factors&#34;,&#34;OOM&#34;))
-
-####load the data for the agreement graphs####
-agree = read.csv(&#34;Graph_data_agree.05.csv&#34;)
-agree2 = read.csv(&#34;Graph_data_agree.005.csv&#34;)
-agree_together = cbind(agree, agree2[ , -c(1:2)])
-colnames(agree_together) = c(&#34;effect&#34;, &#34;N&#34;, &#34;omnibus.05&#34;,
-                             &#34;onetotwo.05&#34;, &#34;twotothree.05&#34;,
-                             &#34;omnibus.005&#34;, &#34;onetotwo.005&#34;, 
-                             &#34;twotothree.005&#34;)
-
-agreelong = melt(agree_together,
-                 id = c(&#34;effect&#34;, &#34;N&#34;))
-colnames(agreelong)[3:4] = c(&#34;comparison&#34;, &#34;percent&#34;)
-
-####load the data for comparison graphs####
-overalleffects = read.csv(&#34;overall_sims_shiny.csv&#34;)
-overalleffects$stdev = factor(overalleffects$stdev,
-                              labels = c(&#34;Large&#34;, &#34;Medium&#34;, &#34;Small&#34;, &#34;None&#34;))
-#make all infinite values the next largest
-large = length(unique(overalleffects$overallBF))
-overalleffects$overallBF[is.infinite(overalleffects$overallBF)] = sort(unique(overalleffects$overallBF))[large-1]
-overalleffects$overallBF = log(overalleffects$overallBF)
-overalleffects$star = as.factor(as.numeric(overalleffects$oomchance &lt;=.05))
+####remove data loading and reshaping####
 
 ####user interface####
 ui &lt;- fluidPage (
@@ -383,7 +326,6 @@ ui &lt;- fluidPage (
                   min = 0, max = 1,
                   value = c(0,1),
                   step = .01)
-      
       
     ), #close sidebar panel
     
@@ -446,28 +388,7 @@ server &lt;- function(input, output) {
      if (input$Nselect == &#34;log&#34;) { graphdata$N = log(graphdata$N) 
                                     xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
      
-     ##make the graph based on the selections
-     ggplot(graphdata) + 
-       geom_line(aes(x=N, 
-                     y=value, 
-                     group = Analysis,
-                     linetype = Analysis, 
-                     colour = Analysis),
-                 size=0.75) + 
-       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
-       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
-       ylab(&#34;Percent Significant&#34;) +
-       xlab(xlabel) + 
-       cleanup +
-       geom_point(data=graphdata,
-                  aes(x = N,
-                      y = value,
-                      shape = Analysis,
-                      color = Analysis), 
-                  size = 4) +
-       scale_linetype_manual(values=c(&#34;solid&#34;, &#34;dashed&#34;, &#34;solid&#34;, &#34;solid&#34;)) +
-       scale_color_manual(values = c(&#34;green&#34;,&#34;red&#34;, &#34;blue&#34;,&#34;purple&#34;)) + 
-       scale_shape_manual(values = c(3, 4, 5, 6))
+     ####GRAPH####
    })
    
    ####NONSIGNIFICANT EFFECTS####
@@ -479,28 +400,7 @@ server &lt;- function(input, output) {
      if (input$Nselect == &#34;log&#34;) { nsgraphdata$N = log(nsgraphdata$N)  
                                    xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
      
-     ##make the graph based on the selections
-     ggplot(nsgraphdata) + 
-       geom_line(aes(x=N, 
-                     y=value, 
-                     group = Analysis,
-                     linetype = Analysis, 
-                     colour = Analysis),
-                 size=0.75) + 
-       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
-       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
-       ylab(&#34;Percent Non-Significant&#34;) +
-       xlab(xlabel) + 
-       cleanup +
-       geom_point(data=nsgraphdata,
-                  aes(x = N,
-                      y = value,
-                      shape = Analysis,
-                      color = Analysis), 
-                  size = 4) +
-       scale_linetype_manual(values=c(&#34;solid&#34;, &#34;dashed&#34;, &#34;solid&#34;, &#34;solid&#34;)) +
-       scale_color_manual(values = c(&#34;green&#34;,&#34;red&#34;, &#34;blue&#34;,&#34;purple&#34;)) + 
-       scale_shape_manual(values = c(3, 4, 5, 6))
+     ####GRAPH####
    })
    
    ####OMNIBUS AGREEMENT####
@@ -510,41 +410,7 @@ server &lt;- function(input, output) {
      if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
                                    xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
      
-     ##omnibus only
-     agreelong = subset(agreelong, comparison == &#34;omnibus.05&#34; | 
-                          comparison == &#34;omnibus.005&#34;)
-     
-     agree_graph = subset(agreelong, effect == input$sizeselect)
-     
-     ggplot(agree_graph) + 
-       geom_line(aes(x=N, 
-                     y=percent, 
-                     group = comparison,
-                     linetype = comparison, 
-                     colour = comparison),
-                 size=0.75) + 
-       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
-       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
-       ylab(&#34;Percent Agreement&#34;) + 
-       xlab(xlabel) + 
-       cleanup +
-       geom_point(data=agree_graph,
-                  aes(x = N,
-                      y = percent,
-                      shape = comparison, 
-                      color = comparison), 
-                  size = 4) +
-       scale_linetype_manual(name = &#34;Comparison&#34;, 
-                             labels = c(&#34;.05&#34;, &#34;.005&#34;),
-                             values=c(&#34;solid&#34;,&#34;solid&#34;)) +
-       scale_color_manual(name = &#34;Comparison&#34;, 
-                          labels = c(&#34;.05&#34;, &#34;.005&#34;),
-                          values = c(&#34;red&#34;,&#34;blue&#34;)) + 
-       scale_shape_manual(name = &#34;Comparison&#34;, 
-                          labels = c(&#34;.05&#34;, &#34;.005&#34;),
-                          values = c(3, 4))
-     
-     
+     ####GRAPH####
    })
    
    ####POST HOC AGREEMENT####
@@ -554,41 +420,7 @@ server &lt;- function(input, output) {
      if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
      xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
      
-     pagreelong = subset(agreelong, comparison != &#34;omnibus.05&#34; &amp; 
-                          comparison != &#34;omnibus.005&#34;)
-     
-     pagreelong$comparison = factor(pagreelong$comparison,
-                                   levels = c(&#34;onetotwo.05&#34;, &#34;twotothree.05&#34;,
-                                              &#34;onetotwo.005&#34;, &#34;twotothree.005&#34;),
-                                   labels = c(&#34;1-2 .05&#34;, &#34;2-3 .05&#34;,
-                                              &#34;1-2 .005&#34;, &#34;2-3 .005&#34;))
-     
-     pagree_graph = subset(pagreelong, effect == input$sizeselect)
-     
-     ggplot(pagree_graph) + 
-       geom_line(aes(x=N, 
-                     y=percent, 
-                     group = comparison,
-                     linetype = comparison, 
-                     colour = comparison),
-                 size=0.75) + 
-       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
-       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
-       ylab(&#34;Percent Agreement&#34;) + 
-       xlab(xlabel) +
-       cleanup +
-       geom_point(data=pagree_graph,
-                  aes(x = N,
-                      y = percent,
-                      shape = comparison, 
-                      color = comparison), 
-                  size = 4) +
-       scale_linetype_manual(name = &#34;Comparison&#34;, 
-                             values=c(&#34;solid&#34;, &#34;solid&#34;,&#34;dashed&#34;, &#34;dashed&#34;)) +
-       scale_color_manual(name = &#34;Comparison&#34;,
-                          values = c(&#34;green&#34;,&#34;red&#34;,&#34;blue&#34;, &#34;purple&#34;)) + 
-       scale_shape_manual(name = &#34;Comparison&#34;,
-                          values = c(3, 4, 3, 4))
+     ####GRAPH####
    })
    
    ####COMPARISON GRAPHS####
@@ -596,71 +428,16 @@ server &lt;- function(input, output) {
      
      if (input$graphselect == &#34;pccp&#34;){
        
-       overallgraph = subset(overalleffects, 
-                             #overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
-                               omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
-                               oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
-                               stdev == input$sizeselect)
-       
-       if (input$Nselect == &#34;log&#34;) { overallgraph$N = round(log(overallgraph$N),2)
-       colorlabel1 = &#34;Log N&#34; } else { colorlabel1 = &#34;N&#34;}
-       
-       overallgraph$N = as.factor(overallgraph$N)
-       
-       ggplot(overallgraph, aes(oompcc, omniP, color = N)) + 
-         cleanup +
-         geom_point(data = overallgraph, aes(shape = star)) +
-         xlab(&#34;OOM PCC Value&#34;) + 
-         ylab(&#34;Omnibus ANOVA p-Value&#34;) +
-         scale_color_discrete(name = colorlabel1) + 
-         scale_shape_manual(name = &#34;c-Value&#34;,
-                              labels = c(&#34;&gt;.05&#34;, &#34;&lt;=.05&#34;),
-                              values = c(16,4))
+       ####GRAPH####
        
      } else if (input$graphselect == &#34;pccbf&#34;){
        
-       overallgraph2 = subset(overalleffects, 
-                             overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
-                             #omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
-                               oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
-                               stdev == input$sizeselect)
-       
-       if (input$Nselect == &#34;log&#34;) { overallgraph2$N = round(log(overallgraph2$N),2)
-       colorlabel2 = &#34;Log N&#34; } else { colorlabel2 = &#34;N&#34;}
-       
-       overallgraph2$N = as.factor(overallgraph2$N)
-       
-       ggplot(overallgraph2, aes(oompcc, overallBF, color = N)) + 
-         cleanup +
-         geom_point(data = overallgraph2, aes(shape = star)) +
-         xlab(&#34;OOM PCC Value&#34;) + 
-         ylab(&#34;Bayes Factor&#34;) +
-         scale_color_discrete(name = colorlabel2) + 
-         scale_shape_manual(name = &#34;c-Value&#34;,
-                            labels = c(&#34;&gt;.05&#34;, &#34;&lt;=.05&#34;),
-                            values = c(16,4))
+       ####GRAPH####
        
      } else if (input$graphselect == &#34;bfp&#34;){
-       overallgraph3 = subset(overalleffects, 
-                              overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
-                                omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
-                                #oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
-                                stdev == input$sizeselect)
        
-       if (input$Nselect == &#34;log&#34;) { overallgraph3$N = round(log(overallgraph3$N),2)
-       colorlabel3 = &#34;Log N&#34; } else { colorlabel3 = &#34;N&#34;}
+       ####GRAPH####
        
-       overallgraph3$N = as.factor(overallgraph3$N)
-       
-       ggplot(overallgraph3, aes(omniP, overallBF, color = N)) + 
-         cleanup +
-         geom_point(data = overallgraph2, aes(shape = star)) +
-         xlab(&#34;Omnibus ANOVA p-Value&#34;) + 
-         ylab(&#34;Bayes Factor&#34;) +
-         scale_color_discrete(name = colorlabel3) + 
-         scale_shape_manual(name = &#34;c-Value&#34;,
-                            labels = c(&#34;&gt;.05&#34;, &#34;&lt;=.05&#34;),
-                            values = c(16,4))
      }
      
    })
@@ -668,19 +445,7 @@ server &lt;- function(input, output) {
    ####3D COMPARISON GRAPHS####
    output$compare3d &lt;- renderPlotly({
      
-     overallgraph3d = subset(overalleffects, 
-                             overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
-                               omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
-                               oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
-                               stdev == input$sizeselect)
-     
-     if (input$Nselect == &#34;log&#34;) { overallgraph3d$N = round(log(overallgraph3d$N),2)
-     colorlabel = &#34;Log N&#34; } else { colorlabel = &#34;N&#34;}
-     
-     #overallgraph3d$N = as.factor(overallgraph3d$N)
-     overallgraph3d$star = factor(overallgraph3d$star,
-                                     levels = c(0,1),
-                                     labels = c(&#34;c &gt; .05&#34;, &#34;c &lt;= .05&#34;))
+     ####GRAPH SET UP####
      
      overall = plot_ly(overallgraph3d, 
                        x = ~overallBF,
@@ -706,7 +471,6 @@ server &lt;- function(input, output) {
      overall
      
    })
-   
    
 } #close server functions
 
