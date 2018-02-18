@@ -22,11 +22,29 @@
     </item>
     
     <item>
+      <title>Publication</title>
+      <link>https://doomlab.github.io/tags/publication/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Research</title>
       <link>https://doomlab.github.io/tags/research/</link>
-      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shiny</title>
+      <link>https://doomlab.github.io/tags/shiny/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/shiny/</guid>
       <description></description>
     </item>
     

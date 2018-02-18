@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>A Shiny App to Compare Stats</title>
+  <meta property="og:title" content="A Shiny App to Compare Stats" />
+  <meta name="twitter:title" content="A Shiny App to Compare Stats" />
+  <meta name="description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
+ Bayes Factors and p-values follow a power function, as we expected.">
+  <meta property="og:description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
+ Bayes Factors and p-values follow a power function, as we expected.">
+  <meta name="twitter:description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased …">
+  <meta name="author" content="aggieerin.com"/>
+  <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
+  <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@aggieerin" />
+  <meta name="twitter:creator" content="@aggieerin" />
+  <meta property="og:url" content="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dr. Erin Buchanan" />
+
+  <meta name="generator" content="Hugo 0.36.1" />
+  <link rel="canonical" href="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" />
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/">Blog</a>
+                
+                  <a href="/tags">Tags</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Stats" href="/page/stats/">Stats</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Vita</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/basics">Basics</a>
+                
+                  <a href="/page/honors">Honors</a>
+                
+                  <a href="/page/res_overview">Research Overview</a>
+                
+                  <a href="/page/res_pubs">Publications</a>
+                
+                  <a href="/page/res_grants">Grants</a>
+                
+                  <a href="/page/res_pres">Presentations</a>
+                
+                  <a href="/page/teach_overview">Teaching Overview</a>
+                
+                  <a href="/page/students">Students</a>
+                
+                  <a href="/page/service">Service</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="OSF" href="https://osf.io/profile/">OSF</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Dr. Erin Buchanan" href="https://doomlab.github.io">
+            <img class="avatar-img" src="https://doomlab.github.io/img/header.jpg" alt="Dr. Erin Buchanan" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>A Shiny App to Compare Stats</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on February 18, 2018
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 9 minutes (1774 words)
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):</p>
+
+<ul>
+<li>Bayes Factors and p-values follow a power function, as we expected.</li>
+<li>Bayes Factors and OOM values follow an interesting pattern, wherein as sample size increases, BF expands outwards, while PCC values tend to constrict.</li>
+<li>p-values will always decrease to floor, and PCC values still tend to constrict toward the simulated effect size range.</li>
+</ul>
+
+<p>Another component of this app I wanted to show off was the interactive response points, wherein the input options (on the left) change based on a user selected input option. Therefore, options that are normally only input are both input and output in the traditional Shiny set up.</p>
+
+<p>You can see that by having the selection (first part) and the changing selection (second part) in the fluid page:</p>
+<div class="highlight"><pre class="chroma">selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
+                  c(&#34;N&#34; = &#34;N&#34;,
+                    &#34;Log N&#34; = &#34;log&#34;)),
+                    
+htmlOutput(&#34;slider_selector&#34;)</pre></div>
+<p>Which is connected to the server function below:</p>
+<div class="highlight"><pre class="chroma">  ####change the slider####
+  output$slider_selector = renderUI({ 
+    
+    if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
+    if (input$Nselect == &#34;log&#34;) { minN = round(log(10),1) 
+                                  maxN = round(log(1000),1)
+                                  stepN = .1}
+    
+    sliderInput(&#34;xaxisrange&#34;, &#34;X-Axis Range:&#34;,
+                min = minN, max = maxN,
+                value = c(minN,maxN),
+                sep = &#34;&#34;,
+                round = -1,
+                step = stepN)
+  })</pre></div>
+<p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
+
+<p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://96.242.30.151:3838/altnhst/">here</a>. It&rsquo;s a lot of plots, so please ask questions if you have them!</p>
+
+<p>Check out the project OSF page <a href="https://osf.io/u9hf4/">here</a>. You can download the entire app from our <a href="https://github.com/doomlab/shiny-server">github repo</a> (also other shiny apps!).</p>
+<div class="highlight"><pre class="chroma">library(shiny)
+library(ggplot2)
+library(reshape)
+library(plotly)
+cleanup = theme(panel.grid.major = element_blank(), 
+                panel.grid.minor = element_blank(), 
+                panel.background = element_blank(), 
+                axis.line.x = element_line(color = &#34;black&#34;),
+                axis.line.y = element_line(color = &#34;black&#34;),
+                legend.key = element_rect(fill = &#34;white&#34;),
+                text = element_text(size = 13))
+
+####load the data for significant and non sig effects####
+#load graph data
+Graph_05 = read.csv(&#34;Graph_data.05.csv&#34;)
+Graph_005 = read.csv(&#34;Graph_data.005.csv&#34;)
+
+Graph_data = cbind(Graph_05, Graph_005[ , 4:5])
+colnames(Graph_data) = c(&#34;Effect&#34;,&#34;Significance&#34;, &#34;N&#34;, &#34;Parametric.05&#34;, &#34;Non.Parametric.05&#34;, &#34;Bayes&#34;, &#34;OOM&#34;, &#34;Parametric.005&#34;, &#34;Non.Parametric.005&#34;)
+
+##delete duplicate NS values, they don&#39;t change
+Graph_data[ Graph_data$Significance == &#34;Non&#34;, &#34;Parametric.005&#34; ] = NA
+Graph_data[ Graph_data$Significance == &#34;Non&#34;, &#34;Non.Parametric.005&#34; ] = NA
+
+##drop NP because results are same as P, all results can been found online if you are interested
+Graph_data = Graph_data[ , -c(5,9)]
+
+##melt the data
+long_graph = melt(Graph_data,
+                  id = c(&#34;Effect&#34;,&#34;Significance&#34;,&#34;N&#34;))
+colnames(long_graph) = c(&#34;Effect&#34;,&#34;Significance&#34;, &#34;N&#34;,&#34;Analysis&#34;,&#34;value&#34;)
+
+long_graph = na.omit(long_graph)
+long_graph$Analysis = factor(long_graph$Analysis,
+                             levels = c(&#34;Parametric.05&#34;, 
+                                        &#34;Parametric.005&#34;,
+                                        &#34;Bayes&#34;,&#34;OOM&#34;),
+                             labels = c(&#34;NHST .05&#34;,
+                                        &#34;NHST .005&#34;,
+                                        &#34;Bayes Factors&#34;,&#34;OOM&#34;))
+
+####load the data for the agreement graphs####
+agree = read.csv(&#34;Graph_data_agree.05.csv&#34;)
+agree2 = read.csv(&#34;Graph_data_agree.005.csv&#34;)
+agree_together = cbind(agree, agree2[ , -c(1:2)])
+colnames(agree_together) = c(&#34;effect&#34;, &#34;N&#34;, &#34;omnibus.05&#34;,
+                             &#34;onetotwo.05&#34;, &#34;twotothree.05&#34;,
+                             &#34;omnibus.005&#34;, &#34;onetotwo.005&#34;, 
+                             &#34;twotothree.005&#34;)
+
+agreelong = melt(agree_together,
+                 id = c(&#34;effect&#34;, &#34;N&#34;))
+colnames(agreelong)[3:4] = c(&#34;comparison&#34;, &#34;percent&#34;)
+
+####load the data for comparison graphs####
+overalleffects = read.csv(&#34;overall_sims_shiny.csv&#34;)
+overalleffects$stdev = factor(overalleffects$stdev,
+                              labels = c(&#34;Large&#34;, &#34;Medium&#34;, &#34;Small&#34;, &#34;None&#34;))
+#make all infinite values the next largest
+large = length(unique(overalleffects$overallBF))
+overalleffects$overallBF[is.infinite(overalleffects$overallBF)] = sort(unique(overalleffects$overallBF))[large-1]
+overalleffects$overallBF = log(overalleffects$overallBF)
+overalleffects$star = as.factor(as.numeric(overalleffects$oomchance &lt;=.05))
+
+####user interface####
+ui &lt;- fluidPage (
+  
+  titlePanel(&#34;Valentine et al. Interactive Graphics&#34;),
+  
+  sidebarLayout(
+    
+    ##sidebarpanel
+    sidebarPanel(
+      
+      br(),
+      
+      ##put input boxes here
+      tags$em(&#34;All Graphs:&#34;),
+      selectInput(&#34;sizeselect&#34;, &#34;Select Effect Size:&#34;,
+                  c(&#34;Negligible&#34; = &#34;None&#34;,
+                    &#34;Small&#34; = &#34;Small&#34;,
+                    &#34;Medium&#34; = &#34;Medium&#34;,
+                    &#34;Large&#34; = &#34;Large&#34;)),
+      
+      tags$em(&#34;Percent Graphs:&#34;),
+      selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
+                  c(&#34;N&#34; = &#34;N&#34;,
+                    &#34;Log N&#34; = &#34;log&#34;)),
+      
+      htmlOutput(&#34;slider_selector&#34;),
+      
+      tags$em(&#34;Comparison Graphs:&#34;),
+      
+      selectInput(&#34;graphselect&#34;, &#34;Select Graph:&#34;,
+                  c(&#34;PCC - p&#34; = &#34;pccp&#34;,
+                    &#34;PCC - BF&#34; = &#34;pccbf&#34;,
+                    &#34;BF - p&#34; = &#34;bfp&#34;)),
+      
+      sliderInput(&#34;bfrange&#34;, &#34;Log BF Range:&#34;,
+                  min = -5, max = 600,
+                  value = c(-5,600),
+                  sep = &#34;&#34;,
+                  step = 10),
+      
+      sliderInput(&#34;prange&#34;, &#34;p Range:&#34;,
+                  min = 0, max = 1,
+                  value = c(0,1),
+                  step = .01),
+      
+      sliderInput(&#34;pccrange&#34;, &#34;PCC Range:&#34;,
+                  min = 0, max = 1,
+                  value = c(0,1),
+                  step = .01)
+      
+      
+    ), #close sidebar panel
+    
+    mainPanel(
+      
+      tabsetPanel(
+        tabPanel(&#34;Significant&#34;, plotOutput(&#34;sigpic&#34;),
+                 br(),
+                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
+        tabPanel(&#34;Non-Significant&#34;, plotOutput(&#34;nonpic&#34;),
+                 br(),
+                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
+        tabPanel(&#34;Omnibus Agreement&#34;, plotOutput(&#34;omniagree&#34;),
+                 br(),
+                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
+        tabPanel(&#34;Posthoc Agreement&#34;, plotOutput(&#34;postagree&#34;),
+                 br(),
+                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
+        tabPanel(&#34;Criterion Comparison&#34;, plotOutput(&#34;compare&#34;), 
+                 br(),
+                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;,br(), 
+                          &#34;BF values have been log transformed to show the entire range of the data.&#34;)),
+        tabPanel(&#34;3D Comparison&#34;, plotlyOutput(&#34;compare3d&#34;), 
+                 br(),
+                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;,br(), 
+                          &#34;BF values have been log transformed to show the entire range of the data.&#34;))
+      )
+      
+    ) #close main panel 
+    
+  ) #close sidebar layout
+
+) #close fluid page
+
+####server functions####
+server &lt;- function(input, output) {
+   
+  ####change the slider####
+  output$slider_selector = renderUI({ 
+    
+    if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
+    if (input$Nselect == &#34;log&#34;) { minN = round(log(10),1) 
+                                  maxN = round(log(1000),1)
+                                  stepN = .1}
+    
+    sliderInput(&#34;xaxisrange&#34;, &#34;X-Axis Range:&#34;,
+                min = minN, max = maxN,
+                value = c(minN,maxN),
+                sep = &#34;&#34;,
+                round = -1,
+                step = stepN)
+  })
+  
+   ####SIGNIFICANT EFFECTS####
+   output$sigpic &lt;- renderPlot({
+
+     graphdata = subset(long_graph, Significance==&#34;Sig&#34; &amp; Effect == input$sizeselect)
+     
+     ##log N
+     if (input$Nselect == &#34;log&#34;) { graphdata$N = log(graphdata$N) 
+                                    xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+     
+     ##make the graph based on the selections
+     ggplot(graphdata) + 
+       geom_line(aes(x=N, 
+                     y=value, 
+                     group = Analysis,
+                     linetype = Analysis, 
+                     colour = Analysis),
+                 size=0.75) + 
+       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
+       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
+       ylab(&#34;Percent Significant&#34;) +
+       xlab(xlabel) + 
+       cleanup +
+       geom_point(data=graphdata,
+                  aes(x = N,
+                      y = value,
+                      shape = Analysis,
+                      color = Analysis), 
+                  size = 4) +
+       scale_linetype_manual(values=c(&#34;solid&#34;, &#34;dashed&#34;, &#34;solid&#34;, &#34;solid&#34;)) +
+       scale_color_manual(values = c(&#34;green&#34;,&#34;red&#34;, &#34;blue&#34;,&#34;purple&#34;)) + 
+       scale_shape_manual(values = c(3, 4, 5, 6))
+   })
+   
+   ####NONSIGNIFICANT EFFECTS####
+   output$nonpic &lt;- renderPlot({
+     
+     nsgraphdata = subset(long_graph, Significance==&#34;Non&#34; &amp; Effect == input$sizeselect)
+     
+     ##log N
+     if (input$Nselect == &#34;log&#34;) { nsgraphdata$N = log(nsgraphdata$N)  
+                                   xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+     
+     ##make the graph based on the selections
+     ggplot(nsgraphdata) + 
+       geom_line(aes(x=N, 
+                     y=value, 
+                     group = Analysis,
+                     linetype = Analysis, 
+                     colour = Analysis),
+                 size=0.75) + 
+       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
+       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
+       ylab(&#34;Percent Non-Significant&#34;) +
+       xlab(xlabel) + 
+       cleanup +
+       geom_point(data=nsgraphdata,
+                  aes(x = N,
+                      y = value,
+                      shape = Analysis,
+                      color = Analysis), 
+                  size = 4) +
+       scale_linetype_manual(values=c(&#34;solid&#34;, &#34;dashed&#34;, &#34;solid&#34;, &#34;solid&#34;)) +
+       scale_color_manual(values = c(&#34;green&#34;,&#34;red&#34;, &#34;blue&#34;,&#34;purple&#34;)) + 
+       scale_shape_manual(values = c(3, 4, 5, 6))
+   })
+   
+   ####OMNIBUS AGREEMENT####
+   output$omniagree &lt;- renderPlot({
+     
+     ##log n to get a better graph
+     if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
+                                   xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+     
+     ##omnibus only
+     agreelong = subset(agreelong, comparison == &#34;omnibus.05&#34; | 
+                          comparison == &#34;omnibus.005&#34;)
+     
+     agree_graph = subset(agreelong, effect == input$sizeselect)
+     
+     ggplot(agree_graph) + 
+       geom_line(aes(x=N, 
+                     y=percent, 
+                     group = comparison,
+                     linetype = comparison, 
+                     colour = comparison),
+                 size=0.75) + 
+       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
+       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
+       ylab(&#34;Percent Agreement&#34;) + 
+       xlab(xlabel) + 
+       cleanup +
+       geom_point(data=agree_graph,
+                  aes(x = N,
+                      y = percent,
+                      shape = comparison, 
+                      color = comparison), 
+                  size = 4) +
+       scale_linetype_manual(name = &#34;Comparison&#34;, 
+                             labels = c(&#34;.05&#34;, &#34;.005&#34;),
+                             values=c(&#34;solid&#34;,&#34;solid&#34;)) +
+       scale_color_manual(name = &#34;Comparison&#34;, 
+                          labels = c(&#34;.05&#34;, &#34;.005&#34;),
+                          values = c(&#34;red&#34;,&#34;blue&#34;)) + 
+       scale_shape_manual(name = &#34;Comparison&#34;, 
+                          labels = c(&#34;.05&#34;, &#34;.005&#34;),
+                          values = c(3, 4))
+     
+     
+   })
+   
+   ####POST HOC AGREEMENT####
+   output$postagree &lt;- renderPlot({
+     
+     ##log n to get a better graph
+     if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
+     xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+     
+     pagreelong = subset(agreelong, comparison != &#34;omnibus.05&#34; &amp; 
+                          comparison != &#34;omnibus.005&#34;)
+     
+     pagreelong$comparison = factor(pagreelong$comparison,
+                                   levels = c(&#34;onetotwo.05&#34;, &#34;twotothree.05&#34;,
+                                              &#34;onetotwo.005&#34;, &#34;twotothree.005&#34;),
+                                   labels = c(&#34;1-2 .05&#34;, &#34;2-3 .05&#34;,
+                                              &#34;1-2 .005&#34;, &#34;2-3 .005&#34;))
+     
+     pagree_graph = subset(pagreelong, effect == input$sizeselect)
+     
+     ggplot(pagree_graph) + 
+       geom_line(aes(x=N, 
+                     y=percent, 
+                     group = comparison,
+                     linetype = comparison, 
+                     colour = comparison),
+                 size=0.75) + 
+       labs(title= paste(input$sizeselect, &#34;Effects&#34;)) +
+       coord_cartesian(ylim = c(0,101), xlim = c(input$xaxisrange[1], input$xaxisrange[2])) + 
+       ylab(&#34;Percent Agreement&#34;) + 
+       xlab(xlabel) +
+       cleanup +
+       geom_point(data=pagree_graph,
+                  aes(x = N,
+                      y = percent,
+                      shape = comparison, 
+                      color = comparison), 
+                  size = 4) +
+       scale_linetype_manual(name = &#34;Comparison&#34;, 
+                             values=c(&#34;solid&#34;, &#34;solid&#34;,&#34;dashed&#34;, &#34;dashed&#34;)) +
+       scale_color_manual(name = &#34;Comparison&#34;,
+                          values = c(&#34;green&#34;,&#34;red&#34;,&#34;blue&#34;, &#34;purple&#34;)) + 
+       scale_shape_manual(name = &#34;Comparison&#34;,
+                          values = c(3, 4, 3, 4))
+   })
+   
+   ####COMPARISON GRAPHS####
+   output$compare &lt;- renderPlot({
+     
+     if (input$graphselect == &#34;pccp&#34;){
+       
+       overallgraph = subset(overalleffects, 
+                             #overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
+                               omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
+                               oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
+                               stdev == input$sizeselect)
+       
+       if (input$Nselect == &#34;log&#34;) { overallgraph$N = round(log(overallgraph$N),2)
+       colorlabel1 = &#34;Log N&#34; } else { colorlabel1 = &#34;N&#34;}
+       
+       overallgraph$N = as.factor(overallgraph$N)
+       
+       ggplot(overallgraph, aes(oompcc, omniP, color = N)) + 
+         cleanup +
+         geom_point(data = overallgraph, aes(shape = star)) +
+         xlab(&#34;OOM PCC Value&#34;) + 
+         ylab(&#34;Omnibus ANOVA p-Value&#34;) +
+         scale_color_discrete(name = colorlabel1) + 
+         scale_shape_manual(name = &#34;c-Value&#34;,
+                              labels = c(&#34;&gt;.05&#34;, &#34;&lt;=.05&#34;),
+                              values = c(16,4))
+       
+     } else if (input$graphselect == &#34;pccbf&#34;){
+       
+       overallgraph2 = subset(overalleffects, 
+                             overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
+                             #omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
+                               oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
+                               stdev == input$sizeselect)
+       
+       if (input$Nselect == &#34;log&#34;) { overallgraph2$N = round(log(overallgraph2$N),2)
+       colorlabel2 = &#34;Log N&#34; } else { colorlabel2 = &#34;N&#34;}
+       
+       overallgraph2$N = as.factor(overallgraph2$N)
+       
+       ggplot(overallgraph2, aes(oompcc, overallBF, color = N)) + 
+         cleanup +
+         geom_point(data = overallgraph2, aes(shape = star)) +
+         xlab(&#34;OOM PCC Value&#34;) + 
+         ylab(&#34;Bayes Factor&#34;) +
+         scale_color_discrete(name = colorlabel2) + 
+         scale_shape_manual(name = &#34;c-Value&#34;,
+                            labels = c(&#34;&gt;.05&#34;, &#34;&lt;=.05&#34;),
+                            values = c(16,4))
+       
+     } else if (input$graphselect == &#34;bfp&#34;){
+       overallgraph3 = subset(overalleffects, 
+                              overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
+                                omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
+                                #oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
+                                stdev == input$sizeselect)
+       
+       if (input$Nselect == &#34;log&#34;) { overallgraph3$N = round(log(overallgraph3$N),2)
+       colorlabel3 = &#34;Log N&#34; } else { colorlabel3 = &#34;N&#34;}
+       
+       overallgraph3$N = as.factor(overallgraph3$N)
+       
+       ggplot(overallgraph3, aes(omniP, overallBF, color = N)) + 
+         cleanup +
+         geom_point(data = overallgraph2, aes(shape = star)) +
+         xlab(&#34;Omnibus ANOVA p-Value&#34;) + 
+         ylab(&#34;Bayes Factor&#34;) +
+         scale_color_discrete(name = colorlabel3) + 
+         scale_shape_manual(name = &#34;c-Value&#34;,
+                            labels = c(&#34;&gt;.05&#34;, &#34;&lt;=.05&#34;),
+                            values = c(16,4))
+     }
+     
+   })
+   
+   ####3D COMPARISON GRAPHS####
+   output$compare3d &lt;- renderPlotly({
+     
+     overallgraph3d = subset(overalleffects, 
+                             overallBF &gt;= input$bfrange[1] &amp; overallBF &lt;= input$bfrange[2] &amp;
+                               omniP &gt;= input$prange[1] &amp; omniP &lt;= input$prange[2] &amp;
+                               oompcc &gt;= input$pccrange[1] &amp; oompcc &lt;= input$pccrange[2] &amp;
+                               stdev == input$sizeselect)
+     
+     if (input$Nselect == &#34;log&#34;) { overallgraph3d$N = round(log(overallgraph3d$N),2)
+     colorlabel = &#34;Log N&#34; } else { colorlabel = &#34;N&#34;}
+     
+     #overallgraph3d$N = as.factor(overallgraph3d$N)
+     overallgraph3d$star = factor(overallgraph3d$star,
+                                     levels = c(0,1),
+                                     labels = c(&#34;c &gt; .05&#34;, &#34;c &lt;= .05&#34;))
+     
+     overall = plot_ly(overallgraph3d, 
+                       x = ~overallBF,
+                       y = ~oompcc,
+                       z = ~omniP,
+                       color = ~N,
+                       symbol = ~star,
+                       symbols=c(&#34;circle&#34;,&#34;cross&#34;),
+                       mode=&#34;markers&#34;) %&gt;%
+       add_markers() %&gt;%
+       layout(scene = list(xaxis = list(title = &#39;Bayes Factors&#39;),
+                           yaxis = list(title = &#39;OOM PCC&#39;),
+                           zaxis = list(title = &#39;p-Value&#39;)),
+              annotations = list(
+                x = 1.13,
+                y = 1.05,
+                text = colorlabel,
+                xref = &#39;paper&#39;,
+                yref = &#39;paper&#39;,
+                showarrow = FALSE
+              ))
+     
+     overall
+     
+   })
+   
+   
+} #close server functions
+
+# Run the application 
+shinyApp(ui = ui, server = server)</pre></div>
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://doomlab.github.io/post/learn-about-mote/" data-toggle="tooltip" data-placement="top" title="Learn About MOTE">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:buchananlab@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/doomlab" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aggieerin" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCMdihazndR0f9XBoSXWqnYg" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="https://doomlab.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="http://www.aggieerin.com">aggieerin.com</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.36.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://doomlab.github.io/js/main.js"></script>
+<script src="https://doomlab.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://doomlab.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
