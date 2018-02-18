@@ -69,7 +69,16 @@ Experience  The DOOM Lab (2010-Current)  Missouri State University, Department o
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/page/res_pres/</guid>
-      <description>Psycholinguistics and memory, general cognitive:    Download Reference     N/A Maxwell, N. P. &amp;amp; Buchanan, E. M. (2018, April). Single and Double Word-Pair Norms: Predictive Ability of Recall and Judgments. Poster presentation for the Annual Convention of the Midwestern Psychological Association, Chicago, IL.   N/A Maxwell, N. P., Kostic, B., &amp;amp; Buchanan, E.M. (2017, November). The Interaction of Semantic, Thematic, and Associative Overlap Strength in Predicting Recall.</description>
+      <description>Psycholinguistics and memory, general cognitive:    Download Reference     N/A Maxwell, N. P. &amp;amp; Buchanan, E. M. (2018, April). Single and Double Word-Pair Norms: Predictive Ability of Recall and Judgments. Poster presentation for the Annual Convention of the Midwestern Psychological Association, Chicago, IL.   PDF Maxwell, N. P., Kostic, B., &amp;amp; Buchanan, E.M. (2017, November). The Interaction of Semantic, Thematic, and Associative Overlap Strength in Predicting Recall.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://doomlab.github.io/page/res_pubs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/page/res_pubs/</guid>
+      <description>code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
     <item>
