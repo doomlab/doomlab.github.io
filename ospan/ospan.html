@@ -1,0 +1,828 @@
+<html>
+<head>
+<title>OSPAN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/javascript" src="code.js"></script>
+</head>
+
+<body text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF" onLoad="document.form2.idcode.focus();" onClick="changeScreensViaClick();">
+
+
+
+
+<div id="idScreen" style="display:block; margin-top:50px; cursor:default;">
+  <table width="80%" border="0" cellspacing="0" cellpadding="8" align="center"  height="80%">
+    <tr>
+    <td valign="top">
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr align="center"> 
+            <td height="335"> 
+              <div style="font: 14pt verdana; font-weight:bold;">
+                <form name="form2">
+                  Please enter your id code and click NEXT: 
+                  <input type="text" name="idcode" value="" size="8" maxlength="4">
+                </form>
+                <br>
+                <br>
+                <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                  <tr> 
+                    <td align="left">&nbsp; </td>
+                    <td align="right"> 
+                      <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                        <tr> 
+                          <td bgcolor="#FFFFFF" align="center"> 
+                            <div style="width:100%; height:100%; cursor:hand;" onClick="doIDCheck();"> 
+                              <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+
+<div id="practiceLetterInstructions1Screen" style="display:none; margin-top:20px; cursor:default;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+  In this experiment you will try to memorize letters you see on the screen while you also solve 
+  simple math problems. During the experiment, you will not be able to write anything down.<br>
+  <br>
+  In the next few minutes, you will have some practice to get you familiar with 
+  how the experiment works.<br>
+  <br>
+  We will begin by practicing the letter part of the experiment.<br>
+  <br>
+        Click the BACK to go back or NEXT to continue.<br>
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('id');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceLetterInstructions2');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+<div id="practiceLetterInstructions2Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+  For this practice set, letters will appear on the screen one at a time.<br>
+  <br>
+  Try to remember each letter in the order presented. <br>
+  <br>
+  After 2-3 letters have been shown, you will see a screen listing 12 possible 
+  letters with a check box beside each one.<br>
+  <br>
+  Your job is to select each letter in the order presented. To do this, use the 
+  mouse to select the box beside each letter. The letters you select will appear 
+  at the bottom of the screen.<br>
+  <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceLetterInstructions1');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceLetterInstructions3');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+<div id="practiceLetterInstructions3Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	When you have selected all the letters, and they are in the correct order, hit the DONE box at the bottom right of the screen.<br>
+	<br>
+	If you make a mistake, hit the CLEAR box to start over. <br>
+	<br>
+	If you forget one of the letters, click the BLANK box to mark the spot for the missing letter.<br>
+	<br>
+	Remember, it is very important to get the letters in the same order as you see them. If you forget one, use the BLANK box to mark the position.<br>
+	<br>
+        Do you have any questions so far? <br>
+	<br>
+        When you're ready, click NEXT to start the letter practice.<br>
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceLetterInstructions2');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="loadLetterPractice();"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+<!--LETTER PRACTICE-->
+<div id="practiceLetterScreen" style="display:none; margin-top:50px; cursor:default;">
+<table width="80%" border="4" cellspacing="0" cellpadding="8" align="center" bordercolor="#000000" height="80%">
+  <tr>
+    <td valign="middle" bgcolor="#CCCCCC" align="center">
+	<b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">
+	<div id="practiceLetterDiv"></div>
+	</font></b></td>
+  </tr>
+</table>
+</div>
+<!--LETTER PRACTICE-->
+
+
+<div id="practiceMathInstructions1Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	Now you will practice doing the math part of the experiment.
+	<br><br>
+	A math problem will appear on the screen, like this:
+	<br><br>(2 * 1) + 1 = ?
+	<br><br>
+	As soon as you see the math problem, you should compute the correct answer.
+	<br><br>
+	In the above problem, the answer 3 is correct.
+	<br><br>
+	When you know the correct answer, you will click the mouse button.
+	<br><br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left">&nbsp; </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceMathInstructions2');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+<div id="practiceMathInstructions2Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	You will see a number displayed on the next screen, along with a box marked TRUE and a box marked FALSE.<br><br>If the number on the screen is the correct answer to the math problem, click on the TRUE box with the mouse.<br><br>If the number is not the correct answer, click on the FALSE box.<br><br>For example, if you see the problem<br>(2 * 2) + 1 = ?<br>and the number on the following screen is 5<br>click the TRUE box, because the answer is correct.<br><br>If you see the problem<br>(2 * 2) + 1 =  ?<br>and the number on the next screen is 6<br>click the FALSE box, because the correct answer is 5, not 6.<br><br>After you click on one of the boxes, the computer will tell you if  you made the right choice.<br><br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceMathInstructions1');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceMathInstructions3');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+<div id="practiceMathInstructions3Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	It is VERY important that you get the math problems correct.  It is also important that you try and solve the problem as quickly as you can.<br><br><br><br>Do you have any questions?<br><br>
+        When you're ready, click NEXT to try some practice problems.<br>
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceMathInstructions2');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="moveToMathPracticeScreen(); clickCameFromButton=true;"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+
+<!--RUN MATH PRACTICE HERE-->
+
+
+
+
+
+<div id="practiceAllInstructions1Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	Now you will practice doing both parts of the experiment at the same time.<br><br>In the next practice set, you will be given one of the math problems.  Once you make your decision about the math problem, a letter will appear on the screen.  Try and remember the letter.<br><br>In the previous section where you only solved math problems, the computer computed your average time to solve the problems.  If you take longer than your average time, the computer will automatically move you onto the letter part, thus skipping the True or False part and will count that problem as a math error.  <br>Therefore it is VERY important to solve the problems as quickly and as accurately as possible<br><br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left">&nbsp; </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceAllInstructions2');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+<div id="practiceAllInstructions2Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	After the letter goes away, another math problem will appear, and then another letter.<br><br>At the end of each set of letters and math problems, a recall screen will appear.  Use the mouse to select the letters you just saw.  Try your best to get the letters in the correct order.<br><br>It is important to work QUICKLY and ACCURATELY on the math.  Make sure you know the answer to the math problem before clicking to the next screen.<br><br><br>You will not be told if your answer to the math problem is correct.<br><br>After the recall screen, you will be given feedback about your performance<br>
+        regarding both the number of letters recalled and the percent correct 
+        on the math problems.<br>
+        <br>
+        Do you have any questions?<br>
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceAllInstructions1');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceAllInstructions3');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+<div id="practiceAllInstructions3Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+  During the feedback, you will see a number in red in the top right of the screen.<br>
+  <br>
+  This indicates your percent correct for the math problems for the entire experiment.<br>
+  <br>
+  It is VERY important for you to keep this at least at 85%.<br>
+  <br>
+  For our purposes, we can only use data where the participant was at least 85% accurate on the math.<br>
+  <br>
+  Therefore, in order for you to continue today, 
+  you must perform at least at 85% on the math problems WHILE doing your best 
+  to recall as many letters as possible.<br>
+  <br>
+  Do you have any questions?<br>
+  <br>
+        Click NEXT to try some practice problems.<br>
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="doChangeMode('practiceAllInstructions2');"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">BACK</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="allAnswers=Array(); practiceRealInitializeNewSet(); clickCameFromButton=true;"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+
+<div id="realInstructions1Screen" style="margin-top:20px; cursor:default; display:none;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" style="font: 14pt verdana; font-weight:bold;">
+ <tr>
+  <td align="center">
+	That is the end of the practice.<br><br>The real trials will look like the practice trials you just completed.<br><br>First you will get a math problem to solve, then a letter to remember.  <br><br>When you see the recall screen, select the letters in the order presented.   If you forget a letter, click the BLANK box to mark where it should go.<br><br>Some sets will have more math problems and letters than others.<br><br>It is important that you do your best on both the math problems and the letter recall parts of this experiment.<br><br>Remember on the math you must work as QUICKLY and ACCURATELY as possible.<br><br>Also, remember to keep your math accuracy at 85% or above.<br><br>
+        Do you have any questions? If not, click NEXT to begin the experiment.<br>
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="left">&nbsp; </td>
+            <td align="right"> 
+              <table width="100" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="initializeNewSet(); clickCameFromButton=true;"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+ </tr>
+</table>
+</div>
+
+
+
+
+
+<div id="problemScreen" style="display:none; margin-top:50px; cursor:default;">
+<table width="80%" border="4" cellspacing="0" cellpadding="8" align="center" bordercolor="#000000" height="80%">
+  <tr>
+    <td valign="top" bgcolor="#CCCCCC">
+      <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr align="center"> 
+          <td height="335">
+		  <b><font face="Verdana, Arial, Helvetica, sans-serif" size="6">
+		  <div id="equationDiv"></div>
+		  </font></b></td>
+        </tr>
+        <tr> 
+          <td align="center"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="5">When 
+            you have solved the math problem, click the mouse to continue.</font></b></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+<div id="answerScreen" style="display:none; margin-top:50px; cursor:default;">
+<table width="80%" border="4" cellspacing="0" cellpadding="8" align="center" bordercolor="#000000" height="80%">
+  <tr>
+    <td valign="top" bgcolor="#CCCCCC">
+      <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr align="center"> 
+            <td height="240" colspan="2"> <b><font face="Verdana, Arial, Helvetica, sans-serif" size="6"> 
+              <div id="equationAnswerDiv"></div>
+		  </font></b>
+		  </td>
+        </tr>
+        <tr> 
+          <td align="center"> 
+            <table width="100" border="8" cellspacing="0" cellpadding="2" bordercolor="#000000" height="55">
+              <tr> 
+                <td bgcolor="#FFFFFF" align="center">
+					<div style="width:100%; height:100%; cursor:hand; padding-top:7px;" onClick="checkEquationAnswer('true')"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">TRUE</font></b></font>		</div>				
+				</td>
+              </tr>
+            </table>
+          </td>
+          <td align="center"> 
+            <table width="100" border="8" cellspacing="0" cellpadding="2" bordercolor="#000000" height="55">
+              <tr> 
+                <td bgcolor="#FFFFFF" align="center">
+					<div style="width:100%; height:100%; cursor:hand; padding-top:7px;" onClick="checkEquationAnswer('false')"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">FALSE</font></b></font>
+					</div>
+				</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+		  <tr align="center"> 
+            <td colspan="2">
+              <br>
+              <br>
+              <div id="practiceEquationFeedbackDiv" style="color:blue; font:16pt verdana,arial; font-weight:bold">
+			  </div>
+			</td>
+		</tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+<div id="letterScreen" style="display:none; margin-top:50px; cursor:default;">
+<table width="80%" border="4" cellspacing="0" cellpadding="8" align="center" bordercolor="#000000" height="80%">
+  <tr>
+    <td valign="middle" bgcolor="#CCCCCC" align="center">
+	<b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">
+	<div id="letterDiv"></div>
+	</font></b></td>
+  </tr>
+</table>
+</div>
+
+
+
+<div id="recallScreen" style="display:none; margin-top:10px;">
+<p align="center"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="3">Select the letters in the order presented. Use the blank button to fill in forgotten letters</font></b></p>
+<table width="80%" border="0" cellspacing="0" cellpadding="2" align="center">
+  <tr align="center"> 
+    <td>
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Frecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onclick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">F</font></b></td>
+        </tr>
+      </table>
+      <b></b></td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Hrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">H</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Jrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">J</font></b></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr align="center"> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center"> 
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Krecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">K</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Lrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">L</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Nrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">N</font></b></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr align="center"> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center"> 
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Precall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">P</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Qrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">Q</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Rrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">R</font></b></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr align="center"> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center"> 
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Srecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">S</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Trecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">T</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td> 
+      <table width="130" border="0" cellspacing="0" cellpadding="6" height="40">
+        <tr> 
+          <td width="70"> 
+            <div id="Yrecall" style="cursor:default; border:blue 1px solid; height:85%; width:65px; font:32pt verdana,arial; font-weight:bold; text-align:center;" onClick="insertNumber(this)"></div>
+          </td>
+          <td width="60"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">Y</font></b></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr align="center"> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center"> 
+    <td>&nbsp;</td>
+    <td> 
+      <div id="-recall" style="cursor:hand; border:blue 1px solid; width:100; height:40; padding-top:7px;" onClick="insertNumber(this)"> 
+        <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="4">blank</font></b></font></div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center"> 
+    <td colspan="3"> 
+      <div id="recallLetterDisplay" style="font:22pt verdana,arial; font-weight:bold; margin-top:10px; margin-bottom:10px; height:24;"></div>
+    </td>
+  </tr>
+  <tr align="center"> 
+    <td> 
+      <div style="cursor:hand; border:black 2px solid; width:100; height:40; padding-top:5px;" onClick="clearRecallScreen()"> 
+        <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="4">Clear</font></b></font></div>
+    </td>
+    <td>&nbsp; </td>
+    <td> 
+        <div style="cursor:hand; border:black 2px solid; width:100; height:40; padding-top:5px;" onClick="finishRecall()"> 
+          <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="4">Done</font></b></font></div>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+
+<div id="feedbackScreen" style="display:none; margin-top:10px; cursor:default;">
+<table width="80%" border="0" cellspacing="0" cellpadding="8" align="center" height="80%">
+  <tr>
+      <td valign="top"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr align="center"> 
+            <td height="20" align="right" valign="top">
+			<b><font face="Verdana, Arial, Helvetica, sans-serif" color="red" size="4"><div id="recallPercentText"></div></font></b></td>
+          </tr>
+          <tr>
+            <td align="center" height="265">
+			<b><font face="Verdana, Arial, Helvetica, sans-serif" size="5"><div id="recallText"></div></font></b>
+			</td>
+          </tr>
+          <tr> 
+            <td align="center" height="102">
+			<b><font face="Verdana, Arial, Helvetica, sans-serif"><div id="recallMathText"></div></font></b>
+			</td>
+          </tr>
+        </table>  
+        <br>
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr> 
+            <td align="center"> 
+              <table width="200" border="3" cellspacing="0" cellpadding="2" bordercolor="#000000">
+                <tr> 
+                  <td bgcolor="#FFFFFF" align="center"> 
+                    <div style="width:100%; height:100%; cursor:hand;" onClick="hideFeedbackScreen();"> 
+                      <font face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3">NEXT 
+                      PROBLEM</font></b></font></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+  </tr>
+</table>
+</div>
+
+
+
+
+<div id="blankScreen" style="display:none; margin-top:50px; cursor:default;">
+<table width="80%" border="4" cellspacing="0" cellpadding="8" align="center" bordercolor="#000000" height="80%">
+  <tr>
+    <td valign="middle" bgcolor="#CCCCCC" align="center">
+	<b><font face="Verdana, Arial, Helvetica, sans-serif" size="7">
+	</font></b>
+	<div>&nbsp;</div>
+	</td>
+  </tr>
+</table>
+</div>
+
+
+
+
+<div id="blankFeedbackScreen" style="display:none; margin-top:10px; cursor:default;">
+</div>
+
+
+
+
+<div id="endGameScreen" style="display:none; margin-top:50px; cursor:default;">
+	<form name="form1" method="POST" action="ospanlog.php">
+	<input type="hidden" name="endGameField">
+	<input type="hidden" name="id">
+	<input type="hidden" name="mathTime">
+	<input type="hidden" name="mathPercentage">
+	<input type="hidden" name="lettersCorrect">
+	<input type="hidden" name="totalLetters">
+	</form>
+</div>
+
+
+
+</body>
+</html>
