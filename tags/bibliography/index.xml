@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publication on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/publication/</link>
-    <description>Recent content in Publication on Dr. Erin Buchanan</description>
+    <title>Bibliography on Dr. Erin Buchanan</title>
+    <link>https://doomlab.github.io/tags/bibliography/</link>
+    <description>Recent content in Bibliography on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/bibliography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 First, let me tell you how much I love Frederik Aust&amp;rsquo;s papaja package for R. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to R to track what we were doing in our data analysis.</description>
-    </item>
-    
-    <item>
-      <title>A Shiny App to Compare Stats</title>
-      <link>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</link>
-      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
-      <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
- Bayes Factors and p-values follow a power function, as we expected.</description>
     </item>
     
   </channel>

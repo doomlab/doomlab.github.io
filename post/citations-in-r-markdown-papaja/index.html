@@ -5,14 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>A Shiny App to Compare Stats</title>
-  <meta property="og:title" content="A Shiny App to Compare Stats" />
-  <meta name="twitter:title" content="A Shiny App to Compare Stats" />
-  <meta name="description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
- Bayes Factors and p-values follow a power function, as we expected.">
-  <meta property="og:description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
- Bayes Factors and p-values follow a power function, as we expected.">
-  <meta name="twitter:description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased …">
+  <title>Citations in R Markdown &#43; Papaja</title>
+  <meta property="og:title" content="Citations in R Markdown &#43; Papaja" />
+  <meta name="twitter:title" content="Citations in R Markdown &#43; Papaja" />
+  <meta name="description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
+First, let me tell you how much I love Frederik Aust&rsquo;s papaja package for R. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to R to track what we were doing in our data analysis.">
+  <meta property="og:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
+First, let me tell you how much I love Frederik Aust&rsquo;s papaja package for R. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to R to track what we were doing in our data analysis.">
+  <meta name="twitter:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having. …">
   <meta name="author" content="aggieerin.com"/>
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
@@ -20,12 +20,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" />
+  <meta property="og:url" content="https://doomlab.github.io/post/citations-in-r-markdown-papaja/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
   <meta name="generator" content="Hugo 0.36.1" />
-  <link rel="canonical" href="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" />
+  <link rel="canonical" href="https://doomlab.github.io/post/citations-in-r-markdown-papaja/" />
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -203,17 +203,17 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>A Shiny App to Compare Stats</h1>
+              <h1>Citations in R Markdown &#43; Papaja</h1>
                 
                 
                   <span class="post-meta">
   
   
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on February 18, 2018
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on February 23, 2018
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 5 minutes (905 words)
+  <i class="fa fa-clock-o"></i> 5 minutes (1051 words)
   
   
 </span>
@@ -233,262 +233,92 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):</p>
+        <p>Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.</p>
 
-<ul>
-<li>Bayes Factors and p-values follow a power function, as we expected.</li>
-<li>Bayes Factors and OOM values follow an interesting pattern, wherein as sample size increases, BF expands outwards, while PCC values tend to constrict.</li>
-<li>p-values will always decrease to floor, and PCC values still tend to constrict toward the simulated effect size range.</li>
-</ul>
+<p>First, let me tell you how much I love Frederik Aust&rsquo;s <a href="https://github.com/crsh/papaja">papaja</a> package for <em>R</em>. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to <em>R</em> to track what we were doing in our data analysis. I heard about papaja through a former student, and I jumped in head first. I know it&rsquo;s helped us think a LOT about reproducibility and replication, as we want people to be able to track what we did and avoid <em>p</em>-hacking in our papers. Having a workflow that is integrated throughout the manuscript really forces you to think about how you are presenting your data and knowing that others can view it especially forces you to be clear about what you did. We&rsquo;ve fully embraced working transparently through Open Science Foundation integration, much of work in on GitHub, and we are writing manuscripts with papaja to make it more obvious what is what.</p>
 
-<p>Another component of this app I wanted to show off was the interactive response points, wherein the input options (on the left) change based on a user selected input option. Therefore, options that are normally only input are both input and output in the traditional Shiny set up.</p>
+<p>Before doing that, I had started learning markdown, and although I&rsquo;ve been using it for a bit now, I still feel like a noob. Mix LaTeX in there, and even more so. Thankfully, I have some very awesome twitter friends that help me when I get stuck in trying to do something &hellip; like trying to stick a % symbol in a column name for a table. Whew. One thing I wish were a little bit different is citations. Currently, papaja using pandoc-citeproc to create the text referencing for knitting to PDF or Word.</p>
 
-<p>You can see that by having the selection (first part) and the changing selection (second part) in the fluid page:</p>
-<div class="highlight"><pre class="chroma">selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
-                  c(&#34;N&#34; = &#34;N&#34;,
-                    &#34;Log N&#34; = &#34;log&#34;)),
-                    
-htmlOutput(&#34;slider_selector&#34;)</pre></div>
-<p>Which is connected to the server function below:</p>
-<div class="highlight"><pre class="chroma">  ####change the slider####
-  output$slider_selector = renderUI({ 
-    
-    if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
-    if (input$Nselect == &#34;log&#34;) { minN = round(log(10),1) 
-                                  maxN = round(log(1000),1)
-                                  stepN = .1}
-    
-    sliderInput(&#34;xaxisrange&#34;, &#34;X-Axis Range:&#34;,
-                min = minN, max = maxN,
-                value = c(minN,maxN),
-                sep = &#34;&#34;,
-                round = -1,
-                step = stepN)
-  })</pre></div>
-<p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
+<p>The problem with this is that any time you have the same author last names (like Erin Buchanan and Tom Buchanan), you automatically get E. Buchanan and T. Buchanan in the in-text referencing. That is <a href="http://blog.apastyle.org/apastyle/2014/01/when-to-use-author-initials-for-text-citations.html">APA style</a> but reviewers and the like <em>do not like it</em>. Real APA != to Used APA. The other issue stems from the fact that you will get the the first initials, even if the other author name match is in second or third place. Therefore, if I cite myself and cite Tom but he only appears as second author, I will still get E. Buchanan in the in text citation. That&rsquo;s probably also a correct interpretation of APA but ain&rsquo;t worth fighting reviewers over. Additionally, the absolute name matching often forces us to fix bibtex files a lot over things like Buchanan, E. versus Buchanan, E.M. versus Buchanan, Erin etc. Many different permutations of one person&rsquo;s name via differences in doi citations can be tedious to fix.</p>
 
-<p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://96.242.30.151:3838/altnhst/">here</a>. The code is pretty long due to the sheer number of graphs, so it&rsquo;s edited down to just the shiny parts - when you see ####GRAPH#### that&rsquo;s some kicking ggplot2 graphs you can view in our github repo.</p>
+<p>Therefore! I checked out the <a href="https://crsh.github.io/papaja_man/writing.html#citations">papaja manual</a> - which is stellar - to see if there was some other way to do it. I also googled this, but really got stuck with the translation of latex to markdown. The manual suggests you can do this:</p>
+<div class="highlight"><pre class="chroma">---
+output:
+  papaja::apa6_pdf:
+    citation_package: biblatex
+---</pre></div>
+<p>To pass the citations through a different processor. Great! I will try that.</p>
+<div class="highlight"><pre class="chroma">Latexmk: This is Latexmk, John Collins, 19 Jan. 2017, version: 4.52c.
+Latexmk: applying rule &#39;biber QWERTY&#39;...
+Rule &#39;biber QWERTY&#39;: File changes, etc:
+   Non-existent destination files:
+      &#39;QWERTY.bbl&#39;
+------------
+Run number 1 of rule &#39;biber QWERTY&#39;
+------------
+------------
+Running &#39;biber  &#34;QWERTY&#34;&#39;
+------------
+INFO - This is Biber 2.7
+INFO - Logfile is &#39;QWERTY.blg&#39;
+ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
+INFO - ERRORS: 1
+Latexmk: biber found malformed bcf file for &#39;QWERTY&#39;.
+  I&#39;ll ignore error, and delete any bbl file.
+Rule &#39;pdflatex&#39;: File changes, etc:
+   Non-existent destination files:
+      &#39;QWERTY.pdf&#39;
+------------
+Run number 1 of rule &#39;pdflatex&#39;
+------------
+Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
+Latexmk: applying rule &#39;pdflatex&#39;...
+------------
+Running &#39;pdflatex  -halt-on-error -interaction=batchmode -recorder  &#34;QWERTY.tex&#34;&#39;
+------------
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
+restricted \write18 enabled.
+entering extended mode
+Latexmk: Non-existent bbl file &#39;QWERTY.bbl&#39;
+No file QWERTY.bbl.
+=== TeX engine is &#39;pdfTeX&#39;
+Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
+Latexmk: Errors, so I did not complete making targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for &#39;pdflatex&#39; gave return code 1
+      Refer to &#39;QWERTY.log&#39; for details
+Latexmk: Use the -f option to force complete processing,
+unless error was exceeding maximum runs of latex/pdflatex.
+! LaTeX Error: Command \c@author already defined.
+               Or name \end... illegal, see p.192 of the manual.
+ 
+Error: Failed to compile QWERTY.tex. See QWERTY.log for more info.
+Execution halted</pre></div>
+<p>Balls. I searched this error for a while and found: 1) update LaTeX: check, 2) figure out why your bibtext was messed up: check &hellip; tried with only one reference and still crashed, and 3) other stuff I don&rsquo;t remember. When I tried a separate markdown, thinking the one that I had open was the problem, I got the actual citation codes, rather than the text:</p>
+<div class="highlight"><pre class="chroma">Researchers discovered that online data collection can be advantageous over laboratory and paper data collection, as it is often cheaper and more efficient (Ilieva2001;Schuldt1994;Reips2012)</pre></div>
+<p>I thought maybe it was my computer, so one of my coauthors tried it. Same as the first error. Maybe it&rsquo;s a mac thing? Another coauthor with a mac, got the second error. I&rsquo;m sad to say that I don&rsquo;t have an answer for either of these problems - from the looks of it, I&rsquo;m following the guidelines suggested, but both problems pop up. I would love to hear if you know why.</p>
 
-<p>Check out the project OSF page <a href="https://osf.io/u9hf4/">here</a>. You can download the entire app from our <a href="https://github.com/doomlab/shiny-server">github repo</a> (also other shiny apps!).</p>
-<div class="highlight"><pre class="chroma">library(shiny)
-library(ggplot2)
-library(reshape)
-library(plotly)
+<p>Enter <a href="https://psychology.missouri.edu/people/haaf">Julia</a>! Julia helped find a work around for the issue. In the head of your markdown file (note I used some &hellip; to shorten some of what papaja does for you automatically):</p>
+<div class="highlight"><pre class="chroma">...
+bibliography      : [&#34;q_bib.bib&#34;]
+...
+output            : papaja::apa6_pdf
+relpace_ampersands: yes
+csl               : apa6.csl
+---</pre></div>
+<p>And then be sure to put the apa6.csl in the same folder as your markdown. Now, you can confuse people with all your Buchanans, Logans, Cohens, and Fritzs. Or, in our case, we can make Reviewer #2 happy and annoy the copy editor.</p>
 
-####remove data loading and reshaping####
+<p><em>Note:</em> I had to update papaja to get this solution to work, as the replace ampersands did not work the first time. Second, I asked a couple times if it was <em>replace_ampersands</em> but apparently not.</p>
 
-####user interface####
-ui &lt;- fluidPage (
-  
-  titlePanel(&#34;Valentine et al. Interactive Graphics&#34;),
-  
-  sidebarLayout(
-    
-    ##sidebarpanel
-    sidebarPanel(
-      
-      br(),
-      
-      ##put input boxes here
-      tags$em(&#34;All Graphs:&#34;),
-      selectInput(&#34;sizeselect&#34;, &#34;Select Effect Size:&#34;,
-                  c(&#34;Negligible&#34; = &#34;None&#34;,
-                    &#34;Small&#34; = &#34;Small&#34;,
-                    &#34;Medium&#34; = &#34;Medium&#34;,
-                    &#34;Large&#34; = &#34;Large&#34;)),
-      
-      tags$em(&#34;Percent Graphs:&#34;),
-      selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
-                  c(&#34;N&#34; = &#34;N&#34;,
-                    &#34;Log N&#34; = &#34;log&#34;)),
-      
-      htmlOutput(&#34;slider_selector&#34;),
-      
-      tags$em(&#34;Comparison Graphs:&#34;),
-      
-      selectInput(&#34;graphselect&#34;, &#34;Select Graph:&#34;,
-                  c(&#34;PCC - p&#34; = &#34;pccp&#34;,
-                    &#34;PCC - BF&#34; = &#34;pccbf&#34;,
-                    &#34;BF - p&#34; = &#34;bfp&#34;)),
-      
-      sliderInput(&#34;bfrange&#34;, &#34;Log BF Range:&#34;,
-                  min = -5, max = 600,
-                  value = c(-5,600),
-                  sep = &#34;&#34;,
-                  step = 10),
-      
-      sliderInput(&#34;prange&#34;, &#34;p Range:&#34;,
-                  min = 0, max = 1,
-                  value = c(0,1),
-                  step = .01),
-      
-      sliderInput(&#34;pccrange&#34;, &#34;PCC Range:&#34;,
-                  min = 0, max = 1,
-                  value = c(0,1),
-                  step = .01)
-      
-    ), #close sidebar panel
-    
-    mainPanel(
-      
-      tabsetPanel(
-        tabPanel(&#34;Significant&#34;, plotOutput(&#34;sigpic&#34;),
-                 br(),
-                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-        tabPanel(&#34;Non-Significant&#34;, plotOutput(&#34;nonpic&#34;),
-                 br(),
-                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-        tabPanel(&#34;Omnibus Agreement&#34;, plotOutput(&#34;omniagree&#34;),
-                 br(),
-                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-        tabPanel(&#34;Posthoc Agreement&#34;, plotOutput(&#34;postagree&#34;),
-                 br(),
-                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-        tabPanel(&#34;Criterion Comparison&#34;, plotOutput(&#34;compare&#34;), 
-                 br(),
-                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;,br(), 
-                          &#34;BF values have been log transformed to show the entire range of the data.&#34;)),
-        tabPanel(&#34;3D Comparison&#34;, plotlyOutput(&#34;compare3d&#34;), 
-                 br(),
-                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;,br(), 
-                          &#34;BF values have been log transformed to show the entire range of the data.&#34;))
-      )
-      
-    ) #close main panel 
-    
-  ) #close sidebar layout
-
-) #close fluid page
-
-####server functions####
-server &lt;- function(input, output) {
-   
-  ####change the slider####
-  output$slider_selector = renderUI({ 
-    
-    if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
-    if (input$Nselect == &#34;log&#34;) { minN = round(log(10),1) 
-                                  maxN = round(log(1000),1)
-                                  stepN = .1}
-    
-    sliderInput(&#34;xaxisrange&#34;, &#34;X-Axis Range:&#34;,
-                min = minN, max = maxN,
-                value = c(minN,maxN),
-                sep = &#34;&#34;,
-                round = -1,
-                step = stepN)
-  })
-  
-   ####SIGNIFICANT EFFECTS####
-   output$sigpic &lt;- renderPlot({
-
-     graphdata = subset(long_graph, Significance==&#34;Sig&#34; &amp; Effect == input$sizeselect)
-     
-     ##log N
-     if (input$Nselect == &#34;log&#34;) { graphdata$N = log(graphdata$N) 
-                                    xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
-     
-     ####GRAPH####
-   })
-   
-   ####NONSIGNIFICANT EFFECTS####
-   output$nonpic &lt;- renderPlot({
-     
-     nsgraphdata = subset(long_graph, Significance==&#34;Non&#34; &amp; Effect == input$sizeselect)
-     
-     ##log N
-     if (input$Nselect == &#34;log&#34;) { nsgraphdata$N = log(nsgraphdata$N)  
-                                   xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
-     
-     ####GRAPH####
-   })
-   
-   ####OMNIBUS AGREEMENT####
-   output$omniagree &lt;- renderPlot({
-     
-     ##log n to get a better graph
-     if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
-                                   xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
-     
-     ####GRAPH####
-   })
-   
-   ####POST HOC AGREEMENT####
-   output$postagree &lt;- renderPlot({
-     
-     ##log n to get a better graph
-     if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
-     xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
-     
-     ####GRAPH####
-   })
-   
-   ####COMPARISON GRAPHS####
-   output$compare &lt;- renderPlot({
-     
-     if (input$graphselect == &#34;pccp&#34;){
-       
-       ####GRAPH####
-       
-     } else if (input$graphselect == &#34;pccbf&#34;){
-       
-       ####GRAPH####
-       
-     } else if (input$graphselect == &#34;bfp&#34;){
-       
-       ####GRAPH####
-       
-     }
-     
-   })
-   
-   ####3D COMPARISON GRAPHS####
-   output$compare3d &lt;- renderPlotly({
-     
-     ####GRAPH SET UP####
-     
-     overall = plot_ly(overallgraph3d, 
-                       x = ~overallBF,
-                       y = ~oompcc,
-                       z = ~omniP,
-                       color = ~N,
-                       symbol = ~star,
-                       symbols=c(&#34;circle&#34;,&#34;cross&#34;),
-                       mode=&#34;markers&#34;) %&gt;%
-       add_markers() %&gt;%
-       layout(scene = list(xaxis = list(title = &#39;Bayes Factors&#39;),
-                           yaxis = list(title = &#39;OOM PCC&#39;),
-                           zaxis = list(title = &#39;p-Value&#39;)),
-              annotations = list(
-                x = 1.13,
-                y = 1.05,
-                text = colorlabel,
-                xref = &#39;paper&#39;,
-                yref = &#39;paper&#39;,
-                showarrow = FALSE
-              ))
-     
-     overall
-     
-   })
-   
-} #close server functions
-
-# Run the application 
-shinyApp(ui = ui, server = server)</pre></div>
       </article>
 
       
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://doomlab.github.io/post/learn-about-mote/" data-toggle="tooltip" data-placement="top" title="Learn About MOTE">&larr; Previous Post</a>
+              <a href="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" data-toggle="tooltip" data-placement="top" title="A Shiny App to Compare Stats">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://doomlab.github.io/post/citations-in-r-markdown-papaja/" data-toggle="tooltip" data-placement="top" title="Citations in R Markdown &#43; Papaja">Next Post &rarr;</a>
-            </li>
           
         </ul>
       

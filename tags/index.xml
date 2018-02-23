@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://doomlab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bibliography</title>
+      <link>https://doomlab.github.io/tags/bibliography/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/bibliography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>https://doomlab.github.io/tags/latex/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Mote</title>
@@ -22,18 +40,45 @@
     </item>
     
     <item>
+      <title>Open Science</title>
+      <link>https://doomlab.github.io/tags/open-science/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/open-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Papaja</title>
+      <link>https://doomlab.github.io/tags/papaja/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/papaja/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Publication</title>
       <link>https://doomlab.github.io/tags/publication/</link>
-      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/publication/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Reproducibility</title>
+      <link>https://doomlab.github.io/tags/reproducibility/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Research</title>
       <link>https://doomlab.github.io/tags/research/</link>
-      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/research/</guid>
       <description></description>
