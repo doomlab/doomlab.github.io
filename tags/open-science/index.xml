@@ -19,7 +19,8 @@
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
-First, let me tell you how much I love Frederik Aust&amp;rsquo;s papaja package for R. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to R to track what we were doing in our data analysis.</description>
+Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
+First, let me tell you how much I love Frederik Aust&amp;rsquo;s papaja package for R.</description>
     </item>
     
   </channel>
