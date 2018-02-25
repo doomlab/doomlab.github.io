@@ -10,10 +10,10 @@
   <meta name="twitter:title" content="Citations in R Markdown &#43; Papaja" />
   <meta name="description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
-First, let me tell you how much I love Frederik Aust&rsquo;s papaja package for R.">
+Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.">
   <meta property="og:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
-First, let me tell you how much I love Frederik Aust&rsquo;s papaja package for R.">
+Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.">
   <meta name="twitter:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having. …">
   <meta name="author" content="aggieerin.com"/>
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -215,7 +215,7 @@ First, let me tell you how much I love Frederik Aust&rsquo;s papaja package for 
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 6 minutes (1079 words)
+  <i class="fa fa-clock-o"></i> 6 minutes (1101 words)
   
   
 </span>
@@ -238,6 +238,8 @@ First, let me tell you how much I love Frederik Aust&rsquo;s papaja package for 
         <p>Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.</p>
 
 <p><em>Update</em>: The csl file I describe below is a special formatted one, which was shared with me. You can download it from <a href="https://github.com/doomlab/QWERTY/blob/master/6%20paper/markdown/apa6.csl">GitHub</a> to try the suggestions below.</p>
+
+<p><em>Update 2:</em> Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github. I&rsquo;ll write a new post when there are updates!</p>
 
 <p>First, let me tell you how much I love Frederik Aust&rsquo;s <a href="https://github.com/crsh/papaja">papaja</a> package for <em>R</em>. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to <em>R</em> to track what we were doing in our data analysis. I heard about papaja through a former student, and I jumped in head first. I know it&rsquo;s helped us think a LOT about reproducibility and replication, as we want people to be able to track what we did and avoid <em>p</em>-hacking in our papers. Having a workflow that is integrated throughout the manuscript really forces you to think about how you are presenting your data and knowing that others can view it especially forces you to be clear about what you did. We&rsquo;ve fully embraced working transparently through Open Science Foundation integration, much of work in on GitHub, and we are writing manuscripts with papaja to make it more obvious what is what.</p>
 
@@ -307,12 +309,12 @@ Execution halted</pre></div>
 bibliography      : [&#34;q_bib.bib&#34;]
 ...
 output            : papaja::apa6_pdf
-relpace_ampersands: yes
+replace_ampersands: yes
 csl               : apa6.csl
 ---</pre></div>
 <p>And then be sure to put the apa6.csl in the same folder as your markdown. Now, you can confuse people with all your Buchanans, Logans, Cohens, and Fritzs. Or, in our case, we can make Reviewer #2 happy and annoy the copy editor.</p>
 
-<p><em>Note:</em> I had to update papaja to get this solution to work, as the replace ampersands did not work the first time. Second, I asked a couple times if it was <em>replace_ampersands</em> but apparently not.</p>
+<p><em>Note:</em> I had to update papaja to get this solution to work, as the replace ampersands did not work the first time.</p>
 
       </article>
 
