@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://doomlab.github.io/tags/reproducibility/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>New Publication - Detect Low Quality Data</title>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
+      <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
+We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
+We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
+    </item>
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>

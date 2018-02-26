@@ -5,16 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Citations in R Markdown &#43; Papaja</title>
-  <meta property="og:title" content="Citations in R Markdown &#43; Papaja" />
-  <meta name="twitter:title" content="Citations in R Markdown &#43; Papaja" />
-  <meta name="description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
-Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
-Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.">
-  <meta property="og:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
-Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
-Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.">
-  <meta name="twitter:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having. …">
+  <title>Rstudio</title>
+  <meta property="og:title" content="Rstudio" />
+  <meta name="twitter:title" content="Rstudio" />
   <meta name="author" content="aggieerin.com"/>
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
@@ -22,13 +15,13 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/post/citations-in-r-markdown-papaja/" />
+  <meta property="og:url" content="https://doomlab.github.io/tags/rstudio/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
   <meta name="generator" content="Hugo 0.36.1" />
-  <link rel="canonical" href="https://doomlab.github.io/post/citations-in-r-markdown-papaja/" />
-  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <link rel="canonical" href="https://doomlab.github.io/tags/rstudio/" />
+  <link rel="alternate" href="https://doomlab.github.io/tags/rstudio/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -188,40 +181,14 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
 
 
     
-  
-  
-  
-
-
-
-
-  
-
   <header class="header-section ">
-    
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
-              <h1>Citations in R Markdown &#43; Papaja</h1>
-                
-                
-                  <span class="post-meta">
-  
-  
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on February 23, 2018
-  
-  
-  &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 6 minutes (1101 words)
-  
-  
-</span>
-
-
-                
+            <div class="page-heading">
+              <h1>#Rstudio</h1>
+              <hr class="small">
             </div>
           </div>
         </div>
@@ -229,119 +196,57 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
     </div>
   </header>
 
-
     
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p>Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.</p>
-
-<p><em>Update</em>: The csl file I describe below is a special formatted one, which was shared with me. You can download it from <a href="https://github.com/doomlab/QWERTY/blob/master/6%20paper/markdown/apa6.csl">GitHub</a> to try the suggestions below.</p>
-
-<p><em>Update 2:</em> Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github. I&rsquo;ll write a new post when there are updates!</p>
-
-<p>First, let me tell you how much I love Frederik Aust&rsquo;s <a href="https://github.com/crsh/papaja">papaja</a> package for <em>R</em>. I had been trying to integrate open science and transparency in our lab, which was helped by the switch to <em>R</em> to track what we were doing in our data analysis. I heard about papaja through a former student, and I jumped in head first. I know it&rsquo;s helped us think a LOT about reproducibility and replication, as we want people to be able to track what we did and avoid <em>p</em>-hacking in our papers. Having a workflow that is integrated throughout the manuscript really forces you to think about how you are presenting your data and knowing that others can view it especially forces you to be clear about what you did. We&rsquo;ve fully embraced working transparently through Open Science Foundation integration, much of work in on GitHub, and we are writing manuscripts with papaja to make it more obvious what is what.</p>
-
-<p>Before doing that, I had started learning markdown, and although I&rsquo;ve been using it for a bit now, I still feel like a noob. Mix LaTeX in there, and even more so. Thankfully, I have some very awesome twitter friends that help me when I get stuck in trying to do something &hellip; like trying to stick a % symbol in a column name for a table. Whew. One thing I wish were a little bit different is citations. Currently, papaja using pandoc-citeproc to create the text referencing for knitting to PDF or Word.</p>
-
-<p>The problem with this is that any time you have the same author last names (like Erin Buchanan and Tom Buchanan), you automatically get E. Buchanan and T. Buchanan in the in-text referencing. That is <a href="http://blog.apastyle.org/apastyle/2014/01/when-to-use-author-initials-for-text-citations.html">APA style</a> but reviewers and the like <em>do not like it</em>. Real APA != to Used APA. The other issue stems from the fact that you will get the the first initials, even if the other author name match is in second or third place. Therefore, if I cite myself and cite Tom but he only appears as second author, I will still get E. Buchanan in the in text citation. That&rsquo;s probably also a correct interpretation of APA but ain&rsquo;t worth fighting reviewers over. Additionally, the absolute name matching often forces us to fix bibtex files a lot over things like Buchanan, E. versus Buchanan, E.M. versus Buchanan, Erin etc. Many different permutations of one person&rsquo;s name via differences in doi citations can be tedious to fix.</p>
-
-<p>Therefore! I checked out the <a href="https://crsh.github.io/papaja_man/writing.html#citations">papaja manual</a> - which is stellar - to see if there was some other way to do it. I also googled this, but really got stuck with the translation of latex to markdown. The manual suggests you can do this:</p>
-<div class="highlight"><pre class="chroma">---
-output:
-  papaja::apa6_pdf:
-    citation_package: biblatex
----</pre></div>
-<p>To pass the citations through a different processor. Great! I will try that.</p>
-<div class="highlight"><pre class="chroma">Latexmk: This is Latexmk, John Collins, 19 Jan. 2017, version: 4.52c.
-Latexmk: applying rule &#39;biber QWERTY&#39;...
-Rule &#39;biber QWERTY&#39;: File changes, etc:
-   Non-existent destination files:
-      &#39;QWERTY.bbl&#39;
-------------
-Run number 1 of rule &#39;biber QWERTY&#39;
-------------
-------------
-Running &#39;biber  &#34;QWERTY&#34;&#39;
-------------
-INFO - This is Biber 2.7
-INFO - Logfile is &#39;QWERTY.blg&#39;
-ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
-INFO - ERRORS: 1
-Latexmk: biber found malformed bcf file for &#39;QWERTY&#39;.
-  I&#39;ll ignore error, and delete any bbl file.
-Rule &#39;pdflatex&#39;: File changes, etc:
-   Non-existent destination files:
-      &#39;QWERTY.pdf&#39;
-------------
-Run number 1 of rule &#39;pdflatex&#39;
-------------
-Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
-Latexmk: applying rule &#39;pdflatex&#39;...
-------------
-Running &#39;pdflatex  -halt-on-error -interaction=batchmode -recorder  &#34;QWERTY.tex&#34;&#39;
-------------
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
-restricted \write18 enabled.
-entering extended mode
-Latexmk: Non-existent bbl file &#39;QWERTY.bbl&#39;
-No file QWERTY.bbl.
-=== TeX engine is &#39;pdfTeX&#39;
-Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
-Latexmk: Errors, so I did not complete making targets
-Collected error summary (may duplicate other messages):
-  pdflatex: Command for &#39;pdflatex&#39; gave return code 1
-      Refer to &#39;QWERTY.log&#39; for details
-Latexmk: Use the -f option to force complete processing,
-unless error was exceeding maximum runs of latex/pdflatex.
-! LaTeX Error: Command \c@author already defined.
-               Or name \end... illegal, see p.192 of the manual.
- 
-Error: Failed to compile QWERTY.tex. See QWERTY.log for more info.
-Execution halted</pre></div>
-<p>Balls. I searched this error for a while and found: 1) update LaTeX: check, 2) figure out why your bibtext was messed up: check &hellip; tried with only one reference and still crashed, and 3) other stuff I don&rsquo;t remember. When I tried a separate markdown, thinking the one that I had open was the problem, I got the actual citation codes, rather than the text:</p>
-<div class="highlight"><pre class="chroma">Researchers discovered that online data collection can be advantageous over laboratory and paper data collection, as it is often cheaper and more efficient (Ilieva2001;Schuldt1994;Reips2012)</pre></div>
-<p>I thought maybe it was my computer, so one of my coauthors tried it. Same as the first error. Maybe it&rsquo;s a mac thing? Another coauthor with a mac, got the second error. I&rsquo;m sad to say that I don&rsquo;t have an answer for either of these problems - from the looks of it, I&rsquo;m following the guidelines suggested, but both problems pop up. I would love to hear if you know why.</p>
-
-<p>Enter <a href="https://psychology.missouri.edu/people/haaf">Julia</a>! Julia helped find a work around for the issue. In the head of your markdown file (note I used some &hellip; to shorten some of what papaja does for you automatically):</p>
-<div class="highlight"><pre class="chroma">...
-bibliography      : [&#34;q_bib.bib&#34;]
-...
-output            : papaja::apa6_pdf
-replace_ampersands: yes
-csl               : apa6.csl
----</pre></div>
-<p>And then be sure to put the apa6.csl in the same folder as your markdown. Now, you can confuse people with all your Buchanans, Logans, Cohens, and Fritzs. Or, in our case, we can make Reviewer #2 happy and annoy the copy editor.</p>
-
-<p><em>Note:</em> I had to update papaja to get this solution to work, as the replace ampersands did not work the first time.</p>
-
-      </article>
-
-      
-        <ul class="pager blog-pager">
-          
-            <li class="previous">
-              <a href="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" data-toggle="tooltip" data-placement="top" title="A Shiny App to Compare Stats">&larr; Previous Post</a>
-            </li>
-          
-          
-            <li class="next">
-              <a href="https://doomlab.github.io/post/new-publication-detect-low-quality-data/" data-toggle="tooltip" data-placement="top" title="New Publication - Detect Low Quality Data">Next Post &rarr;</a>
-            </li>
-          
-        </ul>
-      
-
-
-      
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-        
-      
+        <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://doomlab.github.io/post/new-publication-detect-low-quality-data/">
+                <h2 class="post-title">New Publication - Detect Low Quality Data</h2>
 
+                
+              </a>
+
+              <p class="post-meta">
+                Posted on February 25, 2018
+              </p>
+              <div class="post-entry">
+                
+                  My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
+We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
+We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.
+                  <a href="https://doomlab.github.io/post/new-publication-detect-low-quality-data/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                  
+                    #<a href="https://doomlab.github.io/tags/rstudio/">rstudio</a>&nbsp;
+                  
+                    #<a href="https://doomlab.github.io/tags/shiny/">shiny</a>&nbsp;
+                  
+                    #<a href="https://doomlab.github.io/tags/open-science/">open science</a>&nbsp;
+                  
+                    #<a href="https://doomlab.github.io/tags/publication/">publication</a>&nbsp;
+                  
+                    #<a href="https://doomlab.github.io/tags/reproducibility/">reproducibility</a>&nbsp;
+                  
+                    #<a href="https://doomlab.github.io/tags/vita/">vita</a>&nbsp;
+                  
+                </span>
+              
+
+            </article>
+          
+        </div>
+        
+      </div>
     </div>
   </div>
-</div>
 
     <footer>
   <div class="container">
@@ -384,7 +289,7 @@ csl               : apa6.csl
           
           <li>
             
-            <a href="https://doomlab.github.io/index.xml" title="RSS">
+            <a href="https://doomlab.github.io/tags/rstudio/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
