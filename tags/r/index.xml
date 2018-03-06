@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rstudio on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/rstudio/</link>
-    <description>Recent content in Rstudio on Dr. Erin Buchanan</description>
+    <title>R on Dr. Erin Buchanan</title>
+    <link>https://doomlab.github.io/tags/r/</link>
+    <description>Recent content in R on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
       <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&amp;rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&amp;rsquo;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - http://www.</description>
-    </item>
-    
-    <item>
-      <title>New Publication - Detect Low Quality Data</title>
-      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
-      <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
-We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
-We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
     </item>
     
   </channel>

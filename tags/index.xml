@@ -67,6 +67,15 @@
     </item>
     
     <item>
+      <title>R</title>
+      <link>https://doomlab.github.io/tags/r/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reproducibility</title>
       <link>https://doomlab.github.io/tags/reproducibility/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
@@ -87,7 +96,7 @@
     <item>
       <title>Rstudio</title>
       <link>https://doomlab.github.io/tags/rstudio/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/rstudio/</guid>
       <description></description>
@@ -117,6 +126,15 @@
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Processing</title>
+      <link>https://doomlab.github.io/tags/text-processing/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/text-processing/</guid>
       <description></description>
     </item>
     

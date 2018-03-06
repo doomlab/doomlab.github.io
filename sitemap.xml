@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://doomlab.github.io/post/working-with-messy-text/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/post/new-publications/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -102,7 +107,7 @@
   
   <url>
     <loc>https://doomlab.github.io/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,13 +142,19 @@
   
   <url>
     <loc>https://doomlab.github.io/post/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://doomlab.github.io/tags/publication/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/tags/r/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,13 +172,13 @@
   
   <url>
     <loc>https://doomlab.github.io/categories/research/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://doomlab.github.io/tags/rstudio/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -198,6 +209,12 @@
   <url>
     <loc>https://doomlab.github.io/categories/teaching/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/tags/text-processing/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
