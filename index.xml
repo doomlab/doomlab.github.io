@@ -19,7 +19,7 @@
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
       <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&amp;rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&amp;rsquo;s never done me wrong (unlike you PHP).
-Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - http://www.</description>
+Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
     </item>
     
     <item>
@@ -202,6 +202,15 @@ Undergraduate:
  Experimental Methods Basic Statistics (ANOVA, Regression) Advanced Statistics (Multivariate, Structural Equation Modeling) Nonparametric Statistics Cognition, Attention, Memory, Language  Courses Taught Undergraduate:
  Cognitive Psychology General Psychology Lab in Cognitive Psychology Statistics for Social Sciences Advanced Statistics Research Methods Psycholinguistics Freshman Honor&amp;rsquo;s Seminar  Graduate:
  Regression/Factor Analysis Multivariate Statistics Advanced Statistics Graduate Statistics Structural Equation Modeling Bayesian Methods Nonparametrics  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://doomlab.github.io/post/2018-03-06-working-with-messy-text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/2018-03-06-working-with-messy-text/</guid>
+      <description>Working With Messy Text       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
     <item>

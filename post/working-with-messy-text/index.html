@@ -9,9 +9,9 @@
   <meta property="og:title" content="Working With Messy Text" />
   <meta name="twitter:title" content="Working With Messy Text" />
   <meta name="description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).
-Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - http://www.">
+Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.">
   <meta property="og:description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).
-Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - http://www.">
+Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.">
   <meta name="twitter:description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or …">
   <meta name="author" content="aggieerin.com"/>
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -213,7 +213,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 6 minutes (1253 words)
+  <i class="fa fa-clock-o"></i> 6 minutes (1246 words)
   
   
 </span>
@@ -235,9 +235,9 @@ Anyways! The context of this project is that we are developing a dictionary of w
       <article role="main" class="blog-post">
         <p>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in <em>R</em> that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).</p>
 
-<p>Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - <a href="learn more">http://www.moralfoundations.org/othermaterials</a>. I had a student who was interested in Moral Foundations Theory and its relationship to language, and we had tested some of the dictionary and found it to be frustratingly obtuse. Meaning, that a lot of the words in it are great, but not things that people like, college freshman, or even <strong>me</strong> were likely to say. She&rsquo;s moved on to working with the founder of the <a href="http://liwc.wpengine.com/">LIWC</a> - and even worked on the newest version of it :small brag:.</p>
+<p>Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - <a href="http://www.moralfoundations.org/othermaterials">learn more</a>. I had a student who was interested in Moral Foundations Theory and its relationship to language, and we had tested some of the dictionary and found it to be frustratingly obtuse. Meaning, that a lot of the words in it are great, but not things that people like, college freshman, or even <strong>me</strong> were likely to say. She&rsquo;s moved on to working with the founder of the <a href="http://liwc.wpengine.com/">LIWC</a> - and even worked on the newest version of it :small brag:.</p>
 
-<p>Now I have a second student who&rsquo;s helping finish up some work on the dictionary, to see if what we were doing is worthwhile (spoiler alert: I don&rsquo;t know). However, I thought I might share some code we were using and it&rsquo;s context for people who are also trying to get into doing some of this text mining/cleaning/editing in <em>R</em>. You can find all the materials for this project, including the code in context of our messy paper, on <a href="Github">https://github.com/doomlab/Pol-Lang/tree/master/MTMM%20MF/manuscript</a>.</p>
+<p>Now I have a second student who&rsquo;s helping finish up some work on the dictionary, to see if what we were doing is worthwhile (spoiler alert: I don&rsquo;t know). However, I thought I might share some code we were using and it&rsquo;s context for people who are also trying to get into doing some of this text mining/cleaning/editing in <em>R</em>. You can find all the materials for this project, including the code in context of our messy paper, on <a href="https://github.com/doomlab/Pol-Lang/tree/master/MTMM%20MF/manuscript">GitHub</a>.</p>
 
 <p>Here&rsquo;s a view of what the data looks like (this isn&rsquo;t even the messiest part, and part 2 of our study uses full written paragraphs):</p>
 <div class="highlight"><pre class="chroma">&gt; head(noout1$Q27)
@@ -247,10 +247,13 @@ Anyways! The context of this project is that we are developing a dictionary of w
 [4] &#34;physical healthiness, mental healthiness&#34;
 [5] &#34;hurt, effect, love, protect&#34;             
 [6] &#34;hurt, depression, pain&#34;</pre></div>
-<p>So, couple things we have to deal with:
-- Mixed case
-- Punctuation
-- Stemming (affixes)</p>
+<p>So, couple things we have to deal with:</p>
+
+<ul>
+<li>Mixed case</li>
+<li>Punctuation</li>
+<li>Stemming (affixes)</li>
+</ul>
 
 <p>Now, don&rsquo;t hate on me folks, but I love a good loop. I could probably do this with the <code>apply</code> family, but I didn&rsquo;t:</p>
 <div class="highlight"><pre class="chroma">&gt; ##stem the data library(corpus) was loaded earlier
@@ -258,11 +261,14 @@ Anyways! The context of this project is that we are developing a dictionary of w
 +   noout1$Q27[i] = paste(unlist(
 +     text_tokens(noout1$Q27[i], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
 + }</pre></div>
-<p>Unpacking what this does:
-- Loops over each participant&rsquo;s answers in Q27. I did this because <code>text_tokens</code> returns a list of lists, which I personally find troublesome to deal with, and I wanted to retain each persons answers in one cell.
-- Uses <code>text_tokens</code> to &ldquo;tokenize&rdquo; or de-affix the data. <code>stemmer = &quot;en&quot;</code> is an argument to stem the words in English.
-- Unlists the list returned by <code>text_tokens</code>.
-- Pastes the updated data back to one cell. Be sure to use <code>collapse</code> here and not <code>sep</code>, as we want 1 item returned, and <code>sep</code> would just stick spaces on the end of each item.</p>
+<p>Unpacking what this does:</p>
+
+<ul>
+<li>Loops over each participant&rsquo;s answers in Q27. I did this because <code>text_tokens</code> returns a list of lists, which I personally find troublesome to deal with, and I wanted to retain each persons answers in one cell.</li>
+<li>Uses <code>text_tokens</code> to &ldquo;tokenize&rdquo; or de-affix the data. <code>stemmer = &quot;en&quot;</code> is an argument to stem the words in English.</li>
+<li>Unlists the list returned by <code>text_tokens</code>.</li>
+<li>Pastes the updated data back to one cell. Be sure to use <code>collapse</code> here and not <code>sep</code>, as we want 1 item returned, and <code>sep</code> would just stick spaces between items if there were more than one.</li>
+</ul>
 <div class="highlight"><pre class="chroma">##one example
 &gt; paste(unlist(
 +     text_tokens(noout1$Q27[4], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
@@ -284,10 +290,13 @@ Anyways! The context of this project is that we are developing a dictionary of w
 &gt; harm_TDM = as.matrix(TermDocumentMatrix(harm_corpus,
 +                               control = list(removePunctuation = TRUE,
 +                                              stopwords = TRUE)))</pre></div>
-<p>The <code>Corpus</code> step simply creates a big list of all the &ldquo;documents&rdquo; (here, each participant is treated as a separate document, which is what I want) from a Vector, rather than opening separate documents in a file. The <code>TermDocumentMatrix</code> function creates a giant matrix wherein:
-- Terms (words) are <em>rows</em>
-- Documents (participants) are <em>columns</em>
-- Each row, column combination stores the number of times a term appeared in each document.</p>
+<p>The <code>Corpus</code> step simply creates a big list of all the &ldquo;documents&rdquo; (here, each participant is treated as a separate document, which is what I want) from a Vector, rather than opening separate documents in a file. The <code>TermDocumentMatrix</code> function creates a giant matrix wherein:</p>
+
+<ul>
+<li>Terms (words) are <em>rows</em></li>
+<li>Documents (participants) are <em>columns</em></li>
+<li>Each row, column combination stores the number of times a term appeared in each document.</li>
+</ul>
 
 <p>These can get real big, real fast, fyi. The nice thing about the <code>TermDocumentMatrix</code> function is that it handled the punction for me by using <code>removePunctuation = TRUE</code> and also dealt with the stop words. Stop words are things like <em>the, an, a, of</em> that are traditionally removed from these types of analyses that focus on content words over helper words.</p>
 <div class="highlight"><pre class="chroma">&gt; harm_TDM[1:6, 1:6]
@@ -318,7 +327,7 @@ Terms     1 2 3 4 5 6
 <div class="highlight"><pre class="chroma">&gt; harm_words = harm_freq$Word[harm_freq$percent &gt;=1]
 &gt; head(harm_words)
 [1] &#34;doctor&#34;  &#34;crimin&#34;  &#34;medicin&#34; &#34;health&#34;  &#34;mental&#34;  &#34;physic&#34; </pre></div>
-<p>First, I created a list of harm words that were mentioned at least 1% of the time. I use the transpose function <code>t()</code> to flip the dataset from rows as words, to columns as words to maintain &ldquo;tidy-ish&rdquo; data (i.e., each participant is their own row). Then I subsetting out the dataset to only be my top words:</p>
+<p>First, I created a list of harm words that were mentioned at least 1% of the time. I use the transpose function <code>t()</code> to flip the dataset from rows as words, to columns as words to maintain &ldquo;tidy-ish&rdquo; data (i.e., each participant is their own row). Then I subset out the dataset to only be my top words:</p>
 <div class="highlight"><pre class="chroma">&gt; harm_TDM = as.data.frame(t(harm_TDM))
 &gt; harm_TDM = harm_TDM[ , harm_words]
 &gt; harm_TDM[1:6, 1:6]
@@ -340,7 +349,7 @@ Terms     1 2 3 4 5 6
 4 R_3kMsBrEjwDtu5iJ     6 Independent      16      0      0
 5 R_swkbG8889YEOxoZ     3  Republican      14      0      0
 6 R_s682tzsz2YIkwJX    10    Democrat      17      0      0</pre></div>
-<p>So, now you too can create participant term-document matrices! In later posts, I&rsquo;ll show you how we are going to use this information to create an updated dictionary and examine if that dictionary relates to the Moral Foundations Questionnaire. This task will involve some correlations, but also a multi-trait multimethod analysis using <code>lavaan</code> so stay tuned if you are interested in structural equation modeling.</p>
+<p>So, now you too can create participant term-document matrices! In later posts, I&rsquo;ll show you how we are going to use this information to create an updated dictionary and examine if that dictionary relates to the Moral Foundations Questionnaire. This task will involve some correlations, but also a multi-trait multi-method analysis using <code>lavaan</code> so stay tuned if you are interested in structural equation modeling.</p>
 
       </article>
 
