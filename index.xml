@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://doomlab.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mediation Moderation Workshop</title>
+      <link>https://doomlab.github.io/post/mediation-moderation-workshop/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/mediation-moderation-workshop/</guid>
+      <description>Hi everyone!
+I have been super swamped with a bunch of due dates that all hit in April. For a small brag, and I like making lists:
+ 9 revise and resubmits (four we&amp;rsquo;ve sent back, two have been accepted!) 4 conference posters and one invited talk 1 submitted grant (fingers crossed!) 2 invited papers 2 theses that I&amp;rsquo;m chairing, 2 that I&amp;rsquo;m on the committee for Data camp!  It&amp;rsquo;s been nuts, so haven&amp;rsquo;t left the house much or done much of anything else.</description>
+    </item>
     
     <item>
       <title>Working With Messy Text</title>
@@ -202,6 +213,15 @@ Undergraduate:
  Experimental Methods Basic Statistics (ANOVA, Regression) Advanced Statistics (Multivariate, Structural Equation Modeling) Nonparametric Statistics Cognition, Attention, Memory, Language  Courses Taught Undergraduate:
  Cognitive Psychology General Psychology Lab in Cognitive Psychology Statistics for Social Sciences Advanced Statistics Research Methods Psycholinguistics Freshman Honor&amp;rsquo;s Seminar  Graduate:
  Regression/Factor Analysis Multivariate Statistics Advanced Statistics Graduate Statistics Structural Equation Modeling Bayesian Methods Nonparametrics  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://doomlab.github.io/post/2018-04-10-mediation-moderation-workshop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/2018-04-10-mediation-moderation-workshop/</guid>
+      <description>Mediation Moderation Workshop       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
     <item>
