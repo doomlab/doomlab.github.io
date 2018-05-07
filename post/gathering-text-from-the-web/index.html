@@ -312,10 +312,15 @@ for (i in 1:length(urlslist)){
   NYtimesDF$Text[i] &lt;- paste(text_data, collapse = &#34;&#34;)
     } ##end for loop</pre></div>
 <p>For a good loop tutorial, see <a href="https://www.r-bloggers.com/how-to-write-the-first-for-loop-in-r/">here</a>. What this code does is loop over the url list you created at the start. For each separate post page it:</p>
-<div class="highlight"><pre class="chroma">1) pulls in the entire page by reading that one url, 
-2) pulls out just the story (again figured out with selector gadget how to just get the words instead of headlines this time), 
-3) uses `html_text` to get the text in our text section,
-4) saves the data for further use. Notice we used `paste` with the `collapse` argument to make sure it did not return a list but rather one giant cell of text. </pre></div>
+
+<p>1) pulls in the entire page by reading that one url,</p>
+
+<p>2) pulls out just the story (again figured out with selector gadget how to just get the words instead of headlines this time),</p>
+
+<p>3) uses <code>html_text</code> to get the text in our text section,</p>
+
+<p>4) saves the data for further use. Notice we used <code>paste</code> with the <code>collapse</code> argument to make sure it did not return a list but rather one giant cell of text.</p>
+
 <p>We ran this for <em>DAYS</em> (about twice a day for a month). Websites often use things like &ldquo;see more&rdquo; or &ldquo;older articles&rdquo; to collapse the site - or in the case of Fox (I think), when you scroll paste the current information, more is automatically added (like Facebook). This process saves loading time for the user. We couldn&rsquo;t really force that action to happen from this script, so we simply ran it multiple days to get newer data. The use of unique really allowed us to make sure we weren&rsquo;t getting duplicate data - and if I had to write this again, I would make sure we also pulled in the old data and filtered out more at the beginning rather than the end (but either way works). If you check out our whole script, you can see some other things we did to make this work more efficiently, such as adding all the sub-pages that Fox uses to post politics articles, as they don&rsquo;t all make it to the homepage (or it&rsquo;s going by so fast we weren&rsquo;t getting them even at twice a day).</p>
 
 <p>At the moment, we are still analyzing the data, but the analysis script in our github folder can give you a preview of the next blog post to come about working with text data. Enjoy!</p>

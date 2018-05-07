@@ -169,7 +169,7 @@ urlslist3F &lt;- paste(&quot;http://www.foxnews.com&quot;, urlslist3[grep(&quot;
 urlslist3N &lt;- urlslist3[grep(&quot;^http&quot;, urlslist3)]
 urlslist3 &lt;- c(urlslist3N, urlslist3F)
 urlslist3 &lt;- unique(urlslist3)</code></pre>
-<p>On Fox, we could find the urls in our attributes with http OR (that’s the pipe <code>|</code>) .html. On Breitbart, we had to use the folder name by doing <code>urlslist4 &lt;- urlslist4[grep(&quot;http|/big-government&quot;, urlslist4)]</code>. Then we created the absolute link by sticking the homepage on the front when necessary with the <code>paste</code> function. The <code>urlslist3N</code> here found all the ones with the http at the front <code>^</code> that we didn’t have to fix. Then we combined the fixed and nonfixed ones and found only the unique set.</p>
+<p>On Fox, we could find the urls in our attributes with http OR (that’s the pipe <code>|</code>) .html. On Breitbart, we had to use the folder name by doing <code>urlslist4 &lt;- urlslist4[grep(&quot;http|/big-government&quot;, urlslist4)]</code>. Then we created the absolute link by sticking the homepage on the front when necessary with the <code>paste</code> function. The <code>urlslist3N</code> here found all the ones with the http at the front <code>^</code> that we didn’t have to fix. Then we combined the fixed and non-fixed ones and found only the unique set.</p>
 <p>From there, we started a blank data frame for storing the final data. Then the real magic occurs.</p>
 <pre><code>##start a data frame
 NYtimesDF &lt;- matrix(NA, nrow = length(urlslist), ncol = 3)
@@ -194,11 +194,13 @@ for (i in 1:length(urlslist)){
   NYtimesDF$Text[i] &lt;- paste(text_data, collapse = &quot;&quot;)
     } ##end for loop</code></pre>
 <p>For a good loop tutorial, see <a href="https://www.r-bloggers.com/how-to-write-the-first-for-loop-in-r/">here</a>. What this code does is loop over the url list you created at the start. For each separate post page it:</p>
-<pre><code>1) pulls in the entire page by reading that one url, 
-2) pulls out just the story (again figured out with selector gadget how to just get the words instead of headlines this time), 
-3) uses `html_text` to get the text in our text section,
-4) saves the data for further use. Notice we used `paste` with the `collapse` argument to make sure it did not return a list but rather one giant cell of text. </code></pre>
-<p>We ran this for <em>DAYS</em> (about twice a day for a month). Websites often use things like “see more” or “older articles” to collaspe the site - or in the case of Fox (I think), when you scroll paste the current information, more is automatically added (like Facebook). This saves loading time for the user. We couldn’t really force that action to happen from this script, so we simply ran it multiple days to get newer data. The use of unique really allowed us to make sure we weren’t getting duplicate data - and if I had to write this again, I would make sure we also pulled in the old data and filtered out more at the beginning rather than the end (but either way works). If you check out our whole script, you can see some other things we did to make this work more efficiently, such as adding all the sub-pages that Fox uses to post politics articles, as they don’t all make it to the homepage (or it’s going by so fast we weren’t getting them even at twice a day).</p>
+<ol style="list-style-type: decimal">
+<li><p>pulls in the entire page by reading that one url,</p></li>
+<li><p>pulls out just the story (again figured out with selector gadget how to just get the words instead of headlines this time),</p></li>
+<li><p>uses <code>html_text</code> to get the text in our text section,</p></li>
+<li><p>saves the data for further use. Notice we used <code>paste</code> with the <code>collapse</code> argument to make sure it did not return a list but rather one giant cell of text.</p></li>
+</ol>
+<p>We ran this for <em>DAYS</em> (about twice a day for a month). Websites often use things like “see more” or “older articles” to collapse the site - or in the case of Fox (I think), when you scroll paste the current information, more is automatically added (like Facebook). This process saves loading time for the user. We couldn’t really force that action to happen from this script, so we simply ran it multiple days to get newer data. The use of unique really allowed us to make sure we weren’t getting duplicate data - and if I had to write this again, I would make sure we also pulled in the old data and filtered out more at the beginning rather than the end (but either way works). If you check out our whole script, you can see some other things we did to make this work more efficiently, such as adding all the sub-pages that Fox uses to post politics articles, as they don’t all make it to the homepage (or it’s going by so fast we weren’t getting them even at twice a day).</p>
 <p>At the moment, we are still analyzing the data, but the analysis script in our github folder can give you a preview of the next blog post to come about working with text data. Enjoy!</p>
 
 
