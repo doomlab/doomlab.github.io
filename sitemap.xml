@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://doomlab.github.io/post/gathering-text-from-the-web/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/post/new-publication-texting/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
   </url>
@@ -109,6 +114,10 @@
   </url>
   
   <url>
+    <loc>https://doomlab.github.io/post/2018-05-07-gathering-text-from-the-web/</loc>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/page/about/</loc>
   </url>
   
@@ -133,7 +142,7 @@
   
   <url>
     <loc>https://doomlab.github.io/</loc>
-    <lastmod>2018-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,7 +195,7 @@
   
   <url>
     <loc>https://doomlab.github.io/post/</loc>
-    <lastmod>2018-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -215,20 +224,26 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/research/</loc>
-    <lastmod>2018-04-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://doomlab.github.io/tags/research/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://doomlab.github.io/categories/research/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/tags/rstudio/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/tags/rvest/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -263,20 +278,20 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/teaching/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://doomlab.github.io/tags/teaching/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://doomlab.github.io/categories/teaching/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/tags/text-processing/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

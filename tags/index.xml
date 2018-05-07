@@ -132,9 +132,18 @@
     <item>
       <title>Rstudio</title>
       <link>https://doomlab.github.io/tags/rstudio/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/rstudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rvest</title>
+      <link>https://doomlab.github.io/tags/rvest/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/tags/rvest/</guid>
       <description></description>
     </item>
     
@@ -186,7 +195,7 @@
     <item>
       <title>Text Processing</title>
       <link>https://doomlab.github.io/tags/text-processing/</link>
-      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/tags/text-processing/</guid>
       <description></description>
