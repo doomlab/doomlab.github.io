@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://doomlab.github.io/tags/open-science/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Current Publications with Papaja</title>
+      <link>https://doomlab.github.io/post/current-publications-with-papaja/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/current-publications-with-papaja/</guid>
+      <description>Heyo! Frederik, the author of papaja requested that we update him with papers written with his package. I was like, oh man, like the whole lab?! So, I decided that I could probably make it easy by making a table here. Obviously, this table is current at the moment, as I hope many of the ones under review will get accepted, and I have several others that we will start writing soon.</description>
+    </item>
     
     <item>
       <title>New Publication: Texting</title>
