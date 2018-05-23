@@ -95,10 +95,6 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/page/shiny/</loc>
-  </url>
-  
-  <url>
     <loc>https://doomlab.github.io/page/stats/</loc>
   </url>
   
@@ -111,19 +107,7 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/post/2018-05-21-current-publications-with-papaja/</loc>
-  </url>
-  
-  <url>
     <loc>https://doomlab.github.io/page/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://doomlab.github.io/page/cv/</loc>
-  </url>
-  
-  <url>
-    <loc>https://doomlab.github.io/page/lab/</loc>
   </url>
   
   <url>
@@ -221,13 +205,13 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/tags/research/</loc>
+    <loc>https://doomlab.github.io/categories/research/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/research/</loc>
+    <loc>https://doomlab.github.io/tags/research/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -275,14 +259,14 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/tags/teaching/</loc>
-    <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+    <loc>https://doomlab.github.io/categories/teaching/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/teaching/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <loc>https://doomlab.github.io/tags/teaching/</loc>
+    <lastmod>2018-02-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
