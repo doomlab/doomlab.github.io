@@ -271,72 +271,12 @@ Undergraduate:
     
     <item>
       <title></title>
-      <link>https://doomlab.github.io/shiny/altnhst/</link>
+      <link>https://doomlab.github.io/shiny/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/altnhst/</guid>
-      <description>  Alternatives to NHST Shiny App 
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://doomlab.github.io/shiny/bias1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/bias1/</guid>
-      <description>  Effect Size Bias Part 1 Shiny App 
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://doomlab.github.io/shiny/double_words/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/double_words/</guid>
-      <description>  Word Pairs Shiny App 
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://doomlab.github.io/shiny/lab_table/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/lab_table/</guid>
-      <description>  LAB Shiny App 
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://doomlab.github.io/shiny/lq-screen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/lq-screen/</guid>
-      <description>  Low Quality Data Screening Shiny App 
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://doomlab.github.io/shiny/mote/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/mote/</guid>
-      <description>  Measure of the Effect Shiny App 
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://doomlab.github.io/shiny/single_words/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/shiny/single_words/</guid>
-      <description>  Single Words Shiny App 
- </description>
+      <guid>https://doomlab.github.io/shiny/</guid>
+      <description>Shiny Apps Each Shiny application is listed below, along with any relevant publication information.
+MOTE: Magnitude of the Effect  Shiny App GitHub Research Paper This app allows you to calculate many effect sizes and their confidence intervals. We have included mean differences and variance overlap effect sizes, their formulas, easy to copy output in APA style, help videos on how to use our app, and code for R users.</description>
     </item>
     
     <item>
