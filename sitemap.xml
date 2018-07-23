@@ -113,7 +113,31 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/shiny/</loc>
+    <loc>https://doomlab.github.io/shiny/altnhst/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/bias1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/double_words/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/lab_table/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/lq-screen/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/mote/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/single_words/</loc>
   </url>
   
   <url>
@@ -265,6 +289,11 @@
   <url>
     <loc>https://doomlab.github.io/tags/sem/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/</loc>
     <priority>0</priority>
   </url>
   
