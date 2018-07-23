@@ -117,6 +117,10 @@
   </url>
   
   <url>
+    <loc>https://doomlab.github.io/shiny/altnhst/</loc>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/page/about/</loc>
   </url>
   
@@ -265,6 +269,11 @@
   <url>
     <loc>https://doomlab.github.io/tags/sem/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/shiny/</loc>
     <priority>0</priority>
   </url>
   
