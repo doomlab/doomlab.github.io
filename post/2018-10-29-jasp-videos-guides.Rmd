@@ -1,0 +1,41 @@
+---
+title: JASP Videos + Guides
+author: Erin M. Buchanan
+date: '2018-10-29'
+slug: jasp-videos-guides
+categories:
+  - teaching
+tags:
+  - JASP
+  - statistics
+  - guides
+  - how-to
+  - youtube
+  - videos
+  - datacamp
+  - data camp
+subtitle: ''
+---
+
+Hey everybody! I am back and finally getting to videos again. I hesistate to say "it's been crazy!" because I feel like that's always a thing that academics say, but I will say I've had a lot of life going on, and I am finally getting back to a normal amount of crazy. 
+
+I've decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer. JASP is [Just Another Statistical Program](https://jasp-stats.org/), which an alternative to coding in *R* or using paid programs like *SPSS*. Reasons it is awesome:
+
+- Totally free! Totally!
+- Very easy to use, so much so that our undergraduate program is now exclusively using it for statistics courses.
+- Saves analyses steps + data into one .jasp file - this means I can recreate your work or if you are a student, your instructor can help you with the buttons you clicked. 
+- Includes most simple analyses you might use with parametric statistics, as well as plug in for SEM and Bayesian statistics.
+- It gets better all the time!
+
+Over the summer, we created how-to guides to go with our course redesign, all of which can be found on our [OSF](https://osf.io/t56kg/) page. I'm going back and adding videos to those to help with people who need it to be more visual and step by step. I've got the three I have done linked below, and they will be released on youtube throughout the week. Come back soon for more updates!
+
+1 - [Installing JASP](https://osf.io/rquv8/) - [Video](https://youtu.be/sYw8eG8hoY8)
+
+Useful Links:
+- https://jasp-stats.org/
+- https://jasp-stats.org/download/
+- https://jasp-stats.org/getting-started/
+
+1.5 - [Using RollApp with JASP](https://osf.io/z24ey/) - [Video](https://youtu.be/5dLPk9O4g6A)
+
+2 - [Using JASP and Histograms](https://osf.io/dytgf/) - [Video](https://youtu.be/yN8HU7Suq6Y)
