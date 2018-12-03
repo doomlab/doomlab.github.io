@@ -18,7 +18,7 @@ I was recently talking to a colleague about how utterly terrible my students wer
 First, I took all the times I had taught memory and cognition post Ph.D. (because I did teach it some in graduate school) and dumped the final scores into an excel sheet. Only one semesters worth of grades was lost in the ether but I have nearly 500 scores, so I think we'll get the general picture. 
 
 Here's a histogram of the data:
-```{r hist, include = T}
+```{r hist, include = T, warning=F}
 library(readxl)
 master = read_excel("cognition_grades.xlsx")
 library(ggplot2)
@@ -31,7 +31,7 @@ ggplot(master, aes(Score)) +
 In general, it's a pretty bimodal distribution with lots of good grades. Maybe I'm too nice - I do give lots of easy 0/100 grades for taking classic cognitive experiments, but consistently the exams are worth 50-70% of a student's grade. 
 
 Let's see this semester's distribution (with the caveat that it's not over yet, but grades don't tend to change that much at the end with one test left):
-```{r fall_grades, include=T}
+```{r fall_grades, include=T, warning=F}
 ggplot(master[master$Year == "2018.3" , ], aes(Score)) + 
   theme_bw() +
   geom_histogram(fill = "white", color = "black") +
@@ -48,8 +48,8 @@ mean(master$Score[master$Year != "2018.3"])
 mean(master$Score[master$Year == "2018.3"])
 ```
 
-78 versus 68 is a 10 point differences, so my thoughts are somewhat supported here. We can also bin the scores and see if there is a difference across what would be considered traditional ABCDF bins:
-```{r chisq, include=T}
+83 versus 68 is a nearly 15 point difference, so my thoughts are somewhat supported here. We can also bin the scores and see if there is a difference across what would be considered traditional ABCDF bins:
+```{r chisq, include=T, warning=F}
 master$Letter = NA
 master$Letter[master$Score < 60] = "F"
 master$Letter[master$Score > 60 & master$Score < 70] = "D"
@@ -68,7 +68,7 @@ chisq.test(master$tempyear, master$Letter)$residuals
 The table denotes what the histograms were telling us - this distribution is much more uniform than my normal distribution. The chisquare test tells me (one to be careful of small samples!) but also that the scores appear different. The residuals indicate we see much more Ds and Fs than normal. 
 
 So what is going on? I've actually coded these with a couple more variables, to help determine what might be influencing the data. First, a visualization across years (and I chopped it off at 50 to make this graph work):
-```{r yearly, include=T}
+```{r yearly, include=T, warning=F}
 ggplot(master, aes(Score)) + 
   geom_histogram() +
   facet_wrap( ~ Year, ncol=4) + 
@@ -82,7 +82,7 @@ ggplot(master, aes(Score)) +
 ```
 
 It's hard to compare completely because class size is pretty different from some of these, but I've identified two variables that might be a culprit (other than student factors). First, I've taught both face to face and completely online. Second, I've used multiple choice and essay style exams. Let's see what happens in each of those groups (not completely crossed unfortunately ... I think I've only used the essay tests online, although some of the early years might have been a mixed short answer and multiple choice test, it's been 10 years and I can't quite remember).
-```{r byessay, include=T}
+```{r byessay, include=T, warning=F}
 #Split by test type
 ggplot(master, aes(Score)) + 
   geom_histogram() +

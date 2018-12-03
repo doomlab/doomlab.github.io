@@ -222,7 +222,7 @@ I was recently talking to a colleague about how utterly terrible my students wer
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 6 minutes (1151 words)
+  <i class="fa fa-clock-o"></i> 6 minutes (1130 words)
   
   
 </span>
@@ -273,7 +273,7 @@ mean(master$Score[master$Year != &quot;2018.3&quot;])</code></pre>
 <pre class="r"><code>#this semester
 mean(master$Score[master$Year == &quot;2018.3&quot;])</code></pre>
 <pre><code>## [1] 67.72747</code></pre>
-<p>78 versus 68 is a 10 point differences, so my thoughts are somewhat supported here. We can also bin the scores and see if there is a difference across what would be considered traditional ABCDF bins:</p>
+<p>83 versus 68 is a nearly 15 point difference, so my thoughts are somewhat supported here. We can also bin the scores and see if there is a difference across what would be considered traditional ABCDF bins:</p>
 <pre class="r"><code>master$Letter = NA
 master$Letter[master$Score &lt; 60] = &quot;F&quot;
 master$Letter[master$Score &gt; 60 &amp; master$Score &lt; 70] = &quot;D&quot;
@@ -288,16 +288,12 @@ table(master$tempyear, master$Letter)</code></pre>
 ##   FALSE 257 197  84  26  35
 ##   TRUE    4   7   5   4   8</code></pre>
 <pre class="r"><code>chisq.test(master$tempyear, master$Letter)</code></pre>
-<pre><code>## Warning in chisq.test(master$tempyear, master$Letter): Chi-squared
-## approximation may be incorrect</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
 ## 
 ## data:  master$tempyear and master$Letter
 ## X-squared = 31.73, df = 4, p-value = 2.172e-06</code></pre>
 <pre class="r"><code>chisq.test(master$tempyear, master$Letter)$residuals</code></pre>
-<pre><code>## Warning in chisq.test(master$tempyear, master$Letter): Chi-squared
-## approximation may be incorrect</code></pre>
 <pre><code>##                master$Letter
 ## master$tempyear          A          B          C          D          F
 ##           FALSE  0.4848125  0.1511463 -0.1112164 -0.4969220 -0.9485746
