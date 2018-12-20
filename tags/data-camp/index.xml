@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Camp on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/data-camp/</link>
+    <link>/tags/data-camp/</link>
     <description>Recent content in Data Camp on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/data-camp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/data-camp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JASP Videos &#43; Guides</title>
-      <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
+      <link>/post/jasp-videos-guides/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
+      <guid>/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
     </item>
     
     <item>
       <title>Quick and Dirty Categorical lavaan</title>
-      <link>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</link>
+      <link>/post/quick-and-dirty-categorical-lavaan/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</guid>
+      <guid>/post/quick-and-dirty-categorical-lavaan/</guid>
       <description>I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
 You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&amp;rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</description>
     </item>
