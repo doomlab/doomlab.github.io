@@ -14,7 +14,7 @@ subtitle: ''
 
 Hi guys! I have finally done it! I updated my CV with Rmarkdown using [Steve's Markdown Templates](https://github.com/svmiller/svm-r-markdown-templates). I was tempted to use the new `vitae` package, but I had already gone down this path before that came out, just finally getting back to it. 
 
-Link to the entire CV folder for you to use/view do stuff with: [CV](https://github.com/doomlab/doomlab.github.io/tree/master/cv). 
+Link to the entire CV folder for you to use/view do stuff with: [CV](https://github.com/doomlab/doomlab.github.io/tree/master/cv). Please ignore the html files in that folder, it does "knit" automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part. 
 
 I decided to do my publications + presentations as an Excel database type file, rather than using a BibTex file. Partially because I dislike BibTex type things, and partially because I like being able to update papers and such as part of a R script (with a little bit of manual control). The slowest part of this process was putting all my current pubs and presentations into the Excel document with my coding system. Let's look at it:
 
@@ -23,9 +23,9 @@ library(readxl)
 curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
 names(curated)
 ```
-So, I have coded "real" dois (digital object identifiers, like the ones from journals), the title of the paper/prez, the Open Science Framework doi, authors, journal/conference information, volume, issue, pages, and year for citation purposes. Next, I included information from Google Scholar (pubid) and ORCID (put-code). These are useful for updating information, see below. The last was hand coded pubtype (package, article, presentation), pubstatus (published, preprint), authortype (none, under for undergraduate authors, grad for graduate authors, and both), category (psycho and stats), and link for finding the paper or presentation (open science FTW!). I added these categories to be able to format my CV with different groupings based on the current status of a paper, the type of paper (psychological/cognitive science versus statistics), and include a marker of what type of authors there are (hint: loads of students working with me). I use these columns to dynamically create my CV and some of the website pages, since this information updates somewhat frequently. You can view that by looking at the cv markdown, which I can blog about another time.
+So, I have coded "real" dois (digital object identifiers, like the ones from journals), the title of the paper/prez, the Open Science Framework doi, authors, journal/conference information, volume, issue, pages, and year for citation purposes. Next, I included information from Google Scholar (`pubid`) and ORCID (`put-code`). These are useful for updating information, see below. The last was hand coded pubtype (package, article, presentation), pubstatus (published, preprint), authortype (none, under for undergraduate authors, grad for graduate authors, and both), category (psycho and stats), and link for finding the paper or presentation (open science FTW!). I added these categories to be able to format my CV with different groupings based on the current status of a paper, the type of paper (psychological/cognitive science versus statistics), and include a marker of what type of authors there are (hint: loads of students working with me). I use these columns to dynamically create my CV and some of the website pages, since this information updates somewhat frequently. You can view that by looking at the cv markdown, which I can blog about another time.
 
-This post is about how to update your CV with Scholar and ORCID - but using these packages directly gives you a LOT of nonsense (mostly because I don't spend all data updating the information to be correct on either of these sites, nor do I control what the heck CrossRef/doi.org does when they input the information for dois). Once you have at least one thing entered into an file, you can use this script to update your information, and see what is out there on these two big indexing sites. You would need accounts with Google/ORCID, and I highly recommend both of them to scholars. I have my ORCID to cross reference with CrossRef to add/upate entries, and Google Scholar automatically adds all my OSF pre-prints to my site. They also combine references when it's clear they are the same one (like an OSF page for a project, the journal page for the same paper, etc.).
+This post is about how to update your CV with Scholar and ORCID - but using these packages directly gives you a LOT of nonsense (mostly because I don't spend all data updating the information to be correct on either of these sites, nor do I control what the heck CrossRef/doi.org does when they input the information for dois). Once you have at least one thing entered into an file, you can use this script to update your information, and see what is out there on these two big indexing sites. You would need accounts with Google/ORCID, and I highly recommend both of them to scholars. I have my ORCID to cross reference with CrossRef to add/update entries, and Google Scholar automatically adds all my OSF pre-prints to my site. They also combine references when it's clear they are the same one (like an OSF page for a project, the journal page for the same paper, etc.).
 
 Start by importing your information from each site:
 
@@ -116,15 +116,15 @@ curated_check$`put-code` = newrows$`put-code`
 #write.csv(curated_check, "check_these.csv", row.names = F)
 ```
 
-`setdiff` takes the ones that are in the final dataset (f) but aren't in the curated dataset (c). Then I grabbed the rows in the final dataset that were in the "haven't seen these yet" pile using `%in`. `newrows` is a list of information found in both of these services that aren't in your CV. I use the word "new" loosely here. Let's see what it found, as I've just updated my cv.
+`setdiff` takes the ones that are in the final dataset (f) but aren't in the curated dataset (c). Then I grabbed the rows in the final dataset that were in the "haven't seen these yet" pile using `%in%`. `newrows` is a list of information found in both of these services that aren't in your CV. I use the word "new" loosely here. Let's see what it found, as I've just updated my cv.
 
 ```{r}
 newrows$title
 ```
 
-These three are 1) OSF page for an Accelerated CREP I am on, but I haven't added it yet to my CV because it's a bit early to be sharing (i.e., waiting until there's more of real paper there), 2) a "preprint" project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA's website, which I don't have access to. Probably a doi for a conference presentation, but I don't really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would mostly get ignored as things not to print. 
+These three are 1) OSF page for an Accelerated CREP I am on, but I haven't added it yet to my CV because it's a bit early to be sharing (i.e., waiting until there's more of real paper there), 2) a "preprint" project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA's website, which I don't have access to. Probably a doi for a conference presentation, but I don't really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would get ignored as things not to print. 
 
-This next part is mostly to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that's not really my thing to track (however, for some folks working at insitutions that do care, you could update that over time using something like this code).
+This next part is set up to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that's not really my thing to track (however, for some folks working at institutions that do care, you could update that over time using something like this code).
 
 ```{r}
 #update any X or XX that were place holders for the pages
@@ -162,7 +162,7 @@ Graduate school was not the smoothest adventure for me, which is a story best le
 
 A more important graph for me (if we focus solely again on publications) is this:
 
-```{r}
+```{r graph2, message = F}
 curated$authortype = factor(curated$authortype, 
                             levels = c("none", "under", "grad", "both"),
                             labels = c("Just PhDs", "Undergraduates", "Graduates", "Both"))

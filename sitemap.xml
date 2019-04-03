@@ -113,7 +113,15 @@
   </url>
   
   <url>
+    <loc>https://doomlab.github.io/page/res_pres_old/</loc>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/page/res_pubs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://doomlab.github.io/page/res_pubs_old/</loc>
   </url>
   
   <url>
@@ -316,13 +324,13 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/research/</loc>
+    <loc>https://doomlab.github.io/tags/research/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/tags/research/</loc>
+    <loc>https://doomlab.github.io/categories/research/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -376,13 +384,13 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/teaching/</loc>
+    <loc>https://doomlab.github.io/tags/teaching/</loc>
     <lastmod>2018-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/tags/teaching/</loc>
+    <loc>https://doomlab.github.io/categories/teaching/</loc>
     <lastmod>2018-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

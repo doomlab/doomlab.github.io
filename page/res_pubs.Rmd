@@ -1,0 +1,119 @@
+---
+comments: false
+---
+
+## Publications
+
+```{r print-pubs, include = FALSE}
+library(readxl)
+curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
+  
+  curated$citation = NA
+  
+  for (i in 1:nrow(curated)){
+    
+    #deal with author type
+    if (curated$authortype[i] == "grad"){authortype = "+"}
+    if (curated$authortype[i] == "under"){authortype = "*"}
+    if (curated$authortype[i] == "both"){authortype = "$"}
+    if (curated$authortype[i] == "none"){authortype = ""}
+    
+    #deal with dois
+    if (!is.na(curated$doi[i])){
+      doi = paste("doi: ", curated$doi[i], " ", sep = "")} else {doi = " "}
+    
+    #deal with links
+    if(!is.na(curated$link[i])){
+      curated$link2[i] = paste("[Link](", curated$link[i], ") ", sep = "")} else {curated$link2[i] = "NA"}
+    
+    #articles
+    if(curated$pubtype[i] == "article"){
+      
+      #published articles
+      if(curated$pubstatus[i] == "published"){
+      
+      curated$citation[i] = paste(authortype, #type of author
+                             curated$author[i], " (", #author names
+                             curated$year[i], "). ", #year
+                             curated$title[i], ". ", #title
+                             curated$journal[i], ", ", #journal
+                             curated$volume[i], ", ", #volume
+                             curated$pages[i], ". ", #pages
+                             doi,
+                             sep = "")
+      } #close published
+      
+      #preprints
+      if(curated$pubstatus[i] == "preprint"){
+        
+        curated$citation[i] = paste(authortype, #type of author
+                               curated$author[i], " (", #author names
+                               curated$year[i], "). ", #year
+                               curated$title[i], ". ", #title
+                               doi,
+                               sep = "")
+      } #close preprint
+      
+    } #close articles
+    
+    if(curated$pubtype[i] == "present"){
+      
+      curated$citation[i] = paste(authortype, #type of author
+                             curated$author[i], " (", #author names
+                             curated$year[i], "). ", #year
+                             curated$title[i], ". ", #title
+                             curated$journal[i], ". ", #conference information
+                             doi, #doi
+                             sep = "")
+      
+    }
+    
+    if(curated$pubtype[i] == "package"){
+      
+      curated$citation[i] = paste(authortype, #type of author
+                             curated$author[i], " (", #author names
+                             curated$year[i], "). ", #year
+                             curated$title[i], ". ", #title
+                             curated$journal[i], ". ", #conference information
+                             doi, 
+                             sep = "")
+      
+    }
+    
+  }
+  
+  curated = curated[order(curated$year, decreasing = T), ]
+  curated$citation = gsub("\\", "", curated$citation, fixed = T)
+
+library(knitr)
+library(kableExtra)
+```
+
+### Statistical Packages & Tools
+
+*Note:* \* indicate undergraduate authors, + graduate authors, $ both undergraduate and graduate
+
+`r kable(curated[ curated$pubtype == "package", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+
+See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny apps and their help guides. 
+
+### Journal Articles
+
+#### Psycholinguistics, Cognitive Science
+
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+
+#### Applied Statistics
+
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+
+### Preprints
+
+#### Psycholinguistics, Cognitive Science
+
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "preprint" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+
+
+#### Applied Statistics
+
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "preprint" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
