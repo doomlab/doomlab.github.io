@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teaching on Dr. Erin Buchanan</title>
-    <link>/categories/teaching/</link>
+    <link>https://doomlab.github.io/categories/teaching/</link>
     <description>Recent content in Teaching on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Sun, 02 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/teaching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/categories/teaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Intuitions about Grades</title>
-      <link>/post/intuitions-about-grades/</link>
+      <link>https://doomlab.github.io/post/intuitions-about-grades/</link>
       <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/intuitions-about-grades/</guid>
+      <guid>https://doomlab.github.io/post/intuitions-about-grades/</guid>
       <description>Are my intuitions about grades correct?
 I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.
 First, I took all the times I had taught memory and cognition post Ph.</description>
@@ -25,30 +25,30 @@ First, I took all the times I had taught memory and cognition post Ph.</descript
     
     <item>
       <title>JASP Videos &#43; Guides</title>
-      <link>/post/jasp-videos-guides/</link>
+      <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/jasp-videos-guides/</guid>
+      <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
     </item>
     
     <item>
       <title>Quick and Dirty Categorical lavaan</title>
-      <link>/post/quick-and-dirty-categorical-lavaan/</link>
+      <link>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/quick-and-dirty-categorical-lavaan/</guid>
+      <guid>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</guid>
       <description>I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
 You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&amp;rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</description>
     </item>
     
     <item>
       <title>Mediation Moderation Workshop</title>
-      <link>/post/mediation-moderation-workshop/</link>
+      <link>https://doomlab.github.io/post/mediation-moderation-workshop/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/mediation-moderation-workshop/</guid>
+      <guid>https://doomlab.github.io/post/mediation-moderation-workshop/</guid>
       <description>Hi everyone!
 I have been super swamped with a bunch of due dates that all hit in April. For a small brag, and I like making lists:
  9 revise and resubmits (four we&amp;rsquo;ve sent back, two have been accepted!) 4 conference posters and one invited talk 1 submitted grant (fingers crossed!) 2 invited papers 2 theses that I&amp;rsquo;m chairing, 2 that I&amp;rsquo;m on the committee for Data camp!  It&amp;rsquo;s been nuts, so haven&amp;rsquo;t left the house much or done much of anything else.</description>
@@ -56,10 +56,10 @@ I have been super swamped with a bunch of due dates that all hit in April. For a
     
     <item>
       <title>Teaching Statement</title>
-      <link>/post/teaching-statement/</link>
+      <link>https://doomlab.github.io/post/teaching-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/teaching-statement/</guid>
+      <guid>https://doomlab.github.io/post/teaching-statement/</guid>
       <description>Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.</description>
     </item>
     

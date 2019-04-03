@@ -2,32 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstudio on Dr. Erin Buchanan</title>
-    <link>/tags/rstudio/</link>
+    <link>https://doomlab.github.io/tags/rstudio/</link>
     <description>Recent content in Rstudio on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Mon, 07 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Updating Your CV with Packages</title>
+      <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
+      <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&amp;rsquo;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
+Link to the entire CV folder for you to use/view do stuff with: CV.
+I decided to do my publications + presentations as an Excel database type file, rather than using a BibTex file.</description>
+    </item>
+    
+    <item>
       <title>Gathering Text from the Web</title>
-      <link>/post/gathering-text-from-the-web/</link>
+      <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/gathering-text-from-the-web/</guid>
+      <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
       <description>Hi everyone! I don&amp;rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
     </item>
     
     <item>
       <title>Mediation Moderation Workshop</title>
-      <link>/post/mediation-moderation-workshop/</link>
+      <link>https://doomlab.github.io/post/mediation-moderation-workshop/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/mediation-moderation-workshop/</guid>
+      <guid>https://doomlab.github.io/post/mediation-moderation-workshop/</guid>
       <description>Hi everyone!
 I have been super swamped with a bunch of due dates that all hit in April. For a small brag, and I like making lists:
  9 revise and resubmits (four we&amp;rsquo;ve sent back, two have been accepted!) 4 conference posters and one invited talk 1 submitted grant (fingers crossed!) 2 invited papers 2 theses that I&amp;rsquo;m chairing, 2 that I&amp;rsquo;m on the committee for Data camp!  It&amp;rsquo;s been nuts, so haven&amp;rsquo;t left the house much or done much of anything else.</description>
@@ -35,20 +46,20 @@ I have been super swamped with a bunch of due dates that all hit in April. For a
     
     <item>
       <title>Working With Messy Text</title>
-      <link>/post/working-with-messy-text/</link>
+      <link>https://doomlab.github.io/post/working-with-messy-text/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/working-with-messy-text/</guid>
+      <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
       <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&amp;rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&amp;rsquo;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>/post/new-publication-detect-low-quality-data/</link>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-detect-low-quality-data/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>

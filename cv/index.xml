@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cvs on Dr. Erin Buchanan</title>
+    <link>https://doomlab.github.io/cv/</link>
+    <description>Recent content in Cvs on Dr. Erin Buchanan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
+    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
+    
+	<atom:link href="https://doomlab.github.io/cv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CV</title>
+      <link>https://doomlab.github.io/cv/cv_markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/cv/cv_markdown/</guid>
+      <description>Education Ph.D., Experimental Cognitive Psychology, Texas Tech University 2008
+Dissertation: What’s the difference: A study on semantic and associative priming and blocking.
+Committee: Drs. William S. Maki (chair), Patricia R. Delucia, Ruth Maki, Roman Taraban
+M.A., Experimental Psychology, Texas Tech University 2006
+Thesis: Feature binding: Not quite so pre-attentive
+Committee: Drs. M. Kathryn Bleckley (chair), William S. Maki
+B.S., Psychology, Texas A&amp;amp;M University 2004
+ Employment Harrisburg University of Science and Technology, Analytics Full Time</description>
+    </item>
+    
+  </channel>
+</rss>

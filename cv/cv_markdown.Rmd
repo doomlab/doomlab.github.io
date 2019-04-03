@@ -1,0 +1,589 @@
+---
+output: 
+  pdf_document:
+    latex_engine: pdflatex
+    template: svm-latex-cv.tex
+geometry: margin=1in
+
+title: "CV"
+author: Erin M. Buchanan
+
+jobtitle: "Professor of Cognitive Analytics"
+address: "Harrisburg University of Science and Technology · 326 Market St. · Harrisburg, PA 17101"
+fontawesome: yes
+email: ebuchanan@harrisburgu.edu
+github: doomlab
+web: www.aggieerin.com
+updated: no
+
+keywords: R Markdown, academic CV, template
+
+fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 11pt
+linkcolor: blue
+urlcolor: blue
+---
+
+# Education
+
+Ph.D., Experimental Cognitive Psychology, Texas Tech University \hfill 2008
+
+\quad\quad Dissertation: *What's the difference: A study on semantic and associative priming and blocking.*
+
+\quad\quad Committee: Drs. William S. Maki (chair), Patricia R. Delucia, Ruth Maki, Roman Taraban	
+
+M.A., Experimental Psychology, Texas Tech University \hfill 2006
+
+\quad\quad Thesis: *Feature binding: Not quite so pre-attentive*
+
+\quad\quad Committee: Drs. M. Kathryn Bleckley (chair), William S. Maki			
+
+B.S., Psychology, Texas A&M University \hfill 2004
+
+# Employment
+
+Harrisburg University of Science and Technology, Analytics \hfill Full Time
+
+\quad\quad Professor of Cognitive Analytics \hfill 2019-Current
+
+DataCamp Instructor \hfill Part-Time
+
+\quad\quad Structural Equation Modeling in R [Link](https://www.datacamp.com/courses/structural-equation-modeling-with-lavaan-in-r) \hfill 2018-Current
+
+Missouri State University, Department of Psychology \hfill Full Time
+
+\quad\quad Associate Professor of Quantitative Psychology \hfill 2014-2018
+
+\quad\quad Assistant Professor of Quantitative Psychology \hfill 2010-2014
+
+University of Mississippi, Department of Psychology \hfill Full Time
+
+\quad\quad Instructional Assistant Professor of Psychology \hfill 2008-2010
+
+Texas Tech University, Department of Psychology \hfill Part Time
+
+\quad\quad Graduate Part-Time Instructor \hfill 2005-2008
+
+\quad\quad Graduate Teaching Assistant \hfill 2004-2005
+
+Texas A&M University, Student Learning Center \hfill Part Time
+
+\quad\quad Supplemental Instruction Leader for Sociology and Psychology \hfill 2002-2004
+
+# Honors and Awards
+
+NACADA Academic Advising Excellence Faculty Advisor Award \hfill 2016
+
+Nominated for the Missouri State Master Online Recognition Award \hfill 2016
+
+Curtis P. Lawrence Award for Excellence in Advising Recipient, 
+
+\quad\quad Missouri State University \hfill 2016
+
+Missouri State University Honors College Curtis P. Lawrence Teaching Award Recipient \hfill 2015
+
+Missouri State University Honors College Research Award Recipient \hfill 2014
+
+Nominated for the Missouri State University Foundation Award in Research \hfill 2014; 2015 
+
+Nominated for the Curtis P. Lawrence Award for Excellence in Advising, 
+
+\quad\quad Missouri State University \hfill 2012
+
+Nominated for Frist Teaching Award, University of Mississippi \hfill 2009
+
+Teaching Academy's Departmental Excellence in Teaching Award \hfill 2007
+
+First place in the 5th Annual Graduate Student Poster Competition \hfill 2006
+
+Department of Psychology Travel Grant \hfill 2005-2007
+
+Graduate School Travel Grant \hfill 2005-2007
+
+Department of Psychology Competitive Scholarship \hfill 2004-2006
+
+# Research
+
+### Links
+
+[Google Scholar](https://scholar.google.com/citations?user=ReD-s38AAAAJ&hl=en)
+
+[OrcID](https://orcid.org/0000-0002-9689-4189)
+
+[General CV, Research](https://www.aggieerin.com)
+
+[Computational Linguistics](https://www.wordnorms.com)
+
+[Statistics Tools](http://statstools.com/)
+
+[YouTube Channel](https://www.youtube.com/channel/UCMdihazndR0f9XBoSXWqnYg?view_as=subscriber)
+
+[GitHub](https://www.github.com/doomlab)
+
+[Open Science Framework](https://osf.io/4ivpc)
+
+[Twitter](https://www.twitter.com/aggieerin)
+
+### Interests
+
+## Psycholinguistics and memory 
+Semantic memory, associative memory, priming of memory types, normed databases, linguistic variables, memory maps, judgments of memory, language statistics, working memory, individual differences.
+
+## Statistics
+Alternatives to null hypothesis testing, effect sizes and confidence intervals, multigroup confirmatory factor analysis, item response theory, Bayesian inference statistics, hierarchical linear modeling, exploratory factor analysis, statistical reporting
+
+### Experience
+
+The DOOM Lab \hfill 2019-Current
+
+\quad\quad Harrisburg University of Science and Technology, Analytics
+
+\quad\quad Principle Investigator	
+
+The DOOM Lab \hfill 2010-2018
+
+\quad\quad Missouri State University, Department of Psychology
+
+\quad\quad Principle Investigator	
+
+Positive Psychology - Clinical Disaster Research Center \hfill 2009-Current
+
+\quad\quad University of Mississippi, Department of Psychology
+
+\quad\quad Researcher 
+
+Geospatial Sciences Collaborative Team \hfill 2009-2011
+
+\quad\quad University of Mississippi, Depts of Psychology, Computer Science, 
+
+\quad\quad Health Exercise Science, and Geospatial Sciences
+	
+\quad\quad Researcher	
+
+Psycholinguistics Lab \hfill 2008-2010
+
+\quad\quad University of Mississippi, Department of Psychology
+
+\quad\quad Principle Investigator
+
+Memory and Judgments Laboratory for Dr. William Maki \hfill 2006-2008
+
+\quad\quad Texas Tech University, Department of Psychology
+
+\quad\quad Graduate Researcher
+
+Memory and Aging Laboratory Dr. M. Kathryn Bleckley \hfill 2004-2006
+
+\quad\quad Texas Tech University, Department of Psychology
+
+\quad\quad Graduate Coordinator and Researcher
+
+Cognition and Perception Laboratory Dr. Takashi Yamauchi \hfill 2004
+
+\quad\quad Texas A&M University, Department of Psychology
+
+\quad\quad Undergraduate Research Assistant
+
+### Skill Set
+
+## Programming knowledge 
+HTML, CSS, Perl, C++, PHP, MSSQL, MYSQL, Python, R
+
+## Software
+SPSS (including syntax), Excel (macros/functions), AMOS, LISREL, RStudio, Shiny, MPlus, Inquisit, Qualtrics, Observation Oriented Modeling (OOM), JASP/Jamovi
+
+# Publications
+
+```{r print-pubs, include = FALSE}
+library(readxl)
+curated = as.data.frame(read_excel("cv_pubs.xlsx"))
+  
+  curated$citation = NA
+  
+  for (i in 1:nrow(curated)){
+    
+    #deal with author type
+    if (curated$authortype[i] == "grad"){authortype = "+"}
+    if (curated$authortype[i] == "under"){authortype = "*"}
+    if (curated$authortype[i] == "both"){authortype = "$"}
+    if (curated$authortype[i] == "none"){authortype = ""}
+    
+    #deal with dois
+    if (!is.na(curated$doi[i])){
+      doi = paste("doi: ", curated$doi[i], " ", sep = "")} else {doi = " "}
+    
+    #deal with links
+    if(!is.na(curated$link[i])){
+      link = paste("[Link](", curated$link[i], ") ", sep = "")} else {link = ""}
+    
+    #articles
+    if(curated$pubtype[i] == "article"){
+      
+      #published articles
+      if(curated$pubstatus[i] == "published"){
+      
+      curated$citation[i] = paste(authortype, #type of author
+                             curated$author[i], " (", #author names
+                             curated$year[i], "). ", #year
+                             curated$title[i], ". \\textit{", #title
+                             curated$journal[i], ", ", #journal
+                             curated$volume[i], "}, ", #volume
+                             curated$pages[i], ". ", #pages
+                             doi, #doi
+                             link, #links
+                             "\\newline \\newline ",
+                             sep = "")
+      } #close published
+      
+      #preprints
+      if(curated$pubstatus[i] == "preprint"){
+        
+        curated$citation[i] = paste(authortype, #type of author
+                               curated$author[i], " (", #author names
+                               curated$year[i], "). ", #year
+                               curated$title[i], ". ", #title
+                               doi, #doi
+                               link, #links
+                               "\\newline \\newline ",
+                               sep = "")
+      } #close preprint
+      
+    } #close articles
+    
+    if(curated$pubtype[i] == "present"){
+      
+      curated$citation[i] = paste(authortype, #type of author
+                             curated$author[i], " (", #author names
+                             curated$year[i], "). \\textit{", #year
+                             curated$title[i], ".} ", #title
+                             curated$journal[i], ". ", #conference information
+                             doi, #doi
+                             link, #links
+                             "\\newline \\newline ",
+                             sep = "")
+      
+    }
+    
+    if(curated$pubtype[i] == "package"){
+      
+      curated$citation[i] = paste(authortype, #type of author
+                             curated$author[i], " (", #author names
+                             curated$year[i], "). ", #year
+                             curated$title[i], ". \\textit{", #title
+                             curated$journal[i], "}.", #conference information
+                             doi, #doi
+                             link, #links
+                             "\\newline \\newline ",
+                             sep = "")
+      
+    }
+    
+  }
+  
+  curated = curated[order(curated$year, decreasing = T), ]
+  
+  p_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                    curated$category == "psycho" & 
+                                    curated$pubstatus == "published"], collapse = "") 
+  
+  s_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                    curated$category == "stats" & 
+                                    curated$pubstatus == "published"], collapse = "")
+  
+  pp_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                  curated$category == "psycho" & 
+                                  curated$pubstatus == "preprint"], collapse = "")
+  
+  sp_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                    curated$category == "stats" & 
+                                    curated$pubstatus == "preprint"], collapse = "")
+
+  p_pres = paste(curated$citation[ curated$pubtype == "present" & 
+                                    curated$category == "psycho"], collapse = "") 
+  
+  s_pres = paste(curated$citation[ curated$pubtype == "present" & 
+                                    curated$category == "stats"], collapse = "")
+  
+  pack = paste(curated$citation[ curated$pubtype == "package"], collapse = "")
+  
+```
+
+### Statistical Packages & Tools
+
+*Note:* \* indicate undergraduate authors, + graduate authors, $ both undergraduate and graduate
+
+`r pack`
+See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny apps and their help guides. 
+
+### Journal Articles
+
+## Psycholinguistics, Cognitive Science
+
+`r p_art`
+
+## Applied Statistics
+
+`r s_art`
+
+### Preprints
+
+## Psycholinguistics, Cognitive Science
+
+`r pp_art`
+
+## Applied Statistics
+
+`r sp_art`
+
+### Grants
+
+## Psycholinguistics, Cognitive Science
+
+Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.00
+
+Principal Investigator. Using Language to Understand Congressional Voting Behaviors. 
+National Science Foundation (2014, submitted). $176,098.
+
+Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM’s 
+Watson Group. (2014). Applied for access to database.
+
+Principal Investigator. Counting tweets: How social media word frequency enhances our 
+understanding of cognition. Twitter Grant Competition. (2014, submitted). Applied for access to database.
+
+Principal Investigator. Memory as a Complex System: Creating Online, Dynamic 
+Semantic Memory Models. James S. McDonnell Foundation Scholar Award in 
+Complex Systems. (2014, submitted). $450,000.
+
+Principal Investigator. Online course development grant. Online course development 
+stipend. Missouri State University Provost’s Office. (1/1/14-5/15/14). $2,400.
+Principal Investigator. Graduate Recruitment Grant. Missouri State University Graduate 
+College. (1/1/14-12/15/14). $1,800.
+
+Principal Investigator. EXP: Supplemental Instruction: Bridging Technology and Student 
+Academic Success Programs. National Science Foundation (2012, submitted). 
+$526,809.
+
+Principal Investigator. We Are All Biased.  Fixing Judgments of Associative Memory.  
+Missouri State University Graduate College’s Summer Research Stipend. (6/1/2012-8-15-2012). $6000. 
+
+Principal Investigator. Investigating Effective Supplemental Instruction to Improve 
+Student Success. Missouri State University's Dean’s Summer Research Stipend. 
+(5/31/2011-9/1/2011). $6000.
+
+Principal Investigator. Cheating at Scrabble: An Online Database of Word Information. 
+Missouri State University's Faculty Research Grant. (1/2011-1/2012). $7095.
+
+Principle Investigator: Understanding Language Learning in the Brain: Using EEG Brain 
+Computer Interface to Improve Development. Honda Initiative (2009, submitted). 
+
+### Applied Statistics
+
+Principal Investigator. Development of a Headache Meaningful Response Measure 
+Using 	a Patient Guided Approach. National Headache Foundation (2018, 
+awarded). $99,592.
+
+Statistician. Utilization of adaptive patient-centered electronic behavioral feedback 
+intervention for the prevention of transformation from episodic to chronic 
+migraine. Pragmatic Clinical Studies funded by the PCORI Foundation. (2014, 
+submitted). $2,000,000.
+
+Statistician. Meaning and Purpose in Life as it Relates to Suicidality in Adult Inpatients with Serious Mental Illness. American Foundation for Suicide Prevention. (2013, submitted). $30,000.
+
+Statistician. Predictors of Subjective Well-being Among Survivors of the Armed Conflict 
+in Colombia: a Positive Psychology View. Psychology Beyond Borders. (2013, 
+submitted). $8,156.38.
+
+Principal Investigator. Visualizing Statistics: Developing Interactive Tools to Improve 
+Statistics and Research Learning Outcomes. Faculty Teaching and Learning Center Curriculum Grant. (1/1/14-8/15/14). $4,500.
+
+Principal Investigator. Using Item Response Theory to Explore Scale Psychometrics. 
+Missouri State University's Faculty Research Grant. (1/1/14-12/31/14). $2,040.
+
+Principal Investigator. A solution to the file drawer problem: Alternative analyses to null hypothesis testing.  National Science Foundation (2013, submitted). Up to 
+$1,000,000.
+
+Principal Investigator. Luella Stuck Cline resources award for textbook purchase. 
+Missouri State University Library Funding. (2012, submitted). $366.
+
+Co-Principle Investigator: II-NEW: An Infrastructure for Distributed Research on 
+Neurophysiology and Brain-Computer Interface. National Science Foundation (2010, resubmitted).
+
+### Presentations
+
+## Psycholinguistics, Cognitive Science
+
+`r p_pres`
+
+## Applied Statistics
+
+`r s_pres`
+
+# Students
+
+### Graduate Students
+
+| School, Year | Name | Thesis |
+| ----- | ------ | ------------- |
+| MSU, 2018-2020 | Arielle Cunningham | TBD |
+|	MSU, 2017-2019	|	Addie Wikowsky	|	Working memory, expertise, and fluid intelligence	|
+|	MSU, 2017-2019	|	William Padfield	|	Moral Foundations and political rhetoric	|
+| MSU, 2016-2018  | David Herr | Generativity and Trauma in first responders | 
+|	MSU, 2016-2018	|	Nick Maxwell	|	Investigating the interaction between associative, semantic, and thematic database norms for memory judgments and recall	|
+|	MSU, 2015-2017	|	Katherine Miller	|	The Mediating Effects of Cortisol on Memory and Judgments of Learning	|
+|	MSU, 2015-2017	|	Rebecca Knoph	|	Language Learning and Metacognition: An Interventions to Improve Language Classrooms	|
+|	MSU, 2014-2016	|	Jahnavi Delmonico	|	Politics, Personality, and Sensitivity to Change	|
+|	MSU, 2013-2015	|	Marshall Beauchamp	|	IRT Analyses of Body Dissatisfaction in Men	|
+|	MSU, 2013-2015	|	Kayla Jordan	|	Linguistic Markers of Writing about War	|
+|	MSU, 2012-2014	|	Marilee Teasley	|	When Music Goes Up in Flames: The Impact of Academic Advising on the Perceived Burnout of Music Majors	|
+|	MSU, 2011-2013	|	Kathrene Valentine	|	Alternatives: A Comparison of Parametric, Nonparametric, and Observation Oriented Modeling techniques	|
+
+*Note*. I have supervised many graduate and undergraduate theses, presentations, and assistants. More information abouut each of their presentations and outcomes can be found on my website under students. 
+
+# Teaching
+
+### Interests
+
+## Undergraduate
+
+Statistics, Cognition, Research Methods/Experimental Design, Memory, Psycholinguistics, Analytics
+
+## Graduate: 
+
+Experimental Methhods, Basic Statistics (ANOVA, Regression), Advanced Statistics (Multivarite, Structural Equation Modeling), Non-parametric Statistics, Cognition, Attention, Memory, Language
+
+### Courses Taught
+
+## Undergraduate
+
+Cognitive Psychology, General Psychology, Lab in Cognitive Psychology, Statistics for the Social Sciences, Advanced Statistics, Research Methods, Psycholinguistics, Freshman/Senior Honor's Seminars
+
+## Graduate
+
+Regression/Factor Analysis, Multivariate Statistics, Advanced Statistics, Graduate Statistics, Nonparametric Methods, Structural Equation Modeling, Bayesian Methods, Sentiment Analytics, Natural Language Processing, Human Language 
+
+Course Evaluations can be provided upon request.
+
+### Statistics Outreach
+
+*Statistics Certificate*: I designed a statistics and research methods graduate certificate for Missouri State University. I coordinated the program, working with students to 	ensure they’ve completed the requirements in a way that matches their long-term goals. Certificate requirement are one graduate statistics course, one research methods course, and two other electives in statistics or research based courses. 
+	
+*In-Person/Online Help Desk*: The Psychology Help Desk was designed as small group tutoring/help opportunity for our statistics and research methods courses (approximately 1,500 students annually). The Help Desk holds regular open hours to accommodate students who need assistance with program or math related questions. The online Help Desk was created to reach our busy, non-traditional, and online students. I supervised the graduate assistant and practicum students who hold open hours. I trained these students, as well as create materials for the online portion of the Help Desk. The graduate assistant answered a special email box for the Help Desk and provides assistance through a special Blackboard portal. The Blackboard site was used to link students to appropriate materials, contact information for the Help Desk, and email out information as necessary.
+
+*YouTube*: My YouTube channel contains many hours of tutorials on how to complete statistical procedures in SPSS, Excel, R, MOTE, and G*Power. This information is used as teaching material in my courses and is open access for students/researchers to use as needed. I respond to online questions about these materials and take requests for video material. 
+
+*MOTE*: MOTE is a free R package and online app that calculates effect sizes and their non-central confidence intervals. This package was designed to fill the gap between running hypothesis testing calculations and effect sizes for students in a simple format – while also adding in confidence intervals for effect sizes because of the promotion for these values in reporting. 
+
+*Statstools.com*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate  statistics and structural equation modeling) are provided with multiple formats  (SPSS, Excel, R) for use by students in my courses and the interested graduate  student or researcher. This information is formatted so that an individual may  download the entire course for a template when assigned as a course prep. 
+
+# Service
+
+### Professional Memberships
+
+Society for the Improvement of the Psychological Sciences (SIPS)
+
+Midwestern Psychological Association (MPA)
+
+Southwestern Psychological Association (SWPA)
+
+Psychonomic Society, Fellow
+
+Association for Psychological Science (APS)
+
+Graduate and Professional Student Association	
+
+### Professional Activities
+
+## Journal Reviewer
+
+[Publons Profile](https://publons.com/author/1325012/erin-m-buchanan#profile) \hfill 2017-Current
+
+Reviewer for Applied Psycholinguistics \hfill 2018-Current
+
+Reviewer for Journal of Traumatic Stress \hfill 2018-Current
+
+Reviewer for International Journal of Dermatology \hfill 2018-Current
+
+Reviewer for Language Teaching Research \hfill 2018-Current
+
+Reviewer for Psychology of Popular Media Culture \hfill 2018-Current
+
+Reviewer for Journal of Clinical Psychology \hfill 2013-Current
+
+Reviewer for Behavior Research Methods \hfill 2012-Current
+
+Reviewer for the Journal of Scientific Psychology \hfill 2007 – Current 
+
+Editorial Board for Journal of Scientific Psychology \hfill 2009-Current
+
+## Service Commmittees
+
+Provost Council for Web Accessibility \hfill 2018
+
+GradCAS "Dream Team", Graduate Application Redesign \hfill 2018
+
+Statistics Couse Redesign, Chair \hfill 2018
+
+Application System Coordinator \hfill 2014-2018
+
+Departmental Assessment Committee \hfill 2014-2018
+
+Graduate Council \hfill 2013-2017
+
+Comprehensive Exam Coordinator \hfill 2013-2018
+
+Coordinator of Statistics Help Lab \hfill 2013-2018
+
+Graduate Review Committee \hfill 2013-2018
+
+Multidisciplinary Forum \hfill 2012-2014
+
+Departmental Search Committees \hfill 2012-2018 
+
+Space Utilization Committee, Chair, \hfill 2011-2018
+
+CHHS Assessment Committee \hfill 2011-2014
+
+Course Evaluation Redesign and Coordinator \hfill 2011-2018
+
+RStats Consultant \hfill 2011-2018
+
+Research Writing Group \hfill 2010-2014
+
+Honors Thesis Supervisor \hfill 2009-2018
+
+Masters Thesis Committees \hfill 2008-2018
+	
+Honors Thesis Committees \hfill 2009-2018
+
+Faculty Supervisor for Photography Club \hfill 2008 – 2010
+
+Vice President of the Student Experimental Counsel \hfill 2007-2008
+
+Psychology Textbook Adoption Committee \hfill 2006
+
+Treasurer of the Student Experimental Counsel \hfill 2005-2006  
+
+Psychology Recycling Committee \hfill 2004-2008
+
+Member of the Student Experimental Counsel \hfill 2004-2008		
+
+Served as research mentor for research assistants \hfill 2004-2008
+
+Served as a poster judge undergraduate research presentations \hfill 2004-2008 
+
+## Advising 
+
+Pre-Law Advisor \hfill 2012-2018
+
+Honors College Advisor \hfill 2011-2018
+
+Living Learning Community Faculty Advisor \hfill 2011-2012
+
+PASS Faculty Fellow \hfill 2011-2018
+
+Recruitment Committee, Chair \hfill 2011-2018
+
+Major's Fair \hfill 2010-2018
+
+Bear Claw Advisory Board \hfill 2010-2018

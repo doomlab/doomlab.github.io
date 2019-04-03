@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vita on Dr. Erin Buchanan</title>
-    <link>/tags/vita/</link>
+    <link>https://doomlab.github.io/tags/vita/</link>
     <description>Recent content in Vita on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/vita/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/vita/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Publications</title>
-      <link>/post/new-publications/</link>
+      <link>https://doomlab.github.io/post/new-publications/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications/</guid>
+      <guid>https://doomlab.github.io/post/new-publications/</guid>
       <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&amp;rsquo;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
 We&amp;rsquo;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&amp;rsquo;ve done this week after taking a breather from a seriously packed week.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>/post/new-publication-detect-low-quality-data/</link>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-detect-low-quality-data/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
@@ -35,29 +35,29 @@ We create a really nice R function to help you detect low quality data, which yo
     
     <item>
       <title>Learn About MOTE</title>
-      <link>/post/learn-about-mote/</link>
+      <link>https://doomlab.github.io/post/learn-about-mote/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/learn-about-mote/</guid>
+      <guid>https://doomlab.github.io/post/learn-about-mote/</guid>
       <description>The APA Task Force on Statistical Inference (Wilkinson &amp;amp; TFSI, 1999) has advocated the inclusion of effect sizes in journal articles as an important source of information. The fifth and current edition of the APA publication manual (2001, 2010) emphasized these findings from the task force, along with requirement of effect sizes to publish in their journals. However, Fidler et al. (2005) have conveyed that only slight increases in report rates have been found in popular journals.</description>
     </item>
     
     <item>
       <title>Research Statement</title>
-      <link>/post/research-statement/</link>
+      <link>https://doomlab.github.io/post/research-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/research-statement/</guid>
+      <guid>https://doomlab.github.io/post/research-statement/</guid>
       <description>Upon arriving at Missouri State University, I founded the Deciphering Outrageous Observations and Modeling (DOOM) lab which has included more than ten graduate and thirty undergraduate students. My research mission has been in two primary domains described in detail below and includes many collaborative efforts throughout the years.
 Psycholinguistics. My cognitive research focuses broadly on psycholinguistics and memory, particularly on the statistical properties of word relationships. Overall, I seek to understand how language is represented in memory by adding to and examining available linguistic database information (i.</description>
     </item>
     
     <item>
       <title>Teaching Statement</title>
-      <link>/post/teaching-statement/</link>
+      <link>https://doomlab.github.io/post/teaching-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/teaching-statement/</guid>
+      <guid>https://doomlab.github.io/post/teaching-statement/</guid>
       <description>Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.</description>
     </item>
     

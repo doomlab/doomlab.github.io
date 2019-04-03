@@ -2,22 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>How To on Dr. Erin Buchanan</title>
-    <link>/tags/how-to/</link>
+    <link>https://doomlab.github.io/tags/how-to/</link>
     <description>Recent content in How To on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Updating Your CV with Packages</title>
+      <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
+      <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&amp;rsquo;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
+Link to the entire CV folder for you to use/view do stuff with: CV.
+I decided to do my publications + presentations as an Excel database type file, rather than using a BibTex file.</description>
+    </item>
+    
+    <item>
       <title>JASP Videos &#43; Guides</title>
-      <link>/post/jasp-videos-guides/</link>
+      <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/jasp-videos-guides/</guid>
+      <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
     </item>
