@@ -139,13 +139,13 @@ The DOOM Lab \hfill 2019-Current
 
 \quad\quad Harrisburg University of Science and Technology, Analytics
 
-\quad\quad Principle Investigator	
+\quad\quad Principal Investigator	
 
 The DOOM Lab \hfill 2010-2018
 
 \quad\quad Missouri State University, Department of Psychology
 
-\quad\quad Principle Investigator	
+\quad\quad Principal Investigator	
 
 Positive Psychology - Clinical Disaster Research Center \hfill 2009-Current
 
@@ -165,7 +165,7 @@ Psycholinguistics Lab \hfill 2008-2010
 
 \quad\quad University of Mississippi, Department of Psychology
 
-\quad\quad Principle Investigator
+\quad\quad Principal Investigator
 
 Memory and Judgments Laboratory for Dr. William Maki \hfill 2006-2008
 
@@ -374,7 +374,7 @@ Student Success. Missouri State University's Dean’s Summer Research Stipend.
 Principal Investigator. Cheating at Scrabble: An Online Database of Word Information. 
 Missouri State University's Faculty Research Grant. (1/2011-1/2012). $7095.
 
-Principle Investigator: Understanding Language Learning in the Brain: Using EEG Brain 
+Principal Investigator: Understanding Language Learning in the Brain: Using EEG Brain 
 Computer Interface to Improve Development. Honda Initiative (2009, submitted). 
 
 ### Applied Statistics
@@ -406,7 +406,7 @@ $1,000,000.
 Principal Investigator. Luella Stuck Cline resources award for textbook purchase. 
 Missouri State University Library Funding. (2012, submitted). $366.
 
-Co-Principle Investigator: II-NEW: An Infrastructure for Distributed Research on 
+Co-Principal Investigator: II-NEW: An Infrastructure for Distributed Research on 
 Neurophysiology and Brain-Computer Interface. National Science Foundation (2010, resubmitted).
 
 ### Presentations
