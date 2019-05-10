@@ -219,7 +219,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 9 minutes (1779 words)
+  <i class="fa fa-clock-o"></i> 10 minutes (1999 words)
   
   
 </span>
@@ -256,15 +256,19 @@ curated <span class="o">=</span> <span class="kp">as.data.frame</span><span clas
 
 <p>Start by importing your information from each site:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># pull information from scholar ---------------------------------------------</span>
-<span class="kn">library</span><span class="p">(</span>scholar<span class="p">)</span>
-erinpubs <span class="o">=</span> get_publications<span class="p">(</span><span class="s">&#34;ReD-s38AAAAJ&amp;hl&#34;</span><span class="p">,</span> <span class="c1">#my scholar id</span>
+<span class="kn">library</span><span class="p">(</span>scholar<span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma">## Registered S3 method overwritten by &#39;R.oo&#39;:
+##   method        from       
+##   throw.default R.methodsS3</pre></div><div class="highlight"><pre class="chroma">## Registered S3 method overwritten by &#39;rvest&#39;:
+##   method            from
+##   read_xml.response xml2</pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">erinpubs <span class="o">=</span> get_publications<span class="p">(</span><span class="s">&#34;ReD-s38AAAAJ&amp;hl&#34;</span><span class="p">,</span> <span class="c1">#my scholar id</span>
                  cstart <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="c1">#get everything</span>
                  pagesize <span class="o">=</span> <span class="m">1000</span><span class="p">,</span> <span class="c1">#max amount of things to get</span>
                  flush <span class="o">=</span> <span class="bp">F</span><span class="p">)</span> <span class="c1">#caching parameter</span>
 
 <span class="c1"># pull information from orcid ---------------------------------------------</span>
-<span class="kn">library</span><span class="p">(</span>rorcid<span class="p">)</span>
-erinorc <span class="o">=</span> works<span class="p">(</span>orcid_id<span class="p">(</span><span class="s">&#34;0000-0002-9689-4189&#34;</span><span class="p">))</span> <span class="c1">#my orcid</span>
+<span class="kn">library</span><span class="p">(</span>rorcid<span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma">## Registered S3 method overwritten by &#39;crul&#39;:
+##   method                 from
+##   as.character.form_file httr</pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">erinorc <span class="o">=</span> works<span class="p">(</span>orcid_id<span class="p">(</span><span class="s">&#34;0000-0002-9689-4189&#34;</span><span class="p">))</span> <span class="c1">#my orcid</span>
 <span class="c1">#note you will have to authorize your orcid for each folder you use this file in</span></code></pre></div>
 <p>Each of these creates a data.frame with different pieces of information - I encourage you to investigate your own. The next thing I did was set up the ORC pages to merge with the Scholar pages. Unfortunately, the ORCID one pulls in a column that&rsquo;s a list within each cell, so I converted that into a doi (the only variable I wanted) column separately.</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># set up dois -------------------------------------------------------------</span>
@@ -324,10 +328,23 @@ curated_check<span class="o">$</span><span class="sb">`put-code`</span> <span cl
 
 <span class="c1">#write.csv(curated_check, &#34;check_these.csv&#34;, row.names = F)</span></code></pre></div>
 <p><code>setdiff</code> takes the ones that are in the final dataset (f) but aren&rsquo;t in the curated dataset &copy;. Then I grabbed the rows in the final dataset that were in the &ldquo;haven&rsquo;t seen these yet&rdquo; pile using <code>%in%</code>. <code>newrows</code> is a list of information found in both of these services that aren&rsquo;t in your CV. I use the word &ldquo;new&rdquo; loosely here. Let&rsquo;s see what it found, as I&rsquo;ve just updated my cv.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">newrows<span class="o">$</span>title</code></pre></div><div class="highlight"><pre class="chroma">## [1] Accelerated CREP                              
-## [2] State of Science Paper Guide                  
-## [3] Perceived Effect of the Gulf Oil Spill Measure
-## 124 Levels: “Textisms”: The comfort of the recipient. ...</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">newrows<span class="o">$</span>title</code></pre></div><div class="highlight"><pre class="chroma">##  [1] A Meta-Analysis of Expressive Writing on Posttraumatic Stress, Posttraumatic Growth, and Quality of Life                                  
+##  [2] Accelerated CREP                                                                                                                          
+##  [3] Accelerated CREP-RRR: Turri, Buckwalter, &amp; Blouw (2015)                                                                                   
+##  [4] An Extension of the QWERTY Effect: Not Just the Right Hand, Expertise and Typability Predict Valence Ratings of Words                     
+##  [5] Improving psychological adjustment among late-stage ovarian cancer patients: Examining the role of avoidance in treatment                 
+##  [6] Justify your alpha                                                                                                                        
+##  [7] State of Science Paper Guide                                                                                                              
+##  [8] The Language of War: A Replication and Extension of Abe (2012) and Matsumoto Et Al.(2015)                                                 
+##  [9] The N400&#39;s 3 As: Association, Automaticity, Attenuation (and Some Semantics Too)                                                          
+## [10] &#34;Textisms&#34;: The Comfort of the Recipient                                                                                                  
+## [11] Risk Factors for Keratinocyte Carcinoma Skin Cancer In Nonwhite Individuals: A Retrospective Analysis                                     
+## [12] A novel dissemination effort for prolonged exposure: Practice and dissemination curriculum                                                
+## [13] Measuring resilience with the RS-14: A tale of two samples                                                                                
+## [14] Perceived Effect of the Gulf Oil Spill Measure                                                                                            
+## [15] The meaning in life questionnaire: Psychometric properties with individuals with serious mental illness in an inpatient setting           
+## [16] Negative impact of episodic migraine on a university population: Quality of life, functional impairment, and comorbid psychiatric symptoms
+## 130 Levels: “Textisms”: The comfort of the recipient. ...</pre></div>
 <p>These three are 1) OSF page for an Accelerated CREP I am on, but I haven&rsquo;t added it yet to my CV because it&rsquo;s a bit early to be sharing (i.e., waiting until there&rsquo;s more of real paper there), 2) a &ldquo;preprint&rdquo; project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA&rsquo;s website, which I don&rsquo;t have access to. Probably a doi for a conference presentation, but I don&rsquo;t really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would get ignored as things not to print.</p>
 
 <p>This next part is set up to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that&rsquo;s not really my thing to track (however, for some folks working at institutions that do care, you could update that over time using something like this code).</p>
@@ -337,14 +354,14 @@ update <span class="o">=</span> temp<span class="o">$</span>pubid<span class="p"
 
 final<span class="p">[</span>final<span class="o">$</span>pubid <span class="o">%in%</span> update<span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">,</span> <span class="s">&#34;number&#34;</span><span class="p">)]</span></code></pre></div><div class="highlight"><pre class="chroma">##                                                                                                                 title
 ## 1                                                                           “Textisms”: The comfort of the recipient.
-## 20                                 Differential Effects of Association and Semantics on Priming and Memory Judgments.
-## 23                                  English Semantic Feature Production Norms: An Extended Database of 4,436 Concepts
-## 25 Evaluating the effectiveness of ecological momentary assessment and intervention targeting body checking behaviors
+## 21                                 Differential Effects of Association and Semantics on Priming and Memory Judgments.
+## 24                                   English semantic feature production norms: An extended database of 4436 concepts
+## 26 Evaluating the effectiveness of ecological momentary assessment and intervention targeting body checking behaviors
 ##    number
 ## 1        
-## 20       
-## 23       
-## 25   1-17</pre></div>
+## 21       
+## 24   1-15
+## 26   1-17</pre></div>
 <p>None of these have new volume or page numbers, so I am good to go here. Because I have this as an excel sheet, I can do some fun visualizations:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
 
