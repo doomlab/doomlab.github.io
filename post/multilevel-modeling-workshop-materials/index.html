@@ -5,9 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Teaching</title>
-  <meta property="og:title" content="Teaching" />
-  <meta name="twitter:title" content="Teaching" />
+  <title>Multilevel Modeling Workshop Materials</title>
+  <meta property="og:title" content="Multilevel Modeling Workshop Materials" />
+  <meta name="twitter:title" content="Multilevel Modeling Workshop Materials" />
+  <meta name="description" content="Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
+I used RStudio&rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.">
+  <meta property="og:description" content="Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
+I used RStudio&rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.">
+  <meta name="twitter:description" content="Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter …">
   <meta name="author" content="aggieerin.com"/>
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
@@ -15,13 +20,13 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/tags/teaching/" />
+  <meta property="og:url" content="https://doomlab.github.io/post/multilevel-modeling-workshop-materials/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
   <meta name="generator" content="Hugo 0.36.1" />
-  <link rel="canonical" href="https://doomlab.github.io/tags/teaching/" />
-  <link rel="alternate" href="https://doomlab.github.io/tags/teaching/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <link rel="canonical" href="https://doomlab.github.io/post/multilevel-modeling-workshop-materials/" />
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -187,14 +192,40 @@
 
 
     
+  
+  
+  
+
+
+
+
+  
+
   <header class="header-section ">
+    
     <div class="intro-header no-img">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>#Teaching</h1>
-              <hr class="small">
+            <div class="post-heading">
+              <h1>Multilevel Modeling Workshop Materials</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on May 15, 2019
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 2 minutes (388 words)
+  
+  
+</span>
+
+
+                
             </div>
           </div>
         </div>
@@ -202,118 +233,80 @@
     </div>
   </header>
 
+
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Many thanks to Rutgers University Spanish and Portuguese Department (<a href="https://span-port.rutgers.edu/">https://span-port.rutgers.edu/</a>) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.</p>
+
+<p>I used RStudio&rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes. You can find the information here: <a href="https://rstudio.cloud/project/340414">https://rstudio.cloud/project/340414</a>. You will need a cloud account (free), but then you can save the materials to your own workspace and edit it to your liking.</p>
+
+<p>Thoughts on cloud:</p>
+
+<ul>
+<li><p>Works great! I have taught several years now with multiple languages (R, Python). Being able to share all the materials quickly is a big plus. Additionally, not having to worry about whether or not the person has the programs + packages is super handy. I included code for their installations later, but being able to run <em>lme</em> right away is useful. Doesn&rsquo;t solve the tech problems setting up though! ;)</p></li>
+
+<li><p>I should be a bit better at remembering that people aren&rsquo;t super familar with markdown. I could have explained &ldquo;here&rsquo;s the markdown file, you can take notes in it, the ## part denotes each new slide I am going to show you&rdquo;. I knew I had a mixed audience, but did assume some <em>R</em> skills, but a good reminder for myself is to make sure that&rsquo;s clear.</p></li>
+
+<li><p>Oddly, the workspace doesn&rsquo;t always update the knitted files. I had changed a few files (mostly the data) so it would load faster when we were working. Even though I had re-knitted and even did it that day, the .html file of the slides was definitely about 5 versions back. That&rsquo;s frustrating because then I would have to reknit (and I didn&rsquo;t cache doh!), which slowed us down sometimes.</p></li>
+</ul>
+
+<p>Here&rsquo;s the links to the videos I recorded during that time - as usual I make dumb jokes and wander around a lot but the new microphone I have seems to have picked up the sound much better than my previous one. Win!</p>
+
+<ul>
+<li><a href="https://youtu.be/n9gYDxR8bjI">https://youtu.be/n9gYDxR8bjI</a>  R - Multilevel Models Workshop Part 1</li>
+<li><a href="https://youtu.be/ezb5znKdDeo">https://youtu.be/ezb5znKdDeo</a>  R - Multilevel Models Workshop Part 2</li>
+</ul>
+
+<p>Enjoy!</p>
+
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://doomlab.github.io/post/updating-your-cv-with-packages/" data-toggle="tooltip" data-placement="top" title="Updating Your CV with Packages">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://doomlab.github.io/post/multilevel-modeling-workshop-materials/">
-                <h2 class="post-title">Multilevel Modeling Workshop Materials</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on May 15, 2019
-              </p>
-              <div class="post-entry">
-                
-                  Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
-I used RStudio&rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.
-                  <a href="https://doomlab.github.io/post/multilevel-modeling-workshop-materials/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://doomlab.github.io/tags/teaching/">teaching</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/statistics/">statistics</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/rstudio/">rstudio</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/regression/">regression</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/multilevel-models/">multilevel models</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/reproducibility/">reproducibility</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/r/">r</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://doomlab.github.io/post/intuitions-about-grades/">
-                <h2 class="post-title">Intuitions about Grades</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on December 2, 2018
-              </p>
-              <div class="post-entry">
-                
-                  Are my intuitions about grades correct?
-I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.
-First, I took all the times I had taught memory and cognition post Ph.
-                  <a href="https://doomlab.github.io/post/intuitions-about-grades/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://doomlab.github.io/tags/teaching/">teaching</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/grades/">grades</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://doomlab.github.io/post/teaching-statement/">
-                <h2 class="post-title">Teaching Statement</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on February 17, 2018
-              </p>
-              <div class="post-entry">
-                
-                  Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.
-                  <a href="https://doomlab.github.io/post/teaching-statement/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://doomlab.github.io/tags/teaching/">teaching</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/vita/">vita</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-        </div>
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aggieerin" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
         
-      </div>
+        
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
@@ -356,7 +349,7 @@ First, I took all the times I had taught memory and cognition post Ph.
           
           <li>
             
-            <a href="https://doomlab.github.io/tags/teaching/index.xml" title="RSS">
+            <a href="https://doomlab.github.io/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
