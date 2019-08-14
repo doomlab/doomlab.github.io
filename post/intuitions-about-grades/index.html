@@ -222,7 +222,7 @@ I was recently talking to a colleague about how utterly terrible my students wer
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 6 minutes (1149 words)
+  <i class="fa fa-clock-o"></i> 6 minutes (1130 words)
   
   
 </span>
@@ -248,13 +248,8 @@ I was recently talking to a colleague about how utterly terrible my students wer
 <p>Here’s a histogram of the data:</p>
 <pre class="r"><code>library(readxl)
 master = read_excel(&quot;cognition_grades.xlsx&quot;)
-library(ggplot2)</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang</code></pre>
-<pre class="r"><code>ggplot(master, aes(Score)) + 
+library(ggplot2)
+ggplot(master, aes(Score)) + 
   theme_bw() +
   geom_histogram(fill = &quot;white&quot;, color = &quot;black&quot;) +
   xlab(&quot;Final Class Score&quot;) + 

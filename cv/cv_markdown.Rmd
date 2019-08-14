@@ -51,6 +51,8 @@ DataCamp Instructor \hfill Part-Time
 
 \quad\quad Structural Equation Modeling in R [Link](https://www.datacamp.com/courses/structural-equation-modeling-with-lavaan-in-r) \hfill 2018-Current
 
+\quad\quad Financial Modeling in Spreadsheets [Link](https://www.datacamp.com/courses/financial-modeling-in-spreadsheets) \hfill 2019-Current
+
 Missouri State University, Department of Psychology \hfill Full Time
 
 \quad\quad Associate Professor of Quantitative Psychology \hfill 2014-2018
@@ -128,9 +130,11 @@ Department of Psychology Competitive Scholarship \hfill 2004-2006
 ### Interests
 
 ## Psycholinguistics and memory 
+
 Semantic memory, associative memory, priming of memory types, normed databases, linguistic variables, memory maps, judgments of memory, language statistics, working memory, individual differences.
 
 ## Statistics
+
 Alternatives to null hypothesis testing, effect sizes and confidence intervals, multigroup confirmatory factor analysis, item response theory, Bayesian inference statistics, hierarchical linear modeling, exploratory factor analysis, statistical reporting
 
 ### Experience
@@ -188,9 +192,11 @@ Cognition and Perception Laboratory Dr. Takashi Yamauchi \hfill 2004
 ### Skill Set
 
 ## Programming knowledge 
+
 HTML, CSS, Perl, C++, PHP, MSSQL, MYSQL, Python, R
 
 ## Software
+
 SPSS (including syntax), Excel (macros/functions), AMOS, LISREL, RStudio, Shiny, MPlus, Inquisit, Qualtrics, Observation Oriented Modeling (OOM), JASP/Jamovi
 
 # Publications
@@ -345,7 +351,7 @@ Co-Principal Investigator. To see or not to see: Perceptual learning in organic 
 Principal Investigator. Using Language to Understand Congressional Voting Behaviors. 
 National Science Foundation (2014, submitted). $176,098.
 
-Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM’s 
+Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM's 
 Watson Group. (2014). Applied for access to database.
 
 Principal Investigator. Counting tweets: How social media word frequency enhances our 
@@ -356,7 +362,7 @@ Semantic Memory Models. James S. McDonnell Foundation Scholar Award in
 Complex Systems. (2014, submitted). $450,000.
 
 Principal Investigator. Online course development grant. Online course development 
-stipend. Missouri State University Provost’s Office. (1/1/14-5/15/14). $2,400.
+stipend. Missouri State University Provost's Office. (1/1/14-5/15/14). $2,400.
 Principal Investigator. Graduate Recruitment Grant. Missouri State University Graduate 
 College. (1/1/14-12/15/14). $1,800.
 
@@ -365,10 +371,10 @@ Academic Success Programs. National Science Foundation (2012, submitted).
 $526,809.
 
 Principal Investigator. We Are All Biased.  Fixing Judgments of Associative Memory.  
-Missouri State University Graduate College’s Summer Research Stipend. (6/1/2012-8-15-2012). $6000. 
+Missouri State University Graduate College's Summer Research Stipend. (6/1/2012-8-15-2012). $6000. 
 
 Principal Investigator. Investigating Effective Supplemental Instruction to Improve 
-Student Success. Missouri State University's Dean’s Summer Research Stipend. 
+Student Success. Missouri State University's Dean's Summer Research Stipend. 
 (5/31/2011-9/1/2011). $6000.
 
 Principal Investigator. Cheating at Scrabble: An Online Database of Word Information. 
@@ -438,7 +444,7 @@ Neurophysiology and Brain-Computer Interface. National Science Foundation (2010,
 |	MSU, 2012-2014	|	Marilee Teasley	|	When Music Goes Up in Flames: The Impact of Academic Advising on the Perceived Burnout of Music Majors	|
 |	MSU, 2011-2013	|	Kathrene Valentine	|	Alternatives: A Comparison of Parametric, Nonparametric, and Observation Oriented Modeling techniques	|
 
-*Note*. I have supervised many graduate and undergraduate theses, presentations, and assistants. More information abouut each of their presentations and outcomes can be found on my website under students. 
+*Note*. I have supervised many graduate and undergraduate theses, presentations, and assistants. More information about each of their presentations and outcomes can be found on my website under students. 
 
 # Teaching
 
@@ -450,7 +456,7 @@ Statistics, Cognition, Research Methods/Experimental Design, Memory, Psycholingu
 
 ## Graduate: 
 
-Experimental Methhods, Basic Statistics (ANOVA, Regression), Advanced Statistics (Multivarite, Structural Equation Modeling), Non-parametric Statistics, Cognition, Attention, Memory, Language
+Experimental Methods, Basic Statistics (ANOVA, Regression), Advanced Statistics (Multivariate, Structural Equation Modeling), Non-parametric Statistics, Cognition, Attention, Memory, Language
 
 ### Courses Taught
 
@@ -466,7 +472,7 @@ Course Evaluations can be provided upon request.
 
 ### Statistics Outreach
 
-*Statistics Certificate*: I designed a statistics and research methods graduate certificate for Missouri State University. I coordinated the program, working with students to 	ensure they’ve completed the requirements in a way that matches their long-term goals. Certificate requirement are one graduate statistics course, one research methods course, and two other electives in statistics or research based courses. 
+*Statistics Certificate*: I designed a statistics and research methods graduate certificate for Missouri State University. I coordinated the program, working with students to ensure they've completed the requirements in a way that matches their long-term goals. Certificate requirement are one graduate statistics course, one research methods course, and two other electives in statistics or research based courses. 
 	
 *In-Person/Online Help Desk*: The Psychology Help Desk was designed as small group tutoring/help opportunity for our statistics and research methods courses (approximately 1,500 students annually). The Help Desk holds regular open hours to accommodate students who need assistance with program or math related questions. The online Help Desk was created to reach our busy, non-traditional, and online students. I supervised the graduate assistant and practicum students who hold open hours. I trained these students, as well as create materials for the online portion of the Help Desk. The graduate assistant answered a special email box for the Help Desk and provides assistance through a special Blackboard portal. The Blackboard site was used to link students to appropriate materials, contact information for the Help Desk, and email out information as necessary.
 
@@ -474,13 +480,15 @@ Course Evaluations can be provided upon request.
 
 *MOTE*: MOTE is a free R package and online app that calculates effect sizes and their non-central confidence intervals. This package was designed to fill the gap between running hypothesis testing calculations and effect sizes for students in a simple format – while also adding in confidence intervals for effect sizes because of the promotion for these values in reporting. 
 
-*Statstools.com*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate  statistics and structural equation modeling) are provided with multiple formats  (SPSS, Excel, R) for use by students in my courses and the interested graduate  student or researcher. This information is formatted so that an individual may  download the entire course for a template when assigned as a course prep. 
+*Statstools.com*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate statistics and structural equation modeling) are provided with multiple formats (SPSS, Excel, R) for use by students in my courses and the interested graduate student or researcher. This information is formatted so that an individual may download the entire course for a template when assigned as a course prep. 
 
 # Service
 
 ### Professional Memberships
 
-Society for Computers in Psychology (SCIP)
+Psychological Science Accelerator (PSA) - Assistant Director of Training 
+
+Society for Computers in Psychology (SCIP) - Executive Board 
 
 Society for the Improvement of the Psychological Sciences (SIPS)
 
@@ -488,7 +496,7 @@ Midwestern Psychological Association (MPA)
 
 Southwestern Psychological Association (SWPA)
 
-Psychonomic Society, Fellow
+Psychonomic Society - Fellow
 
 Association for Psychological Science (APS)
 
@@ -496,9 +504,19 @@ Graduate and Professional Student Association
 
 ### Professional Activities
 
+## Journal Boards
+
+Meta-Psychology, Editorial Board \& Action Editor \hfill 2019-Current
+
+Journal of Scientific Psychology, Consulting Editor \hfill 2009-Current
+
 ## Journal Reviewer
 
 [Publons Profile](https://publons.com/author/1325012/erin-m-buchanan#profile) \hfill 2017-Current
+
+Reviewer for Assessment \hfill 2019-Current
+
+Reviewer for Cognitive Science \hfill 2019-Current
 
 Reviewer for Applied Psycholinguistics \hfill 2018-Current
 
@@ -516,15 +534,13 @@ Reviewer for Behavior Research Methods \hfill 2012-Current
 
 Reviewer for the Journal of Scientific Psychology \hfill 2007 – Current 
 
-Editorial Board for Journal of Scientific Psychology \hfill 2009-Current
-
-## Service Commmittees
+## Service Committees
 
 Provost Council for Web Accessibility \hfill 2018
 
 GradCAS "Dream Team", Graduate Application Redesign \hfill 2018
 
-Statistics Couse Redesign, Chair \hfill 2018
+Statistics Course Redesign, Chair \hfill 2018
 
 Application System Coordinator \hfill 2014-2018
 
@@ -564,7 +580,7 @@ Vice President of the Student Experimental Counsel \hfill 2007-2008
 
 Psychology Textbook Adoption Committee \hfill 2006
 
-Treasurer of the Student Experimental Counsel \hfill 2005-2006  
+Treasurer of the Student Experimental Counsel \hfill 2005-2006 
 
 Psychology Recycling Committee \hfill 2004-2008
 
