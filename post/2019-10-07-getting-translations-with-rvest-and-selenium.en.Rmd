@@ -64,9 +64,9 @@ webpage <- readLines("webpage")
 webpage <- paste(webpage, collapse = " ")
 ```
 
-```{r selen3}
-#load tidyverse
-library(tidyverse, quietly = T)
+```{r selen3, message = F}
+#load dplyr
+library(dplyr, quietly = T)
 
 #get all the text
 answers <- webpage %>% #your webpage
