@@ -346,6 +346,8 @@ See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny 
 
 ## Psycholinguistics, Cognitive Science
 
+Principal Investigator. Measuring the Lexicon: Computational Approaches to Quantifying Similarity Among Cognitive Representations. Psychonomic Society Estes Grants. (2019, submitted). $19,000.00
+
 Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.00
 
 Principal Investigator. Using Language to Understand Congressional Voting Behaviors. 
@@ -385,9 +387,10 @@ Computer Interface to Improve Development. Honda Initiative (2009, submitted).
 
 ### Applied Statistics
 
+Principal Investigator. Validation of the Functional Assessment of Migraine Scale (FAMS). National Headache Foundation (2019, submitted). $54,000.00.
+
 Principal Investigator. Development of a Headache Meaningful Response Measure 
-Using 	a Patient Guided Approach. National Headache Foundation (2018, 
-awarded). $99,592.
+Using a Patient Guided Approach. National Headache Foundation (04/01/2018-04/01/2019). $99,592. 
 
 Statistician. Utilization of adaptive patient-centered electronic behavioral feedback 
 intervention for the prevention of transformation from episodic to chronic 

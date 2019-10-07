@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://doomlab.github.io/post/new-publications/</loc>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
   </url>
@@ -173,6 +178,12 @@
   </url>
   
   <url>
+    <loc>https://doomlab.github.io/tags/clinical/</loc>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/tags/crlf/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -197,7 +208,7 @@
   
   <url>
     <loc>https://doomlab.github.io/</loc>
-    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,19 +321,19 @@
   
   <url>
     <loc>https://doomlab.github.io/post/</loc>
-    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://doomlab.github.io/tags/psycholinguistics/</loc>
-    <lastmod>2018-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://doomlab.github.io/tags/publication/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -345,13 +356,13 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/tags/research/</loc>
-    <lastmod>2019-04-03T00:00:00+00:00</lastmod>
+    <loc>https://doomlab.github.io/categories/research/</loc>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/research/</loc>
+    <loc>https://doomlab.github.io/tags/research/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -405,13 +416,13 @@
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/tags/teaching/</loc>
+    <loc>https://doomlab.github.io/categories/teaching/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://doomlab.github.io/categories/teaching/</loc>
+    <loc>https://doomlab.github.io/tags/teaching/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -430,7 +441,7 @@
   
   <url>
     <loc>https://doomlab.github.io/tags/update/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -442,7 +453,7 @@
   
   <url>
     <loc>https://doomlab.github.io/tags/vita/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
