@@ -1,0 +1,103 @@
+---
+title: Getting Translations with rvest and Selenium
+author: Erin Buchanan
+date: '2019-10-07'
+slug: getting-translations-with-rvest-and-selenium
+categories:
+  - research
+tags:
+  - text processing
+  - rstudio
+  - how-to
+  - github
+  - guides
+subtitle: ''
+---
+
+In this guide, I'll go over how you can use web scraping `rvest` and `Selenium` to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here's a slightly more difficult approach that appears to work. Happy to hear comments!
+
+First, load the `rvest` and `RSelenium` libraries. I wish I could remember precisely what I did to set up `RSelenium` but I don't :| there are good tutorials out there if you need help with setting it up. 
+
+```{r}
+library(rvest)
+library(RSelenium)
+```
+
+Next, put in the text you would like to translate:
+
+```{r}
+##words
+words_translate <- c("hebben deze van door heet woord maar wat sommige")
+```
+
+This next part controls the browser:
+
+- `rsDriver` tells you what browser to control/open and gets the session started. If you get an error that there's already something open on that port, run `rD[["server"]]$stop()` to stop the session and try again.
+- The second line sets up you at the client for controlling the session.
+- `$navigate` is exactly how it sounds, go to this page. 
+- When you run these, you will see a browser open, then go to the Google page. 
+
+```{r selen, eval = F}
+##an example to show you what's happening
+rD <- rsDriver(browser = "firefox")
+remDr <- rD[["client"]]
+remDr$navigate("https://translate.Google.com/")
+```
+
+Once you get the page open, this part is a bit harder. You have to figure out the area of the page you want to control. I have used the `SelectorGadget` plugin for this, as well as right clicking -> inspect element to find the right class ids and also just View Page Source because I understand html. You should start with `SelectorGadget` if you aren't familiar with html and css.
+
+- `$findElement` finds a specific area of the page. 
+- `$sendKeysToElement` sends text to the area of the page you found. You can also do things like `clickElement` to click on a certain area of the page. Note that the `\uE007` is the Enter key. So, we are filling in our words we want and hitting enter. 
+- `$getPageSource` gets the page source - `rvest` has `read_html` but I could not get that to find all the right information to get the translated text back. 
+
+```{r selen2, eval = F}
+webElem <- remDr$findElement(using = "class name","goog-textarea")
+webElem$sendKeysToElement(list(words_translate, "\uE007"))
+
+webpage <-remDr$getPageSource()
+```
+
+Next, you need to translate the page source into something usable. I will say that in theory, `html_nodes` allows you to specify a specific class id you are looking for (that's the `result-shield` stuff), but I could not get that to work. So, I grabbed the text, the class codes, slapped them together, and then sorted it out. 
+
+```{r selencheat, echo = F}
+webpage <- readLines("webpage")
+webpage <- paste(webpage, collapse = " ")
+```
+
+```{r selen3}
+#load tidyverse
+library(tidyverse, quietly = T)
+
+#get all the text
+answers <- webpage %>% #your webpage
+  unlist() %>% #unlist, as it saves as a list
+  read_html() %>% #read the html 
+  html_nodes("div") %>% #grab all the divs
+  html_text() #get the text from those divs
+
+#get the class names
+class_names <- webpage %>% 
+  unlist() %>% 
+  read_html() %>% 
+  html_nodes("div") %>% 
+  html_attrs() %>% #get the attributes, that's the class codes 
+  sapply(function(x) x[1]) #just the first one is good
+
+#get the answer that has this class code
+answers[class_names == "result-shield-container tlid-copy-target"][1]
+```
+
+Now we have the translation of some top Dutch words. You could loop over a set of translations you want to do, storing them in a data frame, tibble, list, etc. I would recommend a `Sys.sleep()` between loops to just not make the website angry. I usually use something like `Sys.sleep(runif(1,0,5))` to get a random sleep time between 0 and 5 seconds. 
+
+When you are done be sure to close the remote session/connection:
+
+```{r selen4, eval = F}
+#close the browser 
+remDr$close()
+# stop the selenium server
+rD[["server"]]$stop()
+```
+
+The nice thing about this set up is that you could pull the automatic translation here, and then "click" on a different translation using Selenium - you just would have to figure out where to click on the page. I find myself doing a lot of trial and error for clicks, so just play around it with until it clicks where you want. 
+
+Enjoy!

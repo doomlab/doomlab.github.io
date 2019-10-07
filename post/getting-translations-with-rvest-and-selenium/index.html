@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Text Processing</title>
-  <meta property="og:title" content="Text Processing" />
-  <meta name="twitter:title" content="Text Processing" />
+  <title>Getting Translations with rvest and Selenium</title>
+  <meta property="og:title" content="Getting Translations with rvest and Selenium" />
+  <meta name="twitter:title" content="Getting Translations with rvest and Selenium" />
+  <meta name="description" content="In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.">
+  <meta property="og:description" content="In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.">
+  <meta name="twitter:description" content="In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space …">
   <meta name="author" content="aggieerin.com"/>
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
@@ -15,13 +18,13 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/tags/text-processing/" />
+  <meta property="og:url" content="https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
   <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://doomlab.github.io/tags/text-processing/" />
-  <link rel="alternate" href="https://doomlab.github.io/tags/text-processing/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <link rel="canonical" href="https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/" />
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -187,14 +190,40 @@
 
 
     
+  
+  
+  
+
+
+
+
+  
+
   <header class="header-section ">
+    
     <div class="intro-header no-img">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>#Text Processing</h1>
-              <hr class="small">
+            <div class="post-heading">
+              <h1>Getting Translations with rvest and Selenium</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 7, 2019
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 4 minutes (791 words)
+  
+  
+</span>
+
+
+                
             </div>
           </div>
         </div>
@@ -202,117 +231,126 @@
     </div>
   </header>
 
+
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>In this guide, I’ll go over how you can use web scraping <code>rvest</code> and <code>Selenium</code> to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work. Happy to hear comments!</p>
+<p>First, load the <code>rvest</code> and <code>RSelenium</code> libraries. I wish I could remember precisely what I did to set up <code>RSelenium</code> but I don’t :| there are good tutorials out there if you need help with setting it up.</p>
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## Loading required package: xml2</code></pre>
+<pre class="r"><code>library(RSelenium)</code></pre>
+<p>Next, put in the text you would like to translate:</p>
+<pre class="r"><code>##words
+words_translate &lt;- c(&quot;hebben deze van door heet woord maar wat sommige&quot;)</code></pre>
+<p>This next part controls the browser:</p>
+<ul>
+<li><code>rsDriver</code> tells you what browser to control/open and gets the session started. If you get an error that there’s already something open on that port, run <code>rD[[&quot;server&quot;]]$stop()</code> to stop the session and try again.</li>
+<li>The second line sets up you at the client for controlling the session.</li>
+<li><code>$navigate</code> is exactly how it sounds, go to this page.</li>
+<li>When you run these, you will see a browser open, then go to the Google page.</li>
+</ul>
+<pre class="r"><code>##an example to show you what&#39;s happening
+rD &lt;- rsDriver(browser = &quot;firefox&quot;)
+remDr &lt;- rD[[&quot;client&quot;]]
+remDr$navigate(&quot;https://translate.Google.com/&quot;)</code></pre>
+<p>Once you get the page open, this part is a bit harder. You have to figure out the area of the page you want to control. I have used the <code>SelectorGadget</code> plugin for this, as well as right clicking -&gt; inspect element to find the right class ids and also just View Page Source because I understand html. You should start with <code>SelectorGadget</code> if you aren’t familiar with html and css.</p>
+<ul>
+<li><code>$findElement</code> finds a specific area of the page.</li>
+<li><code>$sendKeysToElement</code> sends text to the area of the page you found. You can also do things like <code>clickElement</code> to click on a certain area of the page. Note that the <code>\uE007</code> is the Enter key. So, we are filling in our words we want and hitting enter.</li>
+<li><code>$getPageSource</code> gets the page source - <code>rvest</code> has <code>read_html</code> but I could not get that to find all the right information to get the translated text back.</li>
+</ul>
+<pre class="r"><code>webElem &lt;- remDr$findElement(using = &quot;class name&quot;,&quot;goog-textarea&quot;)
+webElem$sendKeysToElement(list(words_translate, &quot;\uE007&quot;))
+
+webpage &lt;-remDr$getPageSource()</code></pre>
+<p>Next, you need to translate the page source into something usable. I will say that in theory, <code>html_nodes</code> allows you to specify a specific class id you are looking for (that’s the <code>result-shield</code> stuff), but I could not get that to work. So, I grabbed the text, the class codes, slapped them together, and then sorted it out.</p>
+<pre class="r"><code>#load tidyverse
+library(tidyverse, quietly = T)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter()         masks stats::filter()
+## ✖ readr::guess_encoding() masks rvest::guess_encoding()
+## ✖ dplyr::lag()            masks stats::lag()
+## ✖ purrr::pluck()          masks rvest::pluck()</code></pre>
+<pre class="r"><code>#get all the text
+answers &lt;- webpage %&gt;% #your webpage
+  unlist() %&gt;% #unlist, as it saves as a list
+  read_html() %&gt;% #read the html 
+  html_nodes(&quot;div&quot;) %&gt;% #grab all the divs
+  html_text() #get the text from those divs
+
+#get the class names
+class_names &lt;- webpage %&gt;% 
+  unlist() %&gt;% 
+  read_html() %&gt;% 
+  html_nodes(&quot;div&quot;) %&gt;% 
+  html_attrs() %&gt;% #get the attributes, that&#39;s the class codes 
+  sapply(function(x) x[1]) #just the first one is good
+
+#get the answer that has this class code
+answers[class_names == &quot;result-shield-container tlid-copy-target&quot;][1]</code></pre>
+<pre><code>## [1] &quot;have this van by hot word but some&quot;</code></pre>
+<p>Now we have the translation of some top Dutch words. You could loop over a set of translations you want to do, storing them in a data frame, tibble, list, etc. I would recommend a <code>Sys.sleep()</code> between loops to just not make the website angry. I usually use something like <code>Sys.sleep(runif(1,0,5))</code> to get a random sleep time between 0 and 5 seconds.</p>
+<p>When you are done be sure to close the remote session/connection:</p>
+<pre class="r"><code>#close the browser 
+remDr$close()
+# stop the selenium server
+rD[[&quot;server&quot;]]$stop()</code></pre>
+<p>The nice thing about this set up is that you could pull the automatic translation here, and then “click” on a different translation using Selenium - you just would have to figure out where to click on the page. I find myself doing a lot of trial and error for clicks, so just play around it with until it clicks where you want.</p>
+<p>Enjoy!</p>
+
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://doomlab.github.io/post/new-publications-oct-19/" data-toggle="tooltip" data-placement="top" title="New Publications">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/">
-                <h2 class="post-title">Getting Translations with rvest and Selenium</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on October 7, 2019
-              </p>
-              <div class="post-entry">
-                
-                  In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.
-                  <a href="https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://doomlab.github.io/tags/text-processing/">text processing</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/rstudio/">rstudio</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/how-to/">how-to</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/github/">github</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/guides/">guides</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://doomlab.github.io/post/gathering-text-from-the-web/">
-                <h2 class="post-title">Gathering Text from the Web</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on May 7, 2018
-              </p>
-              <div class="post-entry">
-                
-                  Hi everyone! I don&rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
-First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.
-                  <a href="https://doomlab.github.io/post/gathering-text-from-the-web/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://doomlab.github.io/tags/rstudio/">rstudio</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/rvest/">rvest</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/text-processing/">text processing</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://doomlab.github.io/post/working-with-messy-text/">
-                <h2 class="post-title">Working With Messy Text</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on March 6, 2018
-              </p>
-              <div class="post-entry">
-                
-                  Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).
-Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.
-                  <a href="https://doomlab.github.io/post/working-with-messy-text/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://doomlab.github.io/tags/r/">r</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/rstudio/">rstudio</a>&nbsp;
-                  
-                    #<a href="https://doomlab.github.io/tags/text-processing/">text processing</a>&nbsp;
-                  
-                </span>
-              
-
-            </article>
-          
-        </div>
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aggieerin" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
         
-      </div>
+        
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
@@ -355,7 +393,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
           
           <li>
             
-            <a href="https://doomlab.github.io/tags/text-processing/index.xml" title="RSS">
+            <a href="https://doomlab.github.io/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
