@@ -219,7 +219,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 9 minutes (1814 words)
+  <i class="fa fa-clock-o"></i> 9 minutes (1832 words)
   
   
 </span>
@@ -256,17 +256,15 @@ curated <span class="o">=</span> <span class="kp">as.data.frame</span><span clas
 
 <p>Start by importing your information from each site:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># pull information from scholar ---------------------------------------------</span>
-<span class="kn">library</span><span class="p">(</span>scholar<span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma">## Registered S3 method overwritten by &#39;R.oo&#39;:
-##   method        from       
-##   throw.default R.methodsS3</pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">erinpubs <span class="o">=</span> get_publications<span class="p">(</span><span class="s">&#34;ReD-s38AAAAJ&amp;hl&#34;</span><span class="p">,</span> <span class="c1">#my scholar id</span>
+<span class="kn">library</span><span class="p">(</span>scholar<span class="p">)</span>
+erinpubs <span class="o">=</span> get_publications<span class="p">(</span><span class="s">&#34;ReD-s38AAAAJ&amp;hl&#34;</span><span class="p">,</span> <span class="c1">#my scholar id</span>
                  cstart <span class="o">=</span> <span class="m">0</span><span class="p">,</span> <span class="c1">#get everything</span>
                  pagesize <span class="o">=</span> <span class="m">1000</span><span class="p">,</span> <span class="c1">#max amount of things to get</span>
                  flush <span class="o">=</span> <span class="bp">F</span><span class="p">)</span> <span class="c1">#caching parameter</span>
 
 <span class="c1"># pull information from orcid ---------------------------------------------</span>
-<span class="kn">library</span><span class="p">(</span>rorcid<span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma">## Registered S3 method overwritten by &#39;crul&#39;:
-##   method                 from
-##   as.character.form_file httr</pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">erinorc <span class="o">=</span> works<span class="p">(</span>orcid_id<span class="p">(</span><span class="s">&#34;0000-0002-9689-4189&#34;</span><span class="p">))</span> <span class="c1">#my orcid</span>
+<span class="kn">library</span><span class="p">(</span>rorcid<span class="p">)</span>
+erinorc <span class="o">=</span> works<span class="p">(</span>orcid_id<span class="p">(</span><span class="s">&#34;0000-0002-9689-4189&#34;</span><span class="p">))</span> <span class="c1">#my orcid</span>
 <span class="c1">#note you will have to authorize your orcid for each folder you use this file in</span></code></pre></div>
 <p>Each of these creates a data.frame with different pieces of information - I encourage you to investigate your own. The next thing I did was set up the ORC pages to merge with the Scholar pages. Unfortunately, the ORCID one pulls in a column that&rsquo;s a list within each cell, so I converted that into a doi (the only variable I wanted) column separately.</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># set up dois -------------------------------------------------------------</span>
@@ -326,9 +324,11 @@ curated_check<span class="o">$</span><span class="sb">`put-code`</span> <span cl
 
 <span class="c1">#write.csv(curated_check, &#34;check_these.csv&#34;, row.names = F)</span></code></pre></div>
 <p><code>setdiff</code> takes the ones that are in the final dataset (f) but aren&rsquo;t in the curated dataset &copy;. Then I grabbed the rows in the final dataset that were in the &ldquo;haven&rsquo;t seen these yet&rdquo; pile using <code>%in%</code>. <code>newrows</code> is a list of information found in both of these services that aren&rsquo;t in your CV. I use the word &ldquo;new&rdquo; loosely here. Let&rsquo;s see what it found, as I&rsquo;ve just updated my cv.</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">newrows<span class="o">$</span>title</code></pre></div><div class="highlight"><pre class="chroma">## [1] Development of a Patient Reported Outcome Measure Evaluating Meaningful Response to Migraine Treatment
-## [2] State of Science Paper Guide                                                                          
-## 141 Levels: “Textisms”: The comfort of the recipient. ...</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r">newrows<span class="o">$</span>title</code></pre></div><div class="highlight"><pre class="chroma">## [1] Acknowledgment to our Reviewers                                                                       
+## [2] Acknowledgment to Reviewers                                                                           
+## [3] Development of a Patient Reported Outcome Measure Evaluating Meaningful Response to Migraine Treatment
+## [4] State of Science Paper Guide                                                                          
+## 146 Levels: “Textisms”: The comfort of the recipient. ...</pre></div>
 <p>These three are 1) OSF page for an Accelerated CREP I am on, but I haven&rsquo;t added it yet to my CV because it&rsquo;s a bit early to be sharing (i.e., waiting until there&rsquo;s more of real paper there), 2) a &ldquo;preprint&rdquo; project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA&rsquo;s website, which I don&rsquo;t have access to. Probably a doi for a conference presentation, but I don&rsquo;t really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would get ignored as things not to print.</p>
 
 <p>This next part is set up to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that&rsquo;s not really my thing to track (however, for some folks working at institutions that do care, you could update that over time using something like this code).</p>
@@ -337,15 +337,19 @@ temp <span class="o">=</span> na.omit<span class="p">(</span>curated<span class=
 update <span class="o">=</span> temp<span class="o">$</span>pubid<span class="p">[</span>temp<span class="o">$</span>volume <span class="o">==</span> <span class="s">&#34;X&#34;</span><span class="p">]</span>
 
 final<span class="p">[</span>final<span class="o">$</span>pubid <span class="o">%in%</span> update<span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">,</span> <span class="s">&#34;number&#34;</span><span class="p">)]</span></code></pre></div><div class="highlight"><pre class="chroma">##                                                                                                                           title
-## 26                                           Differential Effects of Association and Semantics on Priming and Memory Judgments.
-## 31           Evaluating the effectiveness of ecological momentary assessment and intervention targeting body checking behaviors
-## 41                        How the Presence of Others Affects Desirability Judgments in Heterosexual and Homosexual Participants
-## 60 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
+## 8                                                                  A practical primer on processing semantic property norm data
+## 28                                           Differential Effects of Association and Semantics on Priming and Memory Judgments.
+## 38                                                        Generativity and other buffers of death awareness in first responders
+## 45                        How the Presence of Others Affects Desirability Judgments in Heterosexual and Homosexual Participants
+## 65 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
+## 83             Valued Living in Daily Experience: Relations with Mindfulness, Meaning, Psychological Flexibility, and Stressors
 ##    number
-## 26       
-## 31   1-17
-## 41       
-## 60</pre></div>
+## 8    1-13
+## 28       
+## 38   1-14
+## 45       
+## 65       
+## 83   1-11</pre></div>
 <p>None of these have new volume or page numbers, so I am good to go here. Because I have this as an excel sheet, I can do some fun visualizations:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
 

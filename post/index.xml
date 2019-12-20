@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://doomlab.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Year of the Thesis</title>
+      <link>https://doomlab.github.io/post/2019-in-review/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/2019-in-review/</guid>
+      <description>The Year of the Thesis!
+Just wanted to highlight several publications from this year, which were mostly theses from some fabulous young researchers:
+ Scofield, J.E., Kostic, B., &amp;amp; Buchanan, E.M. (2019). How the presence of others affects desirability judgments in heterosexual and homosexual participants. Archives of Sexual Behavior, X, XX–XX. doi: 10.1007/s10508-019-01516-w
+ Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019). Investigating the interaction of direct and indirect relation on memory judgments and retrieval.</description>
+    </item>
     
     <item>
       <title>Getting Translations with rvest and Selenium</title>

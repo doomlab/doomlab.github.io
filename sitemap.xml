@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://doomlab.github.io/post/2019-in-review/</loc>
+    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
   </url>
@@ -213,7 +218,7 @@
   
   <url>
     <loc>https://doomlab.github.io/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -326,7 +331,7 @@
   
   <url>
     <loc>https://doomlab.github.io/post/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -338,7 +343,7 @@
   
   <url>
     <loc>https://doomlab.github.io/tags/publication/</loc>
-    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -368,7 +373,7 @@
   
   <url>
     <loc>https://doomlab.github.io/categories/research/</loc>
-    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -387,6 +387,8 @@ Computer Interface to Improve Development. Honda Initiative (2009, submitted).
 
 ### Applied Statistics
 
+Principal Investigator. Creating Enhanced Shared Decision Making through a Migraine Tracking Application. Presidential Research Grant at Harrisburg University. (2019, awarded). $19180.
+
 Principal Investigator. Validation of the Functional Assessment of Migraine Scale (FAMS). National Headache Foundation (2019, submitted). $54,000.00.
 
 Principal Investigator. Development of a Headache Meaningful Response Measure 
@@ -479,19 +481,19 @@ Course Evaluations can be provided upon request.
 	
 *In-Person/Online Help Desk*: The Psychology Help Desk was designed as small group tutoring/help opportunity for our statistics and research methods courses (approximately 1,500 students annually). The Help Desk holds regular open hours to accommodate students who need assistance with program or math related questions. The online Help Desk was created to reach our busy, non-traditional, and online students. I supervised the graduate assistant and practicum students who hold open hours. I trained these students, as well as create materials for the online portion of the Help Desk. The graduate assistant answered a special email box for the Help Desk and provides assistance through a special Blackboard portal. The Blackboard site was used to link students to appropriate materials, contact information for the Help Desk, and email out information as necessary.
 
-*YouTube*: My YouTube channel contains many hours of tutorials on how to complete statistical procedures in SPSS, Excel, R, MOTE, and G*Power. This information is used as teaching material in my courses and is open access for students/researchers to use as needed. I respond to online questions about these materials and take requests for video material. 
+*YouTube*: My YouTube channel contains many hours of tutorials on how to complete statistical procedures in SPSS, Excel, *R*, MOTE, and G*Power. This information is used as teaching material in my courses and is open access for students/researchers to use as needed. I respond to online questions about these materials and take requests for video material. 
 
-*MOTE*: MOTE is a free R package and online app that calculates effect sizes and their non-central confidence intervals. This package was designed to fill the gap between running hypothesis testing calculations and effect sizes for students in a simple format – while also adding in confidence intervals for effect sizes because of the promotion for these values in reporting. 
+*MOTE*: MOTE is a free *R* package and online app that calculates effect sizes and their non-central confidence intervals. This package was designed to fill the gap between running hypothesis testing calculations and effect sizes for students in a simple format – while also adding in confidence intervals for effect sizes because of the promotion for these values in reporting. 
 
-*Statstools.com*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate statistics and structural equation modeling) are provided with multiple formats (SPSS, Excel, R) for use by students in my courses and the interested graduate student or researcher. This information is formatted so that an individual may download the entire course for a template when assigned as a course prep. 
+*Statstools.com*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate statistics and structural equation modeling) are provided with multiple formats (SPSS, Excel, *R*) for use by students in my courses and the interested graduate student or researcher. This information is formatted so that an individual may download the entire course for a template when assigned as a course prep. 
 
 # Service
 
 ### Professional Memberships
 
-Psychological Science Accelerator (PSA) - Assistant Director of Training 
+Psychological Science Accelerator (PSA) - Assistant Director of Training, Web Admin 
 
-Society for Computers in Psychology (SCIP) - Executive Board 
+Society for Computation in Psychology (SCIP) - Executive Board 
 
 Society for the Improvement of the Psychological Sciences (SIPS)
 
@@ -508,6 +510,8 @@ Graduate and Professional Student Association
 ### Professional Activities
 
 ## Journal Boards
+
+Behavior Research Methods, Associate Editor \hfill 2020-Current
 
 Meta-Psychology, Editorial Board \& Action Editor \hfill 2019-Current
 
@@ -535,7 +539,7 @@ Reviewer for Journal of Clinical Psychology \hfill 2013-Current
 
 Reviewer for Behavior Research Methods \hfill 2012-Current
 
-Reviewer for the Journal of Scientific Psychology \hfill 2007 – Current 
+Reviewer for the Journal of Scientific Psychology \hfill 2007–Current 
 
 ## Service Committees
 
