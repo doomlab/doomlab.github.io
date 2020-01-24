@@ -8,31 +8,31 @@
   <title>Working With Messy Text</title>
   <meta property="og:title" content="Working With Messy Text" />
   <meta name="twitter:title" content="Working With Messy Text" />
-  <meta name="description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).
+  <meta name="description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was probably my first real language, but I love the heck out of perl. It&#39;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.">
-  <meta property="og:description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).
+  <meta property="og:description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was probably my first real language, but I love the heck out of perl. It&#39;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.">
-  <meta name="twitter:description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in R that I used to do in perl. HTML or …">
+  <meta name="twitter:description" content="Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C&#43;&#43; was …">
   <meta name="author" content="aggieerin.com"/>
-  <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
-  <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/header.jpg" />
+  <meta name="twitter:image" content="/img/header.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/post/working-with-messy-text/" />
+  <meta property="og:url" content="/post/working-with-messy-text/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
-  <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://doomlab.github.io/post/working-with-messy-text/" />
-  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <meta name="generator" content="Hugo 0.62.2" />
+  <link rel="canonical" href="/post/working-with-messy-text/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" />
 
 
 
@@ -98,7 +98,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+      <a class="navbar-brand" href="/">Dr. Erin Buchanan</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -178,8 +178,8 @@ Anyways! The context of this project is that we are developing a dictionary of w
     <div class="avatar-container">
       <div class="avatar-img-border">
         
-          <a title="Dr. Erin Buchanan" href="https://doomlab.github.io">
-            <img class="avatar-img" src="https://doomlab.github.io/img/header.jpg" alt="Dr. Erin Buchanan" />
+          <a title="Dr. Erin Buchanan" href="/">
+            <img class="avatar-img" src="/img/header.jpg" alt="Dr. Erin Buchanan" />
           </a>
         
       </div>
@@ -239,73 +239,65 @@ Anyways! The context of this project is that we are developing a dictionary of w
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&rsquo;ve put together that solves problems in <em>R</em> that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&rsquo;s never done me wrong (unlike you PHP).</p>
-
-<p>Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - <a href="http://www.moralfoundations.org/othermaterials">learn more</a>. I had a student who was interested in Moral Foundations Theory and its relationship to language, and we had tested some of the dictionary and found it to be frustratingly obtuse. Meaning, that a lot of the words in it are great, but not things that people like, college freshman, or even <strong>me</strong> were likely to say. She&rsquo;s moved on to working with the founder of the <a href="http://liwc.wpengine.com/">LIWC</a> - and even worked on the newest version of it :small brag:.</p>
-
-<p>Now I have a second student who&rsquo;s helping finish up some work on the dictionary, to see if what we were doing is worthwhile (spoiler alert: I don&rsquo;t know). However, I thought I might share some code we were using and it&rsquo;s context for people who are also trying to get into doing some of this text mining/cleaning/editing in <em>R</em>. You can find all the materials for this project, including the code in context of our messy paper, on <a href="https://github.com/doomlab/Pol-Lang/tree/master/MTMM%20MF/manuscript">GitHub</a>.</p>
-
-<p>Here&rsquo;s a view of what the data looks like (this isn&rsquo;t even the messiest part, and part 2 of our study uses full written paragraphs):</p>
-<div class="highlight"><pre class="chroma">&gt; head(noout1$Q27)
+        <p>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I've put together that solves problems in <em>R</em> that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It's never done me wrong (unlike you PHP).</p>
+<p>Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - <a href="http://www.moralfoundations.org/othermaterials">learn more</a>. I had a student who was interested in Moral Foundations Theory and its relationship to language, and we had tested some of the dictionary and found it to be frustratingly obtuse. Meaning, that a lot of the words in it are great, but not things that people like, college freshman, or even <strong>me</strong> were likely to say. She's moved on to working with the founder of the <a href="http://liwc.wpengine.com/">LIWC</a> - and even worked on the newest version of it :small brag:.</p>
+<p>Now I have a second student who's helping finish up some work on the dictionary, to see if what we were doing is worthwhile (spoiler alert: I don't know). However, I thought I might share some code we were using and it's context for people who are also trying to get into doing some of this text mining/cleaning/editing in <em>R</em>. You can find all the materials for this project, including the code in context of our messy paper, on <a href="https://github.com/doomlab/Pol-Lang/tree/master/MTMM%20MF/manuscript">GitHub</a>.</p>
+<p>Here's a view of what the data looks like (this isn't even the messiest part, and part 2 of our study uses full written paragraphs):</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; head(noout1$Q27)
 [1] &#34;doctors, babysitting&#34;                    
 [2] &#34;criminals, doctors, shootings, medicine &#34;
 [3] &#34;Health&#34;                                  
 [4] &#34;physical healthiness, mental healthiness&#34;
 [5] &#34;hurt, effect, love, protect&#34;             
-[6] &#34;hurt, depression, pain&#34;</pre></div>
-<p>So, couple things we have to deal with:</p>
-
+[6] &#34;hurt, depression, pain&#34;
+</code></pre></div><p>So, couple things we have to deal with:</p>
 <ul>
 <li>Mixed case</li>
 <li>Punctuation</li>
 <li>Stemming (affixes)</li>
 </ul>
-
-<p>Now, don&rsquo;t hate on me folks, but I love a good loop. I could probably do this with the <code>apply</code> family, but I didn&rsquo;t:</p>
-<div class="highlight"><pre class="chroma">&gt; ##stem the data library(corpus) was loaded earlier
+<p>Now, don't hate on me folks, but I love a good loop. I could probably do this with the <code>apply</code> family, but I didn't:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##stem the data library(corpus) was loaded earlier
 &gt; for (i in 1:nrow(noout1)) {
 +   noout1$Q27[i] = paste(unlist(
 +     text_tokens(noout1$Q27[i], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
-+ }</pre></div>
-<p>Unpacking what this does:</p>
-
++ }
+</code></pre></div><p>Unpacking what this does:</p>
 <ul>
-<li>Loops over each participant&rsquo;s answers in Q27. I did this because <code>text_tokens</code> returns a list of lists, which I personally find troublesome to deal with, and I wanted to retain each persons answers in one cell.</li>
+<li>Loops over each participant's answers in Q27. I did this because <code>text_tokens</code> returns a list of lists, which I personally find troublesome to deal with, and I wanted to retain each persons answers in one cell.</li>
 <li>Uses <code>text_tokens</code> to &ldquo;tokenize&rdquo; or de-affix the data. <code>stemmer = &quot;en&quot;</code> is an argument to stem the words in English.</li>
 <li>Unlists the list returned by <code>text_tokens</code>.</li>
 <li>Pastes the updated data back to one cell. Be sure to use <code>collapse</code> here and not <code>sep</code>, as we want 1 item returned, and <code>sep</code> would just stick spaces between items if there were more than one.</li>
 </ul>
-<div class="highlight"><pre class="chroma">##one example
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">##one example
 &gt; paste(unlist(
 +     text_tokens(noout1$Q27[4], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
 [1] &#34;physic healthi , mental healthi&#34; ##one string
 &gt; paste(unlist(
 +     text_tokens(noout1$Q27[4], stemmer = &#34;en&#34;)), sep = &#34; &#34;)
-[1] &#34;physic&#34;  &#34;healthi&#34; &#34;,&#34;       &#34;mental&#34;  &#34;healthi&#34; ##five strings</pre></div>
-<p>Let&rsquo;s look at the data now:</p>
-<div class="highlight"><pre class="chroma">&gt; head(noout1$Q27)
+[1] &#34;physic&#34;  &#34;healthi&#34; &#34;,&#34;       &#34;mental&#34;  &#34;healthi&#34; ##five strings
+</code></pre></div><p>Let's look at the data now:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; head(noout1$Q27)
 [1] &#34;doctor , babysit&#34;                 
 [2] &#34;crimin , doctor , shoot , medicin&#34;
 [3] &#34;health&#34;                           
 [4] &#34;physic healthi , mental healthi&#34;  
 [5] &#34;hurt , effect , love , protect&#34;   
-[6] &#34;hurt , depress , pain&#34;    </pre></div>
-<p>You can see that the words have been stemmed and are now in lower case. We haven&rsquo;t removed punctuation yet. There&rsquo;s lots of ways to do that, but since one of the next steps does it for me, I won&rsquo;t cover those. The next step requires the <code>tm</code> library, although I bet the <code>corpus</code> library also does similar steps, just more familiar with <code>tm</code>. We will create a corpus out of the vector of participant answers I have:</p>
-<div class="highlight"><pre class="chroma">&gt; ##create a corpus
+[6] &#34;hurt , depress , pain&#34;    
+</code></pre></div><p>You can see that the words have been stemmed and are now in lower case. We haven't removed punctuation yet. There's lots of ways to do that, but since one of the next steps does it for me, I won't cover those. The next step requires the <code>tm</code> library, although I bet the <code>corpus</code> library also does similar steps, just more familiar with <code>tm</code>. We will create a corpus out of the vector of participant answers I have:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##create a corpus
 &gt; harm_corpus = Corpus(VectorSource(noout1$Q27))
 &gt; harm_TDM = as.matrix(TermDocumentMatrix(harm_corpus,
 +                               control = list(removePunctuation = TRUE,
-+                                              stopwords = TRUE)))</pre></div>
-<p>The <code>Corpus</code> step simply creates a big list of all the &ldquo;documents&rdquo; (here, each participant is treated as a separate document, which is what I want) from a Vector, rather than opening separate documents in a file. The <code>TermDocumentMatrix</code> function creates a giant matrix wherein:</p>
-
++                                              stopwords = TRUE)))
+</code></pre></div><p>The <code>Corpus</code> step simply creates a big list of all the &ldquo;documents&rdquo; (here, each participant is treated as a separate document, which is what I want) from a Vector, rather than opening separate documents in a file. The <code>TermDocumentMatrix</code> function creates a giant matrix wherein:</p>
 <ul>
 <li>Terms (words) are <em>rows</em></li>
 <li>Documents (participants) are <em>columns</em></li>
 <li>Each row, column combination stores the number of times a term appeared in each document.</li>
 </ul>
-
 <p>These can get real big, real fast, fyi. The nice thing about the <code>TermDocumentMatrix</code> function is that it handled the punction for me by using <code>removePunctuation = TRUE</code> and also dealt with the stop words. Stop words are things like <em>the, an, a, of</em> that are traditionally removed from these types of analyses that focus on content words over helper words.</p>
-<div class="highlight"><pre class="chroma">&gt; harm_TDM[1:6, 1:6]
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_TDM[1:6, 1:6]
          Docs
 Terms     1 2 3 4 5 6
   babysit 1 0 0 0 0 0
@@ -313,9 +305,9 @@ Terms     1 2 3 4 5 6
   crimin  0 1 0 0 0 0
   medicin 0 1 0 0 0 0
   shoot   0 1 0 0 0 0
-  health  0 0 1 0 0 0</pre></div>
-<p>Great, now what can I do with that? Everything! Here&rsquo;s what we did. Found the most frequent words by creating a data.frame that was a frequency table (thanks StackOverflow!):</p>
-<div class="highlight"><pre class="chroma">&gt; ##view the most frequent words
+  health  0 0 1 0 0 0
+</code></pre></div><p>Great, now what can I do with that? Everything! Here's what we did. Found the most frequent words by creating a data.frame that was a frequency table (thanks StackOverflow!):</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##view the most frequent words
 &gt; harm_freq = data.frame(Word = rownames(harm_TDM),
 +                        Freq = rowSums(harm_TDM),
 +                        row.names = NULL)
@@ -328,13 +320,13 @@ Terms     1 2 3 4 5 6
 3  crimin    6  1.3793103
 4 medicin    5  1.1494253
 5   shoot    1  0.2298851
-6  health   16  3.6781609</pre></div>
-<p>Doctor is in the top 5, other big words included hurt, love, pain, and hospit(al). In this prompt, participants were free associating with the harm/care foundation. Now the tricky part was to combine this data back with my other data frame that included particiapnt information, including their moral foundation questionnaire scores:</p>
-<div class="highlight"><pre class="chroma">&gt; harm_words = harm_freq$Word[harm_freq$percent &gt;=1]
+6  health   16  3.6781609
+</code></pre></div><p>Doctor is in the top 5, other big words included hurt, love, pain, and hospit(al). In this prompt, participants were free associating with the harm/care foundation. Now the tricky part was to combine this data back with my other data frame that included particiapnt information, including their moral foundation questionnaire scores:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_words = harm_freq$Word[harm_freq$percent &gt;=1]
 &gt; head(harm_words)
-[1] &#34;doctor&#34;  &#34;crimin&#34;  &#34;medicin&#34; &#34;health&#34;  &#34;mental&#34;  &#34;physic&#34; </pre></div>
-<p>First, I created a list of harm words that were mentioned at least 1% of the time. I use the transpose function <code>t()</code> to flip the dataset from rows as words, to columns as words to maintain &ldquo;tidy-ish&rdquo; data (i.e., each participant is their own row). Then I subset out the dataset to only be my top words:</p>
-<div class="highlight"><pre class="chroma">&gt; harm_TDM = as.data.frame(t(harm_TDM))
+[1] &#34;doctor&#34;  &#34;crimin&#34;  &#34;medicin&#34; &#34;health&#34;  &#34;mental&#34;  &#34;physic&#34; 
+</code></pre></div><p>First, I created a list of harm words that were mentioned at least 1% of the time. I use the transpose function <code>t()</code> to flip the dataset from rows as words, to columns as words to maintain &ldquo;tidy-ish&rdquo; data (i.e., each participant is their own row). Then I subset out the dataset to only be my top words:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_TDM = as.data.frame(t(harm_TDM))
 &gt; harm_TDM = harm_TDM[ , harm_words]
 &gt; harm_TDM[1:6, 1:6]
   doctor crimin medicin health mental physic
@@ -343,9 +335,9 @@ Terms     1 2 3 4 5 6
 3      0      0       0      1      0      0
 4      0      0       0      0      1      1
 5      0      0       0      0      0      0
-6      0      0       0      0      0      0</pre></div>
-<p>Now, we can <code>cbind</code> our harm dataset with the other relevant columns for harm.</p>
-<div class="highlight"><pre class="chroma">&gt; harm_final = cbind(noout1[ , c(&#34;ResponseId&#34;, &#34;Q15_1&#34;, &#34;Q23&#34;, &#34;harmMFQ&#34;)],
+6      0      0       0      0      0      0
+</code></pre></div><p>Now, we can <code>cbind</code> our harm dataset with the other relevant columns for harm.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_final = cbind(noout1[ , c(&#34;ResponseId&#34;, &#34;Q15_1&#34;, &#34;Q23&#34;, &#34;harmMFQ&#34;)],
 +                    harm_TDM)
 &gt; harm_final[1:6, 1:6]
          ResponseId Q15_1         Q23 harmMFQ doctor crimin
@@ -354,8 +346,8 @@ Terms     1 2 3 4 5 6
 3 R_11hglRVpaSclG0K     5  Republican      13      0      0
 4 R_3kMsBrEjwDtu5iJ     6 Independent      16      0      0
 5 R_swkbG8889YEOxoZ     3  Republican      14      0      0
-6 R_s682tzsz2YIkwJX    10    Democrat      17      0      0</pre></div>
-<p>So, now you too can create participant term-document matrices! In later posts, I&rsquo;ll show you how we are going to use this information to create an updated dictionary and examine if that dictionary relates to the Moral Foundations Questionnaire. This task will involve some correlations, but also a multi-trait multi-method analysis using <code>lavaan</code> so stay tuned if you are interested in structural equation modeling.</p>
+6 R_s682tzsz2YIkwJX    10    Democrat      17      0      0
+</code></pre></div><p>So, now you too can create participant term-document matrices! In later posts, I'll show you how we are going to use this information to create an updated dictionary and examine if that dictionary relates to the Moral Foundations Questionnaire. This task will involve some correlations, but also a multi-trait multi-method analysis using <code>lavaan</code> so stay tuned if you are interested in structural equation modeling.</p>
 
       </article>
 
@@ -363,12 +355,12 @@ Terms     1 2 3 4 5 6
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://doomlab.github.io/post/new-publications/" data-toggle="tooltip" data-placement="top" title="New Publications">&larr; Previous Post</a>
+              <a href="/post/new-publications/" data-toggle="tooltip" data-placement="top" title="New Publications">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://doomlab.github.io/post/mediation-moderation-workshop/" data-toggle="tooltip" data-placement="top" title="Mediation Moderation Workshop">Next Post &rarr;</a>
+              <a href="/post/mediation-moderation-workshop/" data-toggle="tooltip" data-placement="top" title="Mediation Moderation Workshop">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -448,7 +440,7 @@ Terms     1 2 3 4 5 6
           
           <li>
             
-            <a href="https://doomlab.github.io/index.xml" title="RSS">
+            <a href="/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -466,16 +458,16 @@ Terms     1 2 3 4 5 6
           
 
           &nbsp;&bull;&nbsp;
-          2019
+          2020
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+            <a href="/">Dr. Erin Buchanan</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.49.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.62.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
@@ -487,13 +479,13 @@ Terms     1 2 3 4 5 6
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://doomlab.github.io/js/main.js"></script>
-<script src="https://doomlab.github.io/js/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://doomlab.github.io/js/load-photoswipe.js"></script>
+<script src="/js/load-photoswipe.js"></script>
 
 
 

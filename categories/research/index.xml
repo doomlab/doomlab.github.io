@@ -1,23 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Research on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/categories/research/</link>
-    <description>Recent content in Research on Dr. Erin Buchanan</description>
+    <title>research on Dr. Erin Buchanan</title>
+    <link>/categories/research/</link>
+    <description>Recent content in research on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/categories/research/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/research/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Lasso Myself Numbers</title>
+      <link>/post/lasso-myself-numbers/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>/post/lasso-myself-numbers/</guid>
+      <description>Hey everybody!
+The last couple days I have been trying to learn LASSO regression, which stands for Least Absolute Shrinkage and Selection Operator. I have several datasets with many variables, and I thought these would be a good opportunity to learn about how to lasso, while maybe answering a few questions about words.
+Right, the part I forgot about is that I have repeated measures data, which always complicates things.</description>
+    </item>
+    
+    <item>
       <title>The Year of the Thesis</title>
-      <link>https://doomlab.github.io/post/2019-in-review/</link>
+      <link>/post/2019-in-review/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/2019-in-review/</guid>
+      <guid>/post/2019-in-review/</guid>
       <description>The Year of the Thesis!
 Just wanted to highlight several publications from this year, which were mostly theses from some fabulous young researchers:
  Scofield, J.E., Kostic, B., &amp;amp; Buchanan, E.M. (2019). How the presence of others affects desirability judgments in heterosexual and homosexual participants. Archives of Sexual Behavior, X, XX–XX. doi: 10.1007/s10508-019-01516-w
@@ -26,51 +37,51 @@ Just wanted to highlight several publications from this year, which were mostly 
     
     <item>
       <title>Getting Translations with rvest and Selenium</title>
-      <link>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</link>
+      <link>/post/getting-translations-with-rvest-and-selenium/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</guid>
+      <guid>/post/getting-translations-with-rvest-and-selenium/</guid>
       <description>In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.</description>
     </item>
     
     <item>
       <title>New Publications</title>
-      <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
+      <link>/post/new-publications-oct-19/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
-      <description>Just updated my CV - here&amp;rsquo;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&amp;rsquo;t really predict what order the same year publications are going to be in - not that it matters in general, but it&amp;rsquo;s an interesting side effect.
+      <guid>/post/new-publications-oct-19/</guid>
+      <description>Just updated my CV - here&#39;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&#39;t really predict what order the same year publications are going to be in - not that it matters in general, but it&#39;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
 Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of direct and in-direct relation on memory judgments and retrieval.</description>
     </item>
     
     <item>
       <title>Updating Your CV with Packages</title>
-      <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
+      <link>/post/updating-your-cv-with-packages/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
-      <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&amp;rsquo;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
+      <guid>/post/updating-your-cv-with-packages/</guid>
+      <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does &amp;ldquo;knit&amp;rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.</description>
     </item>
     
     <item>
       <title>Line Endings Are Dumb</title>
-      <link>https://doomlab.github.io/post/line-endings-are-dumb/</link>
+      <link>/post/line-endings-are-dumb/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/line-endings-are-dumb/</guid>
-      <description>I have happily acquired a new Mac Book (yay!) and a new work computer (Windows). So, I&amp;rsquo;ve been making One Drive exceedingly unhappy moving GBs of file from one to another.
+      <guid>/post/line-endings-are-dumb/</guid>
+      <description>I have happily acquired a new Mac Book (yay!) and a new work computer (Windows). So, I&#39;ve been making One Drive exceedingly unhappy moving GBs of file from one to another.
 As I was working on reconnecting my GitHub repositories to the files, I was trying to understand why several of my repos were saying I had a bunch of file changes but nothing in the files themselves had changed. I noticed they were mostly .</description>
     </item>
     
     <item>
       <title>New Publications and Updated CV</title>
-      <link>https://doomlab.github.io/post/new-publications-and-updated-cv/</link>
+      <link>/post/new-publications-and-updated-cv/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publications-and-updated-cv/</guid>
-      <description>Hi guys! I just wanted to post that I&amp;rsquo;ve updated the website to be current with some new publications I wanted to highlight:
+      <guid>/post/new-publications-and-updated-cv/</guid>
+      <description>Hi guys! I just wanted to post that I&#39;ve updated the website to be current with some new publications I wanted to highlight:
 First up is two papers on psycholinguistics that were undergraduate student projects:
 Duncan, J., Buchanan, E.M., Marshall, C.Z., &amp;amp; Oberdieck, K. (accepted). But words will never hurt me, Journal of Psychology and Behavioral Sciences, X, XX-XX. PDF
 Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort of the Recipient, Psychology of Popular Media Culture, X, XX-XX.</description>
@@ -78,29 +89,29 @@ Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort
     
     <item>
       <title>Current Publications with Papaja</title>
-      <link>https://doomlab.github.io/post/current-publications-with-papaja/</link>
+      <link>/post/current-publications-with-papaja/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/current-publications-with-papaja/</guid>
+      <guid>/post/current-publications-with-papaja/</guid>
       <description>Heyo! Frederik, the author of papaja, requested that we update him with papers written with his package. I was like, oh man, like the whole lab?! So, I decided that I could probably make it easy by making a table here. Obviously, this table is current at the moment, as I hope many of the ones under review will get accepted, and I have several others that we will start writing soon.</description>
     </item>
     
     <item>
       <title>Gathering Text from the Web</title>
-      <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
+      <link>/post/gathering-text-from-the-web/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
-      <description>Hi everyone! I don&amp;rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
+      <guid>/post/gathering-text-from-the-web/</guid>
+      <description>Hi everyone! I don&#39;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
     </item>
     
     <item>
       <title>New Publication: Texting</title>
-      <link>https://doomlab.github.io/post/new-publication-texting/</link>
+      <link>/post/new-publication-texting/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publication-texting/</guid>
+      <guid>/post/new-publication-texting/</guid>
       <description>One more announcement! We just had a new publication accepted:
 &amp;ldquo;Textisms&amp;rdquo;: The Comfort of the Recipient: This paper was an undergraduate honors thesis that Flora-Jean and I finally got accepted! She did a great job making sure this paper was completed and published.
 You can check out the materials here: https://osf.io/8kt52/
@@ -110,30 +121,30 @@ We should have the real print up soon! Just waiting on the journal now.</descrip
     
     <item>
       <title>Working With Messy Text</title>
-      <link>https://doomlab.github.io/post/working-with-messy-text/</link>
+      <link>/post/working-with-messy-text/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
-      <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&amp;rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&amp;rsquo;s never done me wrong (unlike you PHP).
+      <guid>/post/working-with-messy-text/</guid>
+      <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&#39;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
     </item>
     
     <item>
       <title>New Publications</title>
-      <link>https://doomlab.github.io/post/new-publications/</link>
+      <link>/post/new-publications/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publications/</guid>
-      <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&amp;rsquo;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
-We&amp;rsquo;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&amp;rsquo;ve done this week after taking a breather from a seriously packed week.</description>
+      <guid>/post/new-publications/</guid>
+      <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&#39;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
+We&#39;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&#39;ve done this week after taking a breather from a seriously packed week.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
+      <link>/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
+      <guid>/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
@@ -141,40 +152,40 @@ We create a really nice R function to help you detect low quality data, which yo
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
-      <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
+      <link>/post/citations-in-r-markdown-papaja/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
-      <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
+      <guid>/post/citations-in-r-markdown-papaja/</guid>
+      <description>Heyo! I wanted to write a post about some of the quirky things I&#39;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
 Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.</description>
     </item>
     
     <item>
       <title>A Shiny App to Compare Stats</title>
-      <link>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</link>
+      <link>/post/a-shiny-app-to-compare-stats/</link>
       <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
+      <guid>/post/a-shiny-app-to-compare-stats/</guid>
       <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
  Bayes Factors and p-values follow a power function, as we expected.</description>
     </item>
     
     <item>
       <title>Learn About MOTE</title>
-      <link>https://doomlab.github.io/post/learn-about-mote/</link>
+      <link>/post/learn-about-mote/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/learn-about-mote/</guid>
+      <guid>/post/learn-about-mote/</guid>
       <description>The APA Task Force on Statistical Inference (Wilkinson &amp;amp; TFSI, 1999) has advocated the inclusion of effect sizes in journal articles as an important source of information. The fifth and current edition of the APA publication manual (2001, 2010) emphasized these findings from the task force, along with requirement of effect sizes to publish in their journals. However, Fidler et al. (2005) have conveyed that only slight increases in report rates have been found in popular journals.</description>
     </item>
     
     <item>
       <title>Research Statement</title>
-      <link>https://doomlab.github.io/post/research-statement/</link>
+      <link>/post/research-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/research-statement/</guid>
+      <guid>/post/research-statement/</guid>
       <description>Upon arriving at Missouri State University, I founded the Deciphering Outrageous Observations and Modeling (DOOM) lab which has included more than ten graduate and thirty undergraduate students. My research mission has been in two primary domains described in detail below and includes many collaborative efforts throughout the years.
 Psycholinguistics. My cognitive research focuses broadly on psycholinguistics and memory, particularly on the statistical properties of word relationships. Overall, I seek to understand how language is represented in memory by adding to and examining available linguistic database information (i.</description>
     </item>

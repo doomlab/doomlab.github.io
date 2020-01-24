@@ -1,0 +1,296 @@
+---
+title: Lasso Myself Numbers
+author: Erin M. Buchanan
+date: '2020-01-21'
+slug: lasso-myself-numbers
+categories:
+  - research
+tags:
+  - regression
+  - lasso
+  - how-to
+  - psycholinguistics
+subtitle: ''
+---
+
+Hey everybody!
+
+The last couple days I have been trying to learn LASSO regression, which stands for Least Absolute Shrinkage and Selection Operator. I have several datasets with many variables, and I thought these would be a good opportunity to learn about how to lasso, while maybe answering a few questions about words. 
+
+Right, the part I forgot about is that I have repeated measures data, which always complicates things. One day I will give up liking words and do simple between-subjects studies, but today is not that day.
+
+This project can be found at: https://github.com/doomlab/Nick-Thesis - although, if you are truly into the background details, I'd probably tell you to read the published manuscript pilot part of this study at: https://osf.io/fcesn/. Nick and I are interested in bad judgments - how can we predict the sensitivity of these judgments? 
+
+These studies are played Family Feud style. You are shown two words `rock-roll` and asked "if I said the first word (rock), how many times out of 100 would someone say the second word (roll)". You guess the probability of their association, and then we compare your answer to the real answer. Our previous work has shown that people are fairly insensitive to the differences in highly related pairs and less related pairs, so they have a shallow slope (which means they can't tell the difference between things that are only a little bit related and a lot related). Why does that matter? We guess probabilities all the time in our daily lives, but especially important as this exact same effect is shown in judgments of learning (i.e., how well do you think you will do on a test over this material?). So, to students, understanding what influences judgments seems important.
+
+Now, I'm more interested in what part of the word network influences these judgments because words are interesting. :) We generally use measures of similarity (word pair combinations) to predict these judgments because that's what you are asking participants to do - estimate similarity. However, there are lots of individual word influences that might affect judgments - part of speech, length, familiarity, etc. 
+
+We originally did this analysis by using ordinary least squares ("regular") regression with a lot of steps (hierarchical). It's a lot of variables, but stepwise regression has a bad name in the social sciences. I'm going to use LASSO regression here to see if I find anything useful.
+
+First, let's get the full data (across two experiments, with different word pairs) from GitHub. 
+
+```{r}
+library(RCurl)
+thesis.dat <- read.csv(text = getURL("https://raw.githubusercontent.com/doomlab/Nick-Thesis/master/3%20manuscripts/Melted%20Data%20pilot.csv"))
+
+pilot.dat <- read.csv(text = getURL("https://raw.githubusercontent.com/doomlab/Nick-Thesis/master/3%20manuscripts/master.csv"))
+```
+
+Next, data cleanup: 
+
+- Fixing column names, factor label names, and using only the columns I was interested in. I dropped the phonemes and syllables columns because these are nearly perfectly correlated with word length - because longer words naturally have more sounds. Please note that the 1 and 2 at the end of variables denotes which word it relates to (cue versus target). 
+
+```{r}
+#we didn't name columns the same thing
+colnames(thesis.dat)[2] <- "Judgment"
+
+#put together the two datasets
+full.dat <- rbind(thesis.dat, pilot.dat)
+
+#cleaning out when people estimated more than 100
+full.dat$Judged.Value[ full.dat$Judged.Value > 100] <- NA
+
+#again consistent naming
+full.dat$Judgment <- tolower(full.dat$Judgment)
+full.dat$Judgment <- as.factor(full.dat$Judgment)
+
+#all the variables I am going to use
+xcolumns <- c("COS", "LSA", "FSG","QSS.1","QCON.1",
+              "LogSub.1","Length.1" ,"POS.1","Ortho.1","Phono.1",
+              "Morphemes.1","AOA.1", "Valence.1","Imageability.1",
+              "Familiarity.1","QCON.2","LogSub.2","Length.2",
+              "POS.2","Ortho.2","Phono.2","Morphemes.2",
+              "AOA.2","Valence.2","Imageability.2","Familiarity.2",
+              "TSS.2","FSS.1","FSS.2","COSC.1","COSC.2", "Judgment", 
+              "Partno")
+
+#just that data
+full.dat <- full.dat[ ,c(xcolumns, "Judged.Value") ]
+
+#merge several mostly empty categories together 
+full.dat$POS.1 <- as.character(full.dat$POS.1)
+full.dat$POS.2 <- as.character(full.dat$POS.2)
+full.dat$POS.1 <- gsub("Other", "ADJ", full.dat$POS.1)
+full.dat$POS.2 <- gsub("Other", "ADJ", full.dat$POS.2)
+full.dat$POS.2 <- gsub("JJ", "ADJ", full.dat$POS.2)
+
+full.dat$POS.1 <- as.factor(full.dat$POS.1)
+full.dat$POS.2 <- as.factor(full.dat$POS.2)
+full.dat$POS.1 <- droplevels(full.dat$POS.1)
+full.dat$POS.2 <- droplevels(full.dat$POS.2)
+
+#found out you can't have missing data for this analysis 
+full.dat <- na.omit(full.dat)
+```
+
+Now, one thing I figured out when running the analysis below is that everyone must have a complete dataset. Meaning, if a participant skipped trial 7 or actually hit 500 on a judgment (which we would set to NA because it can't be more than 100)...then you lose the whole participant. That is unfortunate, and I would love to know if I am wrong here, but I couldn't get it to run otherwise.
+
+So, I factored the participant number, calculated the number of trials that they had, and dropped everyone who was not equal to 63. 
+
+```{r}
+full.dat$Partno <- factor(full.dat$Partno)
+temp <- as.data.frame(table(full.dat$Partno))
+
+full.dat2 <- subset(full.dat,
+                    Partno %in% temp$Var1[temp$Freq == 63])
+
+full.dat2$Partno <- droplevels(full.dat2$Partno)
+```
+
+Everything I read about the LASSO indicated it needed some sort of scaling. I tried this analysis by using z-scores of everything, and the numbers I got were WILD. It seemed more appropriate to me to put the data all in the same basic scale, which means that the coefficients can be compared more directly. Since the dependent variable (Judged Value) is 0 to 100, I scaled all the data to be 0 to 100 based on the possible values of the variables. 
+
+```{r}
+#scale the data 0 to 100
+vars <- c("COS", "LSA", "FSG")
+full.dat2[ , vars] <- full.dat2[ , vars] * 100
+```
+
+For example, frequency (LogSub), neighborhoods (how many words sound and visually look alike), and set sizes (how many words are similar > 0), can all be 0 to possibly infinity. So I took each score, subtracted the minimum (0) and divided by the max in the data, since you can't really determine the upper bounds of these. 
+
+```{r}
+#scale the data 0 to inf
+vars <- c("QSS.1", "LogSub.1", "Ortho.1", "Phono.1", "AOA.1", "LogSub.2", 
+          "Ortho.2", "Phono.2", "AOA.2", "TSS.2", "COSC.1", "COSC.2")
+full.dat2[ , vars] <- apply(full.dat2[ , vars], 2, function(x)
+  {
+  (x - 0)/max(x) * 100 
+  })
+```
+
+Length, number of morphemes, and feature set sizes are minimally 1, so did the same thing with a minimum of 1 in this group. 
+
+```{r}
+#scale the data 1 to inf
+vars <- c("Length.1", "Morphemes.1", "Length.2", "Morphemes.2",
+          "FSS.1", "FSS.2")
+full.dat2[ , vars] <- apply(full.dat2[ , vars], 2, function(x)
+  {
+  (x - 1)/max(x) * 100 
+  })
+```
+
+Last, the data collected for concreteness, familiarity, and imageability all ranged from 1 to 7, while valence ranged from 1 to 10. 
+
+```{r}
+#scale the data 1 to 7
+vars <- c("QCON.1", "Imageability.1", "Familiarity.1",
+          "QCON.2", "Imageability.2", "Familiarity.2")
+full.dat2[ , vars] <- apply(full.dat2[ , vars], 2, function(x)
+  {
+  (x - 1)/7 * 100 
+  })
+
+#scale the data 1 to 10
+vars <- c("Valence.1", "Valence.2")
+full.dat2[ , vars] <- apply(full.dat2[ , vars], 2, function(x)
+  {
+  (x - 1)/10 * 100 
+  })
+```
+
+Now, on to the good part. I am using `glmmLasso` because my data is repeated measures (sigh, I like mixed models, but learning new things in mixed models is hard). I took the tutorial from the `glmmLasso` package. In this section, you are setting up the possible penalty ($\lambda$) values, and estimating good starting values for your random effects. The tricky part was figuring out what the delta vector should have been - it's fixed effects, followed by 0s for all the possible fixed effects of the number of predictors, followed by the estimated random intercepts for the participants. I am using participants here as my random variable, but I could also try items. My research tends to focus on the participants' intercept (bias) and slope (sensitivity), so participants' variability seems more appropriate to me, but I can see it both ways. I have tried both before and usually it doesn't help to add the second one. I also know that participants vary a lot in their slopes, so I'll try estimating those random effects later. 
+
+```{r}
+library(glmmLasso)
+
+lambda <- seq(100, 0, by=-5)
+
+BIC_vec <- rep(Inf, length(lambda))
+
+## first fit good starting model
+library(MASS)
+library(nlme)
+
+PQL <- glmmPQL(Judged.Value ~ 1,
+             random = ~1|Partno,
+             family = "gaussian",
+             data = full.dat2)
+
+Delta.start <- c(as.numeric(PQL$coef$fixed),
+                rep(0, 40), #number of predictors
+                as.numeric(t(PQL$coef$random$Partno)))
+
+Q.start <- as.numeric(VarCorr(PQL)[1,1])
+```
+
+This section I ran a couple times with various lambda values (even larger ones). The purpose of this loop is to find the best penalty value - I actually found that values > 100 were all equal in BIC and everything <= 95 were all a slightly smaller value. Since I want to reduce variables, treating lambda as zero seemed inappropriate, so I just went with 95. I am also terrible at `try-catch` so props to the package for providing an example. PS this model runs slowly. Several sandwiches were eaten. 
+
+```{r eval = F}
+for (j in 1:10)
+  {
+    print(paste("Iteration ", j, sep=""))
+    
+    glm1 <- try(
+      glmmLasso(Judged.Value ~ COS + LSA + FSG + QSS.1 + QCON.1 + LogSub.1 + 
+            Length.1 + as.factor(POS.1) + Ortho.1 + Phono.1 + Morphemes.1 + 
+            AOA.1 + Valence.1 + Imageability.1 + Familiarity.1 + QCON.2 + 
+            LogSub.2 + Length.2 + Ortho.2 + Phono.2 + as.factor(POS.2) + 
+            Morphemes.2 + AOA.2 + Valence.2 + Imageability.2 + Familiarity.2 + 
+            TSS.2 + FSS.1 + FSS.2 + COSC.1 + COSC.2 + as.factor(Judgment),
+          rnd = list(Partno = ~1), 
+          family = gaussian(link = "identity"),
+          data = full.dat2,
+          lambda = lambda[j],
+          switch.NR = TRUE,
+          final.re = TRUE,
+          control=list(start = Delta.start,
+                       q_start = Q.start)), 
+      silent = TRUE)
+    if(class(glm1)!="try-error")
+      {  
+      BIC_vec[j]<-glm1$bic
+      }
+  }
+    
+which.min(BIC_vec)
+```
+
+Here's the final model. You use the normal `Y ~ X + X + X...` notation to create your formula. I just threw everything in. Even though part of speech (POS) and Judgment type (Judgment) were already factored, you must use `as.factor()` around them in the formula. That took a while to figure out, so be noted!
+
+Random notation is somewhat similar to `lme4` or `nlme` with the Variable = ~1 for the intercept. I assumed these variables were somewhat normal, so I used the `gaussian` family to estimate the model. The rest are all default/suggested start values that I pulled from the vignette. 
+
+```{r}
+final_lambda <- 95
+        
+glm1_final <- glmmLasso(Judged.Value ~ COS + LSA + FSG + QSS.1 + QCON.1 + LogSub.1 + 
+            Length.1 + as.factor(POS.1) + Ortho.1 + Phono.1 + Morphemes.1 + 
+            AOA.1 + Valence.1 + Imageability.1 + Familiarity.1 + QCON.2 + 
+            LogSub.2 + Length.2 + Ortho.2 + Phono.2 + as.factor(POS.2) + 
+            Morphemes.2 + AOA.2 + Valence.2 + Imageability.2 + Familiarity.2 + 
+            TSS.2 + FSS.1 + FSS.2 + COSC.1 + COSC.2 + as.factor(Judgment),
+          rnd = list(Partno = ~1), 
+          family = gaussian(link = "identity"),
+          data = full.dat2,
+          lambda = final_lambda,
+          switch.NR = TRUE,
+          final.re = TRUE,
+          control=list(start = Delta.start,
+                       q_start = Q.start))
+```
+
+Before we see the results, let me say I asked Nick to preregister an "important value" of the estimate to be useful. He suggested 5-10 points meaning that the variable needs to influence the slope 5 to 10 points before we should consider it useful. That seemed reasonable until I remembered that the traditional formula for one of these simple judgment models is $\hat{Y} = .23*FSG + .50$...which means that for every one point increase in forward strength (how often someone answer the target for the cue), we get a quarter of a point increase in judgment. This means that slopes are FLAT - thus, participants are insensitivity to actual value.
+
+That's true in this dataset too (simple lm to demonstrate):
+
+```{r}
+summary(lm(Judged.Value ~ FSG, data = full.dat2))
+```
+
+So, maybe we should go with .10 scaled for his answer as the low end. I've not seen participants push much past .50 for slope, so that could be our "wow" coefficients. 
+```{r}
+library(flextable)
+
+output <- summary(glm1_final)
+coef <- as.data.frame(output[['coefficients']])
+coef$Label <- rownames(coef)
+coef <- coef[ , c(5, 1:4)]
+coef[ , 2:5] <- round(coef[ , 2:5], 3)
+
+flextable(coef)
+```
+
+Sooooooooooo, I learned this analysis to help *remove* variables, but here we are. How can they all possibly be useful?! The only one that drops out - gets "shrink"ed - is the frequency of the first word (LogSub). These *z* values appear especially crazy - and they are that large if I use z-scores as my scaling as well. 
+
+For the categorical variables, the larger numbers are simply the difference between the ratings for those types of words (part of speech) or those judgment conditions. These results are not *that* different than a normal mixed model - so, maybe just examining the coefficient size is going to be key here. 
+
+```{r}
+nlme_model <- lme(Judged.Value ~ COS + LSA + FSG + QSS.1 + QCON.1 + LogSub.1 + 
+            Length.1 + as.factor(POS.1) + Ortho.1 + Phono.1 + Morphemes.1 + 
+            AOA.1 + Valence.1 + Imageability.1 + Familiarity.1 + QCON.2 + 
+            LogSub.2 + Length.2 + Ortho.2 + Phono.2 + as.factor(POS.2) + 
+            Morphemes.2 + AOA.2 + Valence.2 + Imageability.2 + Familiarity.2 + 
+            TSS.2 + FSS.1 + FSS.2 + COSC.1 + COSC.2 + as.factor(Judgment),
+            data = full.dat2, 
+            random = list(~1|Partno))
+head(summary(nlme_model)$tTable)
+```
+
+So, uh, everything matters in judgments? I will want to update this analysis with the direct versus indirect associations using the Small World of Words, rather than the older free association norms, but after several sandwiches of running, I thought to leave that for another day. The most interesting thing that we noted during his thesis was that the first and second words almost have a competition going - often when one of the words has a positive slope, the second has a negative. For example, the imageability of the first word (cue) is positively influencing judgments, while the imageability of the second word (target) negatively influences judgments. Maybe this explains some of the flat slopes is the contrasting influences of the networks of each word. 
+
+Thanks for reading! Questions welcome. 
+
+A list of variables:
+
+- Lexical properties:
+  - Length
+  - Frequency (LogSub)
+  - Morphemes
+- Rated Properties
+  - Age of Acquisition (AOA)
+  - Imageabilty 
+  - Concreteness (QCON)
+  - Valence
+  - Familiarity
+- Neighborhood Connections
+  - Cue and target set size (QSS, TSS, number of words with FSG > 0 to that word)
+  - Feature set size (semantic richness, FSS)
+  - Cosine connectedness (COSC, number of words with COS > 0 to that word)
+  - Orthographic neighborhood (Ortho)
+  - Phonographic neighborhood (Phono)
+- Similarity
+  - Cosine (COS on feature production norms)
+  - Forward strength (FSG from Nelson et al. SWOW wasn't out yet ok?)
+  - Latent semantic analysis cosine (LSA from Semantic Priming Project)
+  
+
+

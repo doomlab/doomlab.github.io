@@ -9,30 +9,30 @@
   <meta property="og:title" content="Quick and Dirty Categorical lavaan" />
   <meta name="twitter:title" content="Quick and Dirty Categorical lavaan" />
   <meta name="description" content="I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
-You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.">
+You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&#39;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.">
   <meta property="og:description" content="I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
-You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.">
+You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&#39;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.">
   <meta name="twitter:description" content="I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible …">
   <meta name="author" content="aggieerin.com"/>
-  <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
-  <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/header.jpg" />
+  <meta name="twitter:image" content="/img/header.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/" />
+  <meta property="og:url" content="/post/quick-and-dirty-categorical-lavaan/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
-  <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/" />
-  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <meta name="generator" content="Hugo 0.62.2" />
+  <link rel="canonical" href="/post/quick-and-dirty-categorical-lavaan/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" />
 
 
 
@@ -98,7 +98,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+      <a class="navbar-brand" href="/">Dr. Erin Buchanan</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -178,8 +178,8 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
     <div class="avatar-container">
       <div class="avatar-img-border">
         
-          <a title="Dr. Erin Buchanan" href="https://doomlab.github.io">
-            <img class="avatar-img" src="https://doomlab.github.io/img/header.jpg" alt="Dr. Erin Buchanan" />
+          <a title="Dr. Erin Buchanan" href="/">
+            <img class="avatar-img" src="/img/header.jpg" alt="Dr. Erin Buchanan" />
           </a>
         
       </div>
@@ -240,11 +240,9 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>I was tagged today on twitter asking about categorical variables in <code>lavaan</code>. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for <code>lavaan</code> <a href="http://lavaan.ugent.be/tutorial/cat.html">here</a>.</p>
-
-<p>You will need both the <code>lavaan</code> and <code>psych</code> packages to reproduce this code. Ironically, this data is binary outcome data (the <code>epi</code> dataset in <code>psych</code>), which wasn&rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</p>
-
-<p>First, let&rsquo;s make a model that works (I do assume you know a bit about <code>lavaan</code> here, feel free to ask questions):</p>
-<div class="highlight"><pre class="chroma">#load libraries and data
+<p>You will need both the <code>lavaan</code> and <code>psych</code> packages to reproduce this code. Ironically, this data is binary outcome data (the <code>epi</code> dataset in <code>psych</code>), which wasn't intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</p>
+<p>First, let's make a model that works (I do assume you know a bit about <code>lavaan</code> here, feel free to ask questions):</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#load libraries and data
 library(psych)
 library(lavaan)
 DF = epi
@@ -258,33 +256,32 @@ epi.fit = cfa(model = epi.model,
               data = DF)
 
 #show a summary
-summary(epi.fit)</pre></div>
-<p>The <code>cfa</code> and <code>summary</code> did not throw any errors, so the model at least runs smoothly, even if it is not a &ldquo;good&rdquo; model. For good measure, you can also use <code>semPlot</code> to create a picture of this two-factor model:</p>
-<div class="highlight"><pre class="chroma">library(semPlot)
+summary(epi.fit)
+</code></pre></div><p>The <code>cfa</code> and <code>summary</code> did not throw any errors, so the model at least runs smoothly, even if it is not a &ldquo;good&rdquo; model. For good measure, you can also use <code>semPlot</code> to create a picture of this two-factor model:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">library(semPlot)
 
 #semPaths with basic options
 semPaths(epi.fit,
          whatLabels = &#34;std&#34;,
-         edge.label.cex = 1)</pre></div>
-<p><img src="lavaan1.jpeg" alt="Two-factor lavaan model" /></p>
-
+         edge.label.cex = 1)
+</code></pre></div><p><img src="lavaan1.jpeg" alt="Two-factor lavaan model"></p>
 <p>Next, I created a fake dummy coded variable with three levels, although you could scale this easily with more levels:</p>
-<div class="highlight"><pre class="chroma">DF$category = c(rep(&#34;group&#34;, nrow(epi)/3),
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">DF$category = c(rep(&#34;group&#34;, nrow(epi)/3),
                 rep(&#34;group2&#34;, nrow(epi)/3),
                 rep(&#34;group3&#34;, nrow(epi)/3))
-DF$category = as.factor(DF$category)</pre></div>
-<p>When I tried to run a new model with the <code>category</code> variable, <code>lavaan</code> was not happy:</p>
-<div class="highlight"><pre class="chroma">Warning message:
+DF$category = as.factor(DF$category)
+</code></pre></div><p>When I tried to run a new model with the <code>category</code> variable, <code>lavaan</code> was not happy:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Warning message:
 In lav_data_full(data = data, group = group, cluster = cluster,  :
-  lavaan WARNING: unordered factor(s) with more than 2 levels detected in data: category</pre></div>
-<p>Fine, let&rsquo;s dummy code them with the gloriously easy <code>dummy.code</code> function in <code>psych</code>:</p>
-<div class="highlight"><pre class="chroma">#dummy code and combine with DF
-DF_dc = cbind(DF, dummy.code(DF$category))</pre></div>
-<p>However, I will warn you that <code>psych</code> does give you K columns where K = levels. Real dummy coding is K - 1 columns, so I find it odd that <code>psych</code> gives you K output. For example, it took our <code>group</code>, <code>group2</code>, <code>group3</code> labels and transformed them into three new columns with 0 as <em>not my group</em> and 1 as <em>my group</em>. Therefore, I will advise you to pick your favorite combination of K - 1 levels, and do not use all of them or you will create a singular matrix that will be difficult to troubleshoot in any regression based analysis. Here&rsquo;s an example of that error:</p>
-<div class="highlight"><pre class="chroma">Error in lav_samplestats_icov(COV = cov[[g]], ridge = ridge, x.idx = x.idx[[g]],  : 
-  lavaan ERROR: sample covariance matrix is not positive-definite</pre></div>
-<p>I can add the first two to the model predicting one of the latents using <code>~</code> for regression rather than <code>=~</code> for create a latent:</p>
-<div class="highlight"><pre class="chroma">#model syntax
+  lavaan WARNING: unordered factor(s) with more than 2 levels detected in data: category
+</code></pre></div><p>Fine, let's dummy code them with the gloriously easy <code>dummy.code</code> function in <code>psych</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#dummy code and combine with DF
+DF_dc = cbind(DF, dummy.code(DF$category))
+</code></pre></div><p>However, I will warn you that <code>psych</code> does give you K columns where K = levels. Real dummy coding is K - 1 columns, so I find it odd that <code>psych</code> gives you K output. For example, it took our <code>group</code>, <code>group2</code>, <code>group3</code> labels and transformed them into three new columns with 0 as <em>not my group</em> and 1 as <em>my group</em>. Therefore, I will advise you to pick your favorite combination of K - 1 levels, and do not use all of them or you will create a singular matrix that will be difficult to troubleshoot in any regression based analysis. Here's an example of that error:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Error in lav_samplestats_icov(COV = cov[[g]], ridge = ridge, x.idx = x.idx[[g]],  : 
+  lavaan ERROR: sample covariance matrix is not positive-definite
+</code></pre></div><p>I can add the first two to the model predicting one of the latents using <code>~</code> for regression rather than <code>=~</code> for create a latent:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#model syntax
 epi.model2 = &#39;latent =~ V1+V2+V3+V4
 latent2 =~ V5+V6+V7+V8
 latent ~ group
@@ -295,23 +292,20 @@ epi.fit2 = cfa(model = epi.model2,
                data = DF_dc)
 
 #summarize the model               
-summary(epi.fit2)</pre></div>
-<p>In your output, you will get two new lines for regression:</p>
-<div class="highlight"><pre class="chroma">Regressions:
+summary(epi.fit2)
+</code></pre></div><p>In your output, you will get two new lines for regression:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Regressions:
                    Estimate  Std.Err  z-value  P(&gt;|z|)
   latent ~                                            
     group             0.026    0.014    1.847    0.065
-    group2           -0.001    0.014   -0.082    0.935</pre></div>
-<p>The interpretation here would be that group = group 1 versus group 3 was related to/predicted <code>latent</code> at 0.026, so the difference in <code>latent</code> for group 1 to group 3 was 0.026. The second variable would be group2 = group 2 versus group 3, and they basically have no difference on <code>latent</code>. You can learn more about dummy coding <a href="https://youtu.be/Zv19sslm-S4">here</a>.</p>
-
-<p>Here&rsquo;s the picture of that analysis:</p>
-<div class="highlight"><pre class="chroma">semPaths(epi.fit,
+    group2           -0.001    0.014   -0.082    0.935
+</code></pre></div><p>The interpretation here would be that group = group 1 versus group 3 was related to/predicted <code>latent</code> at 0.026, so the difference in <code>latent</code> for group 1 to group 3 was 0.026. The second variable would be group2 = group 2 versus group 3, and they basically have no difference on <code>latent</code>. You can learn more about dummy coding <a href="https://youtu.be/Zv19sslm-S4">here</a>.</p>
+<p>Here's the picture of that analysis:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">semPaths(epi.fit,
          whatLabels = &#34;std&#34;,
-         edge.label.cex = 1)</pre></div>
-<p><img src="lavaan2.jpeg" alt="Two-factor lavaan model with dummy coded variables" /></p>
-
+         edge.label.cex = 1)
+</code></pre></div><p><img src="lavaan2.jpeg" alt="Two-factor lavaan model with dummy coded variables"></p>
 <p>Remember that any endogenous variables will get automatically correlated &hellip; so now we have a second latent variable hanging out in space we would want to either predict with our dummy coded variables or do something with. So, I would probably either add the correlation between latents back in with: <code>latent ~~ latent2</code> or add in the regressions for using the categoricals to predict latent2: <code>latent2 ~ group</code> and <code>latent2 ~ group2</code>.</p>
-
 <p>More lavaan help can be found on my <a href="https://www.youtube.com/channel/UCMdihazndR0f9XBoSXWqnYg?view_as=subscriber">youtube channel!</a>.</p>
 
       </article>
@@ -320,12 +314,12 @@ summary(epi.fit2)</pre></div>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://doomlab.github.io/post/new-publications-and-updated-cv/" data-toggle="tooltip" data-placement="top" title="New Publications and Updated CV">&larr; Previous Post</a>
+              <a href="/post/new-publications-and-updated-cv/" data-toggle="tooltip" data-placement="top" title="New Publications and Updated CV">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://doomlab.github.io/post/jasp-videos-guides/" data-toggle="tooltip" data-placement="top" title="JASP Videos &#43; Guides">Next Post &rarr;</a>
+              <a href="/post/jasp-videos-guides/" data-toggle="tooltip" data-placement="top" title="JASP Videos &#43; Guides">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -405,7 +399,7 @@ summary(epi.fit2)</pre></div>
           
           <li>
             
-            <a href="https://doomlab.github.io/index.xml" title="RSS">
+            <a href="/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -423,16 +417,16 @@ summary(epi.fit2)</pre></div>
           
 
           &nbsp;&bull;&nbsp;
-          2019
+          2020
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+            <a href="/">Dr. Erin Buchanan</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.49.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.62.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
@@ -444,13 +438,13 @@ summary(epi.fit2)</pre></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://doomlab.github.io/js/main.js"></script>
-<script src="https://doomlab.github.io/js/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://doomlab.github.io/js/load-photoswipe.js"></script>
+<script src="/js/load-photoswipe.js"></script>
 
 
 

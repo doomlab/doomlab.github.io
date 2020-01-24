@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clinical on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/clinical/</link>
-    <description>Recent content in Clinical on Dr. Erin Buchanan</description>
+    <title>clinical on Dr. Erin Buchanan</title>
+    <link>/tags/clinical/</link>
+    <description>Recent content in clinical on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Sun, 06 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/clinical/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/clinical/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Publications</title>
-      <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
+      <link>/post/new-publications-oct-19/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
-      <description>Just updated my CV - here&amp;rsquo;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&amp;rsquo;t really predict what order the same year publications are going to be in - not that it matters in general, but it&amp;rsquo;s an interesting side effect.
+      <guid>/post/new-publications-oct-19/</guid>
+      <description>Just updated my CV - here&#39;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&#39;t really predict what order the same year publications are going to be in - not that it matters in general, but it&#39;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
 Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of direct and in-direct relation on memory judgments and retrieval.</description>
     </item>

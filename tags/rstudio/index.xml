@@ -1,83 +1,83 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rstudio on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/rstudio/</link>
-    <description>Recent content in Rstudio on Dr. Erin Buchanan</description>
+    <title>rstudio on Dr. Erin Buchanan</title>
+    <link>/tags/rstudio/</link>
+    <description>Recent content in rstudio on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Translations with rvest and Selenium</title>
-      <link>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</link>
+      <link>/post/getting-translations-with-rvest-and-selenium/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</guid>
+      <guid>/post/getting-translations-with-rvest-and-selenium/</guid>
       <description>In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.</description>
     </item>
     
     <item>
       <title>Multilevel Modeling Workshop Materials</title>
-      <link>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</link>
+      <link>/post/multilevel-modeling-workshop-materials/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</guid>
+      <guid>/post/multilevel-modeling-workshop-materials/</guid>
       <description>Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
-I used RStudio&amp;rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.</description>
+I used RStudio&#39;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.</description>
     </item>
     
     <item>
       <title>Updating Your CV with Packages</title>
-      <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
+      <link>/post/updating-your-cv-with-packages/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
-      <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&amp;rsquo;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
+      <guid>/post/updating-your-cv-with-packages/</guid>
+      <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does &amp;ldquo;knit&amp;rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.</description>
     </item>
     
     <item>
       <title>Gathering Text from the Web</title>
-      <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
+      <link>/post/gathering-text-from-the-web/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
-      <description>Hi everyone! I don&amp;rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
+      <guid>/post/gathering-text-from-the-web/</guid>
+      <description>Hi everyone! I don&#39;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
     </item>
     
     <item>
       <title>Mediation Moderation Workshop</title>
-      <link>https://doomlab.github.io/post/mediation-moderation-workshop/</link>
+      <link>/post/mediation-moderation-workshop/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/mediation-moderation-workshop/</guid>
+      <guid>/post/mediation-moderation-workshop/</guid>
       <description>Hi everyone!
 I have been super swamped with a bunch of due dates that all hit in April. For a small brag, and I like making lists:
- 9 revise and resubmits (four we&amp;rsquo;ve sent back, two have been accepted!) 4 conference posters and one invited talk 1 submitted grant (fingers crossed!) 2 invited papers 2 theses that I&amp;rsquo;m chairing, 2 that I&amp;rsquo;m on the committee for Data camp!  It&amp;rsquo;s been nuts, so haven&amp;rsquo;t left the house much or done much of anything else.</description>
+ 9 revise and resubmits (four we&#39;ve sent back, two have been accepted!) 4 conference posters and one invited talk 1 submitted grant (fingers crossed!) 2 invited papers 2 theses that I&#39;m chairing, 2 that I&#39;m on the committee for Data camp!  It&#39;s been nuts, so haven&#39;t left the house much or done much of anything else.</description>
     </item>
     
     <item>
       <title>Working With Messy Text</title>
-      <link>https://doomlab.github.io/post/working-with-messy-text/</link>
+      <link>/post/working-with-messy-text/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
-      <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&amp;rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&amp;rsquo;s never done me wrong (unlike you PHP).
+      <guid>/post/working-with-messy-text/</guid>
+      <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&#39;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
+      <link>/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
+      <guid>/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>

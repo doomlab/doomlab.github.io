@@ -14,25 +14,25 @@
  Bayes Factors and p-values follow a power function, as we expected.">
   <meta name="twitter:description" content="For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased …">
   <meta name="author" content="aggieerin.com"/>
-  <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
-  <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/header.jpg" />
+  <meta name="twitter:image" content="/img/header.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" />
+  <meta property="og:url" content="/post/a-shiny-app-to-compare-stats/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dr. Erin Buchanan" />
 
-  <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://doomlab.github.io/post/a-shiny-app-to-compare-stats/" />
-  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
+  <meta name="generator" content="Hugo 0.62.2" />
+  <link rel="canonical" href="/post/a-shiny-app-to-compare-stats/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" />
 
 
 
@@ -98,7 +98,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+      <a class="navbar-brand" href="/">Dr. Erin Buchanan</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -178,8 +178,8 @@
     <div class="avatar-container">
       <div class="avatar-img-border">
         
-          <a title="Dr. Erin Buchanan" href="https://doomlab.github.io">
-            <img class="avatar-img" src="https://doomlab.github.io/img/header.jpg" alt="Dr. Erin Buchanan" />
+          <a title="Dr. Erin Buchanan" href="/">
+            <img class="avatar-img" src="/img/header.jpg" alt="Dr. Erin Buchanan" />
           </a>
         
       </div>
@@ -240,23 +240,20 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):</p>
-
 <ul>
 <li>Bayes Factors and p-values follow a power function, as we expected.</li>
 <li>Bayes Factors and OOM values follow an interesting pattern, wherein as sample size increases, BF expands outwards, while PCC values tend to constrict.</li>
 <li>p-values will always decrease to floor, and PCC values still tend to constrict toward the simulated effect size range.</li>
 </ul>
-
 <p>Another component of this app I wanted to show off was the interactive response points, wherein the input options (on the left) change based on a user selected input option. Therefore, options that are normally only input are both input and output in the traditional Shiny set up.</p>
-
 <p>You can see that by having the selection (first part) and the changing selection (second part) in the fluid page:</p>
-<div class="highlight"><pre class="chroma">selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
                   c(&#34;N&#34; = &#34;N&#34;,
                     &#34;Log N&#34; = &#34;log&#34;)),
                     
-htmlOutput(&#34;slider_selector&#34;)</pre></div>
-<p>Which is connected to the server function below:</p>
-<div class="highlight"><pre class="chroma">  ####change the slider####
+htmlOutput(&#34;slider_selector&#34;)
+</code></pre></div><p>Which is connected to the server function below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  ####change the slider####
   output$slider_selector = renderUI({ 
     
     if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
@@ -270,13 +267,11 @@ htmlOutput(&#34;slider_selector&#34;)</pre></div>
                 sep = &#34;&#34;,
                 round = -1,
                 step = stepN)
-  })</pre></div>
-<p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
-
-<p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://aggieerin.com/shiny/altnhst/">here</a>. The code is pretty long due to the sheer number of graphs, so it&rsquo;s edited down to just the shiny parts - when you see ####GRAPH#### that&rsquo;s some kicking ggplot2 graphs you can view in our github repo.</p>
-
+  })
+</code></pre></div><p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
+<p>Code is included below, and when our server isn't being cranky, the app is <a href="http://aggieerin.com/shiny/altnhst/">here</a>. The code is pretty long due to the sheer number of graphs, so it's edited down to just the shiny parts - when you see ####GRAPH#### that's some kicking ggplot2 graphs you can view in our github repo.</p>
 <p>Check out the project OSF page <a href="https://osf.io/u9hf4/">here</a>. You can download the entire app from our <a href="https://github.com/doomlab/shiny-server">github repo</a> (also other shiny apps!).</p>
-<div class="highlight"><pre class="chroma">library(shiny)
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">library(shiny)
 library(ggplot2)
 library(reshape)
 library(plotly)
@@ -481,19 +476,20 @@ server &lt;- function(input, output) {
 } #close server functions
 
 # Run the application 
-shinyApp(ui = ui, server = server)</pre></div>
+shinyApp(ui = ui, server = server)
+</code></pre></div>
       </article>
 
       
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://doomlab.github.io/post/learn-about-mote/" data-toggle="tooltip" data-placement="top" title="Learn About MOTE">&larr; Previous Post</a>
+              <a href="/post/learn-about-mote/" data-toggle="tooltip" data-placement="top" title="Learn About MOTE">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://doomlab.github.io/post/citations-in-r-markdown-papaja/" data-toggle="tooltip" data-placement="top" title="Citations in R Markdown &#43; Papaja">Next Post &rarr;</a>
+              <a href="/post/citations-in-r-markdown-papaja/" data-toggle="tooltip" data-placement="top" title="Citations in R Markdown &#43; Papaja">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -573,7 +569,7 @@ shinyApp(ui = ui, server = server)</pre></div>
           
           <li>
             
-            <a href="https://doomlab.github.io/index.xml" title="RSS">
+            <a href="/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -591,16 +587,16 @@ shinyApp(ui = ui, server = server)</pre></div>
           
 
           &nbsp;&bull;&nbsp;
-          2019
+          2020
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+            <a href="/">Dr. Erin Buchanan</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.49.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.62.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
@@ -612,13 +608,13 @@ shinyApp(ui = ui, server = server)</pre></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://doomlab.github.io/js/main.js"></script>
-<script src="https://doomlab.github.io/js/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://doomlab.github.io/js/load-photoswipe.js"></script>
+<script src="/js/load-photoswipe.js"></script>
 
 
 

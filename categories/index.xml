@@ -1,31 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
+    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Research</title>
-      <link>https://doomlab.github.io/categories/research/</link>
-      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      <title>research</title>
+      <link>/categories/research/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/categories/research/</guid>
+      <guid>/categories/research/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Teaching</title>
-      <link>https://doomlab.github.io/categories/teaching/</link>
+      <title>teaching</title>
+      <link>/categories/teaching/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/categories/teaching/</guid>
+      <guid>/categories/teaching/</guid>
       <description></description>
     </item>
     
