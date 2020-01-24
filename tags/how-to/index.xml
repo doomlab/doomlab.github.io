@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>how-to on Dr. Erin Buchanan</title>
-    <link>/tags/how-to/</link>
+    <link>https://doomlab.github.io/tags/how-to/</link>
     <description>Recent content in how-to on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lasso Myself Numbers</title>
-      <link>/post/lasso-myself-numbers/</link>
+      <link>https://doomlab.github.io/post/lasso-myself-numbers/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/lasso-myself-numbers/</guid>
+      <guid>https://doomlab.github.io/post/lasso-myself-numbers/</guid>
       <description>Hey everybody!
 The last couple days I have been trying to learn LASSO regression, which stands for Least Absolute Shrinkage and Selection Operator. I have several datasets with many variables, and I thought these would be a good opportunity to learn about how to lasso, while maybe answering a few questions about words.
 Right, the part I forgot about is that I have repeated measures data, which always complicates things.</description>
@@ -25,29 +25,29 @@ Right, the part I forgot about is that I have repeated measures data, which alwa
     
     <item>
       <title>Getting Translations with rvest and Selenium</title>
-      <link>/post/getting-translations-with-rvest-and-selenium/</link>
+      <link>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/getting-translations-with-rvest-and-selenium/</guid>
+      <guid>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</guid>
       <description>In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.</description>
     </item>
     
     <item>
       <title>Updating Your CV with Packages</title>
-      <link>/post/updating-your-cv-with-packages/</link>
+      <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/updating-your-cv-with-packages/</guid>
+      <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
       <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does &amp;ldquo;knit&amp;rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.</description>
     </item>
     
     <item>
       <title>JASP Videos &#43; Guides</title>
-      <link>/post/jasp-videos-guides/</link>
+      <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/jasp-videos-guides/</guid>
+      <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
     </item>

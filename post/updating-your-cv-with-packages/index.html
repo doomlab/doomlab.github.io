@@ -1,45 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
+    
+
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Updating Your CV with Packages</title>
-  <meta property="og:title" content="Updating Your CV with Packages" />
-  <meta name="twitter:title" content="Updating Your CV with Packages" />
+  <title>Updating Your CV with Packages - Dr. Erin Buchanan</title>
   <meta name="description" content="Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does &ldquo;knit&rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.">
-  <meta property="og:description" content="Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
+  <meta name="author" content="aggieerin.com"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Dr. Erin Buchanan",
+    
+    "url": "https:\/\/doomlab.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/doomlab.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/doomlab.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/doomlab.github.io\/post\/updating-your-cv-with-packages\/",
+          "name": "Updating your c v with packages"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Erin Buchanan"
+  },
+  "headline": "Updating Your CV with Packages",
+  "description" : "Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve\x27s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.\nLink to the entire CV folder for you to use\/view do stuff with: CV. Please ignore the html files in that folder, it does \x26ldquo;knit\x26rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.",
+  "inLanguage" : "en",
+  "wordCount":  1863 ,
+  "datePublished" : "2019-04-03T00:00:00",
+  "dateModified" : "2019-04-03T00:00:00",
+  "image" : "https:\/\/doomlab.github.io\/img\/header.jpg",
+  "keywords" : [ "rstudio, research, how-to" ],
+  "mainEntityOfPage" : "https:\/\/doomlab.github.io\/post\/updating-your-cv-with-packages\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/doomlab.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/doomlab.github.io\/img\/header.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Updating Your CV with Packages" />
+<meta property="og:description" content="Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does &ldquo;knit&rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.">
+<meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
+<meta property="og:url" content="https://doomlab.github.io/post/updating-your-cv-with-packages/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dr. Erin Buchanan" />
+
+  <meta name="twitter:title" content="Updating Your CV with Packages" />
   <meta name="twitter:description" content="Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came …">
-  <meta name="author" content="aggieerin.com"/>
-  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="/img/header.jpg" />
-  <meta name="twitter:image" content="/img/header.jpg" />
+  <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
-  <meta property="og:url" content="/post/updating-your-cv-with-packages/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Dr. Erin Buchanan" />
-
+  <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.62.2" />
-  <link rel="canonical" href="/post/updating-your-cv-with-packages/" />
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" />
+  <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+    </div>
 
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post">Blog</a>
+                
+                  <a href="/tags">Tags</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Stats" href="/page/stats/">Stats</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Shiny" href="/shiny/">Shiny</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Vita</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/basics">Basics</a>
+                
+                  <a href="/page/honors">Honors</a>
+                
+                  <a href="/page/res_overview">Research Overview</a>
+                
+                  <a href="/page/res_pubs">Pubs</a>
+                
+                  <a href="/page/res_grants">Grants</a>
+                
+                  <a href="/page/res_pres">Pres</a>
+                
+                  <a href="/page/teach_overview">Teaching Overview</a>
+                
+                  <a href="/page/students">Students</a>
+                
+                  <a href="/page/service">Service</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="OSF" href="https://osf.io/4ivpc/">OSF</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Dr. Erin Buchanan" href="https://doomlab.github.io">
+            <img class="avatar-img" src="https://doomlab.github.io/img/header.jpg" alt="Dr. Erin Buchanan" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -86,115 +256,12 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
     </div>
 </div>
 
-</head>
 
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Dr. Erin Buchanan</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li>
-              <a title="About" href="/page/about/">About</a>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Blog</a>
-              <div class="navlinks-children">
-                
-                  <a href="/post">Blog</a>
-                
-                  <a href="/tags">Tags</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Stats" href="/page/stats/">Stats</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Shiny" href="/shiny/">Shiny</a>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent" href="javascript:void(0)">Vita</a>
-              <div class="navlinks-children">
-                
-                  <a href="/page/basics">Basics</a>
-                
-                  <a href="/page/honors">Honors</a>
-                
-                  <a href="/page/res_overview">Research Overview</a>
-                
-                  <a href="/page/res_pubs">Pubs</a>
-                
-                  <a href="/page/res_grants">Grants</a>
-                
-                  <a href="/page/res_pres">Pres</a>
-                
-                  <a href="/page/teach_overview">Teaching Overview</a>
-                
-                  <a href="/page/students">Students</a>
-                
-                  <a href="/page/service">Service</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li>
-              <a title="OSF" href="https://osf.io/4ivpc/">OSF</a>
-            </li>
-          
-        
-
-        
-
-        
-      </ul>
-    </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        
-          <a title="Dr. Erin Buchanan" href="/">
-            <img class="avatar-img" src="/img/header.jpg" alt="Dr. Erin Buchanan" />
-          </a>
-        
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-
-
-    
   
   
   
+
+
 
 
 
@@ -204,28 +271,35 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   <header class="header-section ">
     
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Updating Your CV with Packages</h1>
-                
-                
-                  <span class="post-meta">
+              
+                <h1>Updating Your CV with Packages</h1>
+              
+              
+              
+              
+                <span class="post-meta">
   
   
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on April 3, 2019
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 3, 2019
   
   
-  &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 9 minutes (1838 words)
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Erin Buchanan
+    
   
   
 </span>
 
 
-                
+              
             </div>
           </div>
         </div>
@@ -325,9 +399,11 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">## [1] Acknowledgment to our Reviewers                                                                       
 ## [2] Acknowledgment to Reviewers                                                                           
 ## [3] Development of a Patient Reported Outcome Measure Evaluating Meaningful Response to Migraine Treatment
-## [4] Justify Your Alpha                                                                                    
-## [5] State of Science Paper Guide                                                                          
-## 148 Levels: “Textisms”: The comfort of the recipient. ...
+## [4] Getting started creating data dictionaries                                                            
+## [5] Justify Your Alpha                                                                                    
+## [6] State of Science Paper Guide                                                                          
+## [7] The Language of War: A Replication and Extension of Abe (2012) and Matsumoto Et Al.(2015)             
+## 150 Levels: “Textisms”: The comfort of the recipient. ...
 </code></pre></div><p>These three are 1) OSF page for an Accelerated CREP I am on, but I haven't added it yet to my CV because it's a bit early to be sharing (i.e., waiting until there's more of real paper there), 2) a &ldquo;preprint&rdquo; project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA's website, which I don't have access to. Probably a doi for a conference presentation, but I don't really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would get ignored as things not to print.</p>
 <p>This next part is set up to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that's not really my thing to track (however, for some folks working at institutions that do care, you could update that over time using something like this code).</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1">#update any X or XX that were place holders for the pages</span>
@@ -340,15 +416,15 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 ## 29                                           Differential Effects of Association and Semantics on Priming and Memory Judgments.
 ## 39                                                        Generativity and other buffers of death awareness in first responders
 ## 46                        How the Presence of Others Affects Desirability Judgments in Heterosexual and Homosexual Participants
-## 68 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
-## 86             Valued Living in Daily Experience: Relations with Mindfulness, Meaning, Psychological Flexibility, and Stressors
+## 66 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
+## 85             Valued Living in Daily Experience: Relations with Mindfulness, Meaning, Psychological Flexibility, and Stressors
 ##    number
 ## 8    1-13
 ## 29       
 ## 39   1-14
-## 46       
-## 68       
-## 86   1-11
+## 46   1-11
+## 66       
+## 85   1-11
 </code></pre></div><p>None of these have new volume or page numbers, so I am good to go here. Because I have this as an excel sheet, I can do some fun visualizations:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
@@ -388,18 +464,34 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 <p>Students are a priority! Thank you for coming to my TED talk. I don't even know that I could graph the conference presentations in a good way, but it follows the same trend. And that's a much better statistic to be proud of than counts per year.</p>
 <p>Hope you can use these code bits to help with your bean counting - questions welcome and more on the markdown template later.</p>
 
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://doomlab.github.io/tags/rstudio/">rstudio</a>&nbsp;
+            
+              <a href="https://doomlab.github.io/tags/research/">research</a>&nbsp;
+            
+              <a href="https://doomlab.github.io/tags/how-to/">how-to</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
       </article>
 
       
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="/post/line-endings-are-dumb/" data-toggle="tooltip" data-placement="top" title="Line Endings Are Dumb">&larr; Previous Post</a>
+              <a href="https://doomlab.github.io/post/line-endings-are-dumb/" data-toggle="tooltip" data-placement="top" title="Line Endings Are Dumb">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="/post/multilevel-modeling-workshop-materials/" data-toggle="tooltip" data-placement="top" title="Multilevel Modeling Workshop Materials">Next Post &rarr;</a>
+              <a href="https://doomlab.github.io/post/multilevel-modeling-workshop-materials/" data-toggle="tooltip" data-placement="top" title="Multilevel Modeling Workshop Materials">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -408,6 +500,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 
       
         
+          
           <div class="disqus-comments">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -430,6 +523,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
           </div>
+          
         
         
       
@@ -438,7 +532,8 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   </div>
 </div>
 
-    <footer>
+      
+<footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -447,43 +542,41 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
               <li>
                 <a href="mailto:buchananlab@gmail.com" title="Email me">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://github.com/doomlab" title="GitHub">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/aggieerin" title="Twitter">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
               <li>
                 <a href="https://www.youtube.com/channel/UCMdihazndR0f9XBoSXWqnYg" title="Youtube">
                   <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
           
           <li>
-            
-            <a href="/index.xml" title="RSS">
-            
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </li>
@@ -496,41 +589,44 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
             
           
 
-          &nbsp;&bull;&nbsp;
-          2020
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
 
           
             &nbsp;&bull;&nbsp;
-            <a href="/">Dr. Erin Buchanan</a>
+            <a href="https://doomlab.github.io">Dr. Erin Buchanan</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.62.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="https://gohugo.io">Hugo v0.62.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="/js/main.js"></script>
-<script src="/js/highlight.min.js"></script>
+
+<script src="https://doomlab.github.io/js/main.js"></script>
+<script src="https://doomlab.github.io/js/highlight.min.js"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
-<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="/js/load-photoswipe.js"></script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://doomlab.github.io/js/load-photoswipe.js"></script>
 
 
 
 
 
 
+
+
+
+    
   </body>
 </html>
 

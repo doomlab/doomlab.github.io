@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Dr. Erin Buchanan</title>
-    <link>/post/</link>
+    <link>https://doomlab.github.io/post/</link>
     <description>Recent content in Posts on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lasso Myself Numbers</title>
-      <link>/post/lasso-myself-numbers/</link>
+      <link>https://doomlab.github.io/post/lasso-myself-numbers/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/lasso-myself-numbers/</guid>
+      <guid>https://doomlab.github.io/post/lasso-myself-numbers/</guid>
       <description>Hey everybody!
 The last couple days I have been trying to learn LASSO regression, which stands for Least Absolute Shrinkage and Selection Operator. I have several datasets with many variables, and I thought these would be a good opportunity to learn about how to lasso, while maybe answering a few questions about words.
 Right, the part I forgot about is that I have repeated measures data, which always complicates things.</description>
@@ -25,10 +25,10 @@ Right, the part I forgot about is that I have repeated measures data, which alwa
     
     <item>
       <title>The Year of the Thesis</title>
-      <link>/post/2019-in-review/</link>
+      <link>https://doomlab.github.io/post/2019-in-review/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/2019-in-review/</guid>
+      <guid>https://doomlab.github.io/post/2019-in-review/</guid>
       <description>The Year of the Thesis!
 Just wanted to highlight several publications from this year, which were mostly theses from some fabulous young researchers:
  Scofield, J.E., Kostic, B., &amp;amp; Buchanan, E.M. (2019). How the presence of others affects desirability judgments in heterosexual and homosexual participants. Archives of Sexual Behavior, X, XX–XX. doi: 10.1007/s10508-019-01516-w
@@ -37,19 +37,19 @@ Just wanted to highlight several publications from this year, which were mostly 
     
     <item>
       <title>Getting Translations with rvest and Selenium</title>
-      <link>/post/getting-translations-with-rvest-and-selenium/</link>
+      <link>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/getting-translations-with-rvest-and-selenium/</guid>
+      <guid>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</guid>
       <description>In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.</description>
     </item>
     
     <item>
       <title>New Publications</title>
-      <link>/post/new-publications-oct-19/</link>
+      <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications-oct-19/</guid>
+      <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
       <description>Just updated my CV - here&#39;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&#39;t really predict what order the same year publications are going to be in - not that it matters in general, but it&#39;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
 Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of direct and in-direct relation on memory judgments and retrieval.</description>
@@ -57,40 +57,40 @@ Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of d
     
     <item>
       <title>Multilevel Modeling Workshop Materials</title>
-      <link>/post/multilevel-modeling-workshop-materials/</link>
+      <link>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/multilevel-modeling-workshop-materials/</guid>
+      <guid>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</guid>
       <description>Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
 I used RStudio&#39;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.</description>
     </item>
     
     <item>
       <title>Updating Your CV with Packages</title>
-      <link>/post/updating-your-cv-with-packages/</link>
+      <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/updating-your-cv-with-packages/</guid>
+      <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
       <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve&#39;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does &amp;ldquo;knit&amp;rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.</description>
     </item>
     
     <item>
       <title>Line Endings Are Dumb</title>
-      <link>/post/line-endings-are-dumb/</link>
+      <link>https://doomlab.github.io/post/line-endings-are-dumb/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/line-endings-are-dumb/</guid>
+      <guid>https://doomlab.github.io/post/line-endings-are-dumb/</guid>
       <description>I have happily acquired a new Mac Book (yay!) and a new work computer (Windows). So, I&#39;ve been making One Drive exceedingly unhappy moving GBs of file from one to another.
 As I was working on reconnecting my GitHub repositories to the files, I was trying to understand why several of my repos were saying I had a bunch of file changes but nothing in the files themselves had changed. I noticed they were mostly .</description>
     </item>
     
     <item>
       <title>Intuitions about Grades</title>
-      <link>/post/intuitions-about-grades/</link>
+      <link>https://doomlab.github.io/post/intuitions-about-grades/</link>
       <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/intuitions-about-grades/</guid>
+      <guid>https://doomlab.github.io/post/intuitions-about-grades/</guid>
       <description>Are my intuitions about grades correct?
 I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.
 First, I took all the times I had taught memory and cognition post Ph.</description>
@@ -98,30 +98,30 @@ First, I took all the times I had taught memory and cognition post Ph.</descript
     
     <item>
       <title>JASP Videos &#43; Guides</title>
-      <link>/post/jasp-videos-guides/</link>
+      <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/jasp-videos-guides/</guid>
+      <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
     </item>
     
     <item>
       <title>Quick and Dirty Categorical lavaan</title>
-      <link>/post/quick-and-dirty-categorical-lavaan/</link>
+      <link>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/quick-and-dirty-categorical-lavaan/</guid>
+      <guid>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</guid>
       <description>I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
 You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&#39;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</description>
     </item>
     
     <item>
       <title>New Publications and Updated CV</title>
-      <link>/post/new-publications-and-updated-cv/</link>
+      <link>https://doomlab.github.io/post/new-publications-and-updated-cv/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications-and-updated-cv/</guid>
+      <guid>https://doomlab.github.io/post/new-publications-and-updated-cv/</guid>
       <description>Hi guys! I just wanted to post that I&#39;ve updated the website to be current with some new publications I wanted to highlight:
 First up is two papers on psycholinguistics that were undergraduate student projects:
 Duncan, J., Buchanan, E.M., Marshall, C.Z., &amp;amp; Oberdieck, K. (accepted). But words will never hurt me, Journal of Psychology and Behavioral Sciences, X, XX-XX. PDF
@@ -130,29 +130,29 @@ Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort
     
     <item>
       <title>Current Publications with Papaja</title>
-      <link>/post/current-publications-with-papaja/</link>
+      <link>https://doomlab.github.io/post/current-publications-with-papaja/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/current-publications-with-papaja/</guid>
+      <guid>https://doomlab.github.io/post/current-publications-with-papaja/</guid>
       <description>Heyo! Frederik, the author of papaja, requested that we update him with papers written with his package. I was like, oh man, like the whole lab?! So, I decided that I could probably make it easy by making a table here. Obviously, this table is current at the moment, as I hope many of the ones under review will get accepted, and I have several others that we will start writing soon.</description>
     </item>
     
     <item>
       <title>Gathering Text from the Web</title>
-      <link>/post/gathering-text-from-the-web/</link>
+      <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/gathering-text-from-the-web/</guid>
+      <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
       <description>Hi everyone! I don&#39;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
     </item>
     
     <item>
       <title>New Publication: Texting</title>
-      <link>/post/new-publication-texting/</link>
+      <link>https://doomlab.github.io/post/new-publication-texting/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-texting/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-texting/</guid>
       <description>One more announcement! We just had a new publication accepted:
 &amp;ldquo;Textisms&amp;rdquo;: The Comfort of the Recipient: This paper was an undergraduate honors thesis that Flora-Jean and I finally got accepted! She did a great job making sure this paper was completed and published.
 You can check out the materials here: https://osf.io/8kt52/
@@ -162,10 +162,10 @@ We should have the real print up soon! Just waiting on the journal now.</descrip
     
     <item>
       <title>Mediation Moderation Workshop</title>
-      <link>/post/mediation-moderation-workshop/</link>
+      <link>https://doomlab.github.io/post/mediation-moderation-workshop/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/mediation-moderation-workshop/</guid>
+      <guid>https://doomlab.github.io/post/mediation-moderation-workshop/</guid>
       <description>Hi everyone!
 I have been super swamped with a bunch of due dates that all hit in April. For a small brag, and I like making lists:
  9 revise and resubmits (four we&#39;ve sent back, two have been accepted!) 4 conference posters and one invited talk 1 submitted grant (fingers crossed!) 2 invited papers 2 theses that I&#39;m chairing, 2 that I&#39;m on the committee for Data camp!  It&#39;s been nuts, so haven&#39;t left the house much or done much of anything else.</description>
@@ -173,30 +173,30 @@ I have been super swamped with a bunch of due dates that all hit in April. For a
     
     <item>
       <title>Working With Messy Text</title>
-      <link>/post/working-with-messy-text/</link>
+      <link>https://doomlab.github.io/post/working-with-messy-text/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/working-with-messy-text/</guid>
+      <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
       <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&#39;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
     </item>
     
     <item>
       <title>New Publications</title>
-      <link>/post/new-publications/</link>
+      <link>https://doomlab.github.io/post/new-publications/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications/</guid>
+      <guid>https://doomlab.github.io/post/new-publications/</guid>
       <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&#39;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
 We&#39;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&#39;ve done this week after taking a breather from a seriously packed week.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>/post/new-publication-detect-low-quality-data/</link>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-detect-low-quality-data/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
@@ -204,10 +204,10 @@ We create a really nice R function to help you detect low quality data, which yo
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
-      <link>/post/citations-in-r-markdown-papaja/</link>
+      <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/citations-in-r-markdown-papaja/</guid>
+      <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&#39;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
 Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.</description>
@@ -215,48 +215,48 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
     
     <item>
       <title>A Shiny App to Compare Stats</title>
-      <link>/post/a-shiny-app-to-compare-stats/</link>
+      <link>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</link>
       <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/a-shiny-app-to-compare-stats/</guid>
+      <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
       <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
  Bayes Factors and p-values follow a power function, as we expected.</description>
     </item>
     
     <item>
       <title>Learn About MOTE</title>
-      <link>/post/learn-about-mote/</link>
+      <link>https://doomlab.github.io/post/learn-about-mote/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/learn-about-mote/</guid>
+      <guid>https://doomlab.github.io/post/learn-about-mote/</guid>
       <description>The APA Task Force on Statistical Inference (Wilkinson &amp;amp; TFSI, 1999) has advocated the inclusion of effect sizes in journal articles as an important source of information. The fifth and current edition of the APA publication manual (2001, 2010) emphasized these findings from the task force, along with requirement of effect sizes to publish in their journals. However, Fidler et al. (2005) have conveyed that only slight increases in report rates have been found in popular journals.</description>
     </item>
     
     <item>
       <title>Research Statement</title>
-      <link>/post/research-statement/</link>
+      <link>https://doomlab.github.io/post/research-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/research-statement/</guid>
+      <guid>https://doomlab.github.io/post/research-statement/</guid>
       <description>Upon arriving at Missouri State University, I founded the Deciphering Outrageous Observations and Modeling (DOOM) lab which has included more than ten graduate and thirty undergraduate students. My research mission has been in two primary domains described in detail below and includes many collaborative efforts throughout the years.
 Psycholinguistics. My cognitive research focuses broadly on psycholinguistics and memory, particularly on the statistical properties of word relationships. Overall, I seek to understand how language is represented in memory by adding to and examining available linguistic database information (i.</description>
     </item>
     
     <item>
       <title>Teaching Statement</title>
-      <link>/post/teaching-statement/</link>
+      <link>https://doomlab.github.io/post/teaching-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/teaching-statement/</guid>
+      <guid>https://doomlab.github.io/post/teaching-statement/</guid>
       <description>Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/post/2019-05-15-multilevel-modeling-workshop-materials/</link>
+      <link>https://doomlab.github.io/post/2019-05-15-multilevel-modeling-workshop-materials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/2019-05-15-multilevel-modeling-workshop-materials/</guid>
+      <guid>https://doomlab.github.io/post/2019-05-15-multilevel-modeling-workshop-materials/</guid>
       <description>Multilevel Modeling Workshop Materials /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */ !function(a,b){&#34;object&#34;==typeof module&amp;&amp;&#34;object&#34;==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error(&#34;jQuery requires a window with a document&#34;);return b(a)}:b(a)}(&#34;undefined&#34;!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l=&#34;1.11.3&#34;,m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:&#34;&#34;,length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0a?b:0);return this.pushStack(c=0&amp;&amp;bc?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for(&#34;boolean&#34;==typeof g&amp;&amp;(j=g,g=arguments[h]||{},h++),&#34;object&#34;==typeof g||m.isFunction(g)||(g={}),h===i&amp;&amp;(g=this,h--);ih;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&amp;&amp;(j&amp;&amp;c&amp;&amp;(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&amp;&amp;m.isArray(a)?a:[]):f=a&amp;&amp;m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&amp;&amp;(g[d]=c));return g},m.extend({expando:&#34;jQuery&#34;+(l+Math.random()).replace(/\D/g,&#34;&#34;),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return&#34;function&#34;===m.type(a)},isArray:Array.isArray||function(a){return&#34;array&#34;===m.type(a)},isWindow:function(a){return null!=a&amp;&amp;a==a.window},isNumeric:function(a){return!m.isArray(a)&amp;&amp;a-parseFloat(a)+1=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||&#34;object&#34;!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&amp;&amp;!j.call(a,&#34;constructor&#34;)&amp;&amp;!j.call(a.constructor.prototype,&#34;isPrototypeOf&#34;))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+&#34;&#34;:&#34;object&#34;==typeof a||&#34;</description>
     </item>
     

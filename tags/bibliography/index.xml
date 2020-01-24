@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bibliography on Dr. Erin Buchanan</title>
-    <link>/tags/bibliography/</link>
+    <link>https://doomlab.github.io/tags/bibliography/</link>
     <description>Recent content in bibliography on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/bibliography/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/bibliography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
-      <link>/post/citations-in-r-markdown-papaja/</link>
+      <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/citations-in-r-markdown-papaja/</guid>
+      <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&#39;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
 Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.</description>
