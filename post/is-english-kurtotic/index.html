@@ -61,7 +61,7 @@ KD Text
   "headline": "Is English Kurtotic?",
   "description" : "You ever have a random text that sent your brain to work? Here’s mine today:\nKD Text\n Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.",
   "inLanguage" : "en",
-  "wordCount":  1165 ,
+  "wordCount":  1172 ,
   "datePublished" : "2020-02-07T00:00:00",
   "dateModified" : "2020-02-07T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -406,9 +406,12 @@ for (i in 1:length(elp$word)){
   
   repeating &lt;- as.numeric(mapvalues(letters, font_size$letter, font_size$height))
   
+  #height
   distribution_sans &lt;- rep(numbers_sans, repeating)
   distribution_mono &lt;- rep(numbers_mono, repeating)
-  distribution_webdings &lt;- rep(numbers_webdings, repeating)
+  
+  #all same height, so nothing to double
+  distribution_webdings &lt;- numbers_webdings
   
   final_stuff$word[i] &lt;- elp$word[i]
   final_stuff$s_sans[i] &lt;- skewness(distribution_sans)
@@ -458,12 +461,12 @@ mean(final_stuff$k_mono)</code></pre>
 <h3>Webdings</h3>
 <pre class="r"><code>##skew
 mean(final_stuff$s_webdings)</code></pre>
-<pre><code>## [1] -0.01400699</code></pre>
+<pre><code>## [1] 0.004592325</code></pre>
 <pre class="r"><code>hist(final_stuff$s_webdings)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code>##kurtosis
 mean(final_stuff$k_webdings)</code></pre>
-<pre><code>## [1] 1.823287</code></pre>
+<pre><code>## [1] 1.754978</code></pre>
 <pre class="r"><code>hist(final_stuff$k_webdings)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
 <p>Webdings just makes me laugh, as there’s only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Again, some small differences from the sans/serif fonts, which is likely due to the even spacing of the letters minus m.</p>

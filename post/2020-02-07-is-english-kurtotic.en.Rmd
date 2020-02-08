@@ -103,9 +103,12 @@ for (i in 1:length(elp$word)){
   
   repeating <- as.numeric(mapvalues(letters, font_size$letter, font_size$height))
   
+  #height
   distribution_sans <- rep(numbers_sans, repeating)
   distribution_mono <- rep(numbers_mono, repeating)
-  distribution_webdings <- rep(numbers_webdings, repeating)
+  
+  #all same height, so nothing to double
+  distribution_webdings <- numbers_webdings
   
   final_stuff$word[i] <- elp$word[i]
   final_stuff$s_sans[i] <- skewness(distribution_sans)
