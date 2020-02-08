@@ -2,41 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>text processing on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/text-processing/</link>
+    <link>/tags/text-processing/</link>
     <description>Recent content in text processing on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/text-processing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/text-processing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Is English Kurtotic?</title>
+      <link>/post/is-english-kurtotic/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>/post/is-english-kurtotic/</guid>
+      <description>You ever have a random text that sent your brain to work? Here’s mine today:
+Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.</description>
+    </item>
+    
+    <item>
       <title>Getting Translations with rvest and Selenium</title>
-      <link>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</link>
+      <link>/post/getting-translations-with-rvest-and-selenium/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</guid>
+      <guid>/post/getting-translations-with-rvest-and-selenium/</guid>
       <description>In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.</description>
     </item>
     
     <item>
       <title>Gathering Text from the Web</title>
-      <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
+      <link>/post/gathering-text-from-the-web/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
+      <guid>/post/gathering-text-from-the-web/</guid>
       <description>Hi everyone! I don&#39;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
     </item>
     
     <item>
       <title>Working With Messy Text</title>
-      <link>https://doomlab.github.io/post/working-with-messy-text/</link>
+      <link>/post/working-with-messy-text/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
+      <guid>/post/working-with-messy-text/</guid>
       <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&#39;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&#39;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
     </item>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>grades on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/grades/</link>
+    <link>/tags/grades/</link>
     <description>Recent content in grades on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Sun, 02 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/grades/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/grades/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Intuitions about Grades</title>
-      <link>https://doomlab.github.io/post/intuitions-about-grades/</link>
+      <link>/post/intuitions-about-grades/</link>
       <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/intuitions-about-grades/</guid>
+      <guid>/post/intuitions-about-grades/</guid>
       <description>Are my intuitions about grades correct?
 I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.
 First, I took all the times I had taught memory and cognition post Ph.</description>

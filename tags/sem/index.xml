@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sem on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/sem/</link>
+    <link>/tags/sem/</link>
     <description>Recent content in sem on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Thu, 05 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/sem/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/sem/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Quick and Dirty Categorical lavaan</title>
-      <link>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</link>
+      <link>/post/quick-and-dirty-categorical-lavaan/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</guid>
+      <guid>/post/quick-and-dirty-categorical-lavaan/</guid>
       <description>I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
 You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&#39;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</description>
     </item>
