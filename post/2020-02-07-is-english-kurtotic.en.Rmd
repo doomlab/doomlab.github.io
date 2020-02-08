@@ -16,15 +16,11 @@ image: ''
 
 You ever have a random text that sent your brain to work? Here's mine today:
 
-```{r echo = F, fig.align = 'center', results = 'asis'}
-knitr::include_graphics("kd_text.png")
-```
+![KD Text]("https://www.aggieerin.com/post/kd_text.png")
 
 Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is "almost normal". The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here's to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height. Webdings specifically by request. We have one serif font, one sans serif font, and one monospaced font.
 
-```{r echo = F, fig.align = 'center', results = 'asis'}
-knitr::include_graphics("fonts.png")
-```
+![Font Picture]("https://www.aggieerin.com/post/fonts.png")
 
 I don't have a perfect representation of this numerically, but for this analysis, we are going to compare everything to the letter a. Therefore, a is coded as a 1 for width and a 1 for height. For skinnier letters, like f, i, j, and l, they get a .5 for width. The letters m and w received 1.5 for serif and sans serif fonts for being wider than the rest. A mono spaced font like `console` received all 1s for width. Very strangely, the only skinny letter in Webdings is the letter m for the little man character. For height purposes, all readable fonts are the same, tall letters got a 2 for being tall. They don't quite actually take up 2 height wise, but for the math here, 2 is a bit easier to work with.
 

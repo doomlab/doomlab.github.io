@@ -9,7 +9,8 @@
 
   <title>Is English Kurtotic? - Dr. Erin Buchanan</title>
   <meta name="description" content="You ever have a random text that sent your brain to work? Here’s mine today:
-Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.">
+KD Text
+ Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.">
   <meta name="author" content="aggieerin.com"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -58,9 +59,9 @@ Followed up with examples that lol is bimodal, while loop is positively skewed, 
     "name" : "Erin M. Buchanan"
   },
   "headline": "Is English Kurtotic?",
-  "description" : "You ever have a random text that sent your brain to work? Here’s mine today:\nFollowed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.",
+  "description" : "You ever have a random text that sent your brain to work? Here’s mine today:\nKD Text\n Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.",
   "inLanguage" : "en",
-  "wordCount":  982 ,
+  "wordCount":  986 ,
   "datePublished" : "2020-02-07T00:00:00",
   "dateModified" : "2020-02-07T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -81,7 +82,8 @@ Followed up with examples that lol is bimodal, while loop is positively skewed, 
 
 <meta property="og:title" content="Is English Kurtotic?" />
 <meta property="og:description" content="You ever have a random text that sent your brain to work? Here’s mine today:
-Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.">
+KD Text
+ Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.">
 <meta property="og:image" content="/img/header.jpg" />
 <meta property="og:url" content="/post/is-english-kurtotic/" />
 <meta property="og:type" content="website" />
@@ -89,7 +91,8 @@ Followed up with examples that lol is bimodal, while loop is positively skewed, 
 
   <meta name="twitter:title" content="Is English Kurtotic?" />
   <meta name="twitter:description" content="You ever have a random text that sent your brain to work? Here’s mine today:
-Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely …">
+KD Text
+ Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The …">
   <meta name="twitter:image" content="/img/header.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aggieerin" />
@@ -318,9 +321,15 @@ Followed up with examples that lol is bimodal, while loop is positively skewed, 
 
 
 <p>You ever have a random text that sent your brain to work? Here’s mine today:</p>
-<p><img src="kd_text.png" width="132" style="display: block; margin: auto;" /></p>
+<div class="figure">
+<embed src="%22https://www.aggieerin.com/post/kd_text.png%22" />
+<p class="caption">KD Text</p>
+</div>
 <p>Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height. Webdings specifically by request. We have one serif font, one sans serif font, and one monospaced font.</p>
-<p><img src="fonts.png" width="432" style="display: block; margin: auto;" /></p>
+<div class="figure">
+<embed src="%22https://www.aggieerin.com/post/fonts.png%22" />
+<p class="caption">Font Picture</p>
+</div>
 <p>I don’t have a perfect representation of this numerically, but for this analysis, we are going to compare everything to the letter a. Therefore, a is coded as a 1 for width and a 1 for height. For skinnier letters, like f, i, j, and l, they get a .5 for width. The letters m and w received 1.5 for serif and sans serif fonts for being wider than the rest. A mono spaced font like <code>console</code> received all 1s for width. Very strangely, the only skinny letter in Webdings is the letter m for the little man character. For height purposes, all readable fonts are the same, tall letters got a 2 for being tall. They don’t quite actually take up 2 height wise, but for the math here, 2 is a bit easier to work with.</p>
 <pre class="r"><code>font_size &lt;- read.csv(&quot;font_sizes.csv&quot;, stringsAsFactors = F)
 head(font_size)</code></pre>
@@ -341,7 +350,7 @@ head(font_size)</code></pre>
 </ul>
 <pre class="r"><code>enter &lt;- c(1, 2, 2.5, 2.5, 3.5, 4)
 hist(enter, breaks = 5)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>Again, not a perfect representation, but should do. Then we can calculate skew and kurtosis on the word:</p>
 <pre class="r"><code>library(moments)
 skewness(enter)</code></pre>
@@ -407,29 +416,29 @@ write.csv(final_stuff, &quot;final_distribution.csv&quot;, row.names = F)</code>
 <pre class="r"><code>mean(final_stuff$s_sans)</code></pre>
 <pre><code>## [1] -0.0005320944</code></pre>
 <pre class="r"><code>hist(final_stuff$s_sans)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <pre class="r"><code>mean(final_stuff$k_sans)</code></pre>
 <pre><code>## [1] 1.913</code></pre>
 <pre class="r"><code>hist(final_stuff$k_sans)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
 <p>Most serif and sans serif fonts are <em>not</em> skewed, implying that tall letters are a bit more likely in the middle (or none at all). We find that most sans or serif fonts are uniform in distribution. I think it would be hard for them to be much different than that because the highest point is 2 frequency wise.</p>
 <pre class="r"><code>mean(final_stuff$s_mono)</code></pre>
 <pre><code>## [1] -0.01798692</code></pre>
 <pre class="r"><code>hist(final_stuff$s_mono)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <pre class="r"><code>mean(final_stuff$k_mono)</code></pre>
 <pre><code>## [1] 1.821502</code></pre>
 <pre class="r"><code>hist(final_stuff$k_mono)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
 <p>Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we’ve seen above that tall letters are likely not driving skew by only being on the ends of words. They are also more heavily uniform in kurtosis.</p>
 <pre class="r"><code>mean(final_stuff$s_webdings)</code></pre>
 <pre><code>## [1] -0.01400699</code></pre>
 <pre class="r"><code>hist(final_stuff$s_webdings)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code>mean(final_stuff$k_webdings)</code></pre>
 <pre><code>## [1] 1.823287</code></pre>
 <pre class="r"><code>hist(final_stuff$k_webdings)</code></pre>
-<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
 <p>Webdings just makes me laugh, as there’s only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Some of the lowest kurtosis values are for <code>mimi</code> and what would be bimodal words: <code>brat, drat, fret, trot</code> while the highest values are for words that would be the most normal, especially words with double <code>ll</code>: <code>billow, william, pillow</code>.
 So, English is uniform and mostly not skewed. You can find all the data on <a href="https://github.com/doomlab/doomlab.github.io/tree/master/post">GitHub</a>.</p>
 
