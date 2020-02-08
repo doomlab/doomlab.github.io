@@ -157,7 +157,7 @@ mean(final_stuff$k_mono)
 hist(final_stuff$k_mono)
 ```
 
-Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we've seen above that tall letters are likely not driving skew by only being on the ends of words. They are also more heavily uniform in kurtosis. 
+Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we've seen above that tall letters are likely not driving skew by only being on the ends of words. Albeit, "more" skew than the sans/serif fonts, so the variable spacing is doing something. Monospace fonts are also slightly more uniform in kurtosis. 
 
 ### Webdings
 
@@ -171,5 +171,12 @@ mean(final_stuff$k_webdings)
 hist(final_stuff$k_webdings)
 ```
 
-Webdings just makes me laugh, as there's only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Some of the lowest kurtosis values are for `mimi` and what would be bimodal words: `brat, drat, fret, trot` while the highest values are for words that would be the most normal, especially words with double `ll`: `billow, william, pillow`. 
+Webdings just makes me laugh, as there's only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Again, some small differences from the sans/serif fonts, which is likely due to the even spacing of the letters minus m. 
+
+### Overall
+
+Some of the lowest kurtosis values are for `mimi` and what would be bimodal words: `brat, drat, fret, trot` while the highest values are for words that would be the most normal, especially words with double `ll`: `billow, william, pillow`.
+
+The highest and lowest skew values are for words that start and end with tall letters (and nothing in between): `firm, dim, emil, emit, omit`, and m/w seem to make more of an appearance due to their size differences in sans/serif and Webdings fonts.
+
 So, English is uniform and mostly not skewed. You can find all the data on [GitHub](https://github.com/doomlab/doomlab.github.io/tree/master/post).

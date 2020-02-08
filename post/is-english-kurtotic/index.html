@@ -61,7 +61,7 @@ KD Text
   "headline": "Is English Kurtotic?",
   "description" : "You ever have a random text that sent your brain to work? Here’s mine today:\nKD Text\n Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.",
   "inLanguage" : "en",
-  "wordCount":  1084 ,
+  "wordCount":  1165 ,
   "datePublished" : "2020-02-07T00:00:00",
   "dateModified" : "2020-02-07T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -452,7 +452,7 @@ mean(final_stuff$k_mono)</code></pre>
 <pre><code>## [1] 1.821502</code></pre>
 <pre class="r"><code>hist(final_stuff$k_mono)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
-<p>Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we’ve seen above that tall letters are likely not driving skew by only being on the ends of words. They are also more heavily uniform in kurtosis.</p>
+<p>Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we’ve seen above that tall letters are likely not driving skew by only being on the ends of words. Albeit, “more” skew than the sans/serif fonts, so the variable spacing is doing something. Monospace fonts are also slightly more uniform in kurtosis.</p>
 </div>
 <div id="webdings" class="section level3">
 <h3>Webdings</h3>
@@ -466,8 +466,13 @@ mean(final_stuff$k_webdings)</code></pre>
 <pre><code>## [1] 1.823287</code></pre>
 <pre class="r"><code>hist(final_stuff$k_webdings)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
-<p>Webdings just makes me laugh, as there’s only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Some of the lowest kurtosis values are for <code>mimi</code> and what would be bimodal words: <code>brat, drat, fret, trot</code> while the highest values are for words that would be the most normal, especially words with double <code>ll</code>: <code>billow, william, pillow</code>.
-So, English is uniform and mostly not skewed. You can find all the data on <a href="https://github.com/doomlab/doomlab.github.io/tree/master/post">GitHub</a>.</p>
+<p>Webdings just makes me laugh, as there’s only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Again, some small differences from the sans/serif fonts, which is likely due to the even spacing of the letters minus m.</p>
+</div>
+<div id="overall" class="section level3">
+<h3>Overall</h3>
+<p>Some of the lowest kurtosis values are for <code>mimi</code> and what would be bimodal words: <code>brat, drat, fret, trot</code> while the highest values are for words that would be the most normal, especially words with double <code>ll</code>: <code>billow, william, pillow</code>.</p>
+<p>The highest and lowest skew values are for words that start and end with tall letters (and nothing in between): <code>firm, dim, emil, emit, omit</code>, and m/w seem to make more of an appearance due to their size differences in sans/serif and Webdings fonts.</p>
+<p>So, English is uniform and mostly not skewed. You can find all the data on <a href="https://github.com/doomlab/doomlab.github.io/tree/master/post">GitHub</a>.</p>
 </div>
 
 
