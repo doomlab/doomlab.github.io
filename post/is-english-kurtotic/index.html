@@ -61,7 +61,7 @@ KD Text
   "headline": "Is English Kurtotic?",
   "description" : "You ever have a random text that sent your brain to work? Here’s mine today:\nKD Text\n Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.",
   "inLanguage" : "en",
-  "wordCount":  986 ,
+  "wordCount":  1084 ,
   "datePublished" : "2020-02-07T00:00:00",
   "dateModified" : "2020-02-07T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -291,7 +291,7 @@ KD Text
   <i class="fas fa-calendar"></i>&nbsp;Posted on February 7, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
   
@@ -376,6 +376,19 @@ elp &lt;- subset(elp,
 nrow(elp)</code></pre>
 <pre><code>## [1] 71607</code></pre>
 <p>Now, we can create a function to calculate the skew and kurtosis for each word:</p>
+<ul>
+<li>First, create an empty dataframe to save the data in.</li>
+<li>Next, we are going to loop over all the words (this is slow, but whatever).</li>
+<li>For each word:
+<ul>
+<li>Break apart the letters.</li>
+<li><code>mapvalues</code> to convert the letters into numbers based on my scoring system.</li>
+<li>Make those numbers with <code>as.numeric</code>.</li>
+<li>Make those cumulative sequences by using the unfortunately named <code>cumsum</code>.</li>
+<li>All the information about height by using <code>rep</code> to create the “tall” letters in the right places.</li>
+<li>Calculate skew and kurtosis and save the output.</li>
+</ul></li>
+</ul>
 <pre class="r"><code>library(plyr)
 
 final_stuff &lt;- matrix(NA, nrow = length(elp$word), ncol = 7)
@@ -413,34 +426,49 @@ write.csv(final_stuff, &quot;final_distribution.csv&quot;, row.names = F)</code>
 <pre><code>## [1] 1.762602</code></pre>
 <pre class="r"><code>kurtosis(c(1,2,3,3,3,3,3,4,5))</code></pre>
 <pre><code>## [1] 3.06</code></pre>
-<pre class="r"><code>mean(final_stuff$s_sans)</code></pre>
+<div id="serif-and-sans-serif-fonts" class="section level3">
+<h3>Serif and Sans Serif Fonts</h3>
+<pre class="r"><code>##skew
+mean(final_stuff$s_sans)</code></pre>
 <pre><code>## [1] -0.0005320944</code></pre>
 <pre class="r"><code>hist(final_stuff$s_sans)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<pre class="r"><code>mean(final_stuff$k_sans)</code></pre>
+<pre class="r"><code>#kurtosis
+mean(final_stuff$k_sans)</code></pre>
 <pre><code>## [1] 1.913</code></pre>
 <pre class="r"><code>hist(final_stuff$k_sans)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
 <p>Most serif and sans serif fonts are <em>not</em> skewed, implying that tall letters are a bit more likely in the middle (or none at all). We find that most sans or serif fonts are uniform in distribution. I think it would be hard for them to be much different than that because the highest point is 2 frequency wise.</p>
-<pre class="r"><code>mean(final_stuff$s_mono)</code></pre>
+</div>
+<div id="monospaced-fonts" class="section level3">
+<h3>Monospaced fonts</h3>
+<pre class="r"><code>##skew
+mean(final_stuff$s_mono)</code></pre>
 <pre><code>## [1] -0.01798692</code></pre>
 <pre class="r"><code>hist(final_stuff$s_mono)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<pre class="r"><code>mean(final_stuff$k_mono)</code></pre>
+<pre class="r"><code>#kurtosis
+mean(final_stuff$k_mono)</code></pre>
 <pre><code>## [1] 1.821502</code></pre>
 <pre class="r"><code>hist(final_stuff$k_mono)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
 <p>Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we’ve seen above that tall letters are likely not driving skew by only being on the ends of words. They are also more heavily uniform in kurtosis.</p>
-<pre class="r"><code>mean(final_stuff$s_webdings)</code></pre>
+</div>
+<div id="webdings" class="section level3">
+<h3>Webdings</h3>
+<pre class="r"><code>##skew
+mean(final_stuff$s_webdings)</code></pre>
 <pre><code>## [1] -0.01400699</code></pre>
 <pre class="r"><code>hist(final_stuff$s_webdings)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<pre class="r"><code>mean(final_stuff$k_webdings)</code></pre>
+<pre class="r"><code>##kurtosis
+mean(final_stuff$k_webdings)</code></pre>
 <pre><code>## [1] 1.823287</code></pre>
 <pre class="r"><code>hist(final_stuff$k_webdings)</code></pre>
 <p><img src="/post/2020-02-07-is-english-kurtotic.en_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
 <p>Webdings just makes me laugh, as there’s only the letter m to drive any type of effect, so we see nearly no skew and a very uniform distribution for kurtosis. Some of the lowest kurtosis values are for <code>mimi</code> and what would be bimodal words: <code>brat, drat, fret, trot</code> while the highest values are for words that would be the most normal, especially words with double <code>ll</code>: <code>billow, william, pillow</code>.
 So, English is uniform and mostly not skewed. You can find all the data on <a href="https://github.com/doomlab/doomlab.github.io/tree/master/post">GitHub</a>.</p>
+</div>
 
 
         

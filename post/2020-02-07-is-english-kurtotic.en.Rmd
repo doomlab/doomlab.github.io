@@ -75,6 +75,16 @@ nrow(elp)
 
 Now, we can create a function to calculate the skew and kurtosis for each word:
 
+- First, create an empty dataframe to save the data in.
+- Next, we are going to loop over all the words (this is slow, but whatever).
+- For each word:
+  - Break apart the letters.
+  - `mapvalues` to convert the letters into numbers based on my scoring system.
+  - Make those numbers with `as.numeric`.
+  - Make those cumulative sequences by using the unfortunately named `cumsum`. 
+  - All the information about height by using `rep` to create the "tall" letters in the right places. 
+  - Calculate skew and kurtosis and save the output. 
+
 ```{r eval = F}
 library(plyr)
 
@@ -121,27 +131,42 @@ kurtosis(c(1,2,4,5,6,7,8))
 kurtosis(c(1,2,3,3,3,3,3,4,5))
 ```
 
+### Serif and Sans Serif Fonts 
+
 ```{r}
+##skew
 mean(final_stuff$s_sans)
 hist(final_stuff$s_sans)
+
+#kurtosis
 mean(final_stuff$k_sans)
 hist(final_stuff$k_sans)
 ```
 
 Most serif and sans serif fonts are *not* skewed, implying that tall letters are a bit more likely in the middle (or none at all).  We find that most sans or serif fonts are uniform in distribution. I think it would be hard for them to be much different than that because the highest point is 2 frequency wise.
 
+### Monospaced fonts
+
 ```{r}
+##skew
 mean(final_stuff$s_mono)
 hist(final_stuff$s_mono)
+
+#kurtosis
 mean(final_stuff$k_mono)
 hist(final_stuff$k_mono)
 ```
 
 Monospace fonts are nearly all non-skewed (because all the letters take up the same space), and we've seen above that tall letters are likely not driving skew by only being on the ends of words. They are also more heavily uniform in kurtosis. 
 
+### Webdings
+
 ```{r}
+##skew
 mean(final_stuff$s_webdings)
 hist(final_stuff$s_webdings)
+
+##kurtosis
 mean(final_stuff$k_webdings)
 hist(final_stuff$k_webdings)
 ```
