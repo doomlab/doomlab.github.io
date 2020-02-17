@@ -60,7 +60,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   "headline": "Updating Your CV with Packages",
   "description" : "Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve\x27s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.\nLink to the entire CV folder for you to use\/view do stuff with: CV. Please ignore the html files in that folder, it does \x26ldquo;knit\x26rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.",
   "inLanguage" : "en",
-  "wordCount":  1863 ,
+  "wordCount":  1891 ,
   "datePublished" : "2019-04-03T00:00:00",
   "dateModified" : "2019-04-03T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -396,14 +396,17 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 <span class="c1">#write.csv(curated_check, &#34;check_these.csv&#34;, row.names = F)</span>
 </code></pre></div><p><code>setdiff</code> takes the ones that are in the final dataset (f) but aren't in the curated dataset (c). Then I grabbed the rows in the final dataset that were in the &ldquo;haven't seen these yet&rdquo; pile using <code>%in%</code>. <code>newrows</code> is a list of information found in both of these services that aren't in your CV. I use the word &ldquo;new&rdquo; loosely here. Let's see what it found, as I've just updated my cv.</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">newrows</span><span class="o">$</span><span class="n">title</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">## [1] Acknowledgment to our Reviewers                                                                       
-## [2] Acknowledgment to Reviewers                                                                           
-## [3] Development of a Patient Reported Outcome Measure Evaluating Meaningful Response to Migraine Treatment
-## [4] Getting started creating data dictionaries                                                            
-## [5] Justify Your Alpha                                                                                    
-## [6] State of Science Paper Guide                                                                          
-## [7] The Language of War: A Replication and Extension of Abe (2012) and Matsumoto Et Al.(2015)             
-## 150 Levels: “Textisms”: The comfort of the recipient. ...
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">##  [1] Acknowledgment to our Reviewers                                                                       
+##  [2] Acknowledgment to Reviewers                                                                           
+##  [3] Development of a Patient Reported Outcome Measure Evaluating Meaningful Response to Migraine Treatment
+##  [4] Getting started creating data dictionaries                                                            
+##  [5] Justify Your Alpha                                                                                    
+##  [6] Love, Language, and Linear Algebra: Linguistic Modeling of Personality and Mate Preference            
+##  [7] Profile Login                                                                                         
+##  [8] State of Science Paper Guide                                                                          
+##  [9] Swipe om te navigeren naar een ander artikel                                                          
+## [10] The Language of War: A Replication and Extension of Abe (2012) and Matsumoto Et Al.(2015)             
+## 152 Levels: “Textisms”: The comfort of the recipient. ...
 </code></pre></div><p>These three are 1) OSF page for an Accelerated CREP I am on, but I haven't added it yet to my CV because it's a bit early to be sharing (i.e., waiting until there's more of real paper there), 2) a &ldquo;preprint&rdquo; project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA's website, which I don't have access to. Probably a doi for a conference presentation, but I don't really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would get ignored as things not to print.</p>
 <p>This next part is set up to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that's not really my thing to track (however, for some folks working at institutions that do care, you could update that over time using something like this code).</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1">#update any X or XX that were place holders for the pages</span>
@@ -416,15 +419,15 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 ## 29                                           Differential Effects of Association and Semantics on Priming and Memory Judgments.
 ## 39                                                        Generativity and other buffers of death awareness in first responders
 ## 46                        How the Presence of Others Affects Desirability Judgments in Heterosexual and Homosexual Participants
-## 66 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
-## 85             Valued Living in Daily Experience: Relations with Mindfulness, Meaning, Psychological Flexibility, and Stressors
+## 67 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
+## 88             Valued Living in Daily Experience: Relations with Mindfulness, Meaning, Psychological Flexibility, and Stressors
 ##    number
 ## 8    1-13
 ## 29       
 ## 39   1-14
 ## 46   1-11
-## 66       
-## 85   1-11
+## 67       
+## 88   1-11
 </code></pre></div><p>None of these have new volume or page numbers, so I am good to go here. Because I have this as an excel sheet, I can do some fun visualizations:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
