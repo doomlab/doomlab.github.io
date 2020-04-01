@@ -25,11 +25,9 @@ Also, I would suggest running each line of code one at a time, as sometimes the 
 
 In this guide, I'll detail Amazon Lightsail. You can use any cloud virtual machine service or a literal machine with Ubuntu on it. First, I created `ssh keys` for myself to be able to log to the machine from my local terminal. Every service seems to do this differently, but on Lightsail, you go to Account in the top navigation window, and there's an option for SSH Keys. 
 
-![step1](step1.png)
-
 Next, I created a Lightsail instance matching the location to the SSH key I just created. I selected Linux/Unix as the platform, OS Only, and then Ubuntu 18.04. 
 
-![step2](step2.png)
+![step2](https://www.aggieerin.com/post/step2.png)
 
 For this system, I powered it at the highest level (we have $ support for this project): 32GB RAM, 8vCPUs, 640 GB SSD, 7 TB transfer. I will be interested to see if we use this much power, but time will tell. Our project may include a lot of web hits, so went bigger, which I can scale back if it's not necessary. 
 
@@ -37,7 +35,7 @@ For this system, I powered it at the highest level (we have $ support for this p
 
 From here I navigated to the Lightsail instance and clicked on the terminal. Since I had created the SSH key, it logged me in as root. 
 
-![step3](step3.png)
+![step3](https://www.aggieerin.com/post/step3.png)
 
 Let's update the server:
 
@@ -82,9 +80,9 @@ sudo apt-get install -y opencpu-server
 
 I set up the mail information to send from gmail.com, as that's the email I wanted to tie the instance to:
 
-![step4](step4.png)
+![step4](https://www.aggieerin.com/post/step4.png)
 
-![step5](step5.png)
+![step5](https://www.aggieerin.com/post/step5.png)
 
 Before we install *R* packages, we will need to install a few things to help make the *R* packages run smoothly. This list will entirely depend on what underlying requirements there are for your *R* packages. If you get a non-zero exit status error, usually there's a note somewhere above that about which underlying library is needed. 
 
