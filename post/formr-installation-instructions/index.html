@@ -60,7 +60,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   "headline": "formr Installation Instructions",
   "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
   "inLanguage" : "en",
-  "wordCount":  1626 ,
+  "wordCount":  1672 ,
   "datePublished" : "2020-03-31T00:00:00",
   "dateModified" : "2020-03-31T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -510,10 +510,15 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <h4>Set paths and permissions</h4>
 <ul>
 <li>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>.</li>
-<li>To do that, do: <code>sudo chmod -R 666 /tmp</code></li>
+<li>To do that, do: <code>sudo chmod -R 777 /tmp</code> (I know 777 is not normally recommended, but this is what I had to do to get it work)</li>
 <li>And: <code>sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp</code></li>
 </ul>
-<p>STOPPED HERE</p>
+<p>I will note I had to rerun <code>sudo systemctl restart apache2</code> to get everything to start running again.</p>
+</div>
+<div id="a-note-on-emails" class="section level4">
+<h4>A note on emails</h4>
+<p>As I was testing everything, I was getting <code>SMTP connect()</code> errors. Hopefully, I’ll be able to tell you soon the solution!</p>
+<p>Last, here’s a section on the cron if you want to use that.</p>
 </div>
 <div id="installing-the-formr-cron" class="section level4">
 <h4>Installing the formr cron</h4>
@@ -522,13 +527,6 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <li>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code></li>
 <li>Exit and then run: <code>ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr</code></li>
 </ul>
-</div>
-<div id="open-ports" class="section level4">
-<h4>Open Ports</h4>
-<p>I also had to open the ports that Apache/nginx are using by doing:</p>
-<pre><code>sudo ufw allow 8004
-sudo ufw allow 8006
-sudo systemctl restart apache2</code></pre>
 </div>
 </div>
 

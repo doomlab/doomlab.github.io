@@ -290,10 +290,16 @@ $doc_root = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] . '/formr/'
 #### Set paths and permissions
 
 - The following folders (and their sub-folders) have to be writable: `/tmp` and `/webroot/assets/tmp`.
-- To do that, do: `sudo chmod -R 666 /tmp`
+- To do that, do: `sudo chmod -R 777 /tmp` (I know 777 is not normally recommended, but this is what I had to do to get it work)
 - And: `sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp`
 
-STOPPED HERE 
+I will note I had to rerun `sudo systemctl restart apache2` to get everything to start running again. 
+
+#### A note on emails
+
+As I was testing everything, I was getting `SMTP connect()` errors. Hopefully, I'll be able to tell you soon the solution!
+
+Last, here's a section on the cron if you want to use that.
 
 #### Installing the formr cron 
 
@@ -301,12 +307,3 @@ STOPPED HERE
 - Delete the `#` from the line: `\*/10 ... cron.php`
 - Exit and then run: `ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr`
 
-#### Open Ports
-
-I also had to open the ports that Apache/nginx are using by doing: 
-
-```
-sudo ufw allow 8004
-sudo ufw allow 8006
-sudo systemctl restart apache2
-```
