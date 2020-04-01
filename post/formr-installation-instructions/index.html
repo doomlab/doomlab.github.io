@@ -60,7 +60,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   "headline": "formr Installation Instructions",
   "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
   "inLanguage" : "en",
-  "wordCount":  1526 ,
+  "wordCount":  1626 ,
   "datePublished" : "2020-03-31T00:00:00",
   "dateModified" : "2020-03-31T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -329,6 +329,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
 <p class="caption">step2</p>
 </div>
 <p>For this system, I powered it at the highest level (we have $ support for this project): 32GB RAM, 8vCPUs, 640 GB SSD, 7 TB transfer. I will be interested to see if we use this much power, but time will tell. Our project may include a lot of web hits, so went bigger, which I can scale back if it’s not necessary.</p>
+<p>I also recommend creating a static IP address for your instance. You can find this option under networking, which allows you to insert the proper IP address into formr settings and not worry about it changing later.</p>
 </div>
 <div id="install-nginx" class="section level3">
 <h3>Install <code>nginx</code></h3>
@@ -385,11 +386,11 @@ devtools::install_github(&quot;rubenarslan/formr&quot;, upgrade_dependencies = F
 <li>Edit the <code>key_length</code> setting from 13 to 50.</li>
 <li>Also set the following packages to <code>&quot;preload&quot;: [&quot;stringr&quot;, &quot;dplyr&quot;,&quot;knitr&quot;, &quot;lubridate&quot;,&quot;formr&quot;, &quot;rmarkdown&quot;]</code>.</li>
 <li><p>Use <code>control + X</code> to save and exit.</p></li>
-<li>At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server. - Use <code>sudo apt install opencpu-cache</code> to install the caching options for <code>nginx</code>.</li>
+<li>At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server.</li>
+<li>Use <code>sudo apt install opencpu-cache</code> to install the caching options for <code>nginx</code>.</li>
 <li>Use <code>sudo nano /etc/nginx/opencpu.d/ocpu.conf</code> to edit the configuration file.</li>
-<li><p>Remove the first <code>location</code> section and replace with: (NOTE very different than formr instructions)</p></li>
+<li><p>Here’s what the file should look like:</p></li>
 </ul>
-<p>FIX THIS HERE</p>
 <pre><code># Configure upstream &#39;ocpu&#39; address in ../conf.d/opencpu.conf
 # OpenCPU API
 location /ocpu {
@@ -403,16 +404,23 @@ location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
   deny all;
   proxy_pass http://localhost;
   include /etc/nginx/opencpu.d/cache.conf;
+}
+
+#Disable crawling
+location = /robots.txt {
+  proxy_pass http://localhost/ocpu/robots.txt
 }</code></pre>
 <p>IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).</p>
-<p>ALSO HERE
-/etc/nginx/opencpu.d/</p>
-<p>Is file default.conf</p>
-<p>You need to change the proxy_pass on that too from <a href="http://ocpu" class="uri">http://ocpu</a> to <a href="http://localhost" class="uri">http://localhost</a> as well.</p>
 <ul>
-<li>Finally, run <code>sudo service apache2 restart</code>.</li>
+<li>Next, edit the following file with: <code>sudo nano /etc/nginx/opencpu.d/default.conf</code>
+<ul>
+<li>This line: <code>proxy_pass http://ocpu;</code> should be changed to <code>proxy_pass http://localhost/ocpu</code>.</li>
+</ul></li>
+<li>Finally, run <code>sudo service apache2 restart</code>.
+<ul>
 <li>If you go to <a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM</a> - you should see an Apache page.</li>
 <li>If you go to <a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/</a> - you should see an OpenCPU explore page.</li>
+</ul></li>
 </ul>
 </div>
 <div id="other-system-requirements" class="section level3">
@@ -490,15 +498,13 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <li>from (email) =&gt; our gmail account</li>
 <li>username/password for email</li>
 <li><p>timezone =&gt; ‘America/New_York’</p></li>
+<li>We also need to change where formr thinks the website is stored by opening the following: <code>sudo nano /var/www/formr.org/setup.php</code></li>
+<li>Look for the comment <code>&quot;// Global Setup&quot;</code>, it is right above the function <code>__formr_setup ($settings = array())</code> declaration.</li>
+<li><p>You will need to modify this line:</p></li>
 </ul>
-</div>
-<div id="installing-the-formr-cron" class="section level4">
-<h4>Installing the formr cron</h4>
-<ul>
-<li>To install the formr crontab in a linux system: <code>sudo nano /var/www/formr.org/config/formr_crontab</code></li>
-<li>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code></li>
-<li>Exit and then run: <code>ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr</code></li>
-</ul>
+<pre><code>$doc_root = isset($_SERVER[&#39;SERVER_NAME&#39;]) ? $_SERVER[&#39;SERVER_NAME&#39;] . &#39;/&#39; : &#39;/&#39;;</code></pre>
+<p>To be instead:</p>
+<pre><code>$doc_root = isset($_SERVER[&#39;SERVER_NAME&#39;]) ? $_SERVER[&#39;SERVER_NAME&#39;] . &#39;/formr/&#39; : &#39;/formr/&#39;;</code></pre>
 </div>
 <div id="set-paths-and-permissions" class="section level4">
 <h4>Set paths and permissions</h4>
@@ -506,6 +512,15 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <li>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>.</li>
 <li>To do that, do: <code>sudo chmod -R 666 /tmp</code></li>
 <li>And: <code>sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp</code></li>
+</ul>
+<p>STOPPED HERE</p>
+</div>
+<div id="installing-the-formr-cron" class="section level4">
+<h4>Installing the formr cron</h4>
+<ul>
+<li>To install the formr crontab in a linux system: <code>sudo nano /var/www/formr.org/config/formr_crontab</code></li>
+<li>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code></li>
+<li>Exit and then run: <code>ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr</code></li>
 </ul>
 </div>
 <div id="open-ports" class="section level4">

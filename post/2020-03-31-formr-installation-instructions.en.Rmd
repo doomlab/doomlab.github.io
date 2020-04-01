@@ -31,6 +31,8 @@ Next, I created a Lightsail instance matching the location to the SSH key I just
 
 For this system, I powered it at the highest level (we have $ support for this project): 32GB RAM, 8vCPUs, 640 GB SSD, 7 TB transfer. I will be interested to see if we use this much power, but time will tell. Our project may include a lot of web hits, so went bigger, which I can scale back if it's not necessary. 
 
+I also recommend creating a static IP address for your instance. You can find this option under networking, which allows you to insert the proper IP address into formr settings and not worry about it changing later. 
+
 ### Install `nginx`
 
 From here I navigated to the Lightsail instance and clicked on the terminal. Since I had created the SSH key, it logged me in as root. 
@@ -110,11 +112,10 @@ Exit *R* by using `quit()`.
 - Also set the following packages to `"preload": ["stringr", "dplyr","knitr", "lubridate","formr", "rmarkdown"]`.
 - Use `control + X` to save and exit. 
 
-- At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server. - Use `sudo apt install opencpu-cache` to install the caching options for `nginx`. 
+- At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server. 
+- Use `sudo apt install opencpu-cache` to install the caching options for `nginx`. 
 - Use `sudo nano /etc/nginx/opencpu.d/ocpu.conf` to edit the configuration file. 
-- Remove the first `location` section and replace with: (NOTE very different than formr instructions)
-
-FIX THIS HERE 
+- Here's what the file should look like:
 
 ```
 # Configure upstream 'ocpu' address in ../conf.d/opencpu.conf
@@ -131,21 +132,20 @@ location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
   proxy_pass http://localhost;
   include /etc/nginx/opencpu.d/cache.conf;
 }
+
+#Disable crawling
+location = /robots.txt {
+  proxy_pass http://localhost/ocpu/robots.txt
+}
 ```
 
 IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).
 
-ALSO HERE
-/etc/nginx/opencpu.d/
-
-Is file default.conf
-
-You need to change the proxy_pass on that too from http://ocpu to http://localhost as well.
-
-
+- Next, edit the following file with: `sudo nano /etc/nginx/opencpu.d/default.conf`
+  - This line: `proxy_pass http://ocpu;` should be changed to `proxy_pass http://localhost/ocpu`.
 - Finally, run `sudo service apache2 restart`.
-- If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM - you should see an Apache page.
-- If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/ - you should see an OpenCPU explore page. 
+  - If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM - you should see an Apache page.
+  - If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/ - you should see an OpenCPU explore page. 
 
 ### Other System Requirements
 
@@ -273,17 +273,33 @@ mysql formr -uformr -p < /var/www/formr.org/sql/patches/030_sessions_queue.sql
 - username/password for email
 - timezone => 'America/New_York'
 
-#### Installing the formr cron 
+- We also need to change where formr thinks the website is stored by opening the following: `sudo nano /var/www/formr.org/setup.php`
+- Look for the comment `"// Global Setup"`, it is right above the function `__formr_setup ($settings = array())` declaration.
+- You will need to modify this line:
 
-- To install the formr crontab in a linux system: `sudo nano /var/www/formr.org/config/formr_crontab`
-- Delete the `#` from the line: `\*/10 ... cron.php`
-- Exit and then run: `ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr`
+``` 
+$doc_root = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] . '/' : '/';
+``` 
+
+To be instead:
+
+``` 
+$doc_root = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] . '/formr/' : '/formr/';
+```
 
 #### Set paths and permissions
 
 - The following folders (and their sub-folders) have to be writable: `/tmp` and `/webroot/assets/tmp`.
 - To do that, do: `sudo chmod -R 666 /tmp`
 - And: `sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp`
+
+STOPPED HERE 
+
+#### Installing the formr cron 
+
+- To install the formr crontab in a linux system: `sudo nano /var/www/formr.org/config/formr_crontab`
+- Delete the `#` from the line: `\*/10 ... cron.php`
+- Exit and then run: `ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr`
 
 #### Open Ports
 
