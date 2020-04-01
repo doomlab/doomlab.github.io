@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>formr Installation Instructions</title>
+      <link>/post/formr-installation-instructions/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>/post/formr-installation-instructions/</guid>
+      <description>An installation guide taken from formr documentation and modified to include more details for those who need it.
+These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.</description>
+    </item>
     
     <item>
       <title>Lasso Myself Numbers</title>

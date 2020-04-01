@@ -1,0 +1,297 @@
+---
+title: formr Installation Instructions
+author: Erin M. Buchanan
+date: '2020-03-31'
+slug: formr-installation-instructions
+categories:
+  - research
+tags:
+  - formr
+  - ubuntu
+  - installation
+  - how-to
+type: ''
+subtitle: ''
+image: ''
+---
+
+An installation guide taken from [formr documentation](https://github.com/rubenarslan/formr.org/blob/master/INSTALLATION.md) and modified to include more details for those who need it.
+
+These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don't think the product matters, but the size of the machine is likely something you should focus on. The formr group suggests 8 virtual CPUS, but I did get it running fine with 6 CPUs. 
+
+Also, I would suggest running each line of code one at a time, as sometimes the process is interrupted to ask you questions. If you are running multiple lines, it will likely mistake your second line of code for that answer and quit (i.e., updating packages often requires you to say Y to continue). 
+
+### Get the Machine
+
+In this guide, I'll detail Amazon Lightsail. You can use any cloud virtual machine service or a literal machine with Ubuntu on it. First, I created `ssh keys` for myself to be able to log to the machine from my local terminal. Every service seems to do this differently, but on Lightsail, you go to Account in the top navigation window, and there's an option for SSH Keys. 
+
+```{r, echo=FALSE, fig.align="center"}
+knitr::include_graphics("step1.png")
+```
+
+Next, I created a Lightsail instance matching the location to the SSH key I just created. I selected Linux/Unix as the platform, OS Only, and then Ubuntu 18.04. 
+
+```{r, echo=FALSE, fig.align="center"}
+knitr::include_graphics("step2.png")
+```
+
+For this system, I powered it at the highest level (we have $ support for this project): 32GB RAM, 8vCPUs, 640 GB SSD, 7 TB transfer. I will be interested to see if we use this much power, but time will tell. Our project may include a lot of web hits, so went bigger, which I can scale back if it's not necessary. 
+
+### Install `nginx`
+
+From here I navigated to the Lightsail instance and clicked on the terminal. Since I had created the SSH key, it logged me in as root. 
+
+```{r, echo=FALSE, fig.align="center"}
+knitr::include_graphics("step3.png")
+```
+
+Let's update the server:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+PS: if it asks you about ssh installation, keep the local version. I mistakenly thought "oh I should use the newer package version", and that caused quite the headache with being locked out of ssh. I didn't see this at all with Digital Ocean, specifically an Amazon thing. 
+
+Now, install `nginx`:
+
+[Recommended Weblink for nginx reading](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04).
+
+```
+sudo apt install nginx
+systemctl status nginx
+```
+
+The last line should show you something like this:
+
+```
+nginx.service - A high performance web server and a reverse proxy server   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)   
+  Active: active (running) since Tue 2020-03-31 16:09:39 UTC; 5min ago     Docs: man:nginx(8)
+```
+
+### Install `OpenCPU`
+
+Visit the [OpenCPU](https://github.com/jeroenooms/opencpu/) repository and follow the [installation instructions](https://github.com/jeroenooms/opencpu/blob/master/README.md) there on how to set up and configure OpenCPU. You can also use [the PDF server guide](http://opencpu.github.io/server-manual/opencpu-server.pdf).
+
+Run this: 
+
+```
+#requires Ubuntu 16.04 (Xenial) or 18.04 (Bionic)
+sudo add-apt-repository -y ppa:opencpu/opencpu-2.1
+sudo apt-get update 
+sudo apt-get upgrade
+
+#install opencpu server
+sudo apt-get install -y opencpu-server
+```
+
+I set up the mail information to send from gmail.com, as that's the email I wanted to tie the instance to:
+
+```{r, echo=FALSE, fig.align="center"}
+knitr::include_graphics("step4.png")
+```
+
+```{r, echo=FALSE, fig.align="center"}
+knitr::include_graphics("step5.png")
+```
+
+Before we install *R* packages, we will need to install a few things to help make the *R* packages run smoothly. This list will entirely depend on what underlying requirements there are for your *R* packages. If you get a non-zero exit status error, usually there's a note somewhere above that about which underlying library is needed. 
+
+```
+sudo apt install libgsl-dev
+```
+
+Next, we will install *R* packages and information to run on OpenCPU. The Apache server will be down for a bit while we work on the next couple steps.
+
+Run the following to open R: `sudo -i R`. Use the following *R* code to install packages:
+
+```
+install.packages("devtools")
+devtools::install_github("rubenarslan/formr", upgrade_dependencies = FALSE)
+```
+
+Based on the formr recommendations, I also installed: `install.packages(c("codebook", "tidyverse", "pander"))`. You can check out what packages they have installed by looking at: [this usually up-to-date list](https://github.com/rubenarslan/formr.org/wiki/Packages-on-OpenCPU).
+
+Exit *R* by using `quit()`. 
+
+### Edit Configuration
+
+- Use `sudo nano /etc/opencpu/server.conf` to open the configuration file for opencpu. 
+- Edit the `key_length` setting from 13 to 50.
+- Also set the following packages to `"preload": ["stringr", "dplyr","knitr", "lubridate","formr", "rmarkdown"]`.
+- Use `control + X` to save and exit. 
+
+- At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server. - Use `sudo apt install opencpu-cache` to install the caching options for `nginx`. 
+- Use `sudo nano /etc/nginx/opencpu.d/ocpu.conf` to edit the configuration file. 
+- Remove the first `location` section and replace with: (NOTE very different than formr instructions)
+
+```
+# Configure upstream 'ocpu' address in ../conf.d/opencpu.conf
+# OpenCPU API
+location /ocpu {
+  proxy_pass http://localhost/ocpu;
+  include /etc/nginx/opencpu.d/cache.conf;
+}
+
+location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
+  allow IP_ADDRESS_OF_YOUR_FORMR_VM;
+  allow 127.0.0.1;
+  deny all;
+  proxy_pass http://localhost;
+  include /etc/nginx/opencpu.d/cache.conf;
+}
+```
+
+IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).
+
+- Finally, run `sudo service apache2 restart`.
+- If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM - you should see an Apache page.
+- If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/ - you should see an OpenCPU explore page. 
+
+### Other System Requirements
+
+Use the following code to install system requirements:
+
+```
+sudo apt-get install git php apache2 mysql-server composer php-curl php-fpm php-mbstring php-mysql php-zip php-xml php-gd php-intl php-xml pandoc libsodium-dev
+```
+
+Use [Supervisor](http://supervisord.org/) to control email notifications and other session monitoring. Use the following code to install:
+
+```
+sudo apt install python-pip 
+pip install supervisor
+```
+
+Apache needs the rewrite mod enabled, which can be added by running the following:
+
+```
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+```
+
+Allow overrides for the virtual machine. Put the following block on the end of the default configuration file for Apache2 using `sudo nano /etc/apache2/sites-enabled/000-default.conf`
+
+```
+	<Directory /var/www/html>
+		Options Indexes FollowSymlinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+
+	</Directory>
+```
+
+### Install formr from Git
+
+It was suggested you put formr in the `/var/www/` folder. So, type `cd /var/www/` to access that folder on your machine. Then type the following code: 
+
+```
+sudo git clone https://github.com/rubenarslan/formr.org.git
+```
+
+Create the link between folders and fix access rights:
+
+```
+sudo ln -s /var/www/formr.org/webroot /var/www/html/formr 
+sudo chown -R www-data:www-data /var/www/formr.org
+```
+
+Now that we have that installed, let's update application dependencies by using the following code:
+
+```
+cd formr.org #assumes you are still in /var/www/
+sudo composer install
+```
+
+I did see some errors here, but it's unclear (yet!) if they matter. I did see this:
+
+```
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Warning: The lock file is not up to date with the latest changes in composer.json. 
+You may be getting outdated dependencies. Run update to update them.
+Package operations: 26 installs, 0 updates, 0 removals
+```
+
+So I tried running `sudo composer update`. 
+
+Using sudo here generates a message that you shouldn't do that, which is probably true, use real users and not root. 
+
+### The SQL Database
+
+Login to your mysql server with a user that has the right priviledges. I will say this part was hard because Lightsail doesn't provide root passwords, so I had to login via: `sudo mysql -uroot`.
+
+Next, run the following commands changing `EnterPassword` to your desired password. 
+
+```
+  CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+  GRANT ALL PRIVILEGES ON formr.* TO formr@localhost IDENTIFIED BY 'EnterPassword';
+  FLUSH PRIVILEGES;
+  quit;
+```
+
+Next, import the initial required database structure by running (remember change `EnterPassword`):
+
+```
+mysql formr -uformr -pEnterPassword < /var/www/formr.org/sql/schema.sql
+```
+
+Note: my password had a character that made this not run correctly, so you can also do:
+
+```
+mysql formr -uformr -p < /var/www/formr.org/sql/schema.sql
+```
+
+And then you will be prompted to enter your password next. 
+
+Do the same procedure to apply patches 29 and 30, as required currently.
+
+```
+mysql formr -uformr -p < /var/www/formr.org/sql/patches/029_run_expire_cookie_setting.sql
+
+mysql formr -uformr -p < /var/www/formr.org/sql/patches/030_sessions_queue.sql
+```
+
+### Configuration
+
+#### Create the config folder
+
+- Duplicate *(don't rename)* the folder `config-dist`, name it `config`.
+- Run `cd /var/www/formr.org/` to ensure you are in the right folder.
+- Run `sudo cp -avr config-dist config` to copy the folder. 
+- You can type `ls` to show the folders in this formr.org folder if you want to make sure both folders are still there. 
+
+- Type `sudo nano /var/www/formr.org/config/settings.php` to open the settings file. 
+- Here's a list of everything I changed:
+
+- login => 'formr'
+- password => 'EnterPassword' #from above!
+- database => 'formr'
+- base_url => 'http://localhost/ocpu'
+- host (email) => 'smtp.gmail.com'
+- from (email) => our gmail account
+- username/password for email
+- timezone => 'America/New_York'
+
+#### Installing the formr cron 
+
+- To install the formr crontab in a linux system: `sudo nano /var/www/formr.org/config/formr_crontab`
+- Delete the `#` from the line: `\*/10 ... cron.php`
+- Exit and then run: `ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr`
+
+#### Set paths and permissions
+
+- The following folders (and their sub-folders) have to be writable: `/tmp` and `/webroot/assets/tmp`.
+- To do that, do: `sudo chmod -R 666 /tmp`
+- And: `sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp`
+
+#### Open Ports
+
+I also had to open the ports that apache/nginx are using by doing: 
+
+```
+sudo ufw allow 8004
+sudo ufw allow 8006
+```

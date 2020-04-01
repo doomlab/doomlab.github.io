@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>formr Installation Instructions - Dr. Erin Buchanan</title>
+  <meta name="description" content="An installation guide taken from formr documentation and modified to include more details for those who need it.
+These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.">
+  <meta name="author" content="aggieerin.com"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Dr. Erin Buchanan",
+    
+    "url": "\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "\/post\/formr-installation-instructions\/",
+          "name": "Formr installation instructions"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Erin M. Buchanan"
+  },
+  "headline": "formr Installation Instructions",
+  "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
+  "inLanguage" : "en",
+  "wordCount":  1494 ,
+  "datePublished" : "2020-03-31T00:00:00",
+  "dateModified" : "2020-03-31T00:00:00",
+  "image" : "\/img\/header.jpg",
+  "keywords" : [ "formr, ubuntu, installation, how-to" ],
+  "mainEntityOfPage" : "\/post\/formr-installation-instructions\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "\/img\/header.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="formr Installation Instructions" />
+<meta property="og:description" content="An installation guide taken from formr documentation and modified to include more details for those who need it.
+These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.">
+<meta property="og:image" content="/img/header.jpg" />
+<meta property="og:url" content="/post/formr-installation-instructions/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dr. Erin Buchanan" />
+
+  <meta name="twitter:title" content="formr Installation Instructions" />
+  <meta name="twitter:description" content="An installation guide taken from formr documentation and modified to include more details for those who need it.
+These installation instructions are provided for Ubuntu 18.04; however, they could be …">
+  <meta name="twitter:image" content="/img/header.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@aggieerin" />
+  <meta name="twitter:creator" content="@aggieerin" />
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.62.2" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Dr. Erin Buchanan</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post">Blog</a>
+                
+                  <a href="/tags">Tags</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Stats" href="/page/stats/">Stats</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Shiny" href="/shiny/">Shiny</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Vita</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/basics">Basics</a>
+                
+                  <a href="/page/honors">Honors</a>
+                
+                  <a href="/page/res_overview">Research Overview</a>
+                
+                  <a href="/page/res_pubs">Pubs</a>
+                
+                  <a href="/page/res_grants">Grants</a>
+                
+                  <a href="/page/res_pres">Pres</a>
+                
+                  <a href="/page/teach_overview">Teaching Overview</a>
+                
+                  <a href="/page/students">Students</a>
+                
+                  <a href="/page/service">Service</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="OSF" href="https://osf.io/4ivpc/">OSF</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Dr. Erin Buchanan" href="/">
+            <img class="avatar-img" src="/img/header.jpg" alt="Dr. Erin Buchanan" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>formr Installation Instructions</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 31, 2020
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Erin M. Buchanan
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+
+<p>An installation guide taken from <a href="https://github.com/rubenarslan/formr.org/blob/master/INSTALLATION.md">formr documentation</a> and modified to include more details for those who need it.</p>
+<p>These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on. The formr group suggests 8 virtual CPUS, but I did get it running fine with 6 CPUs.</p>
+<p>Also, I would suggest running each line of code one at a time, as sometimes the process is interrupted to ask you questions. If you are running multiple lines, it will likely mistake your second line of code for that answer and quit (i.e., updating packages often requires you to say Y to continue).</p>
+<div id="get-the-machine" class="section level3">
+<h3>Get the Machine</h3>
+<p>In this guide, I’ll detail Amazon Lightsail. You can use any cloud virtual machine service or a literal machine with Ubuntu on it. First, I created <code>ssh keys</code> for myself to be able to log to the machine from my local terminal. Every service seems to do this differently, but on Lightsail, you go to Account in the top navigation window, and there’s an option for SSH Keys.</p>
+<p><img src="step1.png" width="1276" style="display: block; margin: auto;" /></p>
+<p>Next, I created a Lightsail instance matching the location to the SSH key I just created. I selected Linux/Unix as the platform, OS Only, and then Ubuntu 18.04.</p>
+<p><img src="step2.png" width="765" style="display: block; margin: auto;" /></p>
+<p>For this system, I powered it at the highest level (we have $ support for this project): 32GB RAM, 8vCPUs, 640 GB SSD, 7 TB transfer. I will be interested to see if we use this much power, but time will tell. Our project may include a lot of web hits, so went bigger, which I can scale back if it’s not necessary.</p>
+</div>
+<div id="install-nginx" class="section level3">
+<h3>Install <code>nginx</code></h3>
+<p>From here I navigated to the Lightsail instance and clicked on the terminal. Since I had created the SSH key, it logged me in as root.</p>
+<p><img src="step3.png" width="1041" style="display: block; margin: auto;" /></p>
+<p>Let’s update the server:</p>
+<pre><code>sudo apt-get update
+sudo apt-get upgrade</code></pre>
+<p>PS: if it asks you about ssh installation, keep the local version. I mistakenly thought “oh I should use the newer package version”, and that caused quite the headache with being locked out of ssh. I didn’t see this at all with Digital Ocean, specifically an Amazon thing.</p>
+<p>Now, install <code>nginx</code>:</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04">Recommended Weblink for nginx reading</a>.</p>
+<pre><code>sudo apt install nginx
+systemctl status nginx</code></pre>
+<p>The last line should show you something like this:</p>
+<pre><code>nginx.service - A high performance web server and a reverse proxy server   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)   
+  Active: active (running) since Tue 2020-03-31 16:09:39 UTC; 5min ago     Docs: man:nginx(8)</code></pre>
+</div>
+<div id="install-opencpu" class="section level3">
+<h3>Install <code>OpenCPU</code></h3>
+<p>Visit the <a href="https://github.com/jeroenooms/opencpu/">OpenCPU</a> repository and follow the <a href="https://github.com/jeroenooms/opencpu/blob/master/README.md">installation instructions</a> there on how to set up and configure OpenCPU. You can also use <a href="http://opencpu.github.io/server-manual/opencpu-server.pdf">the PDF server guide</a>.</p>
+<p>Run this:</p>
+<pre><code>#requires Ubuntu 16.04 (Xenial) or 18.04 (Bionic)
+sudo add-apt-repository -y ppa:opencpu/opencpu-2.1
+sudo apt-get update 
+sudo apt-get upgrade
+
+#install opencpu server
+sudo apt-get install -y opencpu-server</code></pre>
+<p>I set up the mail information to send from gmail.com, as that’s the email I wanted to tie the instance to:</p>
+<p><img src="step4.png" width="1220" style="display: block; margin: auto;" /></p>
+<p><img src="step5.png" width="1247" style="display: block; margin: auto;" /></p>
+<p>Before we install <em>R</em> packages, we will need to install a few things to help make the <em>R</em> packages run smoothly. This list will entirely depend on what underlying requirements there are for your <em>R</em> packages. If you get a non-zero exit status error, usually there’s a note somewhere above that about which underlying library is needed.</p>
+<pre><code>sudo apt install libgsl-dev</code></pre>
+<p>Next, we will install <em>R</em> packages and information to run on OpenCPU. The Apache server will be down for a bit while we work on the next couple steps.</p>
+<p>Run the following to open R: <code>sudo -i R</code>. Use the following <em>R</em> code to install packages:</p>
+<pre><code>install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;rubenarslan/formr&quot;, upgrade_dependencies = FALSE)</code></pre>
+<p>Based on the formr recommendations, I also installed: <code>install.packages(c(&quot;codebook&quot;, &quot;tidyverse&quot;, &quot;pander&quot;))</code>. You can check out what packages they have installed by looking at: <a href="https://github.com/rubenarslan/formr.org/wiki/Packages-on-OpenCPU">this usually up-to-date list</a>.</p>
+<p>Exit <em>R</em> by using <code>quit()</code>.</p>
+</div>
+<div id="edit-configuration" class="section level3">
+<h3>Edit Configuration</h3>
+<ul>
+<li>Use <code>sudo nano /etc/opencpu/server.conf</code> to open the configuration file for opencpu.</li>
+<li>Edit the <code>key_length</code> setting from 13 to 50.</li>
+<li>Also set the following packages to <code>&quot;preload&quot;: [&quot;stringr&quot;, &quot;dplyr&quot;,&quot;knitr&quot;, &quot;lubridate&quot;,&quot;formr&quot;, &quot;rmarkdown&quot;]</code>.</li>
+<li><p>Use <code>control + X</code> to save and exit.</p></li>
+<li>At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server. - Use <code>sudo apt install opencpu-cache</code> to install the caching options for <code>nginx</code>.</li>
+<li>Use <code>sudo nano /etc/nginx/opencpu.d/ocpu.conf</code> to edit the configuration file.</li>
+<li><p>Remove the first <code>location</code> section and replace with: (NOTE very different than formr instructions)</p></li>
+</ul>
+<pre><code># Configure upstream &#39;ocpu&#39; address in ../conf.d/opencpu.conf
+# OpenCPU API
+location /ocpu {
+  proxy_pass http://localhost/ocpu;
+  include /etc/nginx/opencpu.d/cache.conf;
+}
+
+location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
+  allow IP_ADDRESS_OF_YOUR_FORMR_VM;
+  allow 127.0.0.1;
+  deny all;
+  proxy_pass http://localhost;
+  include /etc/nginx/opencpu.d/cache.conf;
+}</code></pre>
+<p>IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).</p>
+<ul>
+<li>Finally, run <code>sudo service apache2 restart</code>.</li>
+<li>If you go to <a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM</a> - you should see an Apache page.</li>
+<li>If you go to <a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/</a> - you should see an OpenCPU explore page.</li>
+</ul>
+</div>
+<div id="other-system-requirements" class="section level3">
+<h3>Other System Requirements</h3>
+<p>Use the following code to install system requirements:</p>
+<pre><code>sudo apt-get install git php apache2 mysql-server composer php-curl php-fpm php-mbstring php-mysql php-zip php-xml php-gd php-intl php-xml pandoc libsodium-dev</code></pre>
+<p>Use <a href="http://supervisord.org/">Supervisor</a> to control email notifications and other session monitoring. Use the following code to install:</p>
+<pre><code>sudo apt install python-pip 
+pip install supervisor</code></pre>
+<p>Apache needs the rewrite mod enabled, which can be added by running the following:</p>
+<pre><code>sudo a2enmod rewrite
+sudo systemctl restart apache2</code></pre>
+<p>Allow overrides for the virtual machine. Put the following block on the end of the default configuration file for Apache2 using <code>sudo nano /etc/apache2/sites-enabled/000-default.conf</code></p>
+<pre><code>    &lt;Directory /var/www/html&gt;
+        Options Indexes FollowSymlinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+
+    &lt;/Directory&gt;</code></pre>
+</div>
+<div id="install-formr-from-git" class="section level3">
+<h3>Install formr from Git</h3>
+<p>It was suggested you put formr in the <code>/var/www/</code> folder. So, type <code>cd /var/www/</code> to access that folder on your machine. Then type the following code:</p>
+<pre><code>sudo git clone https://github.com/rubenarslan/formr.org.git</code></pre>
+<p>Create the link between folders and fix access rights:</p>
+<pre><code>sudo ln -s /var/www/formr.org/webroot /var/www/html/formr 
+sudo chown -R www-data:www-data /var/www/formr.org</code></pre>
+<p>Now that we have that installed, let’s update application dependencies by using the following code:</p>
+<pre><code>cd formr.org #assumes you are still in /var/www/
+sudo composer install</code></pre>
+<p>I did see some errors here, but it’s unclear (yet!) if they matter. I did see this:</p>
+<pre><code>Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Warning: The lock file is not up to date with the latest changes in composer.json. 
+You may be getting outdated dependencies. Run update to update them.
+Package operations: 26 installs, 0 updates, 0 removals</code></pre>
+<p>So I tried running <code>sudo composer update</code>.</p>
+<p>Using sudo here generates a message that you shouldn’t do that, which is probably true, use real users and not root.</p>
+</div>
+<div id="the-sql-database" class="section level3">
+<h3>The SQL Database</h3>
+<p>Login to your mysql server with a user that has the right priviledges. I will say this part was hard because Lightsail doesn’t provide root passwords, so I had to login via: <code>sudo mysql -uroot</code>.</p>
+<p>Next, run the following commands changing <code>EnterPassword</code> to your desired password.</p>
+<pre><code>  CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+  GRANT ALL PRIVILEGES ON formr.* TO formr@localhost IDENTIFIED BY &#39;EnterPassword&#39;;
+  FLUSH PRIVILEGES;
+  quit;</code></pre>
+<p>Next, import the initial required database structure by running (remember change <code>EnterPassword</code>):</p>
+<pre><code>mysql formr -uformr -pEnterPassword &lt; /var/www/formr.org/sql/schema.sql</code></pre>
+<p>Note: my password had a character that made this not run correctly, so you can also do:</p>
+<pre><code>mysql formr -uformr -p &lt; /var/www/formr.org/sql/schema.sql</code></pre>
+<p>And then you will be prompted to enter your password next.</p>
+<p>Do the same procedure to apply patches 29 and 30, as required currently.</p>
+<pre><code>mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/029_run_expire_cookie_setting.sql
+
+mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sql</code></pre>
+</div>
+<div id="configuration" class="section level3">
+<h3>Configuration</h3>
+<div id="create-the-config-folder" class="section level4">
+<h4>Create the config folder</h4>
+<ul>
+<li>Duplicate <em>(don’t rename)</em> the folder <code>config-dist</code>, name it <code>config</code>.</li>
+<li>Run <code>cd /var/www/formr.org/</code> to ensure you are in the right folder.</li>
+<li>Run <code>sudo cp -avr config-dist config</code> to copy the folder.</li>
+<li><p>You can type <code>ls</code> to show the folders in this formr.org folder if you want to make sure both folders are still there.</p></li>
+<li>Type <code>sudo nano /var/www/formr.org/config/settings.php</code> to open the settings file.</li>
+<li><p>Here’s a list of everything I changed:</p></li>
+<li>login =&gt; ‘formr’</li>
+<li>password =&gt; ‘EnterPassword’ #from above!</li>
+<li>database =&gt; ‘formr’</li>
+<li>base_url =&gt; ‘<a href="http://localhost/ocpu" class="uri">http://localhost/ocpu</a>’</li>
+<li>host (email) =&gt; ‘smtp.gmail.com’</li>
+<li>from (email) =&gt; our gmail account</li>
+<li>username/password for email</li>
+<li><p>timezone =&gt; ‘America/New_York’</p></li>
+</ul>
+</div>
+<div id="installing-the-formr-cron" class="section level4">
+<h4>Installing the formr cron</h4>
+<ul>
+<li>To install the formr crontab in a linux system: <code>sudo nano /var/www/formr.org/config/formr_crontab</code></li>
+<li>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code></li>
+<li>Exit and then run: <code>ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr</code></li>
+</ul>
+</div>
+<div id="set-paths-and-permissions" class="section level4">
+<h4>Set paths and permissions</h4>
+<ul>
+<li>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>.</li>
+<li>To do that, do: <code>sudo chmod -R 666 /tmp</code></li>
+<li>And: <code>sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp</code></li>
+</ul>
+</div>
+<div id="open-ports" class="section level4">
+<h4>Open Ports</h4>
+<p>I also had to open the ports that apache/nginx are using by doing:</p>
+<pre><code>sudo ufw allow 8004
+sudo ufw allow 8006</code></pre>
+</div>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="//tags/formr/">formr</a>&nbsp;
+            
+              <a href="//tags/ubuntu/">ubuntu</a>&nbsp;
+            
+              <a href="//tags/installation/">installation</a>&nbsp;
+            
+              <a href="//tags/how-to/">how-to</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="/post/is-english-kurtotic/" data-toggle="tooltip" data-placement="top" title="Is English Kurtotic?">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aggieerin" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:buchananlab@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/doomlab" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aggieerin" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCMdihazndR0f9XBoSXWqnYg" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="http://www.aggieerin.com">aggieerin.com</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">Dr. Erin Buchanan</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.62.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

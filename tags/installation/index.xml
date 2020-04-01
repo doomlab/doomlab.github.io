@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>installation on Dr. Erin Buchanan</title>
+    <link>/tags/installation/</link>
+    <description>Recent content in installation on Dr. Erin Buchanan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
+    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>formr Installation Instructions</title>
+      <link>/post/formr-installation-instructions/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>/post/formr-installation-instructions/</guid>
+      <description>An installation guide taken from formr documentation and modified to include more details for those who need it.
+These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.</description>
+    </item>
+    
+  </channel>
+</rss>
