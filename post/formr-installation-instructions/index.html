@@ -60,7 +60,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   "headline": "formr Installation Instructions",
   "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
   "inLanguage" : "en",
-  "wordCount":  1494 ,
+  "wordCount":  1527 ,
   "datePublished" : "2020-03-31T00:00:00",
   "dateModified" : "2020-03-31T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -323,15 +323,24 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
 <div id="get-the-machine" class="section level3">
 <h3>Get the Machine</h3>
 <p>In this guide, I’ll detail Amazon Lightsail. You can use any cloud virtual machine service or a literal machine with Ubuntu on it. First, I created <code>ssh keys</code> for myself to be able to log to the machine from my local terminal. Every service seems to do this differently, but on Lightsail, you go to Account in the top navigation window, and there’s an option for SSH Keys.</p>
-<p><img src="step1.png" width="1276" style="display: block; margin: auto;" /></p>
+<div class="figure">
+<img src="step1.png" alt="step1" />
+<p class="caption">step1</p>
+</div>
 <p>Next, I created a Lightsail instance matching the location to the SSH key I just created. I selected Linux/Unix as the platform, OS Only, and then Ubuntu 18.04.</p>
-<p><img src="step2.png" width="765" style="display: block; margin: auto;" /></p>
+<div class="figure">
+<img src="step2.png" alt="step2" />
+<p class="caption">step2</p>
+</div>
 <p>For this system, I powered it at the highest level (we have $ support for this project): 32GB RAM, 8vCPUs, 640 GB SSD, 7 TB transfer. I will be interested to see if we use this much power, but time will tell. Our project may include a lot of web hits, so went bigger, which I can scale back if it’s not necessary.</p>
 </div>
 <div id="install-nginx" class="section level3">
 <h3>Install <code>nginx</code></h3>
 <p>From here I navigated to the Lightsail instance and clicked on the terminal. Since I had created the SSH key, it logged me in as root.</p>
-<p><img src="step3.png" width="1041" style="display: block; margin: auto;" /></p>
+<div class="figure">
+<img src="step3.png" alt="step3" />
+<p class="caption">step3</p>
+</div>
 <p>Let’s update the server:</p>
 <pre><code>sudo apt-get update
 sudo apt-get upgrade</code></pre>
@@ -356,8 +365,14 @@ sudo apt-get upgrade
 #install opencpu server
 sudo apt-get install -y opencpu-server</code></pre>
 <p>I set up the mail information to send from gmail.com, as that’s the email I wanted to tie the instance to:</p>
-<p><img src="step4.png" width="1220" style="display: block; margin: auto;" /></p>
-<p><img src="step5.png" width="1247" style="display: block; margin: auto;" /></p>
+<div class="figure">
+<img src="step4.png" alt="step4" />
+<p class="caption">step4</p>
+</div>
+<div class="figure">
+<img src="step5.png" alt="step5" />
+<p class="caption">step5</p>
+</div>
 <p>Before we install <em>R</em> packages, we will need to install a few things to help make the <em>R</em> packages run smoothly. This list will entirely depend on what underlying requirements there are for your <em>R</em> packages. If you get a non-zero exit status error, usually there’s a note somewhere above that about which underlying library is needed.</p>
 <pre><code>sudo apt install libgsl-dev</code></pre>
 <p>Next, we will install <em>R</em> packages and information to run on OpenCPU. The Apache server will be down for a bit while we work on the next couple steps.</p>
@@ -378,6 +393,7 @@ devtools::install_github(&quot;rubenarslan/formr&quot;, upgrade_dependencies = F
 <li>Use <code>sudo nano /etc/nginx/opencpu.d/ocpu.conf</code> to edit the configuration file.</li>
 <li><p>Remove the first <code>location</code> section and replace with: (NOTE very different than formr instructions)</p></li>
 </ul>
+<p>FIX THIS HERE</p>
 <pre><code># Configure upstream &#39;ocpu&#39; address in ../conf.d/opencpu.conf
 # OpenCPU API
 location /ocpu {
@@ -393,6 +409,10 @@ location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
   include /etc/nginx/opencpu.d/cache.conf;
 }</code></pre>
 <p>IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).</p>
+<p>ALSO HERE
+/etc/nginx/opencpu.d/</p>
+<p>Is file default.conf</p>
+<p>You need to change the proxy_pass on that too from <a href="http://ocpu" class="uri">http://ocpu</a> to <a href="http://localhost" class="uri">http://localhost</a> as well.</p>
 <ul>
 <li>Finally, run <code>sudo service apache2 restart</code>.</li>
 <li>If you go to <a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM</a> - you should see an Apache page.</li>
@@ -439,7 +459,7 @@ Package operations: 26 installs, 0 updates, 0 removals</code></pre>
 </div>
 <div id="the-sql-database" class="section level3">
 <h3>The SQL Database</h3>
-<p>Login to your mysql server with a user that has the right priviledges. I will say this part was hard because Lightsail doesn’t provide root passwords, so I had to login via: <code>sudo mysql -uroot</code>.</p>
+<p>Login to your mysql server with a user that has the right privileges. I will say this part was hard because Lightsail doesn’t provide root passwords, so I had to login via: <code>sudo mysql -uroot</code>.</p>
 <p>Next, run the following commands changing <code>EnterPassword</code> to your desired password.</p>
 <pre><code>  CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
   GRANT ALL PRIVILEGES ON formr.* TO formr@localhost IDENTIFIED BY &#39;EnterPassword&#39;;
@@ -494,9 +514,10 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 </div>
 <div id="open-ports" class="section level4">
 <h4>Open Ports</h4>
-<p>I also had to open the ports that apache/nginx are using by doing:</p>
+<p>I also had to open the ports that Apache/nginx are using by doing:</p>
 <pre><code>sudo ufw allow 8004
-sudo ufw allow 8006</code></pre>
+sudo ufw allow 8006
+sudo systemctl restart apache2</code></pre>
 </div>
 </div>
 
