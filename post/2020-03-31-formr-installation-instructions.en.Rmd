@@ -297,7 +297,7 @@ I will note I had to rerun `sudo systemctl restart apache2` to get everything to
 
 #### A note on emails
 
-As I was testing everything, I was getting `SMTP connect()` errors. Hopefully, I'll be able to tell you soon the solution!
+As I was testing everything, I was getting `SMTP connect()` errors. The solution was to make google less angry that I was "logging" in from a different place. 
 
 Last, here's a section on the cron if you want to use that.
 
@@ -306,4 +306,46 @@ Last, here's a section on the cron if you want to use that.
 - To install the formr crontab in a linux system: `sudo nano /var/www/formr.org/config/formr_crontab`
 - Delete the `#` from the line: `\*/10 ... cron.php`
 - Exit and then run: `ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr`
+
+#### Admin
+
+- Go to the site and register yourself as a user. 
+- Since the complete layout of the formr database may not be clear to those who didn't write it, here's some steps you can take to understand it:
+  - Log in to mysql (see above).
+  - Run `SHOW DATABASES;` to see what's avaliable:
+  
+```
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| formr              |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+```
+
+  - Select the formr database by using `USE formr;`.
+  - To see what's in that database use `SHOW TABLES;`. I'm not showing the output here because it's long, but we are likely interested here `survey_users`. When you register, it sticks you into that table. 
+  - Use `DESCRIBE survey_users;` to see the columns in that table. 
+  - Use `SELECT * FROM survey_users;` to see all the data in that table.
+  - Use `SELECT admin FROM survey_users;` to show that you are not an admin:
+  
+```
+mysql> SELECT admin FROM survey_users;
++-------+
+| admin |
++-------+
+|     0 |
++-------+
+1 row in set (0.00 sec)
+```
+
+ - To make yourself an admin, run `UPDATE survey_users SET admin = 100 WHERE id = 1;` (the assumption here is that you are the only row in the table and are therefore, id number 1). 
+ - You should get a message that you updated your row but you can check it out with `SELECT admin FROM survey_users;` to make sure it ran. 
+ - Now, when I log into my formr instance, I have rights to make surveys and manage users! 
+ 
 

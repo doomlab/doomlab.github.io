@@ -60,7 +60,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   "headline": "formr Installation Instructions",
   "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
   "inLanguage" : "en",
-  "wordCount":  1672 ,
+  "wordCount":  1936 ,
   "datePublished" : "2020-03-31T00:00:00",
   "dateModified" : "2020-03-31T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -288,7 +288,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   <i class="fas fa-calendar"></i>&nbsp;Posted on March 31, 2020
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;10&nbsp;minutes
   
   
   
@@ -517,7 +517,7 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 </div>
 <div id="a-note-on-emails" class="section level4">
 <h4>A note on emails</h4>
-<p>As I was testing everything, I was getting <code>SMTP connect()</code> errors. Hopefully, I’ll be able to tell you soon the solution!</p>
+<p>As I was testing everything, I was getting <code>SMTP connect()</code> errors. The solution was to make google less angry that I was “logging” in from a different place.</p>
 <p>Last, here’s a section on the cron if you want to use that.</p>
 </div>
 <div id="installing-the-formr-cron" class="section level4">
@@ -526,6 +526,47 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <li>To install the formr crontab in a linux system: <code>sudo nano /var/www/formr.org/config/formr_crontab</code></li>
 <li>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code></li>
 <li>Exit and then run: <code>ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr</code></li>
+</ul>
+</div>
+<div id="admin" class="section level4">
+<h4>Admin</h4>
+<ul>
+<li>Go to the site and register yourself as a user.</li>
+<li>Since the complete layout of the formr database may not be clear to those who didn’t write it, here’s some steps you can take to understand it:
+<ul>
+<li>Log in to mysql (see above).</li>
+<li>Run <code>SHOW DATABASES;</code> to see what’s avaliable:</li>
+</ul></li>
+</ul>
+<pre><code>mysql&gt; SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| formr              |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)</code></pre>
+<ul>
+<li>Select the formr database by using <code>USE formr;</code>.</li>
+<li>To see what’s in that database use <code>SHOW TABLES;</code>. I’m not showing the output here because it’s long, but we are likely interested here <code>survey_users</code>. When you register, it sticks you into that table.</li>
+<li>Use <code>DESCRIBE survey_users;</code> to see the columns in that table.</li>
+<li>Use <code>SELECT * FROM survey_users;</code> to see all the data in that table.</li>
+<li>Use <code>SELECT admin FROM survey_users;</code> to show that you are not an admin:</li>
+</ul>
+<pre><code>mysql&gt; SELECT admin FROM survey_users;
++-------+
+| admin |
++-------+
+|     0 |
++-------+
+1 row in set (0.00 sec)</code></pre>
+<ul>
+<li>To make yourself an admin, run <code>UPDATE survey_users SET admin = 100 WHERE id = 1;</code> (the assumption here is that you are the only row in the table and are therefore, id number 1).</li>
+<li>You should get a message that you updated your row but you can check it out with <code>SELECT admin FROM survey_users;</code> to make sure it ran.</li>
+<li>Now, when I log into my formr instance, I have rights to make surveys and manage users!</li>
 </ul>
 </div>
 </div>
