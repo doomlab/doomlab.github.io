@@ -60,7 +60,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   "headline": "formr Installation Instructions",
   "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
   "inLanguage" : "en",
-  "wordCount":  1936 ,
+  "wordCount":  2080 ,
   "datePublished" : "2020-03-31T00:00:00",
   "dateModified" : "2020-03-31T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -389,33 +389,22 @@ devtools::install_github(&quot;rubenarslan/formr&quot;, upgrade_dependencies = F
 <li>At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server.</li>
 <li>Use <code>sudo apt install opencpu-cache</code> to install the caching options for <code>nginx</code>.</li>
 <li>Use <code>sudo nano /etc/nginx/opencpu.d/ocpu.conf</code> to edit the configuration file.</li>
-<li><p>Here’s what the file should look like:</p></li>
+<li><p>Replace the first complete location block with the following: (leave the robots part alone):</p></li>
 </ul>
-<pre><code># Configure upstream &#39;ocpu&#39; address in ../conf.d/opencpu.conf
-# OpenCPU API
+<pre><code># OpenCPU API
 location /ocpu {
-  proxy_pass http://localhost/ocpu;
-  include /etc/nginx/opencpu.d/cache.conf;
+        proxy_pass  http://ocpu/ocpu;
+        include /etc/nginx/opencpu.d/cache.conf;
 }
 
 location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
-  allow IP_ADDRESS_OF_YOUR_FORMR_VM;
-  allow 127.0.0.1;
-  deny all;
-  proxy_pass http://localhost;
-  include /etc/nginx/opencpu.d/cache.conf;
-}
-
-#Disable crawling
-location = /robots.txt {
-  proxy_pass http://localhost/ocpu/robots.txt
+        allow IP_ADDRESS_OF_YOUR_FORMR_VM;
+        deny all;
+        proxy_pass  http://ocpu;
+        include /etc/nginx/opencpu.d/cache.conf;
 }</code></pre>
 <p>IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).</p>
 <ul>
-<li>Next, edit the following file with: <code>sudo nano /etc/nginx/opencpu.d/default.conf</code>
-<ul>
-<li>This line: <code>proxy_pass http://ocpu;</code> should be changed to <code>proxy_pass http://localhost/ocpu</code>.</li>
-</ul></li>
 <li>Finally, run <code>sudo service apache2 restart</code>.
 <ul>
 <li>If you go to <a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM</a> - you should see an Apache page.</li>
@@ -493,14 +482,18 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <li>login =&gt; ‘formr’</li>
 <li>password =&gt; ‘EnterPassword’ #from above!</li>
 <li>database =&gt; ‘formr’</li>
-<li>base_url =&gt; ‘<a href="http://localhost/ocpu" class="uri">http://localhost/ocpu</a>’</li>
+<li>base_url =&gt; ‘<a href="http://IP_ADDRESS_OF_YOUR_FORMR_VM" class="uri">http://IP_ADDRESS_OF_YOUR_FORMR_VM</a>’</li>
 <li>host (email) =&gt; ‘smtp.gmail.com’</li>
 <li>from (email) =&gt; our gmail account</li>
 <li>username/password for email</li>
 <li><p>timezone =&gt; ‘America/New_York’</p></li>
-<li>We also need to change where formr thinks the website is stored by opening the following: <code>sudo nano /var/www/formr.org/setup.php</code></li>
+</ul>
+<p>NOTE: I spent all day tracking down this stupid error: make sure sure the base_url is your IP address only not IP/ocpu.</p>
+<p>This part was important because I have not remapped my IP/formr to be a fancy URL. If you are going to use a <a href="http://stuffandthings.com" class="uri">http://stuffandthings.com</a> as the formr location with a cname or alias, you don’t have to do this part.</p>
+<ul>
+<li>We also needed to change where formr thinks the website is stored by opening the following: <code>sudo nano /var/www/formr.org/setup.php</code></li>
 <li>Look for the comment <code>&quot;// Global Setup&quot;</code>, it is right above the function <code>__formr_setup ($settings = array())</code> declaration.</li>
-<li><p>You will need to modify this line:</p></li>
+<li>You will need to modify this line:</li>
 </ul>
 <pre><code>$doc_root = isset($_SERVER[&#39;SERVER_NAME&#39;]) ? $_SERVER[&#39;SERVER_NAME&#39;] . &#39;/&#39; : &#39;/&#39;;</code></pre>
 <p>To be instead:</p>
@@ -568,6 +561,26 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <li>You should get a message that you updated your row but you can check it out with <code>SELECT admin FROM survey_users;</code> to make sure it ran.</li>
 <li>Now, when I log into my formr instance, I have rights to make surveys and manage users!</li>
 </ul>
+</div>
+<div id="some-last-notes" class="section level4">
+<h4>Some last notes</h4>
+<p>I had some issues with nginx and apache2 “stepping on each other” as my brother put it, so we changed the apache port to 8080, so nginx could use 80:</p>
+<ul>
+<li>Run <code>sudo nano /etc/apache2/ports.conf</code>.</li>
+<li>Change <code>Listen 80</code> to <code>Listen 8080</code>.</li>
+<li>Close that file.</li>
+<li>Run <code>sudo nano /etc/apache2/sites-enabled/000-default.conf</code>.</li>
+<li>Change <code>*:80</code> to <code>*:8080</code>.</li>
+</ul>
+<p>Last, I had some issues with the dynamic linking formr uses because it expects the base url to be the root url (i.e. I have it ip/formr, which it expects you to just have formr at ip/).</p>
+<ul>
+<li>Run <code>sudo nano /var/www/formr.org/application/Library/Functions.php</code>.</li>
+<li>Find <code>function run_url</code> (it’s way down there).</li>
+<li>Change:</li>
+</ul>
+<pre><code>$domain = trim(Config::get(&#39;define_root.doc_root&#39;), &quot;\/\\&quot;);</code></pre>
+<p>TO:</p>
+<pre><code>$domain = trim(WEBROOT, &quot;\/\\&quot;);</code></pre>
 </div>
 </div>
 

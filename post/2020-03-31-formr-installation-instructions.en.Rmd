@@ -115,34 +115,25 @@ Exit *R* by using `quit()`.
 - At this point, I realized that the next step was incorrectly listed on the formr documentation, and neglected to mention an important step of installing the cache server. 
 - Use `sudo apt install opencpu-cache` to install the caching options for `nginx`. 
 - Use `sudo nano /etc/nginx/opencpu.d/ocpu.conf` to edit the configuration file. 
-- Here's what the file should look like:
+- Replace the first complete location block with the following: (leave the robots part alone):
 
 ```
-# Configure upstream 'ocpu' address in ../conf.d/opencpu.conf
 # OpenCPU API
 location /ocpu {
-  proxy_pass http://localhost/ocpu;
-  include /etc/nginx/opencpu.d/cache.conf;
+        proxy_pass  http://ocpu/ocpu;
+        include /etc/nginx/opencpu.d/cache.conf;
 }
 
 location ~* /ocpu/tmp/.+?/(messages|source|console|stdout|info|files/.+\.Rmd) {
-  allow IP_ADDRESS_OF_YOUR_FORMR_VM;
-  allow 127.0.0.1;
-  deny all;
-  proxy_pass http://localhost;
-  include /etc/nginx/opencpu.d/cache.conf;
-}
-
-#Disable crawling
-location = /robots.txt {
-  proxy_pass http://localhost/ocpu/robots.txt
+        allow IP_ADDRESS_OF_YOUR_FORMR_VM;
+        deny all;
+        proxy_pass  http://ocpu;
+        include /etc/nginx/opencpu.d/cache.conf;
 }
 ```
 
 IP_ADDRESS_OF_YOUR_FORMR_VM = the ip address of the hosted instance, which you can find right on your instance page (the IP is at the bottom right of the instance box).
-
-- Next, edit the following file with: `sudo nano /etc/nginx/opencpu.d/default.conf`
-  - This line: `proxy_pass http://ocpu;` should be changed to `proxy_pass http://localhost/ocpu`.
+  
 - Finally, run `sudo service apache2 restart`.
   - If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM - you should see an Apache page.
   - If you go to http://IP_ADDRESS_OF_YOUR_FORMR_VM/ocpu/ - you should see an OpenCPU explore page. 
@@ -267,13 +258,17 @@ mysql formr -uformr -p < /var/www/formr.org/sql/patches/030_sessions_queue.sql
 - login => 'formr'
 - password => 'EnterPassword' #from above!
 - database => 'formr'
-- base_url => 'http://localhost/ocpu'
+- base_url => 'http://IP_ADDRESS_OF_YOUR_FORMR_VM'
 - host (email) => 'smtp.gmail.com'
 - from (email) => our gmail account
 - username/password for email
 - timezone => 'America/New_York'
 
-- We also need to change where formr thinks the website is stored by opening the following: `sudo nano /var/www/formr.org/setup.php`
+NOTE: I spent all day tracking down this stupid error: make sure sure the base_url is your IP address only not IP/ocpu. 
+
+This part was important because I have not remapped my IP/formr to be a fancy URL. If you are going to use a http://stuffandthings.com as the formr location with a cname or alias, you don't have to do this part. 
+
+- We also needed to change where formr thinks the website is stored by opening the following: `sudo nano /var/www/formr.org/setup.php`
 - Look for the comment `"// Global Setup"`, it is right above the function `__formr_setup ($settings = array())` declaration.
 - You will need to modify this line:
 
@@ -348,4 +343,29 @@ mysql> SELECT admin FROM survey_users;
  - You should get a message that you updated your row but you can check it out with `SELECT admin FROM survey_users;` to make sure it ran. 
  - Now, when I log into my formr instance, I have rights to make surveys and manage users! 
  
+#### Some last notes
+
+I had some issues with nginx and apache2 "stepping on each other" as my brother put it, so we changed the apache port to 8080, so nginx could use 80:
+
+- Run `sudo nano /etc/apache2/ports.conf`.
+- Change `Listen 80` to `Listen 8080`.
+- Close that file.
+- Run `sudo nano /etc/apache2/sites-enabled/000-default.conf`.
+- Change `*:80` to `*:8080`.
+
+Last, I had some issues with the dynamic linking formr uses because it expects the base url to be the root url (i.e. I have it ip/formr, which it expects you to just have formr at ip/).
+
+- Run `sudo nano /var/www/formr.org/application/Library/Functions.php`.
+- Find `function run_url` (it's way down there).
+- Change: 
+
+```
+$domain = trim(Config::get('define_root.doc_root'), "\/\\");
+```
+
+TO: 
+
+```
+$domain = trim(WEBROOT, "\/\\");
+```
 
