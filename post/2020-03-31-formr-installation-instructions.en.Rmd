@@ -286,7 +286,7 @@ $doc_root = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] . '/formr/'
 
 - The following folders (and their sub-folders) have to be writable: `/tmp` and `/webroot/assets/tmp`.
 - To do that, do: `sudo chmod -R 777 /tmp` (I know 777 is not normally recommended, but this is what I had to do to get it work)
-- And: `sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp`
+- And: `sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp` *update* needs to be 777 or the custom CSS will not save!
 
 I will note I had to rerun `sudo systemctl restart apache2` to get everything to start running again. 
 

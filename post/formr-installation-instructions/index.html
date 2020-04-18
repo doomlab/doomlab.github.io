@@ -60,7 +60,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
   "headline": "formr Installation Instructions",
   "description" : "An installation guide taken from formr documentation and modified to include more details for those who need it.\nThese installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.",
   "inLanguage" : "en",
-  "wordCount":  2080 ,
+  "wordCount":  2092 ,
   "datePublished" : "2020-03-31T00:00:00",
   "dateModified" : "2020-03-31T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -504,7 +504,7 @@ mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sq
 <ul>
 <li>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>.</li>
 <li>To do that, do: <code>sudo chmod -R 777 /tmp</code> (I know 777 is not normally recommended, but this is what I had to do to get it work)</li>
-<li>And: <code>sudo chmod -R 666 /var/www/formr.org/webroot/assets/tmp</code></li>
+<li>And: <code>sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp</code> <em>update</em> needs to be 777 or the custom CSS will not save!</li>
 </ul>
 <p>I will note I had to rerun <code>sudo systemctl restart apache2</code> to get everything to start running again.</p>
 </div>
