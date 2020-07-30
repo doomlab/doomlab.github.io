@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on Dr. Erin Buchanan</title>
-    <link>/tags/windows/</link>
+    <link>https://doomlab.github.io/tags/windows/</link>
     <description>Recent content in windows on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Thu, 20 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Line Endings Are Dumb</title>
-      <link>/post/line-endings-are-dumb/</link>
+      <link>https://doomlab.github.io/post/line-endings-are-dumb/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/line-endings-are-dumb/</guid>
-      <description>I have happily acquired a new Mac Book (yay!) and a new work computer (Windows). So, I&#39;ve been making One Drive exceedingly unhappy moving GBs of file from one to another.
+      <guid>https://doomlab.github.io/post/line-endings-are-dumb/</guid>
+      <description>I have happily acquired a new Mac Book (yay!) and a new work computer (Windows). So, I&amp;rsquo;ve been making One Drive exceedingly unhappy moving GBs of file from one to another.
 As I was working on reconnecting my GitHub repositories to the files, I was trying to understand why several of my repos were saying I had a bunch of file changes but nothing in the files themselves had changed. I noticed they were mostly .</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>publication on Dr. Erin Buchanan</title>
-    <link>/tags/publication/</link>
+    <link>https://doomlab.github.io/tags/publication/</link>
     <description>Recent content in publication on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Year of the Thesis</title>
-      <link>/post/2019-in-review/</link>
+      <link>https://doomlab.github.io/post/2019-in-review/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/2019-in-review/</guid>
+      <guid>https://doomlab.github.io/post/2019-in-review/</guid>
       <description>The Year of the Thesis!
 Just wanted to highlight several publications from this year, which were mostly theses from some fabulous young researchers:
  Scofield, J.E., Kostic, B., &amp;amp; Buchanan, E.M. (2019). How the presence of others affects desirability judgments in heterosexual and homosexual participants. Archives of Sexual Behavior, X, XX–XX. doi: 10.1007/s10508-019-01516-w
@@ -26,22 +26,22 @@ Just wanted to highlight several publications from this year, which were mostly 
     
     <item>
       <title>New Publications</title>
-      <link>/post/new-publications-oct-19/</link>
+      <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications-oct-19/</guid>
-      <description>Just updated my CV - here&#39;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&#39;t really predict what order the same year publications are going to be in - not that it matters in general, but it&#39;s an interesting side effect.
+      <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
+      <description>Just updated my CV - here&amp;rsquo;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&amp;rsquo;t really predict what order the same year publications are going to be in - not that it matters in general, but it&amp;rsquo;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
 Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of direct and in-direct relation on memory judgments and retrieval.</description>
     </item>
     
     <item>
       <title>New Publications and Updated CV</title>
-      <link>/post/new-publications-and-updated-cv/</link>
+      <link>https://doomlab.github.io/post/new-publications-and-updated-cv/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications-and-updated-cv/</guid>
-      <description>Hi guys! I just wanted to post that I&#39;ve updated the website to be current with some new publications I wanted to highlight:
+      <guid>https://doomlab.github.io/post/new-publications-and-updated-cv/</guid>
+      <description>Hi guys! I just wanted to post that I&amp;rsquo;ve updated the website to be current with some new publications I wanted to highlight:
 First up is two papers on psycholinguistics that were undergraduate student projects:
 Duncan, J., Buchanan, E.M., Marshall, C.Z., &amp;amp; Oberdieck, K. (accepted). But words will never hurt me, Journal of Psychology and Behavioral Sciences, X, XX-XX. PDF
 Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort of the Recipient, Psychology of Popular Media Culture, X, XX-XX.</description>
@@ -49,19 +49,19 @@ Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort
     
     <item>
       <title>Current Publications with Papaja</title>
-      <link>/post/current-publications-with-papaja/</link>
+      <link>https://doomlab.github.io/post/current-publications-with-papaja/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/current-publications-with-papaja/</guid>
+      <guid>https://doomlab.github.io/post/current-publications-with-papaja/</guid>
       <description>Heyo! Frederik, the author of papaja, requested that we update him with papers written with his package. I was like, oh man, like the whole lab?! So, I decided that I could probably make it easy by making a table here. Obviously, this table is current at the moment, as I hope many of the ones under review will get accepted, and I have several others that we will start writing soon.</description>
     </item>
     
     <item>
       <title>New Publication: Texting</title>
-      <link>/post/new-publication-texting/</link>
+      <link>https://doomlab.github.io/post/new-publication-texting/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-texting/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-texting/</guid>
       <description>One more announcement! We just had a new publication accepted:
 &amp;ldquo;Textisms&amp;rdquo;: The Comfort of the Recipient: This paper was an undergraduate honors thesis that Flora-Jean and I finally got accepted! She did a great job making sure this paper was completed and published.
 You can check out the materials here: https://osf.io/8kt52/
@@ -71,20 +71,20 @@ We should have the real print up soon! Just waiting on the journal now.</descrip
     
     <item>
       <title>New Publications</title>
-      <link>/post/new-publications/</link>
+      <link>https://doomlab.github.io/post/new-publications/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications/</guid>
-      <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&#39;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
-We&#39;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&#39;ve done this week after taking a breather from a seriously packed week.</description>
+      <guid>https://doomlab.github.io/post/new-publications/</guid>
+      <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&amp;rsquo;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
+We&amp;rsquo;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&amp;rsquo;ve done this week after taking a breather from a seriously packed week.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>/post/new-publication-detect-low-quality-data/</link>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-detect-low-quality-data/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
@@ -92,21 +92,21 @@ We create a really nice R function to help you detect low quality data, which yo
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
-      <link>/post/citations-in-r-markdown-papaja/</link>
+      <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/citations-in-r-markdown-papaja/</guid>
-      <description>Heyo! I wanted to write a post about some of the quirky things I&#39;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
+      <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
+      <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
 Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.</description>
     </item>
     
     <item>
       <title>A Shiny App to Compare Stats</title>
-      <link>/post/a-shiny-app-to-compare-stats/</link>
+      <link>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</link>
       <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/a-shiny-app-to-compare-stats/</guid>
+      <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
       <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
  Bayes Factors and p-values follow a power function, as we expected.</description>
     </item>

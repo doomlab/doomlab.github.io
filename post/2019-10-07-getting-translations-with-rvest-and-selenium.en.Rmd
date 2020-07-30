@@ -59,12 +59,12 @@ webpage <-remDr$getPageSource()
 
 Next, you need to translate the page source into something usable. I will say that in theory, `html_nodes` allows you to specify a specific class id you are looking for (that's the `result-shield` stuff), but I could not get that to work. So, I grabbed the text, the class codes, slapped them together, and then sorted it out. 
 
-```{r selencheat, echo = F}
+```{r selencheat, echo = F, eval = F}
 webpage <- readLines("webpage")
 webpage <- paste(webpage, collapse = " ")
 ```
 
-```{r selen3, message = F}
+```{r selen3, message = F, eval = F}
 #load dplyr
 library(dplyr, quietly = T)
 
@@ -86,6 +86,11 @@ class_names <- webpage %>%
 #get the answer that has this class code
 answers[class_names == "result-shield-container tlid-copy-target"][1]
 ```
+
+```{r}
+## [1] "have this van by hot word but some"
+```
+
 
 Now we have the translation of some top Dutch words. You could loop over a set of translations you want to do, storing them in a data frame, tibble, list, etc. I would recommend a `Sys.sleep()` between loops to just not make the website angry. I usually use something like `Sys.sleep(runif(1,0,5))` to get a random sleep time between 0 and 5 seconds. 
 

@@ -55,6 +55,18 @@ curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
                                sep = "")
       } #close preprint
       
+      #preprints
+      if(curated$pubstatus[i] == "registered"){
+        
+        curated$citation[i] = paste(authortype, #type of author
+                               curated$author[i], " (", #author names
+                               curated$year[i], "). ", #year
+                               curated$title[i], ". ", #title
+                               curated$journal[i], ". ", #journal
+                               doi, #doi
+                               sep = "")
+      } #close preprint
+      
     } #close articles
     
     if(curated$pubtype[i] == "present"){
@@ -107,6 +119,18 @@ See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny 
 #### Applied Statistics
 
 `r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+
+### Registered Reports
+
+These articles have been accepted as a registered report, but have not been completed for final publication.
+
+#### Psycholinguistics, Cognitive Science
+
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "registered" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+
+#### Applied Statistics
+
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "registered" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
 
 ### Preprints
 

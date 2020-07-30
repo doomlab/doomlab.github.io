@@ -2,445 +2,445 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Dr. Erin Buchanan</title>
-    <link>/tags/</link>
+    <link>https://doomlab.github.io/tags/</link>
     <description>Recent content in Tags on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>formr</title>
-      <link>/tags/formr/</link>
+      <link>https://doomlab.github.io/tags/formr/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/formr/</guid>
+      <guid>https://doomlab.github.io/tags/formr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>how-to</title>
-      <link>/tags/how-to/</link>
+      <link>https://doomlab.github.io/tags/how-to/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/how-to/</guid>
+      <guid>https://doomlab.github.io/tags/how-to/</guid>
       <description></description>
     </item>
     
     <item>
       <title>installation</title>
-      <link>/tags/installation/</link>
+      <link>https://doomlab.github.io/tags/installation/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/installation/</guid>
+      <guid>https://doomlab.github.io/tags/installation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ubuntu</title>
-      <link>/tags/ubuntu/</link>
+      <link>https://doomlab.github.io/tags/ubuntu/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/ubuntu/</guid>
+      <guid>https://doomlab.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fun</title>
-      <link>/tags/fun/</link>
+      <link>https://doomlab.github.io/tags/fun/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/fun/</guid>
+      <guid>https://doomlab.github.io/tags/fun/</guid>
       <description></description>
     </item>
     
     <item>
       <title>psycholinguistics</title>
-      <link>/tags/psycholinguistics/</link>
+      <link>https://doomlab.github.io/tags/psycholinguistics/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/psycholinguistics/</guid>
+      <guid>https://doomlab.github.io/tags/psycholinguistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text processing</title>
-      <link>/tags/text-processing/</link>
+      <link>https://doomlab.github.io/tags/text-processing/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/text-processing/</guid>
+      <guid>https://doomlab.github.io/tags/text-processing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lasso</title>
-      <link>/tags/lasso/</link>
+      <link>https://doomlab.github.io/tags/lasso/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/lasso/</guid>
+      <guid>https://doomlab.github.io/tags/lasso/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>/tags/regression/</link>
+      <link>https://doomlab.github.io/tags/regression/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/regression/</guid>
+      <guid>https://doomlab.github.io/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>publication</title>
-      <link>/tags/publication/</link>
+      <link>https://doomlab.github.io/tags/publication/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/publication/</guid>
+      <guid>https://doomlab.github.io/tags/publication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>/tags/github/</link>
+      <link>https://doomlab.github.io/tags/github/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/github/</guid>
+      <guid>https://doomlab.github.io/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>guides</title>
-      <link>/tags/guides/</link>
+      <link>https://doomlab.github.io/tags/guides/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/guides/</guid>
+      <guid>https://doomlab.github.io/tags/guides/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rstudio</title>
-      <link>/tags/rstudio/</link>
+      <link>https://doomlab.github.io/tags/rstudio/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/rstudio/</guid>
+      <guid>https://doomlab.github.io/tags/rstudio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>clinical</title>
-      <link>/tags/clinical/</link>
+      <link>https://doomlab.github.io/tags/clinical/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/clinical/</guid>
+      <guid>https://doomlab.github.io/tags/clinical/</guid>
       <description></description>
     </item>
     
     <item>
       <title>update</title>
-      <link>/tags/update/</link>
+      <link>https://doomlab.github.io/tags/update/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/update/</guid>
+      <guid>https://doomlab.github.io/tags/update/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vita</title>
-      <link>/tags/vita/</link>
+      <link>https://doomlab.github.io/tags/vita/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/vita/</guid>
+      <guid>https://doomlab.github.io/tags/vita/</guid>
       <description></description>
     </item>
     
     <item>
       <title>multilevel models</title>
-      <link>/tags/multilevel-models/</link>
+      <link>https://doomlab.github.io/tags/multilevel-models/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/multilevel-models/</guid>
+      <guid>https://doomlab.github.io/tags/multilevel-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>r</title>
-      <link>/tags/r/</link>
+      <link>https://doomlab.github.io/tags/r/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/r/</guid>
+      <guid>https://doomlab.github.io/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>reproducibility</title>
-      <link>/tags/reproducibility/</link>
+      <link>https://doomlab.github.io/tags/reproducibility/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/reproducibility/</guid>
+      <guid>https://doomlab.github.io/tags/reproducibility/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>/tags/statistics/</link>
+      <link>https://doomlab.github.io/tags/statistics/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/statistics/</guid>
+      <guid>https://doomlab.github.io/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teaching</title>
-      <link>/tags/teaching/</link>
+      <link>https://doomlab.github.io/tags/teaching/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/teaching/</guid>
+      <guid>https://doomlab.github.io/tags/teaching/</guid>
       <description></description>
     </item>
     
     <item>
       <title>research</title>
-      <link>/tags/research/</link>
+      <link>https://doomlab.github.io/tags/research/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/research/</guid>
+      <guid>https://doomlab.github.io/tags/research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>crlf</title>
-      <link>/tags/crlf/</link>
+      <link>https://doomlab.github.io/tags/crlf/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/crlf/</guid>
+      <guid>https://doomlab.github.io/tags/crlf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>line endings</title>
-      <link>/tags/line-endings/</link>
+      <link>https://doomlab.github.io/tags/line-endings/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/line-endings/</guid>
+      <guid>https://doomlab.github.io/tags/line-endings/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mac</title>
-      <link>/tags/mac/</link>
+      <link>https://doomlab.github.io/tags/mac/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/mac/</guid>
+      <guid>https://doomlab.github.io/tags/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>windows</title>
-      <link>/tags/windows/</link>
+      <link>https://doomlab.github.io/tags/windows/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/windows/</guid>
+      <guid>https://doomlab.github.io/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>grades</title>
-      <link>/tags/grades/</link>
+      <link>https://doomlab.github.io/tags/grades/</link>
       <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/grades/</guid>
+      <guid>https://doomlab.github.io/tags/grades/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data camp</title>
-      <link>/tags/data-camp/</link>
+      <link>https://doomlab.github.io/tags/data-camp/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/data-camp/</guid>
+      <guid>https://doomlab.github.io/tags/data-camp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>datacamp</title>
-      <link>/tags/datacamp/</link>
+      <link>https://doomlab.github.io/tags/datacamp/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/datacamp/</guid>
+      <guid>https://doomlab.github.io/tags/datacamp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JASP</title>
-      <link>/tags/jasp/</link>
+      <link>https://doomlab.github.io/tags/jasp/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/jasp/</guid>
+      <guid>https://doomlab.github.io/tags/jasp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>videos</title>
-      <link>/tags/videos/</link>
+      <link>https://doomlab.github.io/tags/videos/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/videos/</guid>
+      <guid>https://doomlab.github.io/tags/videos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>youtube</title>
-      <link>/tags/youtube/</link>
+      <link>https://doomlab.github.io/tags/youtube/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/youtube/</guid>
+      <guid>https://doomlab.github.io/tags/youtube/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dummy coding</title>
-      <link>/tags/dummy-coding/</link>
+      <link>https://doomlab.github.io/tags/dummy-coding/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/dummy-coding/</guid>
+      <guid>https://doomlab.github.io/tags/dummy-coding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lavaan</title>
-      <link>/tags/lavaan/</link>
+      <link>https://doomlab.github.io/tags/lavaan/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/lavaan/</guid>
+      <guid>https://doomlab.github.io/tags/lavaan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sem</title>
-      <link>/tags/sem/</link>
+      <link>https://doomlab.github.io/tags/sem/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/sem/</guid>
+      <guid>https://doomlab.github.io/tags/sem/</guid>
       <description></description>
     </item>
     
     <item>
       <title>open science</title>
-      <link>/tags/open-science/</link>
+      <link>https://doomlab.github.io/tags/open-science/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/open-science/</guid>
+      <guid>https://doomlab.github.io/tags/open-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>papaja</title>
-      <link>/tags/papaja/</link>
+      <link>https://doomlab.github.io/tags/papaja/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/papaja/</guid>
+      <guid>https://doomlab.github.io/tags/papaja/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rvest</title>
-      <link>/tags/rvest/</link>
+      <link>https://doomlab.github.io/tags/rvest/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/rvest/</guid>
+      <guid>https://doomlab.github.io/tags/rvest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linguistics</title>
-      <link>/tags/linguistics/</link>
+      <link>https://doomlab.github.io/tags/linguistics/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/linguistics/</guid>
+      <guid>https://doomlab.github.io/tags/linguistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>students</title>
-      <link>/tags/students/</link>
+      <link>https://doomlab.github.io/tags/students/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/students/</guid>
+      <guid>https://doomlab.github.io/tags/students/</guid>
       <description></description>
     </item>
     
     <item>
       <title>texting</title>
-      <link>/tags/texting/</link>
+      <link>https://doomlab.github.io/tags/texting/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/texting/</guid>
+      <guid>https://doomlab.github.io/tags/texting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mediation</title>
-      <link>/tags/mediation/</link>
+      <link>https://doomlab.github.io/tags/mediation/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/mediation/</guid>
+      <guid>https://doomlab.github.io/tags/mediation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>moderation</title>
-      <link>/tags/moderation/</link>
+      <link>https://doomlab.github.io/tags/moderation/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/moderation/</guid>
+      <guid>https://doomlab.github.io/tags/moderation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shiny</title>
-      <link>/tags/shiny/</link>
+      <link>https://doomlab.github.io/tags/shiny/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/shiny/</guid>
+      <guid>https://doomlab.github.io/tags/shiny/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bibliography</title>
-      <link>/tags/bibliography/</link>
+      <link>https://doomlab.github.io/tags/bibliography/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/bibliography/</guid>
+      <guid>https://doomlab.github.io/tags/bibliography/</guid>
       <description></description>
     </item>
     
     <item>
       <title>latex</title>
-      <link>/tags/latex/</link>
+      <link>https://doomlab.github.io/tags/latex/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/latex/</guid>
+      <guid>https://doomlab.github.io/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mote</title>
-      <link>/tags/mote/</link>
+      <link>https://doomlab.github.io/tags/mote/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/mote/</guid>
+      <guid>https://doomlab.github.io/tags/mote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>stats</title>
-      <link>/tags/stats/</link>
+      <link>https://doomlab.github.io/tags/stats/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/tags/stats/</guid>
+      <guid>https://doomlab.github.io/tags/stats/</guid>
       <description></description>
     </item>
     

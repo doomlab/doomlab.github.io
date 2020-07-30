@@ -117,7 +117,7 @@ Department of Psychology Competitive Scholarship \hfill 2004-2006
 
 [Computational Linguistics](https://www.wordnorms.com)
 
-[Statistics Tools](http://statstools.com/)
+[Statistics Tools](https://statisticsofdoom.com)
 
 [YouTube Channel](https://www.youtube.com/channel/UCMdihazndR0f9XBoSXWqnYg?view_as=subscriber)
 
@@ -255,6 +255,20 @@ curated = as.data.frame(read_excel("cv_pubs.xlsx"))
                                sep = "")
       } #close preprint
       
+            #preprints
+      if(curated$pubstatus[i] == "registered"){
+        
+        curated$citation[i] = paste(authortype, #type of author
+                               curated$author[i], " (", #author names
+                               curated$year[i], "). ", #year
+                               curated$title[i], ". \\textit{", #title
+                               curated$journal[i], "}. ", #journal
+                               doi, #doi
+                               link, #links
+                               "\\newline \\newline ",
+                               sep = "")
+      } #close preprint
+      
     } #close articles
     
     if(curated$pubtype[i] == "present"){
@@ -297,6 +311,14 @@ curated = as.data.frame(read_excel("cv_pubs.xlsx"))
                                     curated$category == "stats" & 
                                     curated$pubstatus == "published"], collapse = "")
   
+  rrp_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                    curated$category == "psycho" & 
+                                    curated$pubstatus == "registered"], collapse = "") 
+  
+  rrs_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                    curated$category == "stats" & 
+                                    curated$pubstatus == "registered"], collapse = "")
+  
   pp_art = paste(curated$citation[ curated$pubtype == "article" & 
                                   curated$category == "psycho" & 
                                   curated$pubstatus == "preprint"], collapse = "")
@@ -331,6 +353,18 @@ See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny 
 ## Applied Statistics
 
 `r s_art`
+
+### Registered Reports
+
+These articles have been accepted as a registered report, but have not been completed for final publication.
+
+## Psycholinguistics, Cognitive Science
+
+`r rrp_art`
+
+## Applied Statistics
+
+`r rrs_art`
 
 ### Preprints
 
@@ -387,17 +421,20 @@ Computer Interface to Improve Development. Honda Initiative (2009, submitted).
 
 ### Applied Statistics
 
-Principal Investigator. Creating Enhanced Shared Decision Making through a Migraine Tracking Application. Presidential Research Grant at Harrisburg University. (2019, awarded). $19180.
+Principal Investigator. Amazon Response Grants for Non-Profits (in partnership with the Psychological Science Accelerator). (04/01/2020-09/01/2020). $1200.
 
-Principal Investigator. Validation of the Functional Assessment of Migraine Scale (FAMS). National Headache Foundation (2019, submitted). $54,000.00.
+Principal Investigator. Validation of the Functional Assessment of Migraine Scale (FAMS). National Headache Foundation (2020, submitted). $64,016.00.
+
+Statistician. The Impact of Migraine on Women in the Workforce. National Headache Foundation (06/01/2020-12/01/2020). $5,000.
+
+Statistician. Trajectories of psychological functioning and pandemic preparedness for students quarantined during the COVID-19 pandemic. National Hazards Center Quick Response Research Grant Program. (06/01/2020-12/01/2020). $3,240.
+
+Principal Investigator. Creating Enhanced Shared Decision Making through a Migraine Tracking Application. Presidential Research Grant at Harrisburg University. (01/01/2020-01/01/2021). $19,180.
 
 Principal Investigator. Development of a Headache Meaningful Response Measure 
 Using a Patient Guided Approach. National Headache Foundation (04/01/2018-04/01/2019). $99,592. 
 
-Statistician. Utilization of adaptive patient-centered electronic behavioral feedback 
-intervention for the prevention of transformation from episodic to chronic 
-migraine. Pragmatic Clinical Studies funded by the PCORI Foundation. (2014, 
-submitted). $2,000,000.
+Statistician. Utilization of adaptive patient-centered electronic behavioral feedback intervention for the prevention of transformation from episodic to chronic migraine. Pragmatic Clinical Studies funded by the PCORI Foundation. (2014, submitted). $2,000,000.
 
 Statistician. Meaning and Purpose in Life as it Relates to Suicidality in Adult Inpatients with Serious Mental Illness. American Foundation for Suicide Prevention. (2013, submitted). $30,000.
 
@@ -436,6 +473,8 @@ Neurophysiology and Brain-Computer Interface. National Science Foundation (2010,
 
 | School, Year | Name | Thesis |
 | ----- | ------ | ------------- |
+| HU, 2019-current | Phillip Grim II | TBD |
+| HU, 2019-current | Jonathan Korn | TBD |
 | MSU, 2018-2020 | Arielle Cunningham | TBD |
 |	MSU, 2017-2019	|	Addie Wikowsky	|	Working memory, expertise, and fluid intelligence	|
 |	MSU, 2017-2019	|	William Padfield	|	Moral Foundations and political rhetoric	|
@@ -485,7 +524,7 @@ Course Evaluations can be provided upon request.
 
 *MOTE*: MOTE is a free *R* package and online app that calculates effect sizes and their non-central confidence intervals. This package was designed to fill the gap between running hypothesis testing calculations and effect sizes for students in a simple format – while also adding in confidence intervals for effect sizes because of the promotion for these values in reporting. 
 
-*Statstools.com*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate statistics and structural equation modeling) are provided with multiple formats (SPSS, Excel, *R*) for use by students in my courses and the interested graduate student or researcher. This information is formatted so that an individual may download the entire course for a template when assigned as a course prep. 
+*StatsTools*: The Statistics Tools website ties all these resources together in one convenient location. Materials from my courses (basic/advanced/graduate statistics and structural equation modeling) are provided with multiple formats (SPSS, Excel, *R*) for use by students in my courses and the interested graduate student or researcher. This information is formatted so that an individual may download the entire course for a template when assigned as a course prep. 
 
 # Service
 
@@ -493,7 +532,7 @@ Course Evaluations can be provided upon request.
 
 Psychological Science Accelerator (PSA) - Assistant Director of Training, Web Admin 
 
-Society for Computation in Psychology (SCIP) - Executive Board 
+Society for Computation in Psychology (SCIP) - Executive Director 
 
 Society for the Improvement of the Psychological Sciences (SIPS)
 
@@ -542,6 +581,10 @@ Reviewer for Behavior Research Methods \hfill 2012-Current
 Reviewer for the Journal of Scientific Psychology \hfill 2007–Current 
 
 ## Service Committees
+
+Course Lead \hfill 2018-Current
+
+Promotion and Hiring Committees \hfill 2018-Current
 
 Provost Council for Web Accessibility \hfill 2018
 

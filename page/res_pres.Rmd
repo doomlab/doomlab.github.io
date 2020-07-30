@@ -55,6 +55,18 @@ curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
                                sep = "")
       } #close preprint
       
+      #preprints
+      if(curated$pubstatus[i] == "registered"){
+        
+        curated$citation[i] = paste(authortype, #type of author
+                               curated$author[i], " (", #author names
+                               curated$year[i], "). ", #year
+                               curated$title[i], ". ", #title
+                               curated$journal[i], ". ", #journal
+                               doi, #doi
+                               sep = "")
+      } #close preprint
+      
     } #close articles
     
     if(curated$pubtype[i] == "present"){
@@ -89,7 +101,6 @@ curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
 library(knitr)
 library(kableExtra)
 ```
-
 
 ### Presentations
 

@@ -36,6 +36,7 @@ final = merge(erinpubs, erinorc, by = "title", all = T)
 # compare with curated list -------------------------------------------------
 
 library(readxl)
+setwd("~/GitHub/Websites/cv markdown")
 curated = as.data.frame(read_excel("cv_pubs.xlsx"))
 
 c_pubid = na.omit(unlist(strsplit(gsub(" ", "", curated$pubid), ",")))
