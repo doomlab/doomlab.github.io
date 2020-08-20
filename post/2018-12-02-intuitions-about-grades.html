@@ -1,0 +1,113 @@
+
+
+<p>Are my intuitions about grades correct?</p>
+<p>I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that <em>nearly half</em> were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.</p>
+<p>First, I took all the times I had taught memory and cognition post Ph.D. (because I did teach it some in graduate school) and dumped the final scores into an excel sheet. Only one semesters worth of grades was lost in the ether but I have nearly 500 scores, so I think we’ll get the general picture.</p>
+<p>Here’s a histogram of the data:</p>
+<pre class="r"><code>library(readxl)
+master = read_excel(&quot;cognition_grades.xlsx&quot;)
+library(ggplot2)
+ggplot(master, aes(Score)) + 
+  theme_bw() +
+  geom_histogram(fill = &quot;white&quot;, color = &quot;black&quot;) +
+  xlab(&quot;Final Class Score&quot;) + 
+  ylab(&quot;Frequency&quot;)</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="2018-12-02-intuitions-about-grades_files/figure-html/hist-1.png" width="672" />
+In general, it’s a pretty bimodal distribution with lots of good grades. Maybe I’m too nice - I do give lots of easy 0/100 grades for taking classic cognitive experiments, but consistently the exams are worth 50-70% of a student’s grade.</p>
+<p>Let’s see this semester’s distribution (with the caveat that it’s not over yet, but grades don’t tend to change that much at the end with one test left):</p>
+<pre class="r"><code>ggplot(master[master$Year == &quot;2018.3&quot; , ], aes(Score)) + 
+  theme_bw() +
+  geom_histogram(fill = &quot;white&quot;, color = &quot;black&quot;) +
+  xlab(&quot;Final Class Score&quot;) + 
+  ylab(&quot;Frequency&quot;) + 
+  coord_cartesian(xlim = c(0,100))</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="2018-12-02-intuitions-about-grades_files/figure-html/fall_grades-1.png" width="672" /></p>
+<p>The distribution itself doesn’t appear to be too different, but something is awry with the scores, as the do appear to be lower than my normal overall scores. Let’s compare everything ever to this semester:</p>
+<pre class="r"><code>#everything but this semester
+mean(master$Score[master$Year != &quot;2018.3&quot;])</code></pre>
+<pre><code>## [1] 83.62371</code></pre>
+<pre class="r"><code>#this semester
+mean(master$Score[master$Year == &quot;2018.3&quot;])</code></pre>
+<pre><code>## [1] 67.72747</code></pre>
+<p>83 versus 68 is a nearly 15 point difference, so my thoughts are somewhat supported here. We can also bin the scores and see if there is a difference across what would be considered traditional ABCDF bins:</p>
+<pre class="r"><code>master$Letter = NA
+master$Letter[master$Score &lt; 60] = &quot;F&quot;
+master$Letter[master$Score &gt; 60 &amp; master$Score &lt; 70] = &quot;D&quot;
+master$Letter[master$Score &gt; 70 &amp; master$Score &lt; 80] = &quot;C&quot;
+master$Letter[master$Score &gt; 80 &amp; master$Score &lt; 90] = &quot;B&quot;
+master$Letter[master$Score &gt; 90] = &quot;A&quot;
+master$tempyear = master$Year &gt; 2018.25
+
+table(master$tempyear, master$Letter)</code></pre>
+<pre><code>##        
+##           A   B   C   D   F
+##   FALSE 257 197  84  26  35
+##   TRUE    4   7   5   4   8</code></pre>
+<pre class="r"><code>chisq.test(master$tempyear, master$Letter)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  master$tempyear and master$Letter
+## X-squared = 31.73, df = 4, p-value = 2.172e-06</code></pre>
+<pre class="r"><code>chisq.test(master$tempyear, master$Letter)$residuals</code></pre>
+<pre><code>##                master$Letter
+## master$tempyear          A          B          C          D          F
+##           FALSE  0.4848125  0.1511463 -0.1112164 -0.4969220 -0.9485746
+##           TRUE  -2.2423748 -0.6990882  0.5144026  2.2983842  4.3873863</code></pre>
+<p>The table denotes what the histograms were telling us - this distribution is much more uniform than my normal distribution. The chisquare test tells me (one to be careful of small samples!) but also that the scores appear different. The residuals indicate we see much more Ds and Fs than normal.</p>
+<p>So what is going on? I’ve actually coded these with a couple more variables, to help determine what might be influencing the data. First, a visualization across years (and I chopped it off at 50 to make this graph work):</p>
+<pre class="r"><code>ggplot(master, aes(Score)) + 
+  geom_histogram() +
+  facet_wrap( ~ Year, ncol=4) + 
+  theme_bw() +
+  xlab(&quot;Final Class Score&quot;) + 
+  ylab(&quot;Frequency&quot;) + 
+  coord_cartesian(xlim = c(50,100)) +
+  geom_vline(xintercept = 70, color = &quot;red&quot;) + 
+  geom_vline(xintercept = 80, color = &quot;blue&quot;) + 
+  geom_vline(xintercept = 90, color = &quot;green&quot;) </code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="2018-12-02-intuitions-about-grades_files/figure-html/yearly-1.png" width="672" /></p>
+<p>It’s hard to compare completely because class size is pretty different from some of these, but I’ve identified two variables that might be a culprit (other than student factors). First, I’ve taught both face to face and completely online. Second, I’ve used multiple choice and essay style exams. Let’s see what happens in each of those groups (not completely crossed unfortunately … I think I’ve only used the essay tests online, although some of the early years might have been a mixed short answer and multiple choice test, it’s been 10 years and I can’t quite remember).</p>
+<pre class="r"><code>#Split by test type
+ggplot(master, aes(Score)) + 
+  geom_histogram() +
+  facet_wrap( ~ MC) + 
+  theme_bw() +
+  xlab(&quot;Final Class Score&quot;) + 
+  ylab(&quot;Frequency&quot;) </code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="2018-12-02-intuitions-about-grades_files/figure-html/byessay-1.png" width="672" /></p>
+<pre class="r"><code>#Split by &quot;is it online&quot;
+ggplot(master, aes(Score)) + 
+  geom_histogram() +
+  facet_wrap( ~ Online) + 
+  theme_bw() +
+  xlab(&quot;Final Class Score&quot;) + 
+  ylab(&quot;Frequency&quot;) </code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="2018-12-02-intuitions-about-grades_files/figure-html/byessay-2.png" width="672" /></p>
+<p>The histograms in these cases aren’t too telling because of course size differences in here, so let’s just calculate the means for each group combination:</p>
+<pre class="r"><code>tapply(master$Score, list(master$MC, master$Online), mean)</code></pre>
+<pre><code>##             No      Yes
+## Essay       NA 83.51651
+## MC    83.86057 75.41040</code></pre>
+<p>In looking at the means, we can see that students in my multiple choice tests classes online are performing nearly a whole letter grade below the students in either online essay or in person multiple choice. Here’s the kicker - these online multiple choice tests are <em>unproctored open book</em>. Let that sink in for a moment.</p>
+<p>Last, I’ll show you changes across years to see if it’s a sudden thing or what. Here’s a box plot of each semester (points are grades jittered and set transparent-ish to see better). The blue diamond indicates the mean for that class. The years are listed with decimals to remind me which semester that was, but I consistently taught the course about 1-2 times a year. So, I colored the box with the type of combination of the course.</p>
+<pre class="r"><code>master$type = paste(master$MC, master$Online, sep = &quot; &quot;)
+master$type = factor(master$type,
+                     levels = names(table(master$type)),
+                     labels = c(&quot;Essay Online&quot;, &quot;MC Person&quot;, &quot;MC Online&quot;))
+
+ggplot(master, aes(as.factor(Year), Score, color = type)) +
+  geom_boxplot() +
+  theme_bw() +
+  geom_jitter(position=position_jitter(0.2), alpha = .1) +
+  stat_summary(fun.y=mean, geom=&quot;point&quot;, shape=23, size=4, color = &quot;blue&quot;) +
+  xlab(&quot;Year of Course&quot;) + 
+  ylab(&quot;Final Class Scores&quot;)</code></pre>
+<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<p><img src="2018-12-02-intuitions-about-grades_files/figure-html/meansbyyear-1.png" width="672" /></p>
+<p>So, the short answer is that things appear to have run off the rails especially this semester, and I my intuitions appear somewhat correct about how students seem to do worse with ostensibly easier tests. Also, a large chunk of this semester poor scoring is likely due to students just not turning anything in - don’t have the time to dig into the assignment level data to determine if that’s more than normal (but likely it’s a culprit as well). The switch in the last two semesters back to multiple choice tests was because I was tired of filling out academic integrity forms - sometimes up to 10 incidents a semester on these essay tests. Not sure that it helped anyone but me though!</p>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>psycholinguistics on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/psycholinguistics/</link>
+    <link>/tags/psycholinguistics/</link>
     <description>Recent content in psycholinguistics on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/psycholinguistics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/psycholinguistics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Is English Kurtotic?</title>
-      <link>https://doomlab.github.io/post/is-english-kurtotic/</link>
+      <link>/post/is-english-kurtotic/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/is-english-kurtotic/</guid>
+      <guid>/post/is-english-kurtotic/</guid>
       <description>You ever have a random text that sent your brain to work? Here’s mine today:
 KD Text
  Followed up with examples that lol is bimodal, while loop is positively skewed, and enter is “almost normal”. The lovely K.D. posed this question to me earlier, and I already have procrastinated a lot today, so here’s to more! First, I typed out some fonts in Word to help me figure out how to code the two important parts for this question: width and height.</description>
@@ -25,10 +25,10 @@ KD Text
     
     <item>
       <title>Lasso Myself Numbers</title>
-      <link>https://doomlab.github.io/post/lasso-myself-numbers/</link>
+      <link>/post/lasso-myself-numbers/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/lasso-myself-numbers/</guid>
+      <guid>/post/lasso-myself-numbers/</guid>
       <description>Hey everybody!
 The last couple days I have been trying to learn LASSO regression, which stands for Least Absolute Shrinkage and Selection Operator. I have several datasets with many variables, and I thought these would be a good opportunity to learn about how to lasso, while maybe answering a few questions about words.
 Right, the part I forgot about is that I have repeated measures data, which always complicates things.</description>
@@ -36,10 +36,10 @@ Right, the part I forgot about is that I have repeated measures data, which alwa
     
     <item>
       <title>New Publications</title>
-      <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
+      <link>/post/new-publications-oct-19/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
+      <guid>/post/new-publications-oct-19/</guid>
       <description>Just updated my CV - here&amp;rsquo;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&amp;rsquo;t really predict what order the same year publications are going to be in - not that it matters in general, but it&amp;rsquo;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
 Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of direct and in-direct relation on memory judgments and retrieval.</description>
@@ -47,10 +47,10 @@ Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of d
     
     <item>
       <title>New Publication: Texting</title>
-      <link>https://doomlab.github.io/post/new-publication-texting/</link>
+      <link>/post/new-publication-texting/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/new-publication-texting/</guid>
+      <guid>/post/new-publication-texting/</guid>
       <description>One more announcement! We just had a new publication accepted:
 &amp;ldquo;Textisms&amp;rdquo;: The Comfort of the Recipient: This paper was an undergraduate honors thesis that Flora-Jean and I finally got accepted! She did a great job making sure this paper was completed and published.
 You can check out the materials here: https://osf.io/8kt52/

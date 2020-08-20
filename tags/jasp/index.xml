@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JASP on Dr. Erin Buchanan</title>
-    <link>https://doomlab.github.io/tags/jasp/</link>
+    <link>/tags/jasp/</link>
     <description>Recent content in JASP on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://doomlab.github.io/tags/jasp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/jasp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JASP Videos &#43; Guides</title>
-      <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
+      <link>/post/jasp-videos-guides/</link>
       <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
+      <guid>/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
     </item>
