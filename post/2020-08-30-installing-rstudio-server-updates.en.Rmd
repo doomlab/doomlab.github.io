@@ -1,0 +1,71 @@
+---
+title: Installing RStudio Server + Updates
+author: Erin M. Buchanan
+date: '2020-08-30'
+slug: installing-rstudio-server-updates
+categories:
+  - research
+tags:
+  - how-to
+  - installation
+  - rstudio
+  - update
+type: ''
+subtitle: ''
+image: ''
+---
+
+One of the most difficult things I try to teach my students is how to deal with error messages. Due to Hurricane Laura, I am currently re-creating several projects including `formr`, `RStudio`, and a website. I thought I would detail that here. 
+
+You can find my first post on `formr` here: https://www.aggieerin.com/post/formr-installation-instructions/
+
+Good news! It's mostly the same and pretty smooth. However, I sometimes get this nonsense: `installation of package ‘psych’ had non-zero exit status` -  any time you get the non-zero exit status message, it requires a careful look at the installation messages. I wasn't actually trying to install `psych` but it's a dependency for something down the line, so let's see what it's missing.
+
+When I try to install `psych`, I get a message that `mnornt` is not available. Ok, let's try that one. Then I find the real culprit: `package ‘mnormt’ is not available (for R version 3.6.3)` ... the version of `opencpu` from my previous instructions did not include R4.0. Thankfully, the new version does:
+
+```
+# Requires Ubuntu 20.04 (Focal) or 18.04 (Bionic)
+sudo add-apt-repository -y ppa:opencpu/opencpu-2.2
+sudo apt-get update 
+sudo apt-get upgrade
+
+# Installs OpenCPU server
+sudo apt-get install -y opencpu-server
+# Done! Open http://yourhost/ocpu in your browser
+
+# Optional: installs rstudio in http://yourhost/rstudio
+sudo apt-get install -y rstudio-server
+```
+
+And you can install rstudio-server as well quickly! Win for me! Unfortunately, I will now chase down all the packages that I have to reinstall for R4.0 now...
+
+The next thing I ran into was this: `E: Unable to locate package python-pip` ... like what?
+
+That's because I only have python3 installed, so instead do this: 
+
+```
+sudo apt install python3-pip 
+pip3 install supervisor
+```
+
+Now, I think mysql must have updated (yes, this is version 8 now) because you need to update database creation as well: 
+
+```
+  CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+  CREATE USER 'formr'@'localhost' IDENTIFIED BY 'EnterPassword';
+  GRANT ALL PRIVILEGES ON formr.* TO formr@localhost;
+  FLUSH PRIVILEGES;
+  quit;
+```
+
+RStudio bases users on the users for the system, so I just made new users that way:
+
+```
+sudo adduser newusername
+```
+
+This action will prompt you to enter a password twice, then a few other optional pieces of information. I also made myself an account that wasn't root and added myself as a sudo (master) user. Only do this step if you want to give a user power to do all the things. 
+
+```
+sudo usermod -aG sudo newuser
+```

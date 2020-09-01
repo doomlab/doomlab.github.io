@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Sun, 06 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/update/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing RStudio Server &#43; Updates</title>
+      <link>/post/installing-rstudio-server-updates/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>/post/installing-rstudio-server-updates/</guid>
+      <description>One of the most difficult things I try to teach my students is how to deal with error messages. Due to Hurricane Laura, I am currently re-creating several projects including formr, RStudio, and a website. I thought I would detail that here.
+You can find my first post on formr here: https://www.aggieerin.com/post/formr-installation-instructions/
+Good news! It’s mostly the same and pretty smooth. However, I sometimes get this nonsense: installation of package ‘psych’ had non-zero exit status - any time you get the non-zero exit status message, it requires a careful look at the installation messages.</description>
+    </item>
     
     <item>
       <title>New Publications</title>
