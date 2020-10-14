@@ -60,7 +60,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   "headline": "Updating Your CV with Packages",
   "description" : "Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve\u0026rsquo;s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.\nLink to the entire CV folder for you to use\/view do stuff with: CV. Please ignore the html files in that folder, it does \u0026ldquo;knit\u0026rdquo; automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.",
   "inLanguage" : "en",
-  "wordCount":  1847 ,
+  "wordCount":  1824 ,
   "datePublished" : "2019-04-03T00:00:00",
   "dateModified" : "2019-04-03T00:00:00",
   "image" : "\/img\/header.jpg",
@@ -407,20 +407,18 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 <span class="n">update</span> <span class="o">=</span> <span class="n">temp</span><span class="o">$</span><span class="n">pubid[temp</span><span class="o">$</span><span class="n">volume</span> <span class="o">==</span> <span class="s">&#34;X&#34;</span><span class="n">]</span>
 
 <span class="n">final[final</span><span class="o">$</span><span class="n">pubid</span> <span class="o">%in%</span> <span class="n">update</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">,</span> <span class="s">&#34;number&#34;</span><span class="p">)</span><span class="n">]</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">##                                                                                                                                title
-## 20                                                                      A practical primer on processing semantic property norm data
-## 51                                                Differential Effects of Association and Semantics on Priming and Memory Judgments.
-## 63                   Examining daily-level associations between nightly alcohol use and next-day valued behavior in college students
-## 109 Meaning, social support, and resilience as predictors of posttraumatic growth: A study of the Louisiana flooding of August 2016.
-## 120     Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
-## 159                                                             Using Word Frequencies to Analyze Political Language and Moral Focus
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">##                                                                                                                            title
+## 20                                                                  A practical primer on processing semantic property norm data
+## 51                                            Differential Effects of Association and Semantics on Priming and Memory Judgments.
+## 63               Examining daily-level associations between nightly alcohol use and next-day valued behavior in college students
+## 120 Modeling resilience, meaning in life, posttraumatic growth, and disaster preparedness with two samples of tornado survivors.
+## 160                                                         Using Word Frequencies to Analyze Political Language and Moral Focus
 ##     number
 ## 20    1-13
 ## 51        
 ## 63     1-5
-## 109       
 ## 120       
-## 159
+## 160
 </code></pre></div><p>None of these have new volume or page numbers, so I am good to go here. Because I have this as an excel sheet, I can do some fun visualizations:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
