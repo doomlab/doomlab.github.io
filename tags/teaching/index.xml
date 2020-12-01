@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>teaching on Dr. Erin Buchanan</title>
-    <link>/tags/teaching/</link>
+    <link>https://doomlab.github.io/tags/teaching/</link>
     <description>Recent content in teaching on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Multilevel Modeling Workshop Materials</title>
-      <link>/post/multilevel-modeling-workshop-materials/</link>
+      <link>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/multilevel-modeling-workshop-materials/</guid>
+      <guid>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</guid>
       <description>Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
 I used RStudio&amp;rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.</description>
     </item>
     
     <item>
       <title>Intuitions about Grades</title>
-      <link>/post/intuitions-about-grades/</link>
+      <link>https://doomlab.github.io/post/intuitions-about-grades/</link>
       <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/intuitions-about-grades/</guid>
+      <guid>https://doomlab.github.io/post/intuitions-about-grades/</guid>
       <description>Are my intuitions about grades correct?
 I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.
 First, I took all the times I had taught memory and cognition post Ph.</description>
@@ -35,10 +35,10 @@ First, I took all the times I had taught memory and cognition post Ph.</descript
     
     <item>
       <title>Teaching Statement</title>
-      <link>/post/teaching-statement/</link>
+      <link>https://doomlab.github.io/post/teaching-statement/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/teaching-statement/</guid>
+      <guid>https://doomlab.github.io/post/teaching-statement/</guid>
       <description>Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.</description>
     </item>
     

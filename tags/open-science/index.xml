@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>open science on Dr. Erin Buchanan</title>
-    <link>/tags/open-science/</link>
+    <link>https://doomlab.github.io/tags/open-science/</link>
     <description>Recent content in open science on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Mon, 21 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/open-science/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/open-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Current Publications with Papaja</title>
-      <link>/post/current-publications-with-papaja/</link>
+      <link>https://doomlab.github.io/post/current-publications-with-papaja/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/current-publications-with-papaja/</guid>
+      <guid>https://doomlab.github.io/post/current-publications-with-papaja/</guid>
       <description>Heyo! Frederik, the author of papaja, requested that we update him with papers written with his package. I was like, oh man, like the whole lab?! So, I decided that I could probably make it easy by making a table here. Obviously, this table is current at the moment, as I hope many of the ones under review will get accepted, and I have several others that we will start writing soon.</description>
     </item>
     
     <item>
       <title>New Publication: Texting</title>
-      <link>/post/new-publication-texting/</link>
+      <link>https://doomlab.github.io/post/new-publication-texting/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-texting/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-texting/</guid>
       <description>One more announcement! We just had a new publication accepted:
 &amp;ldquo;Textisms&amp;rdquo;: The Comfort of the Recipient: This paper was an undergraduate honors thesis that Flora-Jean and I finally got accepted! She did a great job making sure this paper was completed and published.
 You can check out the materials here: https://osf.io/8kt52/
@@ -36,10 +36,10 @@ We should have the real print up soon! Just waiting on the journal now.</descrip
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>/post/new-publication-detect-low-quality-data/</link>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-detect-low-quality-data/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
@@ -47,10 +47,10 @@ We create a really nice R function to help you detect low quality data, which yo
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
-      <link>/post/citations-in-r-markdown-papaja/</link>
+      <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/citations-in-r-markdown-papaja/</guid>
+      <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
 Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.</description>

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>reproducibility on Dr. Erin Buchanan</title>
-    <link>/tags/reproducibility/</link>
+    <link>https://doomlab.github.io/tags/reproducibility/</link>
     <description>Recent content in reproducibility on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/reproducibility/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/reproducibility/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Multilevel Modeling Workshop Materials</title>
-      <link>/post/multilevel-modeling-workshop-materials/</link>
+      <link>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/multilevel-modeling-workshop-materials/</guid>
+      <guid>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</guid>
       <description>Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
 I used RStudio&amp;rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.</description>
     </item>
     
     <item>
       <title>New Publication - Detect Low Quality Data</title>
-      <link>/post/new-publication-detect-low-quality-data/</link>
+      <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publication-detect-low-quality-data/</guid>
+      <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
 We create a really nice R function to help you detect low quality data, which you can find on GitHub, and I even made a video that explains all the parts to the function at YouTube.</description>
@@ -35,10 +35,10 @@ We create a really nice R function to help you detect low quality data, which yo
     
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
-      <link>/post/citations-in-r-markdown-papaja/</link>
+      <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/citations-in-r-markdown-papaja/</guid>
+      <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
 Update 2: Turns out, potentially, the suggestions from the manual are not working correctly, as Frederik has checked it out and opened an issue on github.</description>

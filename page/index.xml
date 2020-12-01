@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Dr. Erin Buchanan</title>
-    <link>/page/</link>
+    <link>https://doomlab.github.io/page/</link>
     <description>Recent content in Pages on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     
-	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/page/basics/</link>
+      <link>https://doomlab.github.io/page/basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/basics/</guid>
+      <guid>https://doomlab.github.io/page/basics/</guid>
       <description>Basic Information Name: Erin M. Buchanan, Ph.D.
 Email: ebuchanan at harrisburgu dot edu
 Address: Harrisburg University of Science and Technology Analytics 326 Market St. Harrisburg, PA 17101
@@ -25,28 +25,28 @@ Education  Ph.D., Experimental Cognitive Psychology, Texas Tech University (2008
     
     <item>
       <title></title>
-      <link>/page/honors/</link>
+      <link>https://doomlab.github.io/page/honors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/honors/</guid>
+      <guid>https://doomlab.github.io/page/honors/</guid>
       <description>Honors and Awards  Society for the Improvement of Psychological Science Commendation (2020) NACADA Academic Advising Excellence Faculty Advisor Award (2016) Nominated for the Missouri State Master Online Recognition Award (2016) Curtis P. Lawrence Award for Excellence in Advising Recipient, Missouri State University (2016) Missouri State University Honors College Curtis P. Lawrence Teaching Award Recipient (2015) Missouri State University Honors College Research Award Recipient (2014) Nominated for the Missouri State University Foundation Award in Research (2014;     Nominated for the Curtis P.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/res_grants/</link>
+      <link>https://doomlab.github.io/page/res_grants/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/res_grants/</guid>
+      <guid>https://doomlab.github.io/page/res_grants/</guid>
       <description>Grants Psycholinguistics and memory, general cognitive:  Principal Investigator. Measuring the Lexicon: Computational Approaches to Quantifying Similarity Among Cognitive Representations. Psychonomic Society Estes Grants. (2019, submitted). $19,000.00 Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.00 Principal Investigator. Using Language to Understand Congressional Voting Behaviors. National Science Foundation (2014, submitted). $176,098. Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM&amp;rsquo;s Watson Group.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/res_overview/</link>
+      <link>https://doomlab.github.io/page/res_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/res_overview/</guid>
+      <guid>https://doomlab.github.io/page/res_overview/</guid>
       <description>Research Overview Interests Psycholinguistics and memory: Semantic memory, associative memory, priming of memory types, normed databases, linguistic variables, memory maps, judgments of memory, language statistics, working memory, individual differences.
 Statistics: Alternatives to null hypothesis testing, effect sizes and confidence intervals, multigroup confirmatory factor analysis, item response theory, Bayesian inference statistics, hierarchical linear modeling, exploratory factor analysis, statistical reporting
 Check out my research statement.
@@ -55,75 +55,75 @@ Experience  The DOOM Lab (2019-Current)  Harrisburg University of Science and Te
     
     <item>
       <title></title>
-      <link>/page/res_pres/</link>
+      <link>https://doomlab.github.io/page/res_pres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/res_pres/</guid>
-      <description>Publications Presentations Psycholinguistics, Cognitive Science   Citation  Link      Buchanan, E. M., Valentine, K. D., Maxwell, N. P., Taylor, J. E., &amp;amp; Montefinese, M. (2020, November). Power simulations for linguistic norm data collection. Spoken presentation for the Annual Meeting of the Psychonomic Society, Austin, TX.  NA    Grim II, P. A. &amp;amp; Buchanan, E.M. (2020, November). Testing the assumption of model similarity across languages.</description>
+      <guid>https://doomlab.github.io/page/res_pres/</guid>
+      <description>Publications Presentations Psycholinguistics, Cognitive Science   Citation  Link      Buchanan, E. M., Valentine, K. D., Maxwell, N. P., Taylor, J. E., &amp;amp; Montefinese, M. (2020, November). Power simulations for linguistic norm data collection. Spoken presentation for the Annual Meeting of the Psychonomic Society, Austin, TX.  Link    Grim II, P. A. &amp;amp; Buchanan, E.M. (2020, November). Testing the assumption of model similarity across languages.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/res_pres_old/</link>
+      <link>https://doomlab.github.io/page/res_pres_old/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/res_pres_old/</guid>
+      <guid>https://doomlab.github.io/page/res_pres_old/</guid>
       <description>Psycholinguistics and memory, general cognitive:    Download Reference     PPT Maxwell, N. P. &amp;amp; Buchanan, E. M. (2018, April). Single and Double Word-Pair Norms: Predictive Ability of Recall and Judgments. Poster presentation for the Annual Convention of the Midwestern Psychological Association, Chicago, IL.   PDF Maxwell, N. P., Kostic, B., &amp;amp; Buchanan, E.M. (2017, November). The Interaction of Semantic, Thematic, and Associative Overlap Strength in Predicting Recall.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/res_pubs/</link>
+      <link>https://doomlab.github.io/page/res_pubs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/res_pubs/</guid>
+      <guid>https://doomlab.github.io/page/res_pubs/</guid>
       <description>Publications Statistical Packages &amp;amp; Tools Note: * indicate undergraduate authors, + graduate authors, $ both undergraduate and graduate
   Citation  Link      +Buchanan, E.M., Gillenwaters, A., Scofield, J.E., &amp;amp; Valentine, K.D. (2019). MOTE: Measure of the Effect: Package to assist in effect size calculations and their confidence intervals. R package version 1.0.1.  Link    Buchanan, E.M. (2018). MeMoBootR: A package for mediation, moderation, and bootstrapped indirect effects.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/res_pubs_old/</link>
+      <link>https://doomlab.github.io/page/res_pubs_old/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/res_pubs_old/</guid>
+      <guid>https://doomlab.github.io/page/res_pubs_old/</guid>
       <description>Publications Psycholinguistics and memory, general cognitive    Download Reference     PDF Duncan, J., Buchanan, E.M., Marshall, C.Z., &amp;amp; Oberdieck, K. (accepted). But words will never hurt me, Journal of Psychology and Behavioral Sciences, X, XX-XX.   PDF Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort of the Recipient, Psychology of Popular Media Culture, X, XX-XX.   PDF Pavlacic, J., Culp, M., Harvey, S.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/service/</link>
+      <link>https://doomlab.github.io/page/service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/service/</guid>
+      <guid>https://doomlab.github.io/page/service/</guid>
       <description>Professional Memberships  Psychological Science Accelerator (PSA) - Assistant Director of Training, Web Admin Society for Computation in Psychology (SCIP) - Executive Director Society for the Improvement of the Psychological Sciences (SIPS) Midwestern Psychological Association (MPA) Southwestern Psychological Association (SWPA) Psychonomic Society - Fellow Association for Psychological Science (APS) Graduate and Professional Student Association  Professional Activities Journal Boards  Behavior Research Methods, Associate Editor - 2020-Current Meta-Psychology, Editorial Board &amp;amp; Action Editor - 2019-Current Journal of Scientific Psychology, Consulting Editor - 2009-Current  Journal Reviewer Publons Profile - 2017-Current</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/stats/</link>
+      <link>https://doomlab.github.io/page/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/stats/</guid>
+      <guid>https://doomlab.github.io/page/stats/</guid>
       <description>Here, you can learn about our goal of making statistical analysis approachable by creating a plethora of learning materials and interactive environment for learning/improving your skills.
 Shiny Apps: I have been working on building interactive applications through Shiny to visualize the data for specific projects and to increase statistical skills by creating easy ways to calculate numbers for non-programming researchers. I try to post about the applications as we put them online, but you can find them on our shiny-server GitHub repository or through the shiny tag on the blog.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/students/</link>
+      <link>https://doomlab.github.io/page/students/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/students/</guid>
+      <guid>https://doomlab.github.io/page/students/</guid>
       <description>Graduate Students DOOM Lab Students    School, Year Name Thesis     MSU, 2018-2020 Arielle Cunningham TBD   MSU, 2017-2019 Addie Wikowsky Working memory, expertise, and fluid intelligence   MSU, 2017-2019 William Padfield Moral foundatins and political rhetoric   MSU, 2016-2018 David Herr Generativity and Trauma in first responders   MSU, 2016-2018 Nick Maxwell Investigating the interaction between associative, semantic, and thematic database norms for memory judgments and recall   MSU, 2015-2017 Katherine Miller The Mediating Effects of Cortisol on Memory and Judgments of Learning   MSU, 2015-2017 Rebecca Knoph Language Learning and Metacognition: An Interventions to Improve Language Classrooms   MSU, 2014-2016 Jahnavi Delmonico Politics, Personality, and Sensitivity to Change   MSU, 2013-2015 Marshall Beauchamp IRT Analyses of Body Dissatisfaction in Men   MSU, 2013-2015 Kayla Jordan Linguistic Markers of Writing about War   MSU, 2012-2014 Marilee Teasley When Music Goes Up in Flames: The Impact of Academic Advising on the Perceived Burnout of Music Majors   MSU, 2011-2013 Kathrene Valentine Alternatives: A Comparison of Parametric, Nonparametric, and Observation Oriented Modeling techniques    Ph.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/page/teach_overview/</link>
+      <link>https://doomlab.github.io/page/teach_overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/teach_overview/</guid>
+      <guid>https://doomlab.github.io/page/teach_overview/</guid>
       <description>Teaching Overview Interests Read my teaching statement.
 Undergraduate:
  Cognition Statistics Research Methods/Experimental Design  Graduate:
@@ -134,10 +134,10 @@ Undergraduate:
     
     <item>
       <title>About Erin</title>
-      <link>/page/about/</link>
+      <link>https://doomlab.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/page/about/</guid>
+      <guid>https://doomlab.github.io/page/about/</guid>
       <description>Professionally Speaking I am currently a Professor of Cognitive Analytics at Harrisburg University of Science and Technology - a STEM school in Pennsylvania. I teach computational linguistics courses in our Analytics and Data Science programs, such as Natural Language Processing, Sentiment Analysis, and Human Language. I also teach a bunch of statistics courses and you can learn more about my stats work on the stats page. Learn more about me the person, me the researcher, and me the bean counted on paper by clicking out the CV pages.</description>
     </item>
     

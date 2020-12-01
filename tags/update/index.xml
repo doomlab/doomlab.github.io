@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>update on Dr. Erin Buchanan</title>
-    <link>/tags/update/</link>
+    <link>https://doomlab.github.io/tags/update/</link>
     <description>Recent content in update on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/update/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/update/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installing RStudio Server &#43; Updates</title>
-      <link>/post/installing-rstudio-server-updates/</link>
+      <link>https://doomlab.github.io/post/installing-rstudio-server-updates/</link>
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/installing-rstudio-server-updates/</guid>
+      <guid>https://doomlab.github.io/post/installing-rstudio-server-updates/</guid>
       <description>One of the most difficult things I try to teach my students is how to deal with error messages. Due to Hurricane Laura, I am currently re-creating several projects including formr, RStudio, and a website. I thought I would detail that here.
 You can find my first post on formr here: https://www.aggieerin.com/post/formr-installation-instructions/
 Good news! It’s mostly the same and pretty smooth. However, I sometimes get this nonsense: installation of package ‘psych’ had non-zero exit status - any time you get the non-zero exit status message, it requires a careful look at the installation messages.</description>
@@ -25,10 +25,10 @@ Good news! It’s mostly the same and pretty smooth. However, I sometimes get th
     
     <item>
       <title>New Publications</title>
-      <link>/post/new-publications-oct-19/</link>
+      <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
       <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications-oct-19/</guid>
+      <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
       <description>Just updated my CV - here&amp;rsquo;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&amp;rsquo;t really predict what order the same year publications are going to be in - not that it matters in general, but it&amp;rsquo;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
 Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of direct and in-direct relation on memory judgments and retrieval.</description>
@@ -36,10 +36,10 @@ Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of d
     
     <item>
       <title>New Publications and Updated CV</title>
-      <link>/post/new-publications-and-updated-cv/</link>
+      <link>https://doomlab.github.io/post/new-publications-and-updated-cv/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/new-publications-and-updated-cv/</guid>
+      <guid>https://doomlab.github.io/post/new-publications-and-updated-cv/</guid>
       <description>Hi guys! I just wanted to post that I&amp;rsquo;ve updated the website to be current with some new publications I wanted to highlight:
 First up is two papers on psycholinguistics that were undergraduate student projects:
 Duncan, J., Buchanan, E.M., Marshall, C.Z., &amp;amp; Oberdieck, K. (accepted). But words will never hurt me, Journal of Psychology and Behavioral Sciences, X, XX-XX. PDF

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dr. Erin Buchanan</title>
-    <link>/categories/</link>
+    <link>https://doomlab.github.io/categories/</link>
     <description>Recent content in Categories on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>research</title>
-      <link>/categories/research/</link>
-      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      <link>https://doomlab.github.io/categories/research/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/categories/research/</guid>
+      <guid>https://doomlab.github.io/categories/research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teaching</title>
-      <link>/categories/teaching/</link>
+      <link>https://doomlab.github.io/categories/teaching/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/categories/teaching/</guid>
+      <guid>https://doomlab.github.io/categories/teaching/</guid>
       <description></description>
     </item>
     

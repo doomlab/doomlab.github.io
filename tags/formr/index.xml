@@ -2,22 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>formr on Dr. Erin Buchanan</title>
-    <link>/tags/formr/</link>
+    <link>https://doomlab.github.io/tags/formr/</link>
     <description>Recent content in formr on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/formr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://doomlab.github.io/tags/formr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>formr Round 3: No nginx Required</title>
+      <link>https://doomlab.github.io/post/formr-round-3-no-nginx-required/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      <author>buchananlab@gmail.com (aggieerin.com)</author>
+      <guid>https://doomlab.github.io/post/formr-round-3-no-nginx-required/</guid>
+      <description>Alright folks! I am back with more installation guides. I&amp;rsquo;ve installed formr so many times at this point &amp;hellip; since my first post, opencpu has updated to R 4+, and I&amp;rsquo;ve found a way to not use nginx. Which is good news, since it often conflicts with also running apache. I&amp;rsquo;m going to leave the old guides up because maybe they can help someone figure out their issues, but here goes with the newest guide.</description>
+    </item>
+    
+    <item>
       <title>formr Installation Instructions</title>
-      <link>/post/formr-installation-instructions/</link>
+      <link>https://doomlab.github.io/post/formr-installation-instructions/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <author>buchananlab@gmail.com (aggieerin.com)</author>
-      <guid>/post/formr-installation-instructions/</guid>
+      <guid>https://doomlab.github.io/post/formr-installation-instructions/</guid>
       <description>An installation guide taken from formr documentation and modified to include more details for those who need it.
 These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.</description>
     </item>
