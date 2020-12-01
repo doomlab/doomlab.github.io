@@ -3,8 +3,6 @@ comments: false
 pagetitle: "Research Presentations"
 ---
 
-## Publications
-
 ```{r print-pubs, include = FALSE}
 library(readxl)
 curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
@@ -102,12 +100,12 @@ library(knitr)
 library(kableExtra)
 ```
 
-### Presentations
+## Presentations
 
-#### Psycholinguistics, Cognitive Science
+### Psycholinguistics, Cognitive Science
 
 `r kable(curated[ curated$pubtype == "present" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
 
-#### Applied Statistics
+### Applied Statistics
 
 `r kable(curated[ curated$pubtype == "present" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
