@@ -206,137 +206,137 @@ SPSS (including syntax), Excel (macros/functions), AMOS, LISREL, RStudio, Shiny,
 ```{r print-pubs, include = FALSE}
 library(readxl)
 curated = as.data.frame(read_excel("cv_pubs.xlsx"))
+
+curated$citation = NA
+
+for (i in 1:nrow(curated)){
   
-  curated$citation = NA
+  #deal with author type
+  if (curated$authortype[i] == "grad"){authortype = "+"}
+  if (curated$authortype[i] == "under"){authortype = "*"}
+  if (curated$authortype[i] == "both"){authortype = "$"}
+  if (curated$authortype[i] == "none"){authortype = ""}
   
-  for (i in 1:nrow(curated)){
+  #deal with dois
+  if (!is.na(curated$doi[i])){
+    doi = paste("doi: ", curated$doi[i], " ", sep = "")} else {doi = " "}
+  
+  #deal with links
+  if(!is.na(curated$link[i])){
+    link = paste("[Link](", curated$link[i], ") ", sep = "")} else {link = ""}
+  
+  #articles
+  if(curated$pubtype[i] == "article"){
     
-    #deal with author type
-    if (curated$authortype[i] == "grad"){authortype = "+"}
-    if (curated$authortype[i] == "under"){authortype = "*"}
-    if (curated$authortype[i] == "both"){authortype = "$"}
-    if (curated$authortype[i] == "none"){authortype = ""}
-    
-    #deal with dois
-    if (!is.na(curated$doi[i])){
-      doi = paste("doi: ", curated$doi[i], " ", sep = "")} else {doi = " "}
-    
-    #deal with links
-    if(!is.na(curated$link[i])){
-      link = paste("[Link](", curated$link[i], ") ", sep = "")} else {link = ""}
-    
-    #articles
-    if(curated$pubtype[i] == "article"){
-      
-      #published articles
-      if(curated$pubstatus[i] == "published"){
+    #published articles
+    if(curated$pubstatus[i] == "published"){
       
       curated$citation[i] = paste(authortype, #type of author
-                             curated$author[i], " (", #author names
-                             curated$year[i], "). ", #year
-                             curated$title[i], ". \\textit{", #title
-                             curated$journal[i], ", ", #journal
-                             curated$volume[i], "}, ", #volume
-                             curated$pages[i], ". ", #pages
-                             doi, #doi
-                             link, #links
-                             "\\newline \\newline ",
-                             sep = "")
-      } #close published
-      
-      #preprints
-      if(curated$pubstatus[i] == "preprint"){
-        
-        curated$citation[i] = paste(authortype, #type of author
-                               curated$author[i], " (", #author names
-                               curated$year[i], "). ", #year
-                               curated$title[i], ". ", #title
-                               doi, #doi
-                               link, #links
-                               "\\newline \\newline ",
-                               sep = "")
-      } #close preprint
-      
-            #preprints
-      if(curated$pubstatus[i] == "registered"){
-        
-        curated$citation[i] = paste(authortype, #type of author
-                               curated$author[i], " (", #author names
-                               curated$year[i], "). ", #year
-                               curated$title[i], ". \\textit{", #title
-                               curated$journal[i], "}. ", #journal
-                               doi, #doi
-                               link, #links
-                               "\\newline \\newline ",
-                               sep = "")
-      } #close preprint
-      
-    } #close articles
+                                  curated$author[i], " (", #author names
+                                  curated$year[i], "). ", #year
+                                  curated$title[i], ". \\textit{", #title
+                                  curated$journal[i], ", ", #journal
+                                  curated$volume[i], "}, ", #volume
+                                  curated$pages[i], ". ", #pages
+                                  doi, #doi
+                                  link, #links
+                                  "\\newline \\newline ",
+                                  sep = "")
+    } #close published
     
-    if(curated$pubtype[i] == "present"){
+    #preprints
+    if(curated$pubstatus[i] == "preprint"){
       
       curated$citation[i] = paste(authortype, #type of author
-                             curated$author[i], " (", #author names
-                             curated$year[i], "). \\textit{", #year
-                             curated$title[i], ".} ", #title
-                             curated$journal[i], ". ", #conference information
-                             doi, #doi
-                             link, #links
-                             "\\newline \\newline ",
-                             sep = "")
-      
-    }
+                                  curated$author[i], " (", #author names
+                                  curated$year[i], "). ", #year
+                                  curated$title[i], ". ", #title
+                                  doi, #doi
+                                  link, #links
+                                  "\\newline \\newline ",
+                                  sep = "")
+    } #close preprint
     
-    if(curated$pubtype[i] == "package"){
+    #preprints
+    if(curated$pubstatus[i] == "registered"){
       
       curated$citation[i] = paste(authortype, #type of author
-                             curated$author[i], " (", #author names
-                             curated$year[i], "). ", #year
-                             curated$title[i], ". \\textit{", #title
-                             curated$journal[i], "}.", #conference information
-                             doi, #doi
-                             link, #links
-                             "\\newline \\newline ",
-                             sep = "")
-      
-    }
+                                  curated$author[i], " (", #author names
+                                  curated$year[i], "). ", #year
+                                  curated$title[i], ". \\textit{", #title
+                                  curated$journal[i], "}. ", #journal
+                                  doi, #doi
+                                  link, #links
+                                  "\\newline \\newline ",
+                                  sep = "")
+    } #close preprint
+    
+  } #close articles
+  
+  if(curated$pubtype[i] == "present"){
+    
+    curated$citation[i] = paste(authortype, #type of author
+                                curated$author[i], " (", #author names
+                                curated$year[i], "). \\textit{", #year
+                                curated$title[i], ".} ", #title
+                                curated$journal[i], ". ", #conference information
+                                doi, #doi
+                                link, #links
+                                "\\newline \\newline ",
+                                sep = "")
     
   }
   
-  curated = curated[order(curated$year, decreasing = T), ]
+  if(curated$pubtype[i] == "package"){
+    
+    curated$citation[i] = paste(authortype, #type of author
+                                curated$author[i], " (", #author names
+                                curated$year[i], "). ", #year
+                                curated$title[i], ". \\textit{", #title
+                                curated$journal[i], "}.", #conference information
+                                doi, #doi
+                                link, #links
+                                "\\newline \\newline ",
+                                sep = "")
+    
+  }
   
-  p_art = paste(curated$citation[ curated$pubtype == "article" & 
-                                    curated$category == "psycho" & 
-                                    curated$pubstatus == "published"], collapse = "") 
-  
-  s_art = paste(curated$citation[ curated$pubtype == "article" & 
-                                    curated$category == "stats" & 
-                                    curated$pubstatus == "published"], collapse = "")
-  
-  rrp_art = paste(curated$citation[ curated$pubtype == "article" & 
+}
+
+curated = curated[order(curated$year, decreasing = T), ]
+
+p_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                  curated$category == "psycho" & 
+                                  curated$pubstatus == "published"], collapse = "") 
+
+s_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                  curated$category == "stats" & 
+                                  curated$pubstatus == "published"], collapse = "")
+
+rrp_art = paste(curated$citation[ curated$pubtype == "article" & 
                                     curated$category == "psycho" & 
                                     curated$pubstatus == "registered"], collapse = "") 
-  
-  rrs_art = paste(curated$citation[ curated$pubtype == "article" & 
+
+rrs_art = paste(curated$citation[ curated$pubtype == "article" & 
                                     curated$category == "stats" & 
                                     curated$pubstatus == "registered"], collapse = "")
-  
-  pp_art = paste(curated$citation[ curated$pubtype == "article" & 
-                                  curated$category == "psycho" & 
-                                  curated$pubstatus == "preprint"], collapse = "")
-  
-  sp_art = paste(curated$citation[ curated$pubtype == "article" & 
-                                    curated$category == "stats" & 
-                                    curated$pubstatus == "preprint"], collapse = "")
 
-  p_pres = paste(curated$citation[ curated$pubtype == "present" & 
-                                    curated$category == "psycho"], collapse = "") 
-  
-  s_pres = paste(curated$citation[ curated$pubtype == "present" & 
-                                    curated$category == "stats"], collapse = "")
-  
-  pack = paste(curated$citation[ curated$pubtype == "package"], collapse = "")
-  
+pp_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                   curated$category == "psycho" & 
+                                   curated$pubstatus == "preprint"], collapse = "")
+
+sp_art = paste(curated$citation[ curated$pubtype == "article" & 
+                                   curated$category == "stats" & 
+                                   curated$pubstatus == "preprint"], collapse = "")
+
+p_pres = paste(curated$citation[ curated$pubtype == "present" & 
+                                   curated$category == "psycho"], collapse = "") 
+
+s_pres = paste(curated$citation[ curated$pubtype == "present" & 
+                                   curated$category == "stats"], collapse = "")
+
+pack = paste(curated$citation[ curated$pubtype == "package"], collapse = "")
+
 ```
 
 ### Statistical Packages & Tools
@@ -441,8 +441,7 @@ Statistician. Utilization of adaptive patient-centered electronic behavioral fee
 Statistician. Meaning and Purpose in Life as it Relates to Suicidality in Adult Inpatients with Serious Mental Illness. American Foundation for Suicide Prevention. (2013, submitted). $30,000.
 
 Statistician. Predictors of Subjective Well-being Among Survivors of the Armed Conflict 
-in Colombia: a Positive Psychology View. Psychology Beyond Borders. (2013, 
-submitted). $8,156.38.
+in Colombia: a Positive Psychology View. Psychology Beyond Borders. (2013, submitted). $8,156.38.
 
 Principal Investigator. Visualizing Statistics: Developing Interactive Tools to Improve 
 Statistics and Research Learning Outcomes. Faculty Teaching and Learning Center Curriculum Grant. (1/1/14-8/15/14). $4,500.
@@ -473,22 +472,35 @@ Neurophysiology and Brain-Computer Interface. National Science Foundation (2010,
 
 ### Graduate Students
 
-| School, Year | Name | Thesis |
-| ----- | ------ | ------------- |
-| HU, 2019-current | Phillip Grim II | TBD |
-| HU, 2019-current | Jonathan Korn | TBD |
-| MSU, 2018-2020 | Arielle Cunningham | TBD |
-|	MSU, 2017-2019	|	Addie Wikowsky	|	Working memory, expertise, and fluid intelligence	|
-|	MSU, 2017-2019	|	William Padfield	|	Moral Foundations and political rhetoric	|
-| MSU, 2016-2018  | David Herr | Generativity and Trauma in first responders | 
-|	MSU, 2016-2018	|	Nick Maxwell	|	Investigating the interaction between associative, semantic, and thematic database norms for memory judgments and recall	|
-|	MSU, 2015-2017	|	Katherine Miller	|	The Mediating Effects of Cortisol on Memory and Judgments of Learning	|
-|	MSU, 2015-2017	|	Rebecca Knoph	|	Language Learning and Metacognition: An Interventions to Improve Language Classrooms	|
-|	MSU, 2014-2016	|	Jahnavi Delmonico	|	Politics, Personality, and Sensitivity to Change	|
-|	MSU, 2013-2015	|	Marshall Beauchamp	|	IRT Analyses of Body Dissatisfaction in Men	|
-|	MSU, 2013-2015	|	Kayla Jordan	|	Linguistic Markers of Writing about War	|
-|	MSU, 2012-2014	|	Marilee Teasley	|	When Music Goes Up in Flames: The Impact of Academic Advising on the Perceived Burnout of Music Majors	|
-|	MSU, 2011-2013	|	Kathrene Valentine	|	Alternatives: A Comparison of Parametric, Nonparametric, and Observation Oriented Modeling techniques	|
+HU, 2020-current | Laurel Lord | TBD 
+
+HU, 2019-current | Phillip Grim II | TBD 
+
+HU, 2019-current | Jonathan Korn | TBD 
+
+MSU, 2018-current | Arielle Cunningham | TBD 
+
+MSU, 2017-2019 | Addie Wikowsky | Working memory, expertise, and fluid intelligence
+
+MSU, 2017-2019 | William Padfield | Moral Foundations and political rhetoric
+
+MSU, 2016-2018 | David Herr | Generativity and Trauma in first responders
+
+MSU, 2016-2018 | Nick Maxwell | Investigating the interaction between associative, semantic, and thematic database norms for memory judgments and recall
+
+MSU, 2015-2017 | Katherine Miller | The Mediating Effects of Cortisol on Memory and Judgments of Learning
+
+MSU, 2015-2017 | Rebecca Knoph | Language Learning and Metacognition: An Interventions to Improve Language Classrooms
+
+MSU, 2014-2016 | Jahnavi Delmonico | Politics, Personality, and Sensitivity to Change
+
+MSU, 2013-2015 | Marshall Beauchamp | IRT Analyses of Body Dissatisfaction in Men
+
+MSU, 2013-2015 | Kayla Jordan | Linguistic Markers of Writing about War
+
+MSU, 2012-2014 | Marilee Teasley | When Music Goes Up in Flames: The Impact of Academic Advising on the Perceived Burnout of Music Majors
+
+MSU, 2011-2013 | Kathrene Valentine | Alternatives: A Comparison of Parametric, Nonparametric, and Observation Oriented Modeling techniques
 
 *Note*. I have supervised many graduate and undergraduate theses, presentations, and assistants. More information about each of their presentations and outcomes can be found on my website under students. 
 
@@ -500,7 +512,7 @@ Neurophysiology and Brain-Computer Interface. National Science Foundation (2010,
 
 Statistics, Cognition, Research Methods/Experimental Design, Memory, Psycholinguistics, Analytics
 
-## Graduate: 
+## Graduate 
 
 Experimental Methods, Basic Statistics (ANOVA, Regression), Advanced Statistics (Multivariate, Structural Equation Modeling), Non-parametric Statistics, Cognition, Attention, Memory, Language
 
