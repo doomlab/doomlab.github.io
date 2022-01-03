@@ -47,7 +47,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
         "position": 3,
         "item": {
           "@id": "https:\/\/doomlab.github.io\/post\/citations-in-r-markdown-papaja\/",
-          "name": "Citations in r markdown \u002b papaja"
+          "name": "Citations in r markdown papaja"
         }
     }]
 }
@@ -96,7 +96,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.91.2" />
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -286,7 +286,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 23, 2018
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
@@ -322,13 +322,13 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
 <p>Before doing that, I had started learning markdown, and although I&rsquo;ve been using it for a bit now, I still feel like a noob. Mix LaTeX in there, and even more so. Thankfully, I have some very awesome twitter friends that help me when I get stuck in trying to do something &hellip; like trying to stick a % symbol in a column name for a table. Whew. One thing I wish were a little bit different is citations. Currently, papaja using pandoc-citeproc to create the text referencing for knitting to PDF or Word.</p>
 <p>The problem with this is that any time you have the same author last names (like Erin Buchanan and Tom Buchanan), you automatically get E. Buchanan and T. Buchanan in the in-text referencing. That is <a href="http://blog.apastyle.org/apastyle/2014/01/when-to-use-author-initials-for-text-citations.html">APA style</a> but reviewers and the like <em>do not like it</em>. Real APA != to Used APA. The other issue stems from the fact that you will get the the first initials, even if the other author name match is in second or third place. Therefore, if I cite myself and cite Tom but he only appears as second author, I will still get E. Buchanan in the in text citation. That&rsquo;s probably also a correct interpretation of APA but ain&rsquo;t worth fighting reviewers over. Additionally, the absolute name matching often forces us to fix bibtex files a lot over things like Buchanan, E. versus Buchanan, E.M. versus Buchanan, Erin etc. Many different permutations of one person&rsquo;s name via differences in doi citations can be tedious to fix.</p>
 <p>Therefore! I checked out the <a href="https://crsh.github.io/papaja_man/writing.html#citations">papaja manual</a> - which is stellar - to see if there was some other way to do it. I also googled this, but really got stuck with the translation of latex to markdown. The manual suggests you can do this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">---
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
 output:
   papaja::apa6_pdf:
     citation_package: biblatex
 ---
 </code></pre></div><p>To pass the citations through a different processor. Great! I will try that.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Latexmk: This is Latexmk, John Collins, 19 Jan. 2017, version: 4.52c.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Latexmk: This is Latexmk, John Collins, 19 Jan. 2017, version: 4.52c.
 Latexmk: applying rule &#39;biber QWERTY&#39;...
 Rule &#39;biber QWERTY&#39;: File changes, etc:
    Non-existent destination files:
@@ -375,10 +375,10 @@ unless error was exceeding maximum runs of latex/pdflatex.
 Error: Failed to compile QWERTY.tex. See QWERTY.log for more info.
 Execution halted
 </code></pre></div><p>Balls. I searched this error for a while and found: 1) update LaTeX: check, 2) figure out why your bibtext was messed up: check &hellip; tried with only one reference and still crashed, and 3) other stuff I don&rsquo;t remember. When I tried a separate markdown, thinking the one that I had open was the problem, I got the actual citation codes, rather than the text:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Researchers discovered that online data collection can be advantageous over laboratory and paper data collection, as it is often cheaper and more efficient (Ilieva2001;Schuldt1994;Reips2012)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Researchers discovered that online data collection can be advantageous over laboratory and paper data collection, as it is often cheaper and more efficient (Ilieva2001;Schuldt1994;Reips2012)
 </code></pre></div><p>I thought maybe it was my computer, so one of my coauthors tried it. Same as the first error. Maybe it&rsquo;s a mac thing? Another coauthor with a mac, got the second error. I&rsquo;m sad to say that I don&rsquo;t have an answer for either of these problems - from the looks of it, I&rsquo;m following the guidelines suggested, but both problems pop up. I would love to hear if you know why.</p>
 <p>Enter <a href="https://psychology.missouri.edu/people/haaf">Julia</a>! Julia helped find a work around for the issue. In the head of your markdown file (note I used some &hellip; to shorten some of what papaja does for you automatically):</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">...
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">...
 bibliography      : [&#34;q_bib.bib&#34;]
 ...
 output            : papaja::apa6_pdf
@@ -533,7 +533,7 @@ csl               : apa6.csl
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.74.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

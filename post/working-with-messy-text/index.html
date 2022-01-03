@@ -94,7 +94,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.91.2" />
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -284,7 +284,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 6, 2018
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
@@ -317,7 +317,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
 <p>Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - <a href="http://www.moralfoundations.org/othermaterials">learn more</a>. I had a student who was interested in Moral Foundations Theory and its relationship to language, and we had tested some of the dictionary and found it to be frustratingly obtuse. Meaning, that a lot of the words in it are great, but not things that people like, college freshman, or even <strong>me</strong> were likely to say. She&rsquo;s moved on to working with the founder of the <a href="http://liwc.wpengine.com/">LIWC</a> - and even worked on the newest version of it :small brag:.</p>
 <p>Now I have a second student who&rsquo;s helping finish up some work on the dictionary, to see if what we were doing is worthwhile (spoiler alert: I don&rsquo;t know). However, I thought I might share some code we were using and it&rsquo;s context for people who are also trying to get into doing some of this text mining/cleaning/editing in <em>R</em>. You can find all the materials for this project, including the code in context of our messy paper, on <a href="https://github.com/doomlab/Pol-Lang/tree/master/MTMM%20MF/manuscript">GitHub</a>.</p>
 <p>Here&rsquo;s a view of what the data looks like (this isn&rsquo;t even the messiest part, and part 2 of our study uses full written paragraphs):</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; head(noout1$Q27)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; head(noout1$Q27)
 [1] &#34;doctors, babysitting&#34;                    
 [2] &#34;criminals, doctors, shootings, medicine &#34;
 [3] &#34;Health&#34;                                  
@@ -331,7 +331,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
 <li>Stemming (affixes)</li>
 </ul>
 <p>Now, don&rsquo;t hate on me folks, but I love a good loop. I could probably do this with the <code>apply</code> family, but I didn&rsquo;t:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##stem the data library(corpus) was loaded earlier
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##stem the data library(corpus) was loaded earlier
 &gt; for (i in 1:nrow(noout1)) {
 +   noout1$Q27[i] = paste(unlist(
 +     text_tokens(noout1$Q27[i], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
@@ -343,7 +343,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
 <li>Unlists the list returned by <code>text_tokens</code>.</li>
 <li>Pastes the updated data back to one cell. Be sure to use <code>collapse</code> here and not <code>sep</code>, as we want 1 item returned, and <code>sep</code> would just stick spaces between items if there were more than one.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">##one example
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">##one example
 &gt; paste(unlist(
 +     text_tokens(noout1$Q27[4], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
 [1] &#34;physic healthi , mental healthi&#34; ##one string
@@ -351,7 +351,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
 +     text_tokens(noout1$Q27[4], stemmer = &#34;en&#34;)), sep = &#34; &#34;)
 [1] &#34;physic&#34;  &#34;healthi&#34; &#34;,&#34;       &#34;mental&#34;  &#34;healthi&#34; ##five strings
 </code></pre></div><p>Let&rsquo;s look at the data now:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; head(noout1$Q27)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; head(noout1$Q27)
 [1] &#34;doctor , babysit&#34;                 
 [2] &#34;crimin , doctor , shoot , medicin&#34;
 [3] &#34;health&#34;                           
@@ -359,7 +359,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
 [5] &#34;hurt , effect , love , protect&#34;   
 [6] &#34;hurt , depress , pain&#34;    
 </code></pre></div><p>You can see that the words have been stemmed and are now in lower case. We haven&rsquo;t removed punctuation yet. There&rsquo;s lots of ways to do that, but since one of the next steps does it for me, I won&rsquo;t cover those. The next step requires the <code>tm</code> library, although I bet the <code>corpus</code> library also does similar steps, just more familiar with <code>tm</code>. We will create a corpus out of the vector of participant answers I have:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##create a corpus
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##create a corpus
 &gt; harm_corpus = Corpus(VectorSource(noout1$Q27))
 &gt; harm_TDM = as.matrix(TermDocumentMatrix(harm_corpus,
 +                               control = list(removePunctuation = TRUE,
@@ -371,7 +371,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
 <li>Each row, column combination stores the number of times a term appeared in each document.</li>
 </ul>
 <p>These can get real big, real fast, fyi. The nice thing about the <code>TermDocumentMatrix</code> function is that it handled the punction for me by using <code>removePunctuation = TRUE</code> and also dealt with the stop words. Stop words are things like <em>the, an, a, of</em> that are traditionally removed from these types of analyses that focus on content words over helper words.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_TDM[1:6, 1:6]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_TDM[1:6, 1:6]
          Docs
 Terms     1 2 3 4 5 6
   babysit 1 0 0 0 0 0
@@ -381,7 +381,7 @@ Terms     1 2 3 4 5 6
   shoot   0 1 0 0 0 0
   health  0 0 1 0 0 0
 </code></pre></div><p>Great, now what can I do with that? Everything! Here&rsquo;s what we did. Found the most frequent words by creating a data.frame that was a frequency table (thanks StackOverflow!):</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##view the most frequent words
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; ##view the most frequent words
 &gt; harm_freq = data.frame(Word = rownames(harm_TDM),
 +                        Freq = rowSums(harm_TDM),
 +                        row.names = NULL)
@@ -396,11 +396,11 @@ Terms     1 2 3 4 5 6
 5   shoot    1  0.2298851
 6  health   16  3.6781609
 </code></pre></div><p>Doctor is in the top 5, other big words included hurt, love, pain, and hospit(al). In this prompt, participants were free associating with the harm/care foundation. Now the tricky part was to combine this data back with my other data frame that included particiapnt information, including their moral foundation questionnaire scores:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_words = harm_freq$Word[harm_freq$percent &gt;=1]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_words = harm_freq$Word[harm_freq$percent &gt;=1]
 &gt; head(harm_words)
 [1] &#34;doctor&#34;  &#34;crimin&#34;  &#34;medicin&#34; &#34;health&#34;  &#34;mental&#34;  &#34;physic&#34; 
 </code></pre></div><p>First, I created a list of harm words that were mentioned at least 1% of the time. I use the transpose function <code>t()</code> to flip the dataset from rows as words, to columns as words to maintain &ldquo;tidy-ish&rdquo; data (i.e., each participant is their own row). Then I subset out the dataset to only be my top words:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_TDM = as.data.frame(t(harm_TDM))
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_TDM = as.data.frame(t(harm_TDM))
 &gt; harm_TDM = harm_TDM[ , harm_words]
 &gt; harm_TDM[1:6, 1:6]
   doctor crimin medicin health mental physic
@@ -411,7 +411,7 @@ Terms     1 2 3 4 5 6
 5      0      0       0      0      0      0
 6      0      0       0      0      0      0
 </code></pre></div><p>Now, we can <code>cbind</code> our harm dataset with the other relevant columns for harm.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_final = cbind(noout1[ , c(&#34;ResponseId&#34;, &#34;Q15_1&#34;, &#34;Q23&#34;, &#34;harmMFQ&#34;)],
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; harm_final = cbind(noout1[ , c(&#34;ResponseId&#34;, &#34;Q15_1&#34;, &#34;Q23&#34;, &#34;harmMFQ&#34;)],
 +                    harm_TDM)
 &gt; harm_final[1:6, 1:6]
          ResponseId Q15_1         Q23 harmMFQ doctor crimin
@@ -560,7 +560,7 @@ Terms     1 2 3 4 5 6
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.74.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

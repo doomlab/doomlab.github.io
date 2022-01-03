@@ -1,478 +1,282 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://doomlab.github.io/categories/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/formr/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/formr-round-3-no-nginx-required/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/how-to/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/installation/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/categories/research/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/installing-rstudio-server-updates/</loc>
     <lastmod>2020-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/rstudio/</loc>
     <lastmod>2020-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/update/</loc>
     <lastmod>2020-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/formr-installation-instructions/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/ubuntu/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/fun/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/is-english-kurtotic/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/psycholinguistics/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/text-processing/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/lasso/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/lasso-myself-numbers/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/regression/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/publication/</loc>
     <lastmod>2019-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/2019-in-review/</loc>
     <lastmod>2019-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/github/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/guides/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/clinical/</loc>
     <lastmod>2019-10-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/new-publications-oct-19/</loc>
     <lastmod>2019-10-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/vita/</loc>
     <lastmod>2019-10-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/multilevel-models/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/r/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/reproducibility/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/statistics/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/teaching/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/categories/teaching/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/research/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/updating-your-cv-with-packages/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/crlf/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/line-endings/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/line-endings-are-dumb/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/mac/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/windows/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/grades/</loc>
     <lastmod>2018-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/intuitions-about-grades/</loc>
     <lastmod>2018-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/data-camp/</loc>
     <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/datacamp/</loc>
     <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/jasp/</loc>
     <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/jasp-videos-guides/</loc>
     <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/videos/</loc>
     <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/youtube/</loc>
     <lastmod>2018-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/dummy-coding/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/lavaan/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/sem/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/new-publications-and-updated-cv/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/current-publications-with-papaja/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/open-science/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/papaja/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/gathering-text-from-the-web/</loc>
     <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/rvest/</loc>
     <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/linguistics/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/new-publication-texting/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/students/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/texting/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/mediation/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/mediation-moderation-workshop/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/moderation/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/working-with-messy-text/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/new-publications/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/shiny/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/bibliography/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/latex/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</loc>
     <lastmod>2018-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/learn-about-mote/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/mote/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/research-statement/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/tags/stats/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/post/teaching-statement/</loc>
     <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/basics/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/honors/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/res_grants/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/res_overview/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/res_pres/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/res_pres_old/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/res_pubs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/res_pubs_old/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/service/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/stats/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/students/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/teach_overview/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/shiny/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/cv/cv_markdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/cv/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://doomlab.github.io/page/</loc>
   </url>
-  
 </urlset>

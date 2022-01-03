@@ -423,7 +423,11 @@ Computer Interface to Improve Development. Honda Initiative (2009, submitted).
 
 ## Applied Statistics
 
-Principal Investigator. Amazon Response Grants for Non-Profits (in partnership with the Psychological Science Accelerator). (04/01/2020-09/01/2020). $1200.
+Principal Investigator. Blueprint for the Enabling QUantitative Interpretation of Patient Preference Estimate Data (EQUIPPED) Database. Pfizer. $43,953. 
+
+Principal Investigator. Building inclusive open data infrastructure for a recovering pandemic world. Trans-Atlantic Platform Social Sciences and Humanities. $199,733.
+
+Principal Investigator. Amazon Response Grants for Non-Profits (in partnership with the Psychological Science Accelerator). (04/01/2020-09/01/2020). $1,200.
 
 Principal Investigator. Validation of the Functional Assessment of Migraine Scale (FAMS). National Headache Foundation (2020, submitted - POSTPONED DUE TO COVID). $64,016.00.
 
@@ -544,7 +548,7 @@ Course Evaluations can be provided upon request.
 
 ### Professional Memberships
 
-Psychological Science Accelerator (PSA) - Assistant Director of Training, Web Admin 
+Psychological Science Accelerator (PSA) - Associate Director
 
 Society for Computation in Psychology (SCIP) - Executive Director 
 
@@ -563,6 +567,8 @@ Graduate and Professional Student Association
 ### Professional Activities
 
 ## Journal Boards
+
+Frontiers, Associate Editor \hfill 2021-Current
 
 Behavior Research Methods, Associate Editor \hfill 2020-Current
 

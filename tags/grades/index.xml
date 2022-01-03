@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
     <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
-    <lastBuildDate>Sun, 02 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://doomlab.github.io/tags/grades/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 02 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://doomlab.github.io/tags/grades/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intuitions about Grades</title>
       <link>https://doomlab.github.io/post/intuitions-about-grades/</link>

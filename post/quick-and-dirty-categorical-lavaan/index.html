@@ -94,7 +94,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.91.2" />
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -284,7 +284,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on July 5, 2018
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
@@ -316,7 +316,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
         <p>I was tagged today on twitter asking about categorical variables in <code>lavaan</code>. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for <code>lavaan</code> <a href="http://lavaan.ugent.be/tutorial/cat.html">here</a>.</p>
 <p>You will need both the <code>lavaan</code> and <code>psych</code> packages to reproduce this code. Ironically, this data is binary outcome data (the <code>epi</code> dataset in <code>psych</code>), which wasn&rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</p>
 <p>First, let&rsquo;s make a model that works (I do assume you know a bit about <code>lavaan</code> here, feel free to ask questions):</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#load libraries and data
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#load libraries and data
 library(psych)
 library(lavaan)
 DF = epi
@@ -332,7 +332,7 @@ epi.fit = cfa(model = epi.model,
 #show a summary
 summary(epi.fit)
 </code></pre></div><p>The <code>cfa</code> and <code>summary</code> did not throw any errors, so the model at least runs smoothly, even if it is not a &ldquo;good&rdquo; model. For good measure, you can also use <code>semPlot</code> to create a picture of this two-factor model:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">library(semPlot)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">library(semPlot)
 
 #semPaths with basic options
 semPaths(epi.fit,
@@ -340,22 +340,22 @@ semPaths(epi.fit,
          edge.label.cex = 1)
 </code></pre></div><p><img src="lavaan1.jpeg" alt="Two-factor lavaan model"></p>
 <p>Next, I created a fake dummy coded variable with three levels, although you could scale this easily with more levels:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">DF$category = c(rep(&#34;group&#34;, nrow(epi)/3),
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">DF$category = c(rep(&#34;group&#34;, nrow(epi)/3),
                 rep(&#34;group2&#34;, nrow(epi)/3),
                 rep(&#34;group3&#34;, nrow(epi)/3))
 DF$category = as.factor(DF$category)
 </code></pre></div><p>When I tried to run a new model with the <code>category</code> variable, <code>lavaan</code> was not happy:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Warning message:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Warning message:
 In lav_data_full(data = data, group = group, cluster = cluster,  :
   lavaan WARNING: unordered factor(s) with more than 2 levels detected in data: category
 </code></pre></div><p>Fine, let&rsquo;s dummy code them with the gloriously easy <code>dummy.code</code> function in <code>psych</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#dummy code and combine with DF
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#dummy code and combine with DF
 DF_dc = cbind(DF, dummy.code(DF$category))
 </code></pre></div><p>However, I will warn you that <code>psych</code> does give you K columns where K = levels. Real dummy coding is K - 1 columns, so I find it odd that <code>psych</code> gives you K output. For example, it took our <code>group</code>, <code>group2</code>, <code>group3</code> labels and transformed them into three new columns with 0 as <em>not my group</em> and 1 as <em>my group</em>. Therefore, I will advise you to pick your favorite combination of K - 1 levels, and do not use all of them or you will create a singular matrix that will be difficult to troubleshoot in any regression based analysis. Here&rsquo;s an example of that error:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Error in lav_samplestats_icov(COV = cov[[g]], ridge = ridge, x.idx = x.idx[[g]],  : 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Error in lav_samplestats_icov(COV = cov[[g]], ridge = ridge, x.idx = x.idx[[g]],  : 
   lavaan ERROR: sample covariance matrix is not positive-definite
 </code></pre></div><p>I can add the first two to the model predicting one of the latents using <code>~</code> for regression rather than <code>=~</code> for create a latent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#model syntax
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#model syntax
 epi.model2 = &#39;latent =~ V1+V2+V3+V4
 latent2 =~ V5+V6+V7+V8
 latent ~ group
@@ -368,14 +368,14 @@ epi.fit2 = cfa(model = epi.model2,
 #summarize the model               
 summary(epi.fit2)
 </code></pre></div><p>In your output, you will get two new lines for regression:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Regressions:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Regressions:
                    Estimate  Std.Err  z-value  P(&gt;|z|)
   latent ~                                            
     group             0.026    0.014    1.847    0.065
     group2           -0.001    0.014   -0.082    0.935
 </code></pre></div><p>The interpretation here would be that group = group 1 versus group 3 was related to/predicted <code>latent</code> at 0.026, so the difference in <code>latent</code> for group 1 to group 3 was 0.026. The second variable would be group2 = group 2 versus group 3, and they basically have no difference on <code>latent</code>. You can learn more about dummy coding <a href="https://youtu.be/Zv19sslm-S4">here</a>.</p>
 <p>Here&rsquo;s the picture of that analysis:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">semPaths(epi.fit,
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">semPaths(epi.fit,
          whatLabels = &#34;std&#34;,
          edge.label.cex = 1)
 </code></pre></div><p><img src="lavaan2.jpeg" alt="Two-factor lavaan model with dummy coded variables"></p>
@@ -525,7 +525,7 @@ summary(epi.fit2)
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.74.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

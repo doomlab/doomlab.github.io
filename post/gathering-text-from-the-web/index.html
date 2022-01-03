@@ -94,7 +94,7 @@ First, we picked four web sources to scrape - The New York Times, NPR, Fox News,
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.91.2" />
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -284,7 +284,7 @@ First, we picked four web sources to scrape - The New York Times, NPR, Fox News,
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2018
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
@@ -315,12 +315,12 @@ First, we picked four web sources to scrape - The New York Times, NPR, Fox News,
       <article role="main" class="blog-post">
         <p>Hi everyone! I don&rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student <a href="https://williampadfield.wordpress.com/">Will</a> and I used <code>rvest</code> to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found <a href="https://osf.io/5kpj7/">on our OSF page</a> - this project is also connected to the <a href="https://github.com/doomlab/Will-Pilot">GitHub folder</a> with the files.</p>
 <p>First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections. To get started, you need the <code>rvest</code> library. After you load the library, you can set your url that you want to pull articles from.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">library(rvest)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">library(rvest)
 #Specifying the url for desired website to be scrapped
 url &lt;- &#39;https://www.nytimes.com/section/politics&#39;
 </code></pre></div><p>Now, this url is just where we expect to find a list of links to open for each individual article that was written by the Times. In many <code>rvest</code> tutorials, they focus on pulling only the information from one page - in this blog, I am showing you how to use loops to pull a bunch of separate pages/posts - this tutorial would also work well for pulling from blog type pages.</p>
 <p>Next, we read in the main webpage:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#Reading the HTML code from the website - headlines
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#Reading the HTML code from the website - headlines
 webpage &lt;- read_html(url)
 headline_data &lt;- html_nodes(webpage,&#39;.story-link a, .story-body a&#39;)
 
@@ -331,7 +331,7 @@ headline_data &lt;- html_nodes(webpage,&#39;.story-link a, .story-body a&#39;)
  [3] &lt;a href=&#34;https://www.n ...
 </code></pre></div><p>Specifically, <code>read_html</code> pulled in the entire webpage, and the <code>html_nodes</code> function helped us find what we were looking for. In this part, we used the <a href="http://selectorgadget.com/">Selector Gadget</a> extension to find the right parts we were looking for. If you know a bit of CSS, you can view page source on your target page, and then find the class/id properties you are searching for. For the non-web people, essentially, this tool allows you to find the specific parts of a website you want to extract. In our case, we were looking for the story headlines and their individual page links <code>a</code> for <code>a href</code>, which is code for links on the web.</p>
 <p>From there, we extracted the attributes of the story links, which created a big list of the headlines and other attributes about them. I really only wanted the links to the individual stories though - not all the information about them. <code>html_attrs</code> created mini-lists of all the attributes for each part of the page we had scraped.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">attr_data &lt;- html_attrs(headline_data) 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">attr_data &lt;- html_attrs(headline_data) 
 
 &gt; attr_data
 [[1]]
@@ -340,7 +340,7 @@ headline_data &lt;- html_nodes(webpage,&#39;.story-link a, .story-body a&#39;)
                                                                                 data-rref 
                                                                                        &#34;&#34; 
 </code></pre></div><p>To get only the links, we tried this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">urlslist &lt;- unlist(attr_data)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">urlslist &lt;- unlist(attr_data)
 urlslist &lt;- urlslist[grep(&#34;http&#34;, urlslist)]
 urlslist &lt;- unique(urlslist)
 urlslist
@@ -350,7 +350,7 @@ urlslist
  [2] &#34;https://www.nytimes.com/2018/05/06/us/politics/giuliani-says-trump-would-not-have-to-comply-with-mueller-subpoena.html&#34;
 </code></pre></div><p><code>unlist</code> took out the list of lists and created the attribute data with only one giant vector. Then I used the <code>grep</code> function to find the urls. Therefore, <code>grep(&quot;http&quot;, urslists)</code> returns the vector number of each item with <code>http</code> in it. I wanted the actual urls, not just the item numbers, so I stuck that inside <code>urslist[...]</code>. The <code>unique</code> function was necessary, as links often repeated, and we really only needed them once.</p>
 <p>A warning: websites don&rsquo;t always use absolute links. Sometimes they use references to folders or relative links. We found this with two of our sites, and solved that problem in a couple of ways. The solution will depend on how exactly the website references their other pages.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">urlslist3 &lt;- urlslist3[grep(&#34;http|.html&#34;, urlslist3)]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">urlslist3 &lt;- urlslist3[grep(&#34;http|.html&#34;, urlslist3)]
 ##fix the ones without the leading foxnews.com
 urlslist3F &lt;- paste(&#34;http://www.foxnews.com&#34;, urlslist3[grep(&#34;^http&#34;, urlslist3, invert = T)], sep = &#34;&#34;)
 urlslist3N &lt;- urlslist3[grep(&#34;^http&#34;, urlslist3)]
@@ -358,7 +358,7 @@ urlslist3 &lt;- c(urlslist3N, urlslist3F)
 urlslist3 &lt;- unique(urlslist3)
 </code></pre></div><p>On Fox, we could find the urls in our attributes with http OR (that&rsquo;s the pipe <code>|</code>) .html. On Breitbart, we had to use the folder name by doing <code>urlslist4 &lt;- urlslist4[grep(&quot;http|/big-government&quot;, urlslist4)]</code>. Then we created the absolute link by sticking the homepage on the front when necessary with the <code>paste</code> function. The <code>urlslist3N</code> here found all the ones with the http at the front <code>^</code> that we didn&rsquo;t have to fix. Then we combined the fixed and non-fixed ones and found only the unique set.</p>
 <p>From there, we started a blank data frame for storing the final data. Then the real magic occurs.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">##start a data frame
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">##start a data frame
 NYtimesDF &lt;- matrix(NA, nrow = length(urlslist), ncol = 3)
 colnames(NYtimesDF) &lt;- c(&#34;Source&#34;, &#34;Url&#34;, &#34;Text&#34;)
 NYtimesDF &lt;- as.data.frame(NYtimesDF)
@@ -535,7 +535,7 @@ for (i in 1:length(urlslist)){
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.74.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

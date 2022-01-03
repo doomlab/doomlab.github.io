@@ -94,7 +94,7 @@
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.91.2" />
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -284,7 +284,7 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 18, 2018
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
@@ -321,13 +321,13 @@
 </ul>
 <p>Another component of this app I wanted to show off was the interactive response points, wherein the input options (on the left) change based on a user selected input option. Therefore, options that are normally only input are both input and output in the traditional Shiny set up.</p>
 <p>You can see that by having the selection (first part) and the changing selection (second part) in the fluid page:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
                   c(&#34;N&#34; = &#34;N&#34;,
                     &#34;Log N&#34; = &#34;log&#34;)),
                     
 htmlOutput(&#34;slider_selector&#34;)
 </code></pre></div><p>Which is connected to the server function below:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  ####change the slider####
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  ####change the slider####
   output$slider_selector = renderUI({ 
     
     if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
@@ -345,7 +345,7 @@ htmlOutput(&#34;slider_selector&#34;)
 </code></pre></div><p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
 <p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://aggieerin.com/shiny/altnhst/">here</a>. The code is pretty long due to the sheer number of graphs, so it&rsquo;s edited down to just the shiny parts - when you see ####GRAPH#### that&rsquo;s some kicking ggplot2 graphs you can view in our github repo.</p>
 <p>Check out the project OSF page <a href="https://osf.io/u9hf4/">here</a>. You can download the entire app from our <a href="https://github.com/doomlab/shiny-server">github repo</a> (also other shiny apps!).</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">library(shiny)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">library(shiny)
 library(ggplot2)
 library(reshape)
 library(plotly)
@@ -689,7 +689,7 @@ shinyApp(ui = ui, server = server)
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.74.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
