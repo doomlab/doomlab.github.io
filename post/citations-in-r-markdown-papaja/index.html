@@ -92,19 +92,17 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
   <meta name="twitter:title" content="Citations in R Markdown &#43; Papaja" />
   <meta name="twitter:description" content="Heyo! I wanted to write a post about some of the quirky things I&rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having. …">
   <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.91.2" />
-  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <meta name="generator" content="Hugo 0.102.3" />
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
-
-
 
 
   </head>
@@ -272,6 +270,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
 
   <header class="header-section ">
     
+    
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
@@ -286,7 +285,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 23, 2018
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
@@ -307,6 +306,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
         </div>
       </div>
     </div>
+  
   </header>
 
 
@@ -322,70 +322,70 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
 <p>Before doing that, I had started learning markdown, and although I&rsquo;ve been using it for a bit now, I still feel like a noob. Mix LaTeX in there, and even more so. Thankfully, I have some very awesome twitter friends that help me when I get stuck in trying to do something &hellip; like trying to stick a % symbol in a column name for a table. Whew. One thing I wish were a little bit different is citations. Currently, papaja using pandoc-citeproc to create the text referencing for knitting to PDF or Word.</p>
 <p>The problem with this is that any time you have the same author last names (like Erin Buchanan and Tom Buchanan), you automatically get E. Buchanan and T. Buchanan in the in-text referencing. That is <a href="http://blog.apastyle.org/apastyle/2014/01/when-to-use-author-initials-for-text-citations.html">APA style</a> but reviewers and the like <em>do not like it</em>. Real APA != to Used APA. The other issue stems from the fact that you will get the the first initials, even if the other author name match is in second or third place. Therefore, if I cite myself and cite Tom but he only appears as second author, I will still get E. Buchanan in the in text citation. That&rsquo;s probably also a correct interpretation of APA but ain&rsquo;t worth fighting reviewers over. Additionally, the absolute name matching often forces us to fix bibtex files a lot over things like Buchanan, E. versus Buchanan, E.M. versus Buchanan, Erin etc. Many different permutations of one person&rsquo;s name via differences in doi citations can be tedious to fix.</p>
 <p>Therefore! I checked out the <a href="https://crsh.github.io/papaja_man/writing.html#citations">papaja manual</a> - which is stellar - to see if there was some other way to do it. I also googled this, but really got stuck with the translation of latex to markdown. The manual suggests you can do this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
-output:
-  papaja::apa6_pdf:
-    citation_package: biblatex
----
-</code></pre></div><p>To pass the citations through a different processor. Great! I will try that.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Latexmk: This is Latexmk, John Collins, 19 Jan. 2017, version: 4.52c.
-Latexmk: applying rule &#39;biber QWERTY&#39;...
-Rule &#39;biber QWERTY&#39;: File changes, etc:
-   Non-existent destination files:
-      &#39;QWERTY.bbl&#39;
-------------
-Run number 1 of rule &#39;biber QWERTY&#39;
-------------
-------------
-Running &#39;biber  &#34;QWERTY&#34;&#39;
-------------
-INFO - This is Biber 2.7
-INFO - Logfile is &#39;QWERTY.blg&#39;
-ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
-INFO - ERRORS: 1
-Latexmk: biber found malformed bcf file for &#39;QWERTY&#39;.
-  I&#39;ll ignore error, and delete any bbl file.
-Rule &#39;pdflatex&#39;: File changes, etc:
-   Non-existent destination files:
-      &#39;QWERTY.pdf&#39;
-------------
-Run number 1 of rule &#39;pdflatex&#39;
-------------
-Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
-Latexmk: applying rule &#39;pdflatex&#39;...
-------------
-Running &#39;pdflatex  -halt-on-error -interaction=batchmode -recorder  &#34;QWERTY.tex&#34;&#39;
-------------
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
-restricted \write18 enabled.
-entering extended mode
-Latexmk: Non-existent bbl file &#39;QWERTY.bbl&#39;
-No file QWERTY.bbl.
-=== TeX engine is &#39;pdfTeX&#39;
-Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
-Latexmk: Errors, so I did not complete making targets
-Collected error summary (may duplicate other messages):
-  pdflatex: Command for &#39;pdflatex&#39; gave return code 1
-      Refer to &#39;QWERTY.log&#39; for details
-Latexmk: Use the -f option to force complete processing,
-unless error was exceeding maximum runs of latex/pdflatex.
-! LaTeX Error: Command \c@author already defined.
-               Or name \end... illegal, see p.192 of the manual.
- 
-Error: Failed to compile QWERTY.tex. See QWERTY.log for more info.
-Execution halted
-</code></pre></div><p>Balls. I searched this error for a while and found: 1) update LaTeX: check, 2) figure out why your bibtext was messed up: check &hellip; tried with only one reference and still crashed, and 3) other stuff I don&rsquo;t remember. When I tried a separate markdown, thinking the one that I had open was the problem, I got the actual citation codes, rather than the text:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Researchers discovered that online data collection can be advantageous over laboratory and paper data collection, as it is often cheaper and more efficient (Ilieva2001;Schuldt1994;Reips2012)
-</code></pre></div><p>I thought maybe it was my computer, so one of my coauthors tried it. Same as the first error. Maybe it&rsquo;s a mac thing? Another coauthor with a mac, got the second error. I&rsquo;m sad to say that I don&rsquo;t have an answer for either of these problems - from the looks of it, I&rsquo;m following the guidelines suggested, but both problems pop up. I would love to hear if you know why.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">output:
+</span></span><span class="line"><span class="cl">  papaja::apa6_pdf:
+</span></span><span class="line"><span class="cl">    citation_package: biblatex
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>To pass the citations through a different processor. Great! I will try that.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Latexmk: This is Latexmk, John Collins, 19 Jan. 2017, version: 4.52c.
+</span></span><span class="line"><span class="cl">Latexmk: applying rule &#39;biber QWERTY&#39;...
+</span></span><span class="line"><span class="cl">Rule &#39;biber QWERTY&#39;: File changes, etc:
+</span></span><span class="line"><span class="cl">   Non-existent destination files:
+</span></span><span class="line"><span class="cl">      &#39;QWERTY.bbl&#39;
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">Run number 1 of rule &#39;biber QWERTY&#39;
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">Running &#39;biber  &#34;QWERTY&#34;&#39;
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">INFO - This is Biber 2.7
+</span></span><span class="line"><span class="cl">INFO - Logfile is &#39;QWERTY.blg&#39;
+</span></span><span class="line"><span class="cl">ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
+</span></span><span class="line"><span class="cl">INFO - ERRORS: 1
+</span></span><span class="line"><span class="cl">Latexmk: biber found malformed bcf file for &#39;QWERTY&#39;.
+</span></span><span class="line"><span class="cl">  I&#39;ll ignore error, and delete any bbl file.
+</span></span><span class="line"><span class="cl">Rule &#39;pdflatex&#39;: File changes, etc:
+</span></span><span class="line"><span class="cl">   Non-existent destination files:
+</span></span><span class="line"><span class="cl">      &#39;QWERTY.pdf&#39;
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">Run number 1 of rule &#39;pdflatex&#39;
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
+</span></span><span class="line"><span class="cl">Latexmk: applying rule &#39;pdflatex&#39;...
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">Running &#39;pdflatex  -halt-on-error -interaction=batchmode -recorder  &#34;QWERTY.tex&#34;&#39;
+</span></span><span class="line"><span class="cl">------------
+</span></span><span class="line"><span class="cl">This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
+</span></span><span class="line"><span class="cl">restricted \write18 enabled.
+</span></span><span class="line"><span class="cl">entering extended mode
+</span></span><span class="line"><span class="cl">Latexmk: Non-existent bbl file &#39;QWERTY.bbl&#39;
+</span></span><span class="line"><span class="cl">No file QWERTY.bbl.
+</span></span><span class="line"><span class="cl">=== TeX engine is &#39;pdfTeX&#39;
+</span></span><span class="line"><span class="cl">Biber error: [427] Utils.pm:180&gt; ERROR - QWERTY.bcf is malformed, last biblatex run probably failed. Deleted QWERTY.bbl
+</span></span><span class="line"><span class="cl">Latexmk: Errors, so I did not complete making targets
+</span></span><span class="line"><span class="cl">Collected error summary (may duplicate other messages):
+</span></span><span class="line"><span class="cl">  pdflatex: Command for &#39;pdflatex&#39; gave return code 1
+</span></span><span class="line"><span class="cl">      Refer to &#39;QWERTY.log&#39; for details
+</span></span><span class="line"><span class="cl">Latexmk: Use the -f option to force complete processing,
+</span></span><span class="line"><span class="cl">unless error was exceeding maximum runs of latex/pdflatex.
+</span></span><span class="line"><span class="cl">! LaTeX Error: Command \c@author already defined.
+</span></span><span class="line"><span class="cl">               Or name \end... illegal, see p.192 of the manual.
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">Error: Failed to compile QWERTY.tex. See QWERTY.log for more info.
+</span></span><span class="line"><span class="cl">Execution halted
+</span></span></code></pre></div><p>Balls. I searched this error for a while and found: 1) update LaTeX: check, 2) figure out why your bibtext was messed up: check &hellip; tried with only one reference and still crashed, and 3) other stuff I don&rsquo;t remember. When I tried a separate markdown, thinking the one that I had open was the problem, I got the actual citation codes, rather than the text:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Researchers discovered that online data collection can be advantageous over laboratory and paper data collection, as it is often cheaper and more efficient (Ilieva2001;Schuldt1994;Reips2012)
+</span></span></code></pre></div><p>I thought maybe it was my computer, so one of my coauthors tried it. Same as the first error. Maybe it&rsquo;s a mac thing? Another coauthor with a mac, got the second error. I&rsquo;m sad to say that I don&rsquo;t have an answer for either of these problems - from the looks of it, I&rsquo;m following the guidelines suggested, but both problems pop up. I would love to hear if you know why.</p>
 <p>Enter <a href="https://psychology.missouri.edu/people/haaf">Julia</a>! Julia helped find a work around for the issue. In the head of your markdown file (note I used some &hellip; to shorten some of what papaja does for you automatically):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">...
-bibliography      : [&#34;q_bib.bib&#34;]
-...
-output            : papaja::apa6_pdf
-replace_ampersands: yes
-csl               : apa6.csl
----
-</code></pre></div><p>And then be sure to put the apa6.csl in the same folder as your markdown. Now, you can confuse people with all your Buchanans, Logans, Cohens, and Fritzs. Or, in our case, we can make Reviewer #2 happy and annoy the copy editor.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">bibliography      : [&#34;q_bib.bib&#34;]
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">output            : papaja::apa6_pdf
+</span></span><span class="line"><span class="cl">replace_ampersands: yes
+</span></span><span class="line"><span class="cl">csl               : apa6.csl
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>And then be sure to put the apa6.csl in the same folder as your markdown. Now, you can confuse people with all your Buchanans, Logans, Cohens, and Fritzs. Or, in our case, we can make Reviewer #2 happy and annoy the copy editor.</p>
 <p><em>Note:</em> I had to update papaja to get this solution to work, as the replace ampersands did not work the first time.</p>
 
 
@@ -436,7 +436,7 @@ csl               : apa6.csl
           <div class="disqus-comments">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -533,15 +533,15 @@ csl               : apa6.csl
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.102.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script src="https://doomlab.github.io/js/main.js"></script>

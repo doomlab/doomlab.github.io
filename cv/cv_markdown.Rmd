@@ -14,7 +14,7 @@ fontawesome: yes
 email: ebuchanan@harrisburgu.edu
 github: doomlab
 web: www.aggieerin.com
-updated: no
+updated: yes
 
 keywords: R Markdown, academic CV, template
 
@@ -386,46 +386,35 @@ Principal Investigator. Measuring the Lexicon: Computational Approaches to Quant
 
 Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.00
 
-Principal Investigator. Using Language to Understand Congressional Voting Behaviors. 
-National Science Foundation (2014, submitted). $176,098.
+Principal Investigator. Using Language to Understand Congressional Voting Behaviors. National Science Foundation (2014, submitted). $176,098.
 
-Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM's 
-Watson Group. (2014). Applied for access to database.
+Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM's Watson Group. (2014). Applied for access to database.
 
-Principal Investigator. Counting tweets: How social media word frequency enhances our 
-understanding of cognition. Twitter Grant Competition. (2014, submitted). Applied for access to database.
+Principal Investigator. Counting tweets: How social media word frequency enhances our understanding of cognition. Twitter Grant Competition. (2014, submitted). Applied for access to database.
 
-Principal Investigator. Memory as a Complex System: Creating Online, Dynamic 
-Semantic Memory Models. James S. McDonnell Foundation Scholar Award in 
-Complex Systems. (2014, submitted). $450,000.
+Principal Investigator. Memory as a Complex System: Creating Online, Dynamic  Semantic Memory Models. James S. McDonnell Foundation Scholar Award in Complex Systems. (2014, submitted). $450,000.
 
-Principal Investigator. Online course development grant. Online course development 
-stipend. Missouri State University Provost's Office. (1/1/14-5/15/14). $2,400.
-Principal Investigator. Graduate Recruitment Grant. Missouri State University Graduate 
-College. (1/1/14-12/15/14). $1,800.
+Principal Investigator. Online course development grant. Online course development stipend. Missouri State University Provost's Office. (1/1/14-5/15/14). $2,400.
 
-Principal Investigator. EXP: Supplemental Instruction: Bridging Technology and Student 
-Academic Success Programs. National Science Foundation (2012, submitted). 
-$526,809.
+Principal Investigator. Graduate Recruitment Grant. Missouri State University Graduate  College. (1/1/14-12/15/14). $1,800.
 
-Principal Investigator. We Are All Biased.  Fixing Judgments of Associative Memory.  
-Missouri State University Graduate College's Summer Research Stipend. (6/1/2012-8-15-2012). $6000. 
+Principal Investigator. EXP: Supplemental Instruction: Bridging Technology and Student Academic Success Programs. National Science Foundation (2012, submitted). $526,809.
 
-Principal Investigator. Investigating Effective Supplemental Instruction to Improve 
-Student Success. Missouri State University's Dean's Summer Research Stipend. 
-(5/31/2011-9/1/2011). $6000.
+Principal Investigator. We Are All Biased. Fixing Judgments of Associative Memory. Missouri State University Graduate College's Summer Research Stipend. (6/1/2012-8-15-2012). $6,000. 
 
-Principal Investigator. Cheating at Scrabble: An Online Database of Word Information. 
-Missouri State University's Faculty Research Grant. (1/2011-1/2012). $7095.
+Principal Investigator. Investigating Effective Supplemental Instruction to Improve Student Success. Missouri State University's Dean's Summer Research Stipend. (5/31/2011-9/1/2011). $6,000.
 
-Principal Investigator: Understanding Language Learning in the Brain: Using EEG Brain 
-Computer Interface to Improve Development. Honda Initiative (2009, submitted). 
+Principal Investigator. Cheating at Scrabble: An Online Database of Word Information. Missouri State University's Faculty Research Grant. (1/2011-1/2012). $7,095.
+
+Principal Investigator: Understanding Language Learning in the Brain: Using EEG Brain Computer Interface to Improve Development. Honda Initiative (2009, submitted). 
 
 ## Applied Statistics
 
-Principal Investigator. Blueprint for the Enabling QUantitative Interpretation of Patient Preference Estimate Data (EQUIPPED) Database. Pfizer. $43,953. 
+Principal Investigator. Customized Response to Treatment Feedback for Patients with Migraine and their Providers. Agency for Health Care Research and Quality. (2022, submitted). $1,015,699. 
 
-Principal Investigator. Building inclusive open data infrastructure for a recovering pandemic world. Trans-Atlantic Platform Social Sciences and Humanities. $199,733.
+Principal Investigator. Blueprint for the Enabling QUantitative Interpretation of Patient Preference Estimate Data (EQUIPPED) Database. Pfizer. (2021, submitted). $43,953. 
+
+Principal Investigator. Building inclusive open data infrastructure for a recovering pandemic world. Trans-Atlantic Platform Social Sciences and Humanities. (2021, submitted). $199,733.
 
 Principal Investigator. Amazon Response Grants for Non-Profits (in partnership with the Psychological Science Accelerator). (04/01/2020-09/01/2020). $1,200.
 
@@ -437,18 +426,15 @@ Statistician. Trajectories of psychological functioning and pandemic preparednes
 
 Principal Investigator. Creating Enhanced Shared Decision Making through a Migraine Tracking Application. Presidential Research Grant at Harrisburg University. (01/01/2020-01/01/2021). $19,180.
 
-Principal Investigator. Development of a Headache Meaningful Response Measure 
-Using a Patient Guided Approach. National Headache Foundation (04/01/2018-04/01/2019). $99,592. 
+Principal Investigator. Development of a Headache Meaningful Response Measure  Using a Patient Guided Approach. National Headache Foundation (04/01/2018-04/01/2019). $99,592. 
 
 Statistician. Utilization of adaptive patient-centered electronic behavioral feedback intervention for the prevention of transformation from episodic to chronic migraine. Pragmatic Clinical Studies funded by the PCORI Foundation. (2014, submitted). $2,000,000.
 
 Statistician. Meaning and Purpose in Life as it Relates to Suicidality in Adult Inpatients with Serious Mental Illness. American Foundation for Suicide Prevention. (2013, submitted). $30,000.
 
-Statistician. Predictors of Subjective Well-being Among Survivors of the Armed Conflict 
-in Colombia: a Positive Psychology View. Psychology Beyond Borders. (2013, submitted). $8,156.38.
+Statistician. Predictors of Subjective Well-being Among Survivors of the Armed Conflict in Colombia: a Positive Psychology View. Psychology Beyond Borders. (2013, submitted). $8,156.38.
 
-Principal Investigator. Visualizing Statistics: Developing Interactive Tools to Improve 
-Statistics and Research Learning Outcomes. Faculty Teaching and Learning Center Curriculum Grant. (1/1/14-8/15/14). $4,500.
+Principal Investigator. Visualizing Statistics: Developing Interactive Tools to Improve Statistics and Research Learning Outcomes. Faculty Teaching and Learning Center Curriculum Grant. (1/1/14-8/15/14). $4,500.
 
 Principal Investigator. Using Item Response Theory to Explore Scale Psychometrics. 
 Missouri State University's Faculty Research Grant. (1/1/14-12/31/14). $2,040.
@@ -456,11 +442,9 @@ Missouri State University's Faculty Research Grant. (1/1/14-12/31/14). $2,040.
 Principal Investigator. A solution to the file drawer problem: Alternative analyses to null hypothesis testing.  National Science Foundation (2013, submitted). Up to 
 $1,000,000.
 
-Principal Investigator. Luella Stuck Cline resources award for textbook purchase. 
-Missouri State University Library Funding. (2012, submitted). $366.
+Principal Investigator. Luella Stuck Cline resources award for textbook purchase. Missouri State University Library Funding. (2012, submitted). $366.
 
-Co-Principal Investigator: II-NEW: An Infrastructure for Distributed Research on 
-Neurophysiology and Brain-Computer Interface. National Science Foundation (2010, resubmitted).
+Co-Principal Investigator: II-NEW: An Infrastructure for Distributed Research on  Neurophysiology and Brain-Computer Interface. National Science Foundation (2010, resubmitted).
 
 ### Presentations
 
@@ -476,13 +460,13 @@ Neurophysiology and Brain-Computer Interface. National Science Foundation (2010,
 
 ### Graduate Students
 
-HU, 2020-current | Laurel Lord | TBD 
+HU, 2020-current | Laurel Lord | Data Science Discussions: Cross-lingual frameworks and natural annotation of crowdsourced online dictionaries 
 
-HU, 2019-current | Phillip Grim II | TBD 
+HU, 2019-current | Phillip Grim II | Word Space in Many Languages:  Discovering the Optimal Dimensions, Algorithm, and Window Size for Building Word Vectors in 59 Languages  
 
-HU, 2019-current | Jonathan Korn | TBD 
+HU, 2019-2022 | Jonathan Korn | Deep Text Mining Approaches for Text Classification 
 
-MSU, 2018-current | Arielle Cunningham | TBD 
+MSU, 2018-current | Arielle Cunningham | The Effect of Brief Mindfulness Meditation on Mind Wandering Content 
 
 MSU, 2017-2019 | Addie Wikowsky | Working memory, expertise, and fluid intelligence
 

@@ -88,19 +88,17 @@
   <meta name="twitter:title" content="formr Round 3: No nginx Required" />
   <meta name="twitter:description" content="Alright folks! I am back with more installation guides. I&rsquo;ve installed formr so many times at this point &hellip; since my first post, opencpu has updated to R 4&#43;, and I&rsquo;ve found a way to …">
   <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.91.2" />
-  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <meta name="generator" content="Hugo 0.102.3" />
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
-
-
 
 
   </head>
@@ -268,6 +266,7 @@
 
   <header class="header-section ">
     
+    
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
@@ -282,7 +281,7 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 25, 2020
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
@@ -303,6 +302,7 @@
         </div>
       </div>
     </div>
+  
   </header>
 
 
@@ -313,40 +313,40 @@
       <article role="main" class="blog-post">
         <p>Alright folks! I am back with more installation guides. I&rsquo;ve installed formr so many times at this point &hellip; since my first post, opencpu has updated to R 4+, and I&rsquo;ve found a way to not use nginx. Which is good news, since it often conflicts with also running apache. I&rsquo;m going to leave the old guides up because maybe they can help someone figure out their issues, but here goes with the newest guide.</p>
 <p>This server is a clean install of Ubuntu 18.04. If all goes well, it also should work on Ubuntu 20, which is what I did for a temporary server. First step is always to update:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get update
-sudo apt-get upgrade
-</code></pre></div><h2 id="install-opencpu">Install <code>OpenCPU</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get upgrade
+</span></span></code></pre></div><h2 id="install-opencpu">Install <code>OpenCPU</code></h2>
 <p>Check out the <a href="https://github.com/opencpu/opencpu">installation guide</a> for OpenCPU and install it. I will note they have not updated their GitHub page as of today, so here&rsquo;s an <a href="https://www.opencpu.org/download.html">alternative link</a> that appears to be updated more. Notice this is 2.2, which does include R4+.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># Requires Ubuntu 20.04 (Focal) or 18.04 (Bionic)
-sudo add-apt-repository -y ppa:opencpu/opencpu-2.2
-sudo apt-get update 
-sudo apt-get upgrade
-
-# Installs OpenCPU server
-sudo apt-get install -y opencpu-server
-# Done! Open http://yourhost/ocpu in your browser
-</code></pre></div><p>I set up the mail information to send from gmail.com, as that’s the email I wanted to tie the instance to:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Requires Ubuntu 20.04 (Focal) or 18.04 (Bionic)
+</span></span><span class="line"><span class="cl">sudo add-apt-repository -y ppa:opencpu/opencpu-2.2
+</span></span><span class="line"><span class="cl">sudo apt-get update 
+</span></span><span class="line"><span class="cl">sudo apt-get upgrade
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Installs OpenCPU server
+</span></span><span class="line"><span class="cl">sudo apt-get install -y opencpu-server
+</span></span><span class="line"><span class="cl"># Done! Open http://yourhost/ocpu in your browser
+</span></span></code></pre></div><p>I set up the mail information to send from gmail.com, as that’s the email I wanted to tie the instance to:</p>
 <p><img src="https://www.aggieerin.com/post/step4.png" alt="step4"></p>
 <p><img src="https://www.aggieerin.com/post/step5.png" alt="step5"></p>
 <p>Once it&rsquo;s done, restart apache:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo systemctl restart apache2
-</code></pre></div><p>You should now see the ocpu test page at http(s)://yourwebsite/ocpu - where yourwebsite is the IP address or name of your website.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><p>You should now see the ocpu test page at http(s)://yourwebsite/ocpu - where yourwebsite is the IP address or name of your website.</p>
 <h2 id="deal-with-r">Deal with R</h2>
 <p>Now that we have the opencpu, it has installed R for us. Let&rsquo;s use:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo -i R
-</code></pre></div><p>To enter R as the administrator. Can I just say I love this version of R: <code>R version 4.0.3 (2020-10-10) -- &quot;Bunny-Wunnies Freak Out&quot;</code>. Now, let&rsquo;s install packages and other things we need to run formr. Start with devtools, but watch for errors, as you may have to exit R and install Ubuntu packages to get the R packages to install. The most common error you will see is <code>non-zero exit status</code> which is jargon for &ldquo;this didn&rsquo;t work, maybe I&rsquo;ll give you a hint&rdquo;. Many package developers say something like &ldquo;install X package&rdquo; somewhere in the error output (bless you!), so that&rsquo;s what to look for.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">install.packages(&#34;devtools&#34;)
-devtools::install_github(&#34;rubenarslan/formr&#34;)
-#recommended by formr, pander is definitely necessary
-install.packages(c(&#34;codebook&#34;, &#34;tidyverse&#34;, &#34;pander&#34;))
-</code></pre></div><p>Not sure what all to install? Other issues? Check out <a href="https://github.com/rubenarslan/formr.org/wiki/Packages-on-OpenCPU">this guide</a> which talks about issues with OpenCPU, R packages, and what formr.org has installed.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo -i R
+</span></span></code></pre></div><p>To enter R as the administrator. Can I just say I love this version of R: <code>R version 4.0.3 (2020-10-10) -- &quot;Bunny-Wunnies Freak Out&quot;</code>. Now, let&rsquo;s install packages and other things we need to run formr. Start with devtools, but watch for errors, as you may have to exit R and install Ubuntu packages to get the R packages to install. The most common error you will see is <code>non-zero exit status</code> which is jargon for &ldquo;this didn&rsquo;t work, maybe I&rsquo;ll give you a hint&rdquo;. Many package developers say something like &ldquo;install X package&rdquo; somewhere in the error output (bless you!), so that&rsquo;s what to look for.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">install.packages(&#34;devtools&#34;)
+</span></span><span class="line"><span class="cl">devtools::install_github(&#34;rubenarslan/formr&#34;)
+</span></span><span class="line"><span class="cl">#recommended by formr, pander is definitely necessary
+</span></span><span class="line"><span class="cl">install.packages(c(&#34;codebook&#34;, &#34;tidyverse&#34;, &#34;pander&#34;))
+</span></span></code></pre></div><p>Not sure what all to install? Other issues? Check out <a href="https://github.com/rubenarslan/formr.org/wiki/Packages-on-OpenCPU">this guide</a> which talks about issues with OpenCPU, R packages, and what formr.org has installed.</p>
 <p>Exit R:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">quit()
-</code></pre></div><p>(I&rsquo;m already suspicious because I didn&rsquo;t get any errors!)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">quit()
+</span></span></code></pre></div><p>(I&rsquo;m already suspicious because I didn&rsquo;t get any errors!)</p>
 <h2 id="edit-configurations">Edit Configurations</h2>
 <p>Open the configuration file for OpenCPU:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo nano /etc/opencpu/server.conf
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /etc/opencpu/server.conf
+</span></span></code></pre></div><ul>
 <li>Edit the <code>key_length</code> setting from 13 to 50.</li>
 <li>Also set the following packages to <code>&quot;preload&quot;: [&quot;stringr&quot;, &quot;dplyr&quot;,&quot;knitr&quot;, &quot;lubridate&quot;,&quot;formr&quot;, &quot;rmarkdown&quot;]</code>.</li>
 <li>Use <code>control + X</code> to save and exit.</li>
@@ -354,59 +354,59 @@ install.packages(c(&#34;codebook&#34;, &#34;tidyverse&#34;, &#34;pander&#34;))
 <p>I will note here - I am completely skipping the opencpu-cache step, which is what the nginx requirements were for. If you want to restart apache to make sure everything is still running, use: <code>sudo service apache2 restart</code>.</p>
 <h2 id="other-system-requirements">Other System Requirements</h2>
 <p>Specifically for formr, use the following code for the Ubuntu packages necessary:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install git php apache2 mysql-server composer php-curl php-fpm php-mbstring php-mysql php-zip php-xml php-gd php-intl php-xml pandoc libsodium-dev
-</code></pre></div><p>Use <a href="http://supervisord.org/">Supervisor</a> to control email notifications and other session monitoring. Use the following code to install:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt install python-pip 
-pip install supervisor
-</code></pre></div><p>Apache needs the rewrite mod enabled, which can be added by running the following:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo a2enmod rewrite
-sudo systemctl restart apache2
-</code></pre></div><p>Allow overrides for the virtual machine. First, open the configuration file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo nano /etc/apache2/sites-enabled/000-default.conf
-</code></pre></div><p>Put the following block on the end of the default configuration file (after <code>&lt;/Virtualhost&gt;</code>) for Apache2 using:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">	&lt;Directory /var/www/html&gt;
-		Options Indexes FollowSymlinks MultiViews
-		AllowOverride All
-		Order allow,deny
-		allow from all
-
-	&lt;/Directory&gt;
-</code></pre></div><h2 id="install-formr-from-github">Install formr from GitHub</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get install git php apache2 mysql-server composer php-curl php-fpm php-mbstring php-mysql php-zip php-xml php-gd php-intl php-xml pandoc libsodium-dev
+</span></span></code></pre></div><p>Use <a href="http://supervisord.org/">Supervisor</a> to control email notifications and other session monitoring. Use the following code to install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install python-pip 
+</span></span><span class="line"><span class="cl">pip install supervisor
+</span></span></code></pre></div><p>Apache needs the rewrite mod enabled, which can be added by running the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo a2enmod rewrite
+</span></span><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><p>Allow overrides for the virtual machine. First, open the configuration file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /etc/apache2/sites-enabled/000-default.conf
+</span></span></code></pre></div><p>Put the following block on the end of the default configuration file (after <code>&lt;/Virtualhost&gt;</code>) for Apache2 using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	&lt;Directory /var/www/html&gt;
+</span></span><span class="line"><span class="cl">		Options Indexes FollowSymlinks MultiViews
+</span></span><span class="line"><span class="cl">		AllowOverride All
+</span></span><span class="line"><span class="cl">		Order allow,deny
+</span></span><span class="line"><span class="cl">		allow from all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	&lt;/Directory&gt;
+</span></span></code></pre></div><h2 id="install-formr-from-github">Install formr from GitHub</h2>
 <p>It&rsquo;s suggested you put formr in the <code>/var/www/</code> folder. Normally websites go in the <code>/var/www/html</code> folder, but we will include a symbolic link (i.e. connection) to know it should show the formr installation, even though it&rsquo;s in a different folder. Use the following code to change folders and clone the GitHub folder.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cd /var/www/
-sudo git clone https://github.com/rubenarslan/formr.org.git
-</code></pre></div><p>Create the link between folders and fix access rights:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo ln -s /var/www/formr.org/webroot /var/www/html/formr 
-sudo chown -R www-data:www-data /var/www/formr.org
-</code></pre></div><p>Now that we have that installed, let&rsquo;s update application dependencies by using the following code:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cd formr.org #assumes you are still in /var/www/
-sudo composer install
-sudo composer update
-</code></pre></div><h2 id="the-sql-database">The SQL Database</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /var/www/
+</span></span><span class="line"><span class="cl">sudo git clone https://github.com/rubenarslan/formr.org.git
+</span></span></code></pre></div><p>Create the link between folders and fix access rights:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ln -s /var/www/formr.org/webroot /var/www/html/formr 
+</span></span><span class="line"><span class="cl">sudo chown -R www-data:www-data /var/www/formr.org
+</span></span></code></pre></div><p>Now that we have that installed, let&rsquo;s update application dependencies by using the following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd formr.org #assumes you are still in /var/www/
+</span></span><span class="line"><span class="cl">sudo composer install
+</span></span><span class="line"><span class="cl">sudo composer update
+</span></span></code></pre></div><h2 id="the-sql-database">The SQL Database</h2>
 <p>Login to the new SQL database using:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo mysql -uroot
-</code></pre></div><p>Next, run the following commands changing <code>EnterPassword</code> to your desired password. In SQL, each line ends with <code>;</code>, so you can run them one at a time if you want. NOte: this is a little updated from the original formr installation instructions because the MySQL syntax has changed a little bit.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-CREATE USER &#39;formr&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;EnterPassword&#39;;
-GRANT ALL PRIVILEGES ON formr.* TO formr@localhost;
-FLUSH PRIVILEGES;
-quit;
-</code></pre></div><p>Next, import the initial required database structure by running (remember change <code>EnterPassword</code>, but leave the -p there!):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mysql formr -uformr -pEnterPassword &lt; /var/www/formr.org/sql/schema.sql
-</code></pre></div><p>Do the same procedure to apply patches 29 and 30, as required currently. Note that by doing just -p, you will be prompted to enter your password.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/029_run_expire_cookie_setting.sql
-
-mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sql
-</code></pre></div><h2 id="configuration-steps">Configuration Steps</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo mysql -uroot
+</span></span></code></pre></div><p>Next, run the following commands changing <code>EnterPassword</code> to your desired password. In SQL, each line ends with <code>;</code>, so you can run them one at a time if you want. NOte: this is a little updated from the original formr installation instructions because the MySQL syntax has changed a little bit.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+</span></span><span class="line"><span class="cl">CREATE USER &#39;formr&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;EnterPassword&#39;;
+</span></span><span class="line"><span class="cl">GRANT ALL PRIVILEGES ON formr.* TO formr@localhost;
+</span></span><span class="line"><span class="cl">FLUSH PRIVILEGES;
+</span></span><span class="line"><span class="cl">quit;
+</span></span></code></pre></div><p>Next, import the initial required database structure by running (remember change <code>EnterPassword</code>, but leave the -p there!):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql formr -uformr -pEnterPassword &lt; /var/www/formr.org/sql/schema.sql
+</span></span></code></pre></div><p>Do the same procedure to apply patches 29 and 30, as required currently. Note that by doing just -p, you will be prompted to enter your password.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/029_run_expire_cookie_setting.sql
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sql
+</span></span></code></pre></div><h2 id="configuration-steps">Configuration Steps</h2>
 <h3 id="configuration-folder">Configuration Folder</h3>
 <p>Duplicate <em>(don&rsquo;t rename)</em> the folder <code>config-dist</code>, name it <code>config</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cd /var/www/formr.org/ #change to the right folder
-sudo cp -avr config-dist config #copy the folder
-</code></pre></div><p>You can type <code>ls</code> to show the folders in this formr.org folder if you want to make sure both folders are still there.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /var/www/formr.org/ #change to the right folder
+</span></span><span class="line"><span class="cl">sudo cp -avr config-dist config #copy the folder
+</span></span></code></pre></div><p>You can type <code>ls</code> to show the folders in this formr.org folder if you want to make sure both folders are still there.</p>
 <h3 id="settingsphp">Settings.php</h3>
 <p>Open the configuration file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo nano /var/www/formr.org/config/settings.php
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /var/www/formr.org/config/settings.php
+</span></span></code></pre></div><ul>
 <li>Here&rsquo;s a list of everything I changed:
 <ul>
 <li>login =&gt; &lsquo;formr&rsquo;</li>
@@ -422,15 +422,15 @@ sudo cp -avr config-dist config #copy the folder
 </ul>
 <h3 id="set-paths-and-permissions">Set paths and permissions</h3>
 <p>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>. Use the following code (note: 777 necessary, I have tested it!):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo chmod -R 777 /tmp
-sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp
-</code></pre></div><p>If you are using gmail, you may need to turn OFF two factor authentication, and ON use less secure apps. I have a special gmail just for this stuff for that very reason.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo chmod -R 777 /tmp
+</span></span><span class="line"><span class="cl">sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp
+</span></span></code></pre></div><p>If you are using gmail, you may need to turn OFF two factor authentication, and ON use less secure apps. I have a special gmail just for this stuff for that very reason.</p>
 <h3 id="cron-jobs">Cron Jobs</h3>
 <p>To install the formr crontab in a linux system:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo nano /var/www/formr.org/config/formr_crontab
-</code></pre></div><p>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code>. Use <code>ctrl + X</code> to exit and then run:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr
-</code></pre></div><p>Now, restart apache one more time for good measure: <code>sudo systemctl restart apache2</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /var/www/formr.org/config/formr_crontab
+</span></span></code></pre></div><p>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code>. Use <code>ctrl + X</code> to exit and then run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr
+</span></span></code></pre></div><p>Now, restart apache one more time for good measure: <code>sudo systemctl restart apache2</code>.</p>
 <h2 id="set-yourself-up">Set Yourself Up</h2>
 <ul>
 <li>Go to the site and register yourself as a user.</li>
@@ -442,32 +442,32 @@ sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SHOW DATABASES;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| formr              |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-5 rows in set (0.00 sec)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; SHOW DATABASES;
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl">| Database           |
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl">| information_schema |
+</span></span><span class="line"><span class="cl">| formr              |
+</span></span><span class="line"><span class="cl">| mysql              |
+</span></span><span class="line"><span class="cl">| performance_schema |
+</span></span><span class="line"><span class="cl">| sys                |
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl">5 rows in set (0.00 sec)
+</span></span></code></pre></div><ul>
 <li>Select the formr database by using <code>USE formr;</code>.</li>
 <li>To see what&rsquo;s in that database use <code>SHOW TABLES;</code>. I&rsquo;m not showing the output here because it&rsquo;s long, but we are likely interested here <code>survey_users</code>. When you register, it sticks you into that table.</li>
 <li>Use <code>DESCRIBE survey_users;</code> to see the columns in that table.</li>
 <li>Use <code>SELECT * FROM survey_users;</code> to see all the data in that table.</li>
 <li>Use <code>SELECT admin FROM survey_users;</code> to show that you are not an admin:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT admin FROM survey_users;
-+-------+
-| admin |
-+-------+
-|     0 |
-+-------+
-1 row in set (0.00 sec)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; SELECT admin FROM survey_users;
+</span></span><span class="line"><span class="cl">+-------+
+</span></span><span class="line"><span class="cl">| admin |
+</span></span><span class="line"><span class="cl">+-------+
+</span></span><span class="line"><span class="cl">|     0 |
+</span></span><span class="line"><span class="cl">+-------+
+</span></span><span class="line"><span class="cl">1 row in set (0.00 sec)
+</span></span></code></pre></div><ul>
 <li>To make yourself an admin, run <code>UPDATE survey_users SET admin = 100 WHERE id = 1;</code> (the assumption here is that you are the only row in the table and are therefore, id number 1).</li>
 <li>You should get a message that you updated your row but you can check it out with <code>SELECT admin FROM survey_users;</code> to make sure it ran.</li>
 <li>Now, when I log into my formr instance, I have rights to make surveys and manage users!</li>
@@ -509,7 +509,7 @@ sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp
           <div class="disqus-comments">
             <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -606,15 +606,15 @@ sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.91.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.102.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script src="https://doomlab.github.io/js/main.js"></script>

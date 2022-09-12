@@ -26,7 +26,7 @@ We create a really nice R function to help you detect low quality data, which yo
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
       <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
- Bayes Factors and p-values follow a power function, as we expected.</description>
+Bayes Factors and p-values follow a power function, as we expected.</description>
     </item>
     
   </channel>

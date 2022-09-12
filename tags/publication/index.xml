@@ -16,8 +16,8 @@
       <guid>https://doomlab.github.io/post/2019-in-review/</guid>
       <description>The Year of the Thesis!
 Just wanted to highlight several publications from this year, which were mostly theses from some fabulous young researchers:
- Scofield, J.E., Kostic, B., &amp;amp; Buchanan, E.M. (2019). How the presence of others affects desirability judgments in heterosexual and homosexual participants. Archives of Sexual Behavior, X, XX–XX. doi: 10.1007/s10508-019-01516-w
- Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019). Investigating the interaction of direct and indirect relation on memory judgments and retrieval.</description>
+Scofield, J.E., Kostic, B., &amp;amp; Buchanan, E.M. (2019). How the presence of others affects desirability judgments in heterosexual and homosexual participants. Archives of Sexual Behavior, X, XX–XX. doi: 10.1007/s10508-019-01516-w
+Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019). Investigating the interaction of direct and indirect relation on memory judgments and retrieval.</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
       <author>buchananlab@gmail.com (aggieerin.com)</author>
       <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
       <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
- Bayes Factors and p-values follow a power function, as we expected.</description>
+Bayes Factors and p-values follow a power function, as we expected.</description>
     </item>
     
   </channel>
