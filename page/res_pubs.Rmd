@@ -3,6 +3,12 @@ comments: false
 pagetitle: "Research Publications"
 ---
 
+<style>
+.table-hover > tbody > tr:hover { 
+  background-color: #bebcff;
+}
+</style>
+
 ## Publications
 
 ```{r print-pubs, include = FALSE}
@@ -106,7 +112,7 @@ library(kableExtra)
 
 *Note:* \* indicate undergraduate authors, + graduate authors, $ both undergraduate and graduate
 
-`r kable(curated[ curated$pubtype == "package", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "package", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
 
 See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny apps and their help guides. 
 
@@ -114,11 +120,11 @@ See [Shiny Page](https://www.aggieerin.com/shiny/) for a complete list of Shiny 
 
 #### Psycholinguistics, Cognitive Science
 
-`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
 
 #### Applied Statistics
 
-`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "published" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
 
 ### Registered Reports
 
@@ -126,19 +132,19 @@ These articles have been accepted as a registered report, but have not been comp
 
 #### Psycholinguistics, Cognitive Science
 
-`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "registered" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "registered" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
 
 #### Applied Statistics
 
-`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "registered" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "registered" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
 
 ### Preprints
 
 #### Psycholinguistics, Cognitive Science
 
-`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "preprint" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "preprint" & curated$category == "psycho", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
 
 
 #### Applied Statistics
 
-`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "preprint" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("striped", "hover"))`
+`r kable(curated[ curated$pubtype == "article" & curated$pubstatus == "preprint" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link")) %>% kable_styling(bootstrap_options = c("hover"))`
