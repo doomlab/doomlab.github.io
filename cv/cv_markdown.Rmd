@@ -1,23 +1,20 @@
 ---
-output: 
+title: "CV"
+author: "Erin M. Buchanan"
+output:
   pdf_document:
     latex_engine: pdflatex
-    template: svm-latex-cv.tex
+    template: "svm-latex-cv.tex"
 geometry: margin=1in
-
-title: "CV"
-author: Erin M. Buchanan
-
-jobtitle: "Professor of Cognitive Analytics"
-address: "Harrisburg University of Science and Technology · 326 Market St. · Harrisburg, PA 17101"
+jobtitle: Professor of Cognitive Analytics
+address: Harrisburg University of Science and Technology · 326 Market St. · Harrisburg,
+  PA 17101
 fontawesome: yes
 email: ebuchanan@harrisburgu.edu
 github: doomlab
 web: www.aggieerin.com
 updated: yes
-
 keywords: R Markdown, academic CV, template
-
 fontfamily: mathpazo
 fontfamilyoptions: sc, osf
 fontsize: 11pt
