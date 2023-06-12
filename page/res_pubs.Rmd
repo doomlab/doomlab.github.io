@@ -15,7 +15,7 @@ pagetitle: "Research Publications"
 library(readxl)
 curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
   
-  curated$citation = NA
+  curated$citation = NA 
   
   for (i in 1:nrow(curated)){
     
