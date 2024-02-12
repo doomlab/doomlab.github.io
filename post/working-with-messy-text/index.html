@@ -94,7 +94,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.111.3">
+  <meta name="generator" content="Hugo 0.120.4">
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -331,11 +331,11 @@ Anyways! The context of this project is that we are developing a dictionary of w
 <li>Stemming (affixes)</li>
 </ul>
 <p>Now, don&rsquo;t hate on me folks, but I love a good loop. I could probably do this with the <code>apply</code> family, but I didn&rsquo;t:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; ##stem the data library(corpus) was loaded earlier
-</span></span><span class="line"><span class="cl">&gt; for (i in 1:nrow(noout1)) {
-</span></span><span class="line"><span class="cl">+   noout1$Q27[i] = paste(unlist(
-</span></span><span class="line"><span class="cl">+     text_tokens(noout1$Q27[i], stemmer = &#34;en&#34;)), collapse = &#34; &#34;)
-</span></span><span class="line"><span class="cl">+ }
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="c1">##stem the data library(corpus) was loaded earlier</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">noout1</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>   <span class="n">noout1</span><span class="o">$</span><span class="n">Q27</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">paste</span><span class="p">(</span><span class="n">unlist</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>     <span class="n">text_tokens</span><span class="p">(</span><span class="n">noout1</span><span class="o">$</span><span class="n">Q27</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stemmer</span> <span class="o">=</span> <span class="s2">&#34;en&#34;</span><span class="p">)),</span> <span class="n">collapse</span> <span class="o">=</span> <span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span> <span class="p">}</span>
 </span></span></code></pre></div><p>Unpacking what this does:</p>
 <ul>
 <li>Loops over each participant&rsquo;s answers in Q27. I did this because <code>text_tokens</code> returns a list of lists, which I personally find troublesome to deal with, and I wanted to retain each persons answers in one cell.</li>
@@ -560,7 +560,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.120.4</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

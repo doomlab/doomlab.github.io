@@ -407,6 +407,10 @@ Principal Investigator: Understanding Language Learning in the Brain: Using EEG 
 
 ## Applied Statistics
 
+Principal Investigator. STAPLE - Science Tracking Across Project Lifespan. NASA ROSES. (10/01/2023-10/01/2024) $97,059. 
+
+Principal Investigator. Customized Response to Treatment Feedback for Patients with Migraine and their Providers. Pfizer. (2023, submitted). $470,456. 
+
 Principal Investigator. Customized Response to Treatment Feedback for Patients with Migraine and their Providers. Agency for Health Care Research and Quality. (2022, submitted). $1,015,699. 
 
 Principal Investigator. Blueprint for the Enabling QUantitative Interpretation of Patient Preference Estimate Data (EQUIPPED) Database. Pfizer. (2021, submitted). $43,953. 
@@ -463,7 +467,7 @@ HU, 2019-current | Phillip Grim II | Word Space in Many Languages:  Discovering 
 
 HU, 2019-2022 | Jonathan Korn | Deep Text Mining Approaches for Text Classification 
 
-MSU, 2018-current | Arielle Cunningham | The Effect of Brief Mindfulness Meditation on Mind Wandering Content 
+MSU, 2018-2022 | Arielle Cunningham | The Effect of Brief Mindfulness Meditation on Mind Wandering Content 
 
 MSU, 2017-2019 | Addie Wikowsky | Working memory, expertise, and fluid intelligence
 

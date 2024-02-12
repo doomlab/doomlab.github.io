@@ -94,7 +94,7 @@ Bayes Factors and p-values follow a power function, as we expected.">
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.111.3">
+  <meta name="generator" content="Hugo 0.120.4">
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -345,212 +345,212 @@ Bayes Factors and p-values follow a power function, as we expected.">
 </span></span></code></pre></div><p>These two pieces feed information back and forth depending on the user input to show either X on a real scale or X on a log scale.</p>
 <p>Code is included below, and when our server isn&rsquo;t being cranky, the app is <a href="http://aggieerin.com/shiny/altnhst/">here</a>. The code is pretty long due to the sheer number of graphs, so it&rsquo;s edited down to just the shiny parts - when you see ####GRAPH#### that&rsquo;s some kicking ggplot2 graphs you can view in our github repo.</p>
 <p>Check out the project OSF page <a href="https://osf.io/u9hf4/">here</a>. You can download the entire app from our <a href="https://github.com/doomlab/shiny-server">github repo</a> (also other shiny apps!).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">library(shiny)
-</span></span><span class="line"><span class="cl">library(ggplot2)
-</span></span><span class="line"><span class="cl">library(reshape)
-</span></span><span class="line"><span class="cl">library(plotly)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">library</span><span class="p">(</span><span class="n">reshape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">####remove data loading and reshaping####
+</span></span><span class="line"><span class="cl"><span class="c1">####remove data loading and reshaping####</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">####user interface####
-</span></span><span class="line"><span class="cl">ui &lt;- fluidPage (
+</span></span><span class="line"><span class="cl"><span class="c1">####user interface####</span>
+</span></span><span class="line"><span class="cl"><span class="n">ui</span> <span class="o">&lt;-</span> <span class="n">fluidPage</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  titlePanel(&#34;Valentine et al. Interactive Graphics&#34;),
+</span></span><span class="line"><span class="cl">  <span class="n">titlePanel</span><span class="p">(</span><span class="s2">&#34;Valentine et al. Interactive Graphics&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  sidebarLayout(
+</span></span><span class="line"><span class="cl">  <span class="n">sidebarLayout</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    ##sidebarpanel
-</span></span><span class="line"><span class="cl">    sidebarPanel(
+</span></span><span class="line"><span class="cl">    <span class="c1">##sidebarpanel</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sidebarPanel</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      br(),
+</span></span><span class="line"><span class="cl">      <span class="n">br</span><span class="p">(),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      ##put input boxes here
-</span></span><span class="line"><span class="cl">      tags$em(&#34;All Graphs:&#34;),
-</span></span><span class="line"><span class="cl">      selectInput(&#34;sizeselect&#34;, &#34;Select Effect Size:&#34;,
-</span></span><span class="line"><span class="cl">                  c(&#34;Negligible&#34; = &#34;None&#34;,
-</span></span><span class="line"><span class="cl">                    &#34;Small&#34; = &#34;Small&#34;,
-</span></span><span class="line"><span class="cl">                    &#34;Medium&#34; = &#34;Medium&#34;,
-</span></span><span class="line"><span class="cl">                    &#34;Large&#34; = &#34;Large&#34;)),
+</span></span><span class="line"><span class="cl">      <span class="c1">##put input boxes here</span>
+</span></span><span class="line"><span class="cl">      <span class="n">tags</span><span class="o">$</span><span class="n">em</span><span class="p">(</span><span class="s2">&#34;All Graphs:&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="n">selectInput</span><span class="p">(</span><span class="s2">&#34;sizeselect&#34;</span><span class="p">,</span> <span class="s2">&#34;Select Effect Size:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">c</span><span class="p">(</span><span class="s2">&#34;Negligible&#34;</span> <span class="o">=</span> <span class="s2">&#34;None&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Small&#34;</span> <span class="o">=</span> <span class="s2">&#34;Small&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Medium&#34;</span> <span class="o">=</span> <span class="s2">&#34;Medium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Large&#34;</span> <span class="o">=</span> <span class="s2">&#34;Large&#34;</span><span class="p">)),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      tags$em(&#34;Percent Graphs:&#34;),
-</span></span><span class="line"><span class="cl">      selectInput(&#34;Nselect&#34;, &#34;Select N Scaling:&#34;,
-</span></span><span class="line"><span class="cl">                  c(&#34;N&#34; = &#34;N&#34;,
-</span></span><span class="line"><span class="cl">                    &#34;Log N&#34; = &#34;log&#34;)),
+</span></span><span class="line"><span class="cl">      <span class="n">tags</span><span class="o">$</span><span class="n">em</span><span class="p">(</span><span class="s2">&#34;Percent Graphs:&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="n">selectInput</span><span class="p">(</span><span class="s2">&#34;Nselect&#34;</span><span class="p">,</span> <span class="s2">&#34;Select N Scaling:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">c</span><span class="p">(</span><span class="s2">&#34;N&#34;</span> <span class="o">=</span> <span class="s2">&#34;N&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Log N&#34;</span> <span class="o">=</span> <span class="s2">&#34;log&#34;</span><span class="p">)),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      htmlOutput(&#34;slider_selector&#34;),
+</span></span><span class="line"><span class="cl">      <span class="n">htmlOutput</span><span class="p">(</span><span class="s2">&#34;slider_selector&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      tags$em(&#34;Comparison Graphs:&#34;),
+</span></span><span class="line"><span class="cl">      <span class="n">tags</span><span class="o">$</span><span class="n">em</span><span class="p">(</span><span class="s2">&#34;Comparison Graphs:&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      selectInput(&#34;graphselect&#34;, &#34;Select Graph:&#34;,
-</span></span><span class="line"><span class="cl">                  c(&#34;PCC - p&#34; = &#34;pccp&#34;,
-</span></span><span class="line"><span class="cl">                    &#34;PCC - BF&#34; = &#34;pccbf&#34;,
-</span></span><span class="line"><span class="cl">                    &#34;BF - p&#34; = &#34;bfp&#34;)),
+</span></span><span class="line"><span class="cl">      <span class="n">selectInput</span><span class="p">(</span><span class="s2">&#34;graphselect&#34;</span><span class="p">,</span> <span class="s2">&#34;Select Graph:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">c</span><span class="p">(</span><span class="s2">&#34;PCC - p&#34;</span> <span class="o">=</span> <span class="s2">&#34;pccp&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;PCC - BF&#34;</span> <span class="o">=</span> <span class="s2">&#34;pccbf&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;BF - p&#34;</span> <span class="o">=</span> <span class="s2">&#34;bfp&#34;</span><span class="p">)),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      sliderInput(&#34;bfrange&#34;, &#34;Log BF Range:&#34;,
-</span></span><span class="line"><span class="cl">                  min = -5, max = 600,
-</span></span><span class="line"><span class="cl">                  value = c(-5,600),
-</span></span><span class="line"><span class="cl">                  sep = &#34;&#34;,
-</span></span><span class="line"><span class="cl">                  step = 10),
+</span></span><span class="line"><span class="cl">      <span class="n">sliderInput</span><span class="p">(</span><span class="s2">&#34;bfrange&#34;</span><span class="p">,</span> <span class="s2">&#34;Log BF Range:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="nb">min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">value</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">600</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">sep</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">step</span> <span class="o">=</span> <span class="mi">10</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      sliderInput(&#34;prange&#34;, &#34;p Range:&#34;,
-</span></span><span class="line"><span class="cl">                  min = 0, max = 1,
-</span></span><span class="line"><span class="cl">                  value = c(0,1),
-</span></span><span class="line"><span class="cl">                  step = .01),
+</span></span><span class="line"><span class="cl">      <span class="n">sliderInput</span><span class="p">(</span><span class="s2">&#34;prange&#34;</span><span class="p">,</span> <span class="s2">&#34;p Range:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="nb">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">value</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">step</span> <span class="o">=</span> <span class="o">.</span><span class="mi">01</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      sliderInput(&#34;pccrange&#34;, &#34;PCC Range:&#34;,
-</span></span><span class="line"><span class="cl">                  min = 0, max = 1,
-</span></span><span class="line"><span class="cl">                  value = c(0,1),
-</span></span><span class="line"><span class="cl">                  step = .01)
+</span></span><span class="line"><span class="cl">      <span class="n">sliderInput</span><span class="p">(</span><span class="s2">&#34;pccrange&#34;</span><span class="p">,</span> <span class="s2">&#34;PCC Range:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="nb">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">value</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">step</span> <span class="o">=</span> <span class="o">.</span><span class="mi">01</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">    ), #close sidebar panel
+</span></span><span class="line"><span class="cl">    <span class="p">),</span> <span class="c1">#close sidebar panel</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    mainPanel(
+</span></span><span class="line"><span class="cl">    <span class="n">mainPanel</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">      tabsetPanel(
-</span></span><span class="line"><span class="cl">        tabPanel(&#34;Significant&#34;, plotOutput(&#34;sigpic&#34;),
-</span></span><span class="line"><span class="cl">                 br(),
-</span></span><span class="line"><span class="cl">                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-</span></span><span class="line"><span class="cl">        tabPanel(&#34;Non-Significant&#34;, plotOutput(&#34;nonpic&#34;),
-</span></span><span class="line"><span class="cl">                 br(),
-</span></span><span class="line"><span class="cl">                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-</span></span><span class="line"><span class="cl">        tabPanel(&#34;Omnibus Agreement&#34;, plotOutput(&#34;omniagree&#34;),
-</span></span><span class="line"><span class="cl">                 br(),
-</span></span><span class="line"><span class="cl">                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-</span></span><span class="line"><span class="cl">        tabPanel(&#34;Posthoc Agreement&#34;, plotOutput(&#34;postagree&#34;),
-</span></span><span class="line"><span class="cl">                 br(),
-</span></span><span class="line"><span class="cl">                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;)),
-</span></span><span class="line"><span class="cl">        tabPanel(&#34;Criterion Comparison&#34;, plotOutput(&#34;compare&#34;), 
-</span></span><span class="line"><span class="cl">                 br(),
-</span></span><span class="line"><span class="cl">                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;,br(), 
-</span></span><span class="line"><span class="cl">                          &#34;BF values have been log transformed to show the entire range of the data.&#34;)),
-</span></span><span class="line"><span class="cl">        tabPanel(&#34;3D Comparison&#34;, plotlyOutput(&#34;compare3d&#34;), 
-</span></span><span class="line"><span class="cl">                 br(),
-</span></span><span class="line"><span class="cl">                 helpText(&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;,br(), 
-</span></span><span class="line"><span class="cl">                          &#34;BF values have been log transformed to show the entire range of the data.&#34;))
-</span></span><span class="line"><span class="cl">      )
+</span></span><span class="line"><span class="cl">      <span class="n">tabsetPanel</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tabPanel</span><span class="p">(</span><span class="s2">&#34;Significant&#34;</span><span class="p">,</span> <span class="n">plotOutput</span><span class="p">(</span><span class="s2">&#34;sigpic&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">br</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">helpText</span><span class="p">(</span><span class="s2">&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tabPanel</span><span class="p">(</span><span class="s2">&#34;Non-Significant&#34;</span><span class="p">,</span> <span class="n">plotOutput</span><span class="p">(</span><span class="s2">&#34;nonpic&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">br</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">helpText</span><span class="p">(</span><span class="s2">&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tabPanel</span><span class="p">(</span><span class="s2">&#34;Omnibus Agreement&#34;</span><span class="p">,</span> <span class="n">plotOutput</span><span class="p">(</span><span class="s2">&#34;omniagree&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">br</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">helpText</span><span class="p">(</span><span class="s2">&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tabPanel</span><span class="p">(</span><span class="s2">&#34;Posthoc Agreement&#34;</span><span class="p">,</span> <span class="n">plotOutput</span><span class="p">(</span><span class="s2">&#34;postagree&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">br</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">helpText</span><span class="p">(</span><span class="s2">&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tabPanel</span><span class="p">(</span><span class="s2">&#34;Criterion Comparison&#34;</span><span class="p">,</span> <span class="n">plotOutput</span><span class="p">(</span><span class="s2">&#34;compare&#34;</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">                 <span class="n">br</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">helpText</span><span class="p">(</span><span class="s2">&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;</span><span class="p">,</span><span class="n">br</span><span class="p">(),</span> 
+</span></span><span class="line"><span class="cl">                          <span class="s2">&#34;BF values have been log transformed to show the entire range of the data.&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tabPanel</span><span class="p">(</span><span class="s2">&#34;3D Comparison&#34;</span><span class="p">,</span> <span class="n">plotlyOutput</span><span class="p">(</span><span class="s2">&#34;compare3d&#34;</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">                 <span class="n">br</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">helpText</span><span class="p">(</span><span class="s2">&#34;Complete dataset avaliable at: https://osf.io/u9hf4/&#34;</span><span class="p">,</span><span class="n">br</span><span class="p">(),</span> 
+</span></span><span class="line"><span class="cl">                          <span class="s2">&#34;BF values have been log transformed to show the entire range of the data.&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
 </span></span><span class="line"><span class="cl">      
-</span></span><span class="line"><span class="cl">    ) #close main panel 
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="c1">#close main panel </span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">  ) #close sidebar layout
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="c1">#close sidebar layout</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">) #close fluid page
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="c1">#close fluid page</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">####server functions####
-</span></span><span class="line"><span class="cl">server &lt;- function(input, output) {
+</span></span><span class="line"><span class="cl"><span class="c1">####server functions####</span>
+</span></span><span class="line"><span class="cl"><span class="n">server</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">  ####change the slider####
-</span></span><span class="line"><span class="cl">  output$slider_selector = renderUI({ 
+</span></span><span class="line"><span class="cl">  <span class="c1">####change the slider####</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output</span><span class="o">$</span><span class="n">slider_selector</span> <span class="o">=</span> <span class="n">renderUI</span><span class="p">({</span> 
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    if (input$Nselect == &#34;N&#34;) { minN = 10; maxN = 1000; stepN = 10}
-</span></span><span class="line"><span class="cl">    if (input$Nselect == &#34;log&#34;) { minN = round(log(10),1) 
-</span></span><span class="line"><span class="cl">                                  maxN = round(log(1000),1)
-</span></span><span class="line"><span class="cl">                                  stepN = .1}
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">Nselect</span> <span class="o">==</span> <span class="s2">&#34;N&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">minN</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">maxN</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span> <span class="n">stepN</span> <span class="o">=</span> <span class="mi">10</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">Nselect</span> <span class="o">==</span> <span class="s2">&#34;log&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">minN</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">log</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">                                  <span class="n">maxN</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">log</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                  <span class="n">stepN</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    sliderInput(&#34;xaxisrange&#34;, &#34;X-Axis Range:&#34;,
-</span></span><span class="line"><span class="cl">                min = minN, max = maxN,
-</span></span><span class="line"><span class="cl">                value = c(minN,maxN),
-</span></span><span class="line"><span class="cl">                sep = &#34;&#34;,
-</span></span><span class="line"><span class="cl">                round = -1,
-</span></span><span class="line"><span class="cl">                step = stepN)
-</span></span><span class="line"><span class="cl">  })
+</span></span><span class="line"><span class="cl">    <span class="n">sliderInput</span><span class="p">(</span><span class="s2">&#34;xaxisrange&#34;</span><span class="p">,</span> <span class="s2">&#34;X-Axis Range:&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">min</span> <span class="o">=</span> <span class="n">minN</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="n">maxN</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">value</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">minN</span><span class="p">,</span><span class="n">maxN</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sep</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">round</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">step</span> <span class="o">=</span> <span class="n">stepN</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
 </span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">   ####SIGNIFICANT EFFECTS####
-</span></span><span class="line"><span class="cl">   output$sigpic &lt;- renderPlot({
+</span></span><span class="line"><span class="cl">   <span class="c1">####SIGNIFICANT EFFECTS####</span>
+</span></span><span class="line"><span class="cl">   <span class="n">output</span><span class="o">$</span><span class="n">sigpic</span> <span class="o">&lt;-</span> <span class="n">renderPlot</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     graphdata = subset(long_graph, Significance==&#34;Sig&#34; &amp; Effect == input$sizeselect)
+</span></span><span class="line"><span class="cl">     <span class="n">graphdata</span> <span class="o">=</span> <span class="n">subset</span><span class="p">(</span><span class="n">long_graph</span><span class="p">,</span> <span class="n">Significance</span><span class="o">==</span><span class="s2">&#34;Sig&#34;</span> <span class="o">&amp;</span> <span class="n">Effect</span> <span class="o">==</span> <span class="n">input</span><span class="o">$</span><span class="n">sizeselect</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ##log N
-</span></span><span class="line"><span class="cl">     if (input$Nselect == &#34;log&#34;) { graphdata$N = log(graphdata$N) 
-</span></span><span class="line"><span class="cl">                                    xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+</span></span><span class="line"><span class="cl">     <span class="c1">##log N</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">Nselect</span> <span class="o">==</span> <span class="s2">&#34;log&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">graphdata</span><span class="o">$</span><span class="n">N</span> <span class="o">=</span> <span class="nb">log</span><span class="p">(</span><span class="n">graphdata</span><span class="o">$</span><span class="n">N</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">                                    <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;Log N&#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;N&#34;</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ####GRAPH####
-</span></span><span class="line"><span class="cl">   })
+</span></span><span class="line"><span class="cl">     <span class="c1">####GRAPH####</span>
+</span></span><span class="line"><span class="cl">   <span class="p">})</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">   ####NONSIGNIFICANT EFFECTS####
-</span></span><span class="line"><span class="cl">   output$nonpic &lt;- renderPlot({
+</span></span><span class="line"><span class="cl">   <span class="c1">####NONSIGNIFICANT EFFECTS####</span>
+</span></span><span class="line"><span class="cl">   <span class="n">output</span><span class="o">$</span><span class="n">nonpic</span> <span class="o">&lt;-</span> <span class="n">renderPlot</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     nsgraphdata = subset(long_graph, Significance==&#34;Non&#34; &amp; Effect == input$sizeselect)
+</span></span><span class="line"><span class="cl">     <span class="n">nsgraphdata</span> <span class="o">=</span> <span class="n">subset</span><span class="p">(</span><span class="n">long_graph</span><span class="p">,</span> <span class="n">Significance</span><span class="o">==</span><span class="s2">&#34;Non&#34;</span> <span class="o">&amp;</span> <span class="n">Effect</span> <span class="o">==</span> <span class="n">input</span><span class="o">$</span><span class="n">sizeselect</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ##log N
-</span></span><span class="line"><span class="cl">     if (input$Nselect == &#34;log&#34;) { nsgraphdata$N = log(nsgraphdata$N)  
-</span></span><span class="line"><span class="cl">                                   xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+</span></span><span class="line"><span class="cl">     <span class="c1">##log N</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">Nselect</span> <span class="o">==</span> <span class="s2">&#34;log&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">nsgraphdata</span><span class="o">$</span><span class="n">N</span> <span class="o">=</span> <span class="nb">log</span><span class="p">(</span><span class="n">nsgraphdata</span><span class="o">$</span><span class="n">N</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">                                   <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;Log N&#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;N&#34;</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ####GRAPH####
-</span></span><span class="line"><span class="cl">   })
+</span></span><span class="line"><span class="cl">     <span class="c1">####GRAPH####</span>
+</span></span><span class="line"><span class="cl">   <span class="p">})</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">   ####OMNIBUS AGREEMENT####
-</span></span><span class="line"><span class="cl">   output$omniagree &lt;- renderPlot({
+</span></span><span class="line"><span class="cl">   <span class="c1">####OMNIBUS AGREEMENT####</span>
+</span></span><span class="line"><span class="cl">   <span class="n">output</span><span class="o">$</span><span class="n">omniagree</span> <span class="o">&lt;-</span> <span class="n">renderPlot</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ##log n to get a better graph
-</span></span><span class="line"><span class="cl">     if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
-</span></span><span class="line"><span class="cl">                                   xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+</span></span><span class="line"><span class="cl">     <span class="c1">##log n to get a better graph</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">Nselect</span> <span class="o">==</span> <span class="s2">&#34;log&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">agreelong</span><span class="o">$</span><span class="n">N</span> <span class="o">=</span> <span class="nb">log</span><span class="p">(</span><span class="n">agreelong</span><span class="o">$</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                   <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;Log N&#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;N&#34;</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ####GRAPH####
-</span></span><span class="line"><span class="cl">   })
+</span></span><span class="line"><span class="cl">     <span class="c1">####GRAPH####</span>
+</span></span><span class="line"><span class="cl">   <span class="p">})</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">   ####POST HOC AGREEMENT####
-</span></span><span class="line"><span class="cl">   output$postagree &lt;- renderPlot({
+</span></span><span class="line"><span class="cl">   <span class="c1">####POST HOC AGREEMENT####</span>
+</span></span><span class="line"><span class="cl">   <span class="n">output</span><span class="o">$</span><span class="n">postagree</span> <span class="o">&lt;-</span> <span class="n">renderPlot</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ##log n to get a better graph
-</span></span><span class="line"><span class="cl">     if (input$Nselect == &#34;log&#34;) { agreelong$N = log(agreelong$N)
-</span></span><span class="line"><span class="cl">     xlabel = &#34;Log N&#34; } else { xlabel = &#34;N&#34;}
+</span></span><span class="line"><span class="cl">     <span class="c1">##log n to get a better graph</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">Nselect</span> <span class="o">==</span> <span class="s2">&#34;log&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">agreelong</span><span class="o">$</span><span class="n">N</span> <span class="o">=</span> <span class="nb">log</span><span class="p">(</span><span class="n">agreelong</span><span class="o">$</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;Log N&#34;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&#34;N&#34;</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ####GRAPH####
-</span></span><span class="line"><span class="cl">   })
+</span></span><span class="line"><span class="cl">     <span class="c1">####GRAPH####</span>
+</span></span><span class="line"><span class="cl">   <span class="p">})</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">   ####COMPARISON GRAPHS####
-</span></span><span class="line"><span class="cl">   output$compare &lt;- renderPlot({
+</span></span><span class="line"><span class="cl">   <span class="c1">####COMPARISON GRAPHS####</span>
+</span></span><span class="line"><span class="cl">   <span class="n">output</span><span class="o">$</span><span class="n">compare</span> <span class="o">&lt;-</span> <span class="n">renderPlot</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     if (input$graphselect == &#34;pccp&#34;){
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">graphselect</span> <span class="o">==</span> <span class="s2">&#34;pccp&#34;</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl">       ####GRAPH####
+</span></span><span class="line"><span class="cl">       <span class="c1">####GRAPH####</span>
 </span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl">     } else if (input$graphselect == &#34;pccbf&#34;){
+</span></span><span class="line"><span class="cl">     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">graphselect</span> <span class="o">==</span> <span class="s2">&#34;pccbf&#34;</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl">       ####GRAPH####
+</span></span><span class="line"><span class="cl">       <span class="c1">####GRAPH####</span>
 </span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl">     } else if (input$graphselect == &#34;bfp&#34;){
+</span></span><span class="line"><span class="cl">     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="o">$</span><span class="n">graphselect</span> <span class="o">==</span> <span class="s2">&#34;bfp&#34;</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl">       ####GRAPH####
+</span></span><span class="line"><span class="cl">       <span class="c1">####GRAPH####</span>
 </span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl">     }
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">   })
+</span></span><span class="line"><span class="cl">   <span class="p">})</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">   ####3D COMPARISON GRAPHS####
-</span></span><span class="line"><span class="cl">   output$compare3d &lt;- renderPlotly({
+</span></span><span class="line"><span class="cl">   <span class="c1">####3D COMPARISON GRAPHS####</span>
+</span></span><span class="line"><span class="cl">   <span class="n">output</span><span class="o">$</span><span class="n">compare3d</span> <span class="o">&lt;-</span> <span class="n">renderPlotly</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     ####GRAPH SET UP####
+</span></span><span class="line"><span class="cl">     <span class="c1">####GRAPH SET UP####</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     overall = plot_ly(overallgraph3d, 
-</span></span><span class="line"><span class="cl">                       x = ~overallBF,
-</span></span><span class="line"><span class="cl">                       y = ~oompcc,
-</span></span><span class="line"><span class="cl">                       z = ~omniP,
-</span></span><span class="line"><span class="cl">                       color = ~N,
-</span></span><span class="line"><span class="cl">                       symbol = ~star,
-</span></span><span class="line"><span class="cl">                       symbols=c(&#34;circle&#34;,&#34;cross&#34;),
-</span></span><span class="line"><span class="cl">                       mode=&#34;markers&#34;) %&gt;%
-</span></span><span class="line"><span class="cl">       add_markers() %&gt;%
-</span></span><span class="line"><span class="cl">       layout(scene = list(xaxis = list(title = &#39;Bayes Factors&#39;),
-</span></span><span class="line"><span class="cl">                           yaxis = list(title = &#39;OOM PCC&#39;),
-</span></span><span class="line"><span class="cl">                           zaxis = list(title = &#39;p-Value&#39;)),
-</span></span><span class="line"><span class="cl">              annotations = list(
-</span></span><span class="line"><span class="cl">                x = 1.13,
-</span></span><span class="line"><span class="cl">                y = 1.05,
-</span></span><span class="line"><span class="cl">                text = colorlabel,
-</span></span><span class="line"><span class="cl">                xref = &#39;paper&#39;,
-</span></span><span class="line"><span class="cl">                yref = &#39;paper&#39;,
-</span></span><span class="line"><span class="cl">                showarrow = FALSE
-</span></span><span class="line"><span class="cl">              ))
+</span></span><span class="line"><span class="cl">     <span class="n">overall</span> <span class="o">=</span> <span class="n">plot_ly</span><span class="p">(</span><span class="n">overallgraph3d</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                       <span class="n">x</span> <span class="o">=</span> <span class="o">~</span><span class="n">overallBF</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">y</span> <span class="o">=</span> <span class="o">~</span><span class="n">oompcc</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">z</span> <span class="o">=</span> <span class="o">~</span><span class="n">omniP</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">color</span> <span class="o">=</span> <span class="o">~</span><span class="n">N</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">symbol</span> <span class="o">=</span> <span class="o">~</span><span class="n">star</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">symbols</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&#34;circle&#34;</span><span class="p">,</span><span class="s2">&#34;cross&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">mode</span><span class="o">=</span><span class="s2">&#34;markers&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">       <span class="n">add_markers</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">       <span class="n">layout</span><span class="p">(</span><span class="n">scene</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">xaxis</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Bayes Factors&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">yaxis</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;OOM PCC&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">zaxis</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;p-Value&#39;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">              <span class="n">annotations</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span> <span class="o">=</span> <span class="mf">1.13</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">y</span> <span class="o">=</span> <span class="mf">1.05</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">text</span> <span class="o">=</span> <span class="n">colorlabel</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">xref</span> <span class="o">=</span> <span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">yref</span> <span class="o">=</span> <span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">showarrow</span> <span class="o">=</span> <span class="n">FALSE</span>
+</span></span><span class="line"><span class="cl">              <span class="p">))</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">     overall
+</span></span><span class="line"><span class="cl">     <span class="n">overall</span>
 </span></span><span class="line"><span class="cl">     
-</span></span><span class="line"><span class="cl">   })
+</span></span><span class="line"><span class="cl">   <span class="p">})</span>
 </span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">} #close server functions
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="c1">#close server functions</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># Run the application 
-</span></span><span class="line"><span class="cl">shinyApp(ui = ui, server = server)
+</span></span><span class="line"><span class="cl"><span class="c1"># Run the application </span>
+</span></span><span class="line"><span class="cl"><span class="n">shinyApp</span><span class="p">(</span><span class="n">ui</span> <span class="o">=</span> <span class="n">ui</span><span class="p">,</span> <span class="n">server</span> <span class="o">=</span> <span class="n">server</span><span class="p">)</span>
 </span></span></code></pre></div>
 
         
@@ -689,7 +689,7 @@ Bayes Factors and p-values follow a power function, as we expected.">
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.120.4</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

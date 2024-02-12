@@ -92,7 +92,7 @@
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.111.3">
+  <meta name="generator" content="Hugo 0.120.4">
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -335,10 +335,10 @@
 <p>Now that we have the opencpu, it has installed R for us. Let&rsquo;s use:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo -i R
 </span></span></code></pre></div><p>To enter R as the administrator. Can I just say I love this version of R: <code>R version 4.0.3 (2020-10-10) -- &quot;Bunny-Wunnies Freak Out&quot;</code>. Now, let&rsquo;s install packages and other things we need to run formr. Start with devtools, but watch for errors, as you may have to exit R and install Ubuntu packages to get the R packages to install. The most common error you will see is <code>non-zero exit status</code> which is jargon for &ldquo;this didn&rsquo;t work, maybe I&rsquo;ll give you a hint&rdquo;. Many package developers say something like &ldquo;install X package&rdquo; somewhere in the error output (bless you!), so that&rsquo;s what to look for.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">install.packages(&#34;devtools&#34;)
-</span></span><span class="line"><span class="cl">devtools::install_github(&#34;rubenarslan/formr&#34;)
-</span></span><span class="line"><span class="cl">#recommended by formr, pander is definitely necessary
-</span></span><span class="line"><span class="cl">install.packages(c(&#34;codebook&#34;, &#34;tidyverse&#34;, &#34;pander&#34;))
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&#34;devtools&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">devtools</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">&#34;rubenarslan/formr&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#recommended by formr, pander is definitely necessary</span>
+</span></span><span class="line"><span class="cl"><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s2">&#34;codebook&#34;</span><span class="p">,</span> <span class="s2">&#34;tidyverse&#34;</span><span class="p">,</span> <span class="s2">&#34;pander&#34;</span><span class="p">))</span>
 </span></span></code></pre></div><p>Not sure what all to install? Other issues? Check out <a href="https://github.com/rubenarslan/formr.org/wiki/Packages-on-OpenCPU">this guide</a> which talks about issues with OpenCPU, R packages, and what formr.org has installed.</p>
 <p>Exit R:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">quit()
@@ -364,24 +364,24 @@
 </span></span></code></pre></div><p>Allow overrides for the virtual machine. First, open the configuration file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /etc/apache2/sites-enabled/000-default.conf
 </span></span></code></pre></div><p>Put the following block on the end of the default configuration file (after <code>&lt;/Virtualhost&gt;</code>) for Apache2 using:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	&lt;Directory /var/www/html&gt;
-</span></span><span class="line"><span class="cl">		Options Indexes FollowSymlinks MultiViews
-</span></span><span class="line"><span class="cl">		AllowOverride All
-</span></span><span class="line"><span class="cl">		Order allow,deny
-</span></span><span class="line"><span class="cl">		allow from all
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">	<span class="o">&lt;</span><span class="ne">Directory</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Options</span> <span class="n">Indexes</span> <span class="n">FollowSymlinks</span> <span class="n">MultiViews</span>
+</span></span><span class="line"><span class="cl">		<span class="n">AllowOverride</span> <span class="n">All</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Order</span> <span class="n">allow</span><span class="p">,</span><span class="n">deny</span>
+</span></span><span class="line"><span class="cl">		<span class="n">allow</span> <span class="n">from</span> <span class="n">all</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	&lt;/Directory&gt;
+</span></span><span class="line"><span class="cl">	<span class="o">&lt;/</span><span class="ne">Directory</span><span class="o">&gt;</span>
 </span></span></code></pre></div><h2 id="install-formr-from-github">Install formr from GitHub</h2>
 <p>It&rsquo;s suggested you put formr in the <code>/var/www/</code> folder. Normally websites go in the <code>/var/www/html</code> folder, but we will include a symbolic link (i.e. connection) to know it should show the formr installation, even though it&rsquo;s in a different folder. Use the following code to change folders and clone the GitHub folder.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /var/www/
-</span></span><span class="line"><span class="cl">sudo git clone https://github.com/rubenarslan/formr.org.git
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rubenarslan</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">git</span>
 </span></span></code></pre></div><p>Create the link between folders and fix access rights:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ln -s /var/www/formr.org/webroot /var/www/html/formr 
-</span></span><span class="line"><span class="cl">sudo chown -R www-data:www-data /var/www/formr.org
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">webroot</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">formr</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span>
 </span></span></code></pre></div><p>Now that we have that installed, let&rsquo;s update application dependencies by using the following code:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd formr.org #assumes you are still in /var/www/
-</span></span><span class="line"><span class="cl">sudo composer install
-</span></span><span class="line"><span class="cl">sudo composer update
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="n">formr</span><span class="o">.</span><span class="n">org</span> <span class="c1">#assumes you are still in /var/www/</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">composer</span> <span class="n">install</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">composer</span> <span class="n">update</span>
 </span></span></code></pre></div><h2 id="the-sql-database">The SQL Database</h2>
 <p>Login to the new SQL database using:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo mysql -uroot
@@ -392,20 +392,20 @@
 </span></span><span class="line"><span class="cl">FLUSH PRIVILEGES;
 </span></span><span class="line"><span class="cl">quit;
 </span></span></code></pre></div><p>Next, import the initial required database structure by running (remember change <code>EnterPassword</code>, but leave the -p there!):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql formr -uformr -pEnterPassword &lt; /var/www/formr.org/sql/schema.sql
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">mysql</span> <span class="n">formr</span> <span class="o">-</span><span class="n">uformr</span> <span class="o">-</span><span class="n">pEnterPassword</span> <span class="o">&lt;</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">sql</span><span class="o">/</span><span class="n">schema</span><span class="o">.</span><span class="n">sql</span>
 </span></span></code></pre></div><p>Do the same procedure to apply patches 29 and 30, as required currently. Note that by doing just -p, you will be prompted to enter your password.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/029_run_expire_cookie_setting.sql
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">mysql</span> <span class="n">formr</span> <span class="o">-</span><span class="n">uformr</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">sql</span><span class="o">/</span><span class="n">patches</span><span class="o">/</span><span class="mi">029</span><span class="n">_run_expire_cookie_setting</span><span class="o">.</span><span class="n">sql</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">mysql formr -uformr -p &lt; /var/www/formr.org/sql/patches/030_sessions_queue.sql
+</span></span><span class="line"><span class="cl"><span class="n">mysql</span> <span class="n">formr</span> <span class="o">-</span><span class="n">uformr</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">sql</span><span class="o">/</span><span class="n">patches</span><span class="o">/</span><span class="mi">030</span><span class="n">_sessions_queue</span><span class="o">.</span><span class="n">sql</span>
 </span></span></code></pre></div><h2 id="configuration-steps">Configuration Steps</h2>
 <h3 id="configuration-folder">Configuration Folder</h3>
 <p>Duplicate <em>(don&rsquo;t rename)</em> the folder <code>config-dist</code>, name it <code>config</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /var/www/formr.org/ #change to the right folder
-</span></span><span class="line"><span class="cl">sudo cp -avr config-dist config #copy the folder
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span> <span class="c1">#change to the right folder</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">cp</span> <span class="o">-</span><span class="n">avr</span> <span class="n">config</span><span class="o">-</span><span class="n">dist</span> <span class="n">config</span> <span class="c1">#copy the folder</span>
 </span></span></code></pre></div><p>You can type <code>ls</code> to show the folders in this formr.org folder if you want to make sure both folders are still there.</p>
 <h3 id="settingsphp">Settings.php</h3>
 <p>Open the configuration file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /var/www/formr.org/config/settings.php
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">settings</span><span class="o">.</span><span class="n">php</span>
 </span></span></code></pre></div><ul>
 <li>Here&rsquo;s a list of everything I changed:
 <ul>
@@ -422,14 +422,14 @@
 </ul>
 <h3 id="set-paths-and-permissions">Set paths and permissions</h3>
 <p>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>. Use the following code (note: 777 necessary, I have tested it!):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo chmod -R 777 /tmp
-</span></span><span class="line"><span class="cl">sudo chmod -R 777 /var/www/formr.org/webroot/assets/tmp
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">-</span><span class="n">R</span> <span class="mi">777</span> <span class="o">/</span><span class="n">tmp</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">-</span><span class="n">R</span> <span class="mi">777</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">webroot</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">tmp</span>
 </span></span></code></pre></div><p>If you are using gmail, you may need to turn OFF two factor authentication, and ON use less secure apps. I have a special gmail just for this stuff for that very reason.</p>
 <h3 id="cron-jobs">Cron Jobs</h3>
 <p>To install the formr crontab in a linux system:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /var/www/formr.org/config/formr_crontab
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">formr_crontab</span>
 </span></span></code></pre></div><p>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code>. Use <code>ctrl + X</code> to exit and then run:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ln -s /var/www/formr.org/config/formr_crontab /etc/cron.d/formr
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">formr_crontab</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">cron</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">formr</span>
 </span></span></code></pre></div><p>Now, restart apache one more time for good measure: <code>sudo systemctl restart apache2</code>.</p>
 <h2 id="set-yourself-up">Set Yourself Up</h2>
 <ul>
@@ -606,7 +606,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.120.4</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

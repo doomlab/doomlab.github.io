@@ -94,7 +94,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
   <meta name="twitter:site" content="@aggieerin" />
   <meta name="twitter:creator" content="@aggieerin" />
   <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.111.3">
+  <meta name="generator" content="Hugo 0.120.4">
   <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -316,21 +316,21 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
         <p>I was tagged today on twitter asking about categorical variables in <code>lavaan</code>. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for <code>lavaan</code> <a href="http://lavaan.ugent.be/tutorial/cat.html">here</a>.</p>
 <p>You will need both the <code>lavaan</code> and <code>psych</code> packages to reproduce this code. Ironically, this data is binary outcome data (the <code>epi</code> dataset in <code>psych</code>), which wasn&rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</p>
 <p>First, let&rsquo;s make a model that works (I do assume you know a bit about <code>lavaan</code> here, feel free to ask questions):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#load libraries and data
-</span></span><span class="line"><span class="cl">library(psych)
-</span></span><span class="line"><span class="cl">library(lavaan)
-</span></span><span class="line"><span class="cl">DF = epi
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">#load libraries and data</span>
+</span></span><span class="line"><span class="cl"><span class="n">library</span><span class="p">(</span><span class="n">psych</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">library</span><span class="p">(</span><span class="n">lavaan</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">DF</span> <span class="o">=</span> <span class="n">epi</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#lavaan model syntax
-</span></span><span class="line"><span class="cl">epi.model = &#39;latent =~ V1+V2+V3+V4
-</span></span><span class="line"><span class="cl">latent2 =~ V5+V6+V7+V8&#39;
+</span></span><span class="line"><span class="cl"><span class="c1">#lavaan model syntax</span>
+</span></span><span class="line"><span class="cl"><span class="n">epi</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;latent =~ V1+V2+V3+V4</span>
+</span></span><span class="line"><span class="cl"><span class="n">latent2</span> <span class="o">=~</span> <span class="n">V5</span><span class="o">+</span><span class="n">V6</span><span class="o">+</span><span class="n">V7</span><span class="o">+</span><span class="n">V8</span><span class="s1">&#39;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#analyze the model
-</span></span><span class="line"><span class="cl">epi.fit = cfa(model = epi.model, 
-</span></span><span class="line"><span class="cl">              data = DF)
+</span></span><span class="line"><span class="cl"><span class="c1">#analyze the model</span>
+</span></span><span class="line"><span class="cl"><span class="n">epi</span><span class="o">.</span><span class="n">fit</span> <span class="o">=</span> <span class="n">cfa</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="n">epi</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">              <span class="n">data</span> <span class="o">=</span> <span class="n">DF</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#show a summary
-</span></span><span class="line"><span class="cl">summary(epi.fit)
+</span></span><span class="line"><span class="cl"><span class="c1">#show a summary</span>
+</span></span><span class="line"><span class="cl"><span class="n">summary</span><span class="p">(</span><span class="n">epi</span><span class="o">.</span><span class="n">fit</span><span class="p">)</span>
 </span></span></code></pre></div><p>The <code>cfa</code> and <code>summary</code> did not throw any errors, so the model at least runs smoothly, even if it is not a &ldquo;good&rdquo; model. For good measure, you can also use <code>semPlot</code> to create a picture of this two-factor model:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">library(semPlot)
 </span></span><span class="line"><span class="cl">
@@ -352,8 +352,8 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#dummy code and combine with DF
 </span></span><span class="line"><span class="cl">DF_dc = cbind(DF, dummy.code(DF$category))
 </span></span></code></pre></div><p>However, I will warn you that <code>psych</code> does give you K columns where K = levels. Real dummy coding is K - 1 columns, so I find it odd that <code>psych</code> gives you K output. For example, it took our <code>group</code>, <code>group2</code>, <code>group3</code> labels and transformed them into three new columns with 0 as <em>not my group</em> and 1 as <em>my group</em>. Therefore, I will advise you to pick your favorite combination of K - 1 levels, and do not use all of them or you will create a singular matrix that will be difficult to troubleshoot in any regression based analysis. Here&rsquo;s an example of that error:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Error in lav_samplestats_icov(COV = cov[[g]], ridge = ridge, x.idx = x.idx[[g]],  : 
-</span></span><span class="line"><span class="cl">  lavaan ERROR: sample covariance matrix is not positive-definite
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Error</span> <span class="ow">in</span> <span class="n">lav_samplestats_icov</span><span class="p">(</span><span class="n">COV</span> <span class="o">=</span> <span class="n">cov</span><span class="p">[[</span><span class="n">g</span><span class="p">]],</span> <span class="n">ridge</span> <span class="o">=</span> <span class="n">ridge</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">idx</span><span class="p">[[</span><span class="n">g</span><span class="p">]],</span>  <span class="p">:</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">lavaan</span> <span class="n">ERROR</span><span class="p">:</span> <span class="n">sample</span> <span class="n">covariance</span> <span class="n">matrix</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">positive</span><span class="o">-</span><span class="n">definite</span>
 </span></span></code></pre></div><p>I can add the first two to the model predicting one of the latents using <code>~</code> for regression rather than <code>=~</code> for create a latent:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#model syntax
 </span></span><span class="line"><span class="cl">epi.model2 = &#39;latent =~ V1+V2+V3+V4
@@ -525,7 +525,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.120.4</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
