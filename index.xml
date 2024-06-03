@@ -6,21 +6,19 @@
     <description>Recent content on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
-    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://doomlab.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>formr Round 3: No nginx Required</title>
       <link>https://doomlab.github.io/post/formr-round-3-no-nginx-required/</link>
-      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/formr-round-3-no-nginx-required/</guid>
       <description>Alright folks! I am back with more installation guides. I&amp;rsquo;ve installed formr so many times at this point &amp;hellip; since my first post, opencpu has updated to R 4+, and I&amp;rsquo;ve found a way to not use nginx. Which is good news, since it often conflicts with also running apache. I&amp;rsquo;m going to leave the old guides up because maybe they can help someone figure out their issues, but here goes with the newest guide.</description>
     </item>
     <item>
       <title>Installing RStudio Server &#43; Updates</title>
       <link>https://doomlab.github.io/post/installing-rstudio-server-updates/</link>
-      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/installing-rstudio-server-updates/</guid>
       <description>One of the most difficult things I try to teach my students is how to deal with error messages. Due to Hurricane Laura, I am currently re-creating several projects including formr, RStudio, and a website. I thought I would detail that here.
 You can find my first post on formr here: https://www.aggieerin.com/post/formr-installation-instructions/
@@ -29,7 +27,7 @@ Good news! It’s mostly the same and pretty smooth. However, I sometimes get th
     <item>
       <title>formr Installation Instructions</title>
       <link>https://doomlab.github.io/post/formr-installation-instructions/</link>
-      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/formr-installation-instructions/</guid>
       <description>An installation guide taken from formr documentation and modified to include more details for those who need it.
 These installation instructions are provided for Ubuntu 18.04; however, they could be modified for other systems. The original instructions suggest Debian 9, but I found this much easier on Ubuntu. I have now used both Digital Ocean and Amazon Lightsail for this installation. I don’t think the product matters, but the size of the machine is likely something you should focus on.</description>
@@ -37,7 +35,7 @@ These installation instructions are provided for Ubuntu 18.04; however, they cou
     <item>
       <title>Is English Kurtotic?</title>
       <link>https://doomlab.github.io/post/is-english-kurtotic/</link>
-      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/is-english-kurtotic/</guid>
       <description>You ever have a random text that sent your brain to work? Here’s mine today:
 KD Text
@@ -46,7 +44,7 @@ Followed up with examples that lol is bimodal, while loop is positively skewed, 
     <item>
       <title>Lasso Myself Numbers</title>
       <link>https://doomlab.github.io/post/lasso-myself-numbers/</link>
-      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/lasso-myself-numbers/</guid>
       <description>Hey everybody!
 The last couple days I have been trying to learn LASSO regression, which stands for Least Absolute Shrinkage and Selection Operator. I have several datasets with many variables, and I thought these would be a good opportunity to learn about how to lasso, while maybe answering a few questions about words.
@@ -55,7 +53,7 @@ Right, the part I forgot about is that I have repeated measures data, which alwa
     <item>
       <title>The Year of the Thesis</title>
       <link>https://doomlab.github.io/post/2019-in-review/</link>
-      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/2019-in-review/</guid>
       <description>The Year of the Thesis!
 Just wanted to highlight several publications from this year, which were mostly theses from some fabulous young researchers:
@@ -65,14 +63,14 @@ Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019). Investigating the interaction of 
     <item>
       <title>Getting Translations with rvest and Selenium</title>
       <link>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</link>
-      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/getting-translations-with-rvest-and-selenium/</guid>
       <description>In this guide, I’ll go over how you can use web scraping rvest and Selenium to get translations from Google Translate. Note: I encourage responsible scraping - I always try to do it with some space between requests. You can only do 5000 characters at a time with the free Google translate. I will say that I tried to do this with just rvest and the predictability of the links for Google translate - but I could not get rvest to pull the right data off the page, so here’s a slightly more difficult approach that appears to work.</description>
     </item>
     <item>
       <title>New Publications</title>
       <link>https://doomlab.github.io/post/new-publications-oct-19/</link>
-      <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/new-publications-oct-19/</guid>
       <description>Just updated my CV - here&amp;rsquo;s a few new publications and conferences! The weird thing about the automatic CV updater I wrote is that you can&amp;rsquo;t really predict what order the same year publications are going to be in - not that it matters in general, but it&amp;rsquo;s an interesting side effect.
 Also, super proud - both of these are student theses turned papers:
@@ -81,7 +79,7 @@ Maxwell, N.P. &amp;amp; Buchanan, E.M. (2019).Investigating the interaction of d
     <item>
       <title>Multilevel Modeling Workshop Materials</title>
       <link>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</link>
-      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/multilevel-modeling-workshop-materials/</guid>
       <description>Many thanks to Rutgers University Spanish and Portuguese Department (https://span-port.rutgers.edu/) for asking me to come talk about multilevel models. I enjoyed talking to the group, meeting Twitter friends in real life!, and I am especially impressed by what their department is doing in what is often considered a qualitative science.
 I used RStudio&amp;rsquo;s Cloud to share a workspace with all the materials, packages, and other information you might need. I built the slide show using markdown, so that people could watch the slides and/or take their own notes.</description>
@@ -89,7 +87,7 @@ I used RStudio&amp;rsquo;s Cloud to share a workspace with all the materials, pa
     <item>
       <title>Updating Your CV with Packages</title>
       <link>https://doomlab.github.io/post/updating-your-cv-with-packages/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/updating-your-cv-with-packages/</guid>
       <description>Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve’s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.
 Link to the entire CV folder for you to use/view do stuff with: CV. Please ignore the html files in that folder, it does “knit” automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.</description>
@@ -97,7 +95,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
     <item>
       <title>Line Endings Are Dumb</title>
       <link>https://doomlab.github.io/post/line-endings-are-dumb/</link>
-      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/line-endings-are-dumb/</guid>
       <description>I have happily acquired a new Mac Book (yay!) and a new work computer (Windows). So, I&amp;rsquo;ve been making One Drive exceedingly unhappy moving GBs of file from one to another.
 As I was working on reconnecting my GitHub repositories to the files, I was trying to understand why several of my repos were saying I had a bunch of file changes but nothing in the files themselves had changed. I noticed they were mostly .</description>
@@ -105,7 +103,7 @@ As I was working on reconnecting my GitHub repositories to the files, I was tryi
     <item>
       <title>Intuitions about Grades</title>
       <link>https://doomlab.github.io/post/intuitions-about-grades/</link>
-      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/intuitions-about-grades/</guid>
       <description>Are my intuitions about grades correct?
 I was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.
@@ -114,7 +112,7 @@ First, I took all the times I had taught memory and cognition post Ph.</descript
     <item>
       <title>JASP Videos &#43; Guides</title>
       <link>https://doomlab.github.io/post/jasp-videos-guides/</link>
-      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/jasp-videos-guides/</guid>
       <description>Hey everybody! I am back and finally getting to videos again. I hesistate to say “it’s been crazy!” because I feel like that’s always a thing that academics say, but I will say I’ve had a lot of life going on, and I am finally getting back to a normal amount of crazy.
 I’ve decided to do some simple videos to start - so I am creating how-to videos to go with our JASP guides we created this summer.</description>
@@ -122,7 +120,7 @@ I’ve decided to do some simple videos to start - so I am creating how-to video
     <item>
       <title>Quick and Dirty Categorical lavaan</title>
       <link>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</link>
-      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/quick-and-dirty-categorical-lavaan/</guid>
       <description>I was tagged today on twitter asking about categorical variables in lavaan. I will say I have not done much with categorical predictors either endogenous or exogenous. I did a quick reproducible example of exogenous variables, and I will refer you to the help guide for lavaan here.
 You will need both the lavaan and psych packages to reproduce this code. Ironically, this data is binary outcome data (the epi dataset in psych), which wasn&amp;rsquo;t intentional, I just knew it was a good dataset to work with to test how to do exogenous categorical variables.</description>
@@ -130,7 +128,7 @@ You will need both the lavaan and psych packages to reproduce this code. Ironica
     <item>
       <title>New Publications and Updated CV</title>
       <link>https://doomlab.github.io/post/new-publications-and-updated-cv/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/new-publications-and-updated-cv/</guid>
       <description>Hi guys! I just wanted to post that I&amp;rsquo;ve updated the website to be current with some new publications I wanted to highlight:
 First up is two papers on psycholinguistics that were undergraduate student projects:
@@ -140,14 +138,14 @@ Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort
     <item>
       <title>Current Publications with Papaja</title>
       <link>https://doomlab.github.io/post/current-publications-with-papaja/</link>
-      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/current-publications-with-papaja/</guid>
       <description>Heyo! Frederik, the author of papaja, requested that we update him with papers written with his package. I was like, oh man, like the whole lab?! So, I decided that I could probably make it easy by making a table here. Obviously, this table is current at the moment, as I hope many of the ones under review will get accepted, and I have several others that we will start writing soon.</description>
     </item>
     <item>
       <title>Gathering Text from the Web</title>
       <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
       <description>Hi everyone! I don&amp;rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
@@ -155,7 +153,7 @@ First, we picked four web sources to scrape - The New York Times, NPR, Fox News,
     <item>
       <title>New Publication: Texting</title>
       <link>https://doomlab.github.io/post/new-publication-texting/</link>
-      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/new-publication-texting/</guid>
       <description>One more announcement! We just had a new publication accepted:
 &amp;ldquo;Textisms&amp;rdquo;: The Comfort of the Recipient: This paper was an undergraduate honors thesis that Flora-Jean and I finally got accepted! She did a great job making sure this paper was completed and published.
@@ -166,7 +164,7 @@ We should have the real print up soon! Just waiting on the journal now.</descrip
     <item>
       <title>Mediation Moderation Workshop</title>
       <link>https://doomlab.github.io/post/mediation-moderation-workshop/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/mediation-moderation-workshop/</guid>
       <description>Hi everyone!
 I have been super swamped with a bunch of due dates that all hit in April. For a small brag, and I like making lists:
@@ -175,7 +173,7 @@ I have been super swamped with a bunch of due dates that all hit in April. For a
     <item>
       <title>Working With Messy Text</title>
       <link>https://doomlab.github.io/post/working-with-messy-text/</link>
-      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/working-with-messy-text/</guid>
       <description>Heyo! I am doing my best to procrastinate here on a blustery Tuesday afternoon. So, I decided to share some code I&amp;rsquo;ve put together that solves problems in R that I used to do in perl. HTML or C++ was probably my first real language, but I love the heck out of perl. It&amp;rsquo;s never done me wrong (unlike you PHP).
 Anyways! The context of this project is that we are developing a dictionary of words to complement the work done by Jonathan Haidt and Jesse Graham - learn more.</description>
@@ -183,7 +181,7 @@ Anyways! The context of this project is that we are developing a dictionary of w
     <item>
       <title>New Publications</title>
       <link>https://doomlab.github.io/post/new-publications/</link>
-      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/new-publications/</guid>
       <description>Just wanted to do a quick post to say that the Nature Human Behavior response paper, Justify Your Alpha is now online at NHB&amp;rsquo;s website: Springer - it is free to view but not download. You can download the PDF version on OSF.
 We&amp;rsquo;ve submitted a couple new papers as well - updated those on my research publications page. I also have a couple more to get done - hoping to feature some of the cool coding work I&amp;rsquo;ve done this week after taking a breather from a seriously packed week.</description>
@@ -191,7 +189,7 @@ We&amp;rsquo;ve submitted a couple new papers as well - updated those on my rese
     <item>
       <title>New Publication - Detect Low Quality Data</title>
       <link>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/new-publication-detect-low-quality-data/</guid>
       <description>My coauthor John Scofield and I just had a publication accepted at Behavior Research Methods - you can check out the publication preprint at OSF.
 We thew together a website for the paper that summarizes everything we found, as well as puts all the materials together in one place - check it out.
@@ -200,7 +198,7 @@ We create a really nice R function to help you detect low quality data, which yo
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
       <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.
@@ -209,7 +207,7 @@ Update 2: Turns out, potentially, the suggestions from the manual are not workin
     <item>
       <title>A Shiny App to Compare Stats</title>
       <link>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</link>
-      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/a-shiny-app-to-compare-stats/</guid>
       <description>For a recent publication comparing null hypothesis testing p-values to Bayes Factors and Observation Oriented Modeling, we created a Shiny app to graph all of our complex plots. I particularly pleased with the plotly 3D graph - as I usually think that 3D graphs are impossible to read. This plot shows what we found in our study (albeit I would recommend viewing the 2D plots more):
 Bayes Factors and p-values follow a power function, as we expected.</description>
@@ -217,14 +215,14 @@ Bayes Factors and p-values follow a power function, as we expected.</description
     <item>
       <title>Learn About MOTE</title>
       <link>https://doomlab.github.io/post/learn-about-mote/</link>
-      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/learn-about-mote/</guid>
       <description>The APA Task Force on Statistical Inference (Wilkinson &amp;amp; TFSI, 1999) has advocated the inclusion of effect sizes in journal articles as an important source of information. The fifth and current edition of the APA publication manual (2001, 2010) emphasized these findings from the task force, along with requirement of effect sizes to publish in their journals. However, Fidler et al. (2005) have conveyed that only slight increases in report rates have been found in popular journals.</description>
     </item>
     <item>
       <title>Research Statement</title>
       <link>https://doomlab.github.io/post/research-statement/</link>
-      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/research-statement/</guid>
       <description>Upon arriving at Missouri State University, I founded the Deciphering Outrageous Observations and Modeling (DOOM) lab which has included more than ten graduate and thirty undergraduate students. My research mission has been in two primary domains described in detail below and includes many collaborative efforts throughout the years.
 Psycholinguistics. My cognitive research focuses broadly on psycholinguistics and memory, particularly on the statistical properties of word relationships. Overall, I seek to understand how language is represented in memory by adding to and examining available linguistic database information (i.</description>
@@ -232,14 +230,14 @@ Psycholinguistics. My cognitive research focuses broadly on psycholinguistics an
     <item>
       <title>Teaching Statement</title>
       <link>https://doomlab.github.io/post/teaching-statement/</link>
-      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/teaching-statement/</guid>
       <description>Overview. My approach to teaching centers on the ideas of accessibility, association, and application. As an effective instructor, I strive to ensure that all students are able to orient to and understand material. Often, this process involves formal efforts to reduce barriers to their learning and/or facilitate a stronger grasp of material through association with things they already know. Once students are able to access information, they can begin to understand it and in turn apply it in novel ways.</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/basics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/basics/</guid>
       <description>Basic Information Name: Erin M. Buchanan, Ph.D.
 Email: ebuchanan at harrisburgu dot edu
@@ -249,21 +247,21 @@ Education Ph.D., Experimental Cognitive Psychology, Texas Tech University (2008)
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/honors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/honors/</guid>
       <description>Honors and Awards Society for the Improvement of Psychological Science Commendation (2020) NACADA Academic Advising Excellence Faculty Advisor Award (2016) Nominated for the Missouri State Master Online Recognition Award (2016) Curtis P. Lawrence Award for Excellence in Advising Recipient, Missouri State University (2016) Missouri State University Honors College Curtis P. Lawrence Teaching Award Recipient (2015) Missouri State University Honors College Research Award Recipient (2014) Nominated for the Missouri State University Foundation Award in Research (2014; Nominated for the Curtis P.</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/res_grants/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/res_grants/</guid>
       <description>Grants Psycholinguistics and memory, general cognitive: Principal Investigator. Semantic Priming Across Many Languages. National Science Foundation. (2023, Submitted). $350,000.00. Principal Investigator. Measuring the Lexicon: Computational Approaches to Quantifying Similarity Among Cognitive Representations. Psychonomic Society Estes Grants. (2019, submitted). $19,000.00 Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.00 Principal Investigator. Using Language to Understand Congressional Voting Behaviors. National Science Foundation (2014, submitted).</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/res_overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/res_overview/</guid>
       <description>Research Overview Interests Psycholinguistics and memory: Semantic memory, associative memory, priming of memory types, normed databases, linguistic variables, memory maps, judgments of memory, language statistics, working memory, individual differences.
 Statistics: Alternatives to null hypothesis testing, effect sizes and confidence intervals, multigroup confirmatory factor analysis, item response theory, Bayesian inference statistics, hierarchical linear modeling, exploratory factor analysis, statistical reporting
@@ -273,43 +271,43 @@ Experience The DOOM Lab (2019-Current) Harrisburg University of Science and Tech
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/res_pres/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/res_pres/</guid>
-      <description>Presentations Psycholinguistics, Cognitive Science Citation Link Buchanan, E. M. (2022, September). BTS Comes for Linguistics. Invited presentation for the University of Utah Linguistics program. Link $Buchanan, E.M., et al. (2022, November). Is Priming Consistent Across Languages? Preliminary Findings from the SPAML: Semantic Priming Across Many Languages. Spoken presentation at the annual meeting of the Psychonomic Society, Boston, MA. Link $Heyman, T., Buchanan, E.M., et al. (2022, November). Crowdsourcing Multiverse Analyses to Examine the Robustness of Research Findings.</description>
+      <description>Presentations Psycholinguistics, Cognitive Science Citation Link Buchanan, E. M. (2023, October). What can we learn about two million priming values? An update to the Semantic Priming Across Many Languages Project (PSA007). Big Team Science Conference. NA Roettger, T., &amp;amp; Buchanan, E. M. (2023, October). ManyLanguages. Big Team Science Conference. [Link $Buchanan, E. M., et al. (2023, November). What can we learn about two million priming values? An update to the Semantic Priming Across Many Languages Project (SPAML).</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/res_pres_old/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/res_pres_old/</guid>
       <description>Psycholinguistics and memory, general cognitive: Download Reference PPT Maxwell, N. P. &amp;amp; Buchanan, E. M. (2018, April). Single and Double Word-Pair Norms: Predictive Ability of Recall and Judgments. Poster presentation for the Annual Convention of the Midwestern Psychological Association, Chicago, IL. PDF Maxwell, N. P., Kostic, B., &amp;amp; Buchanan, E.M. (2017, November). The Interaction of Semantic, Thematic, and Associative Overlap Strength in Predicting Recall. Poster presentation for the Annual Meeting of the Psychonomic Society, Vancouver, Canada.</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/res_pubs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/res_pubs/</guid>
       <description>Publications Statistical Packages &amp;amp; Tools Note: * indicate undergraduate authors, + graduate authors, $ both undergraduate and graduate
-Citation Link +Maxwell, N. P., &amp;amp; Buchanan, E. M. (2021). lrd: A Package for Processing Lexical Response Data. R package version 0.1.0. Link +Buchanan, E.M., Gillenwaters, A., Scofield, J.E., &amp;amp; Valentine, K.D. (2019). MOTE: Measure of the Effect: Package to assist in effect size calculations and their confidence intervals. R package version 1.</description>
+Citation Link Buchanan, E. M. (2024). ViSe: Visualizing sensitivity. R package version 0.0.1. doi: 10.5281/zenodo.10698072 [Link Buchanan, E. M. (2024). visualizemi: Visualization, Effect Size, and Replication of Measurement Invariance for Registered Reports. R package version 0.0.1. [Link +Maxwell, N. P., &amp;amp; Buchanan, E. M. (2021). lrd: A Package for Processing Lexical Response Data.</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/res_pubs_old/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/res_pubs_old/</guid>
       <description>Publications Psycholinguistics and memory, general cognitive Download Reference PDF Duncan, J., Buchanan, E.M., Marshall, C.Z., &amp;amp; Oberdieck, K. (accepted). But words will never hurt me, Journal of Psychology and Behavioral Sciences, X, XX-XX. PDF Forbes, F.-J., &amp;amp; Buchanan, E. M. (accepted). “Textisms”: The Comfort of the Recipient, Psychology of Popular Media Culture, X, XX-XX. PDF Pavlacic, J., Culp, M., Harvey, S., Cathey, C., &amp;amp; Buchanan E.M. (2018). Using Undergraduate Learning Assistants to Aid in Course Redesign.</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/service/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/service/</guid>
       <description>Professional Memberships Psychological Science Accelerator (PSA) - Associate Director, Web Admin Society for Computation in Psychology (SCIP) - Executive Director Society for the Improvement of the Psychological Sciences (SIPS) Midwestern Psychological Association (MPA) Southwestern Psychological Association (SWPA) Psychonomic Society - Fellow Association for Psychological Science (APS) Graduate and Professional Student Association Professional Activities Journal Boards Behavior Research Methods, Editor, 2024-Current Frontiers, Associate Editor - 2021-2023 Behavior Research Methods, Associate Editor - 2020-2024 Meta-Psychology, Editorial Board &amp;amp; Action Editor - 2019-Current Journal of Scientific Psychology, Consulting Editor - 2009-Current Journal Reviewer Publons Profile - 2017-Current</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/stats/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/stats/</guid>
       <description>Here, you can learn about our goal of making statistical analysis approachable by creating a plethora of learning materials and interactive environment for learning/improving your skills.
 Shiny Apps: I have been working on building interactive applications through Shiny to visualize the data for specific projects and to increase statistical skills by creating easy ways to calculate numbers for non-programming researchers. I try to post about the applications as we put them online, but you can find them on our shiny-server GitHub repository or through the shiny tag on the blog.</description>
@@ -317,14 +315,14 @@ Shiny Apps: I have been working on building interactive applications through Shi
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/students/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/students/</guid>
       <description>Graduate Students DOOM Lab Students School, Year Name Thesis MSU, 2018-2020 Arielle Cunningham TBD MSU, 2017-2019 Addie Wikowsky Working memory, expertise, and fluid intelligence MSU, 2017-2019 William Padfield Moral foundatins and political rhetoric MSU, 2016-2018 David Herr Generativity and Trauma in first responders MSU, 2016-2018 Nick Maxwell Investigating the interaction between associative, semantic, and thematic database norms for memory judgments and recall MSU, 2015-2017 Katherine Miller The Mediating Effects of Cortisol on Memory and Judgments of Learning MSU, 2015-2017 Rebecca Knoph Language Learning and Metacognition: An Interventions to Improve Language Classrooms MSU, 2014-2016 Jahnavi Delmonico Politics, Personality, and Sensitivity to Change MSU, 2013-2015 Marshall Beauchamp IRT Analyses of Body Dissatisfaction in Men MSU, 2013-2015 Kayla Jordan Linguistic Markers of Writing about War MSU, 2012-2014 Marilee Teasley When Music Goes Up in Flames: The Impact of Academic Advising on the Perceived Burnout of Music Majors MSU, 2011-2013 Kathrene Valentine Alternatives: A Comparison of Parametric, Nonparametric, and Observation Oriented Modeling techniques Ph.</description>
     </item>
     <item>
       <title></title>
       <link>https://doomlab.github.io/page/teach_overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/teach_overview/</guid>
       <description>Teaching Overview Interests Read my teaching statement.
 Undergraduate:
@@ -336,7 +334,7 @@ Regression/Factor Analysis Multivariate Statistics Advanced Statistics Graduate 
     <item>
       <title></title>
       <link>https://doomlab.github.io/shiny/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/shiny/</guid>
       <description>Shiny Apps Each Shiny application is listed below, along with any relevant publication information.
 MOTE: Magnitude of the Effect Shiny App GitHub Research Paper This app allows you to calculate many effect sizes and their confidence intervals. We have included mean differences and variance overlap effect sizes, their formulas, easy to copy output in APA style, help videos on how to use our app, and code for R users. Alternatives to Null Hypothesis Significance Testing Shiny App GitHub Research Paper This app provides color visualization of the data from our paper that focuses on alternatives to NHST procedures.</description>
@@ -344,14 +342,14 @@ MOTE: Magnitude of the Effect Shiny App GitHub Research Paper This app allows yo
     <item>
       <title>About Erin</title>
       <link>https://doomlab.github.io/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/page/about/</guid>
       <description>Professionally Speaking I am currently a Professor of Cognitive Analytics at Harrisburg University of Science and Technology - a STEM school in Pennsylvania. I teach computational linguistics courses in our Analytics and Data Science programs, such as Natural Language Processing, Sentiment Analysis, and Human Language. I also teach a bunch of statistics courses and you can learn more about my stats work on the stats page. Learn more about me the person, me the researcher, and me the bean counted on paper by clicking out the CV pages.</description>
     </item>
     <item>
       <title>CV</title>
       <link>https://doomlab.github.io/cv/cv_markdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/cv/cv_markdown/</guid>
       <description>Education Ph.D., Experimental Cognitive Psychology, Texas Tech University Dissertation: What’s the difference: A study on semantic and associative priming and blocking.
 Committee: Drs. William S. Maki (chair), Patricia R. Delucia, Ruth Maki, Roman Taraban

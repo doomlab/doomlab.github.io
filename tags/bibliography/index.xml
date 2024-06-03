@@ -6,14 +6,12 @@
     <description>Recent content in bibliography on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
-    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://doomlab.github.io/tags/bibliography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Citations in R Markdown &#43; Papaja</title>
       <link>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/citations-in-r-markdown-papaja/</guid>
       <description>Heyo! I wanted to write a post about some of the quirky things I&amp;rsquo;ve found with writing manuscripts in R Markdown, as well as provide a solution to a problem that someone else might be having.
 Update: The csl file I describe below is a special formatted one, which was shared with me. You can download it from GitHub to try the suggestions below.

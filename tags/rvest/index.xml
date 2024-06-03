@@ -6,14 +6,12 @@
     <description>Recent content in rvest on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>buchananlab@gmail.com (aggieerin.com)</managingEditor>
-    <webMaster>buchananlab@gmail.com (aggieerin.com)</webMaster>
     <lastBuildDate>Mon, 07 May 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://doomlab.github.io/tags/rvest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gathering Text from the Web</title>
       <link>https://doomlab.github.io/post/gathering-text-from-the-web/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate><author>buchananlab@gmail.com (aggieerin.com)</author>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       <guid>https://doomlab.github.io/post/gathering-text-from-the-web/</guid>
       <description>Hi everyone! I don&amp;rsquo;t really feel like working too hard today, so I decided to write a blog post about how my student Will and I used rvest to mine articles from several different news sources for a project. All the scripts and current ongoings of this project can be found on our OSF page - this project is also connected to the GitHub folder with the files.
 First, we picked four web sources to scrape - The New York Times, NPR, Fox News, and Breitbart because of their known political associations, and specifically, we focused on their political sections.</description>
