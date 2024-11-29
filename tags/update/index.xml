@@ -6,8 +6,24 @@
     <description>Recent content in update on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://doomlab.github.io/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Updated CV</title>
+      <link>https://doomlab.github.io/post/updated-cv/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://doomlab.github.io/post/updated-cv/</guid>
+      <description>Heyo! I am finally doing a blog post again - was able to update the site with my newest publications, several new packages, and presentations. Check out the research presentation page for updates on presentations given this year, including several workshops (with provided code).
+Packages:
+Buchanan, E. M. (2024). visualizemi: Visualization, Effect Size, and Replication of Measurement Invariance for Registered Reports. R package version 0.0.1. https://github.com/doomlab/visualizemi Buchanan, E. M. (2024). Visualizing Sensitivity.</description>
+    </item>
+    <item>
+      <title>Updated CV</title>
+      <link>https://doomlab.github.io/post/2024-11-29-updated-cv/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://doomlab.github.io/post/2024-11-29-updated-cv/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Installing RStudio Server &#43; Updates</title>
       <link>https://doomlab.github.io/post/installing-rstudio-server-updates/</link>

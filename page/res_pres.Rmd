@@ -104,7 +104,7 @@ curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
   curated$citation = gsub("\\", "", curated$citation, fixed = T)
 
 library(knitr)
-library(kableExtra) 
+library(kableExtra)
 ```
 
 ## Presentations

@@ -194,7 +194,7 @@ Cognition and Perception Laboratory Dr. Takashi Yamauchi \hfill 2004
 
 ## Programming knowledge 
 
-HTML, CSS, Perl, C++, PHP, MSSQL, MYSQL, Python, R
+HTML, CSS, Perl, C++, PHP, MSSQL, MYSQL, Python, R, Spark, Javascript (React)
 
 ## Software
 
@@ -381,9 +381,9 @@ These articles have been accepted in principle as a registered report, but have 
 
 ## Psycholinguistics, Cognitive Science
 
-Partner Institution Faculty Mentor. Information control processes: an alternative and multidimensional approach to study their development. Horizon MSCA.  
+Partner Institution Faculty Mentor. Information control processes: an alternative and multidimensional approach to study their development. Horizon MSCA. (12/01/2025-12/01/2027).
 
-Principal Investigator. A multilinguistic database of semantic priming and tackling linguistic's WEIRD problem. National Science Foundation (2024, submitted). $355,873.
+Principal Investigator. A multilinguistic database of semantic priming and tackling linguistic's WEIRD problem. National Science Foundation (2024, submitted). $473,434.
 
 Principal Investigator. Measuring the Lexicon: Computational Approaches to Quantifying Similarity Among Cognitive Representations. Psychonomic Society Estes Grants. (2019, submitted). $19,000.00
 
@@ -412,6 +412,8 @@ Principal Investigator. Cheating at Scrabble: An Online Database of Word Informa
 Principal Investigator: Understanding Language Learning in the Brain: Using EEG Brain Computer Interface to Improve Development. Honda Initiative (2009, submitted). 
 
 ## Applied Statistics
+
+Principal Investigator. STAPLE - Science Tracking Across Project Lifespan. National Science Founation. (2024, submitted).  $241,776.
 
 Principal Investigator. STAPLE - Science Tracking Across Project Lifespan. NASA ROSES. (10/01/2023-10/01/2024) $97,059. 
 
@@ -467,9 +469,15 @@ Co-Principal Investigator: II-NEW: An Infrastructure for Distributed Research on
 
 ### Graduate Students
 
-HU, 2020-current | Laurel Lord | Data Science Discussions: Cross-lingual frameworks and natural annotation of crowdsourced online dictionaries 
+HU, 2024 | Meetu Fu | TBA
 
-HU, 2019-current | Phillip Grim II | Word Space in Many Languages:  Discovering the Optimal Dimensions, Algorithm, and Window Size for Building Word Vectors in 59 Languages  
+HU, 2024 | Nidhal Selmi | TBA
+
+HU, 2024 | Rajendra Mannam | TBA
+
+HU, 2024 | Patrick Pan | TBA
+
+HU, 2019-2024 | Phillip Grim II | Word Space in Many Languages:  Discovering the Optimal Dimensions, Algorithm, and Window Size for Building Word Vectors in 59 Languages  
 
 HU, 2019-2022 | Jonathan Korn | Deep Text Mining Approaches for Text Classification 
 
