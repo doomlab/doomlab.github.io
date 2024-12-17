@@ -6,8 +6,15 @@
     <description>Recent content in research on Dr. Erin Buchanan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://doomlab.github.io/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>formr Round 4</title>
+      <link>https://doomlab.github.io/post/formr-round-4/</link>
+      <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://doomlab.github.io/post/formr-round-4/</guid>
+      <description>It&amp;rsquo;s be four years since the last formr update! Good grief. I am building a new server for PSA research projects, so I thought I would share the latest updates and installs for those who want it for their own use. I will also note that the formr dudes recommend docker installation as shown here: https://github.com/rubenarslan/formr_dev_docker. My luck with docker is so-so, so here&amp;rsquo;s my guide for manual install. Further, their warning about &amp;ldquo;no production&amp;rdquo; makes me quite nervous.</description>
+    </item>
     <item>
       <title>Updated CV</title>
       <link>https://doomlab.github.io/post/updated-cv/</link>

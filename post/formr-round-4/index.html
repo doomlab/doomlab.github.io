@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>formr Round 4 - Dr. Erin Buchanan</title>
+  <meta name="description" content="It&rsquo;s be four years since the last formr update! Good grief. I am building a new server for PSA research projects, so I thought I would share the latest updates and installs for those who want it for their own use. I will also note that the formr dudes recommend docker installation as shown here: https://github.com/rubenarslan/formr_dev_docker. My luck with docker is so-so, so here&rsquo;s my guide for manual install. Further, their warning about &ldquo;no production&rdquo; makes me quite nervous."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Dr. Erin Buchanan",
+    
+    "url": "https:\/\/doomlab.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/doomlab.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/doomlab.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/doomlab.github.io\/post\/formr-round-4\/",
+          "name": "Formr round 4"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Erin M. Buchanan"
+  },
+  "headline": "formr Round 4",
+  "description" : "It\u0026rsquo;s be four years since the last formr update! Good grief. I am building a new server for PSA research projects, so I thought I would share the latest updates and installs for those who want it for their own use. I will also note that the formr dudes recommend docker installation as shown here: https:\/\/github.com\/rubenarslan\/formr_dev_docker. My luck with docker is so-so, so here\u0026rsquo;s my guide for manual install. Further, their warning about \u0026ldquo;no production\u0026rdquo; makes me quite nervous.",
+  "inLanguage" : "en",
+  "wordCount":  1851 ,
+  "datePublished" : "2024-12-17T00:00:00",
+  "dateModified" : "2024-12-17T00:00:00",
+  "image" : "https:\/\/doomlab.github.io\/img\/header.jpg",
+  "keywords" : [ "formr, installation, how-to" ],
+  "mainEntityOfPage" : "https:\/\/doomlab.github.io\/post\/formr-round-4\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/doomlab.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/doomlab.github.io\/img\/header.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="formr Round 4" />
+<meta property="og:description" content="It&rsquo;s be four years since the last formr update! Good grief. I am building a new server for PSA research projects, so I thought I would share the latest updates and installs for those who want it for their own use. I will also note that the formr dudes recommend docker installation as shown here: https://github.com/rubenarslan/formr_dev_docker. My luck with docker is so-so, so here&rsquo;s my guide for manual install. Further, their warning about &ldquo;no production&rdquo; makes me quite nervous.">
+<meta property="og:image" content="https://doomlab.github.io/img/header.jpg" />
+<meta property="og:url" content="https://doomlab.github.io/post/formr-round-4/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dr. Erin Buchanan" />
+
+  <meta name="twitter:title" content="formr Round 4" />
+  <meta name="twitter:description" content="It&rsquo;s be four years since the last formr update! Good grief. I am building a new server for PSA research projects, so I thought I would share the latest updates and installs for those who want it …">
+  <meta name="twitter:image" content="https://doomlab.github.io/img/header.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://doomlab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.120.4">
+  <link rel="alternate" href="https://doomlab.github.io/index.xml" type="application/rss+xml" title="Dr. Erin Buchanan"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://doomlab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://doomlab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://doomlab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Blog</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post">Blog</a>
+                
+                  <a href="/tags">Tags</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Stats" href="/page/stats/">Stats</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Shiny" href="/shiny/">Shiny</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Vita</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/basics">Basics</a>
+                
+                  <a href="/page/honors">Honors</a>
+                
+                  <a href="/page/res_overview">Research Overview</a>
+                
+                  <a href="/page/res_pubs">Pubs</a>
+                
+                  <a href="/page/res_grants">Grants</a>
+                
+                  <a href="/page/res_pres">Pres</a>
+                
+                  <a href="/page/teach_overview">Teaching Overview</a>
+                
+                  <a href="/page/students">Students</a>
+                
+                  <a href="/page/service">Service</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="OSF" href="https://osf.io/4ivpc/">OSF</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Dr. Erin Buchanan" href="https://doomlab.github.io">
+            <img class="avatar-img" src="https://doomlab.github.io/img/header.jpg" alt="Dr. Erin Buchanan" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>formr Round 4</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 17, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Erin M. Buchanan
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>It&rsquo;s be <em>four</em> years since the last formr update! Good grief. I am building a new server for PSA research projects, so I thought I would share the latest updates and installs for those who want it for their own use. I will also note that the formr dudes recommend docker installation as shown here: <a href="https://github.com/rubenarslan/formr_dev_docker">https://github.com/rubenarslan/formr_dev_docker</a>. My luck with docker is so-so, so here&rsquo;s my guide for manual install. Further, their warning about &ldquo;no production&rdquo; makes me quite nervous.</p>
+<p>Here&rsquo;s the machine we are using today:</p>
+<p><code>Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-49-generic x86_64)</code></p>
+<p>First, on a clean machine (i.e., nothing else on it that you might mess up by upgrading), upgrade and update everything.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get upgrade
+</span></span></code></pre></div><h2 id="install-opencpu">Install <code>OpenCPU</code></h2>
+<p>Check out the <a href="https://github.com/opencpu/opencpu">installation guide</a> for OpenCPU and install it. I will note they have not updated their GitHub page as of today, so here&rsquo;s an <a href="https://www.opencpu.org/download.html">alternative link</a> that appears to be updated more. Notice this is 2.2, which does include R4+.</p>
+<p>I&rsquo;ll note that these instructions didn&rsquo;t change but they do appear to recommend moving away from Ubuntu 18, which isn&rsquo;t surprising given it&rsquo;s been upgraded. I also always recommend running one line at a time to make sure it doesn&rsquo;t error out.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#requires Ubuntu 22.04 (Jammy) or 20.04 (Focal)
+</span></span><span class="line"><span class="cl">sudo add-apt-repository -y ppa:opencpu/opencpu-2.2
+</span></span><span class="line"><span class="cl">sudo apt-get update 
+</span></span><span class="line"><span class="cl">sudo apt-get upgrade
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Installs OpenCPU server
+</span></span><span class="line"><span class="cl">sudo apt-get install -y opencpu-server
+</span></span><span class="line"><span class="cl"># Done! Open http://yourhost/ocpu in your browser
+</span></span></code></pre></div><p>The PSA now has a fancy email, so I set it up for that:</p>
+<p><img src="https://www.aggieerin.com/post/email_1.png" alt="email setup"></p>
+<p>And of course I forgot to take a picture, but we use sendgrid to send emails, so the next page was smtp information, so it was smtp.sendgrid.net. You can use gmail or any number of services that let you send email through smtp.</p>
+<p>Once it&rsquo;s done, enable opencpu and restart apache:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo a2ensite opencpu
+</span></span><span class="line"><span class="cl">sudo apachectl restart
+</span></span></code></pre></div><p>You should now see the ocpu test page at http(s)://yourwebsite:8004/ocpu/test - where yourwebsite is the IP address or name of your website.</p>
+<p><img src="https://www.aggieerin.com/post/ocpu.png" alt="ocpu setup"></p>
+<h2 id="deal-with-r">Deal with R</h2>
+<p>Now that we have the opencpu, it has installed R for us. Let&rsquo;s use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo -i R
+</span></span></code></pre></div><p>To enter R as the administrator. I&rsquo;m going to check the R version first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; version
+</span></span><span class="line"><span class="cl">platform       x86_64-pc-linux-gnu         
+</span></span><span class="line"><span class="cl">arch           x86_64                      
+</span></span><span class="line"><span class="cl">os             linux-gnu                   
+</span></span><span class="line"><span class="cl">system         x86_64, linux-gnu           
+</span></span><span class="line"><span class="cl">status                                     
+</span></span><span class="line"><span class="cl">major          4                           
+</span></span><span class="line"><span class="cl">minor          4.1                         
+</span></span><span class="line"><span class="cl">year           2024                        
+</span></span><span class="line"><span class="cl">month          06                          
+</span></span><span class="line"><span class="cl">day            14                          
+</span></span><span class="line"><span class="cl">svn rev        86737                       
+</span></span><span class="line"><span class="cl">language       R                           
+</span></span><span class="line"><span class="cl">version.string R version 4.4.1 (2024-06-14)
+</span></span><span class="line"><span class="cl">nickname       Race for Your Life     
+</span></span></code></pre></div><p>Now, let&rsquo;s install packages and other things we need to run formr. Start with devtools, but watch for errors, as you may have to exit R and install Ubuntu packages to get the R packages to install. The most common error you will see is <code>non-zero exit status</code> which is jargon for &ldquo;this didn&rsquo;t work, maybe I&rsquo;ll give you a hint&rdquo;. Many package developers say something like &ldquo;install X package&rdquo; somewhere in the error output (bless you!), so that&rsquo;s what to look for.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&#34;devtools&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">devtools</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">&#34;rubenarslan/formr&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="mi">1</span><span class="p">:</span> <span class="n">In</span> <span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&#34;devtools&#34;</span><span class="p">)</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">installation</span> <span class="n">of</span> <span class="n">package</span> <span class="err">‘</span><span class="n">textshaping</span><span class="err">’</span> <span class="n">had</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span> <span class="n">exit</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span><span class="p">:</span> <span class="n">In</span> <span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&#34;devtools&#34;</span><span class="p">)</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">installation</span> <span class="n">of</span> <span class="n">package</span> <span class="err">‘</span><span class="n">ragg</span><span class="err">’</span> <span class="n">had</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span> <span class="n">exit</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span><span class="p">:</span> <span class="n">In</span> <span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&#34;devtools&#34;</span><span class="p">)</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">installation</span> <span class="n">of</span> <span class="n">package</span> <span class="err">‘</span><span class="n">pkgdown</span><span class="err">’</span> <span class="n">had</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span> <span class="n">exit</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="mi">4</span><span class="p">:</span> <span class="n">In</span> <span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&#34;devtools&#34;</span><span class="p">)</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">installation</span> <span class="n">of</span> <span class="n">package</span> <span class="err">‘</span><span class="n">devtools</span><span class="err">’</span> <span class="n">had</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span> <span class="n">exit</span> <span class="n">status</span>
+</span></span></code></pre></div><p>To figure this out, because it was a LOT of output, I tried textshaping by itself:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s1">&#39;textshaping&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Package</span> <span class="n">harfbuzz</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">search</span> <span class="n">path</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Perhaps</span> <span class="n">you</span> <span class="n">should</span> <span class="n">add</span> <span class="n">the</span> <span class="n">directory</span> <span class="n">containing</span> <span class="err">`</span><span class="n">harfbuzz</span><span class="o">.</span><span class="n">pc</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">to</span> <span class="n">the</span> <span class="n">PKG_CONFIG_PATH</span> <span class="n">environment</span> <span class="n">variable</span>
+</span></span><span class="line"><span class="cl"><span class="n">Package</span> <span class="s1">&#39;harfbuzz&#39;</span><span class="p">,</span> <span class="n">required</span> <span class="n">by</span> <span class="s1">&#39;virtual:world&#39;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">found</span>
+</span></span><span class="line"><span class="cl"><span class="n">Package</span> <span class="s1">&#39;freetype2&#39;</span><span class="p">,</span> <span class="n">required</span> <span class="n">by</span> <span class="s1">&#39;virtual:world&#39;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">found</span>
+</span></span><span class="line"><span class="cl"><span class="n">Package</span> <span class="s1">&#39;fribidi&#39;</span><span class="p">,</span> <span class="n">required</span> <span class="n">by</span> <span class="s1">&#39;virtual:world&#39;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">found</span>
+</span></span></code></pre></div><p>Here&rsquo;s the type of error you are looking for. I will exit R and install these packages:</p>
+<p>(note the &gt; indicates R console, $ indicates linux, don&rsquo;t copy those when you are cutting and pasting)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; quit()
+</span></span><span class="line"><span class="cl">$ sudo apt-get install libharfbuzz-dev libfribidi-dev
+</span></span></code></pre></div><p>Then I went back to R <code>sudo -i R</code> and repeated the process until no errors. You may end up installing other packages as you go - I removed the old suggestions and will add things I found along the way above.</p>
+<p>Here&rsquo;s other linux packages I had to install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ sudo apt-get install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libsodium-dev
+</span></span></code></pre></div><p>Exit R:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">quit()
+</span></span></code></pre></div><h2 id="edit-configurations">Edit Configurations</h2>
+<p>Open the configuration file for OpenCPU:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /etc/opencpu/server.conf
+</span></span></code></pre></div><ul>
+<li>Edit the <code>key_length</code> setting from 13 to 50.</li>
+<li>Also set the following packages to <code>&quot;preload&quot;: [&quot;stringr&quot;, &quot;dplyr&quot;,&quot;knitr&quot;, &quot;lubridate&quot;,&quot;formr&quot;, &quot;rmarkdown&quot;, &quot;lattice&quot;]</code>.</li>
+<li>Use <code>control + X</code> to save and exit.</li>
+</ul>
+<h2 id="other-system-requirements">Other System Requirements</h2>
+<p>Specifically for formr, use the following code for the Ubuntu packages necessary (that we haven&rsquo;t already installed):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get install git php mysql-server composer php-curl php-fpm php-mbstring php-mysql php-zip php-xml php-gd php-intl php-xml pandoc 
+</span></span></code></pre></div><p>Use <a href="http://supervisord.org/">Supervisor</a> to control email notifications and other session monitoring. Use the following code to install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install python3-pip 
+</span></span><span class="line"><span class="cl">pip install supervisor
+</span></span></code></pre></div><p>If this gives you a warning / error:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install supervisor
+</span></span></code></pre></div><p>Apache needs the rewrite mod enabled, which can be added by running the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo a2enmod rewrite
+</span></span><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><p>Allow overrides for the virtual machine. First, open the configuration file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /etc/apache2/sites-enabled/000-default.conf
+</span></span></code></pre></div><p>Put the following block on the end of the default configuration file (after <code>&lt;/Virtualhost&gt;</code>) for Apache2 using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="ne">Directory</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Options</span> <span class="n">Indexes</span> <span class="n">FollowSymlinks</span> <span class="n">MultiViews</span>
+</span></span><span class="line"><span class="cl">        <span class="n">AllowOverride</span> <span class="n">All</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Order</span> <span class="n">allow</span><span class="p">,</span><span class="n">deny</span>
+</span></span><span class="line"><span class="cl">        <span class="n">allow</span> <span class="n">from</span> <span class="n">all</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="ne">Directory</span><span class="o">&gt;</span>
+</span></span></code></pre></div><h2 id="install-formr-from-github">Install formr from GitHub</h2>
+<p>It&rsquo;s suggested you put formr in the <code>/var/www/</code> folder. Normally websites go in the <code>/var/www/html</code> folder, but we will include a symbolic link (i.e. connection) to know it should show the formr installation, even though it&rsquo;s in a different folder. Use the following code to change folders and clone the GitHub folder.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rubenarslan</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">git</span>
+</span></span></code></pre></div><p>Create the link between folders and fix access rights:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">webroot</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">formr</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span>
+</span></span></code></pre></div><p>Now that we have that installed, let&rsquo;s update application dependencies by using the following code:</p>
+<p>(note I got a warning but I&rsquo;m not logged in as www-data, so otherwise I can&rsquo;t edit this folder)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="n">formr</span><span class="o">.</span><span class="n">org</span> <span class="c1">#assumes you are still in /var/www/</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">composer</span> <span class="n">install</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">composer</span> <span class="n">update</span>
+</span></span></code></pre></div><h2 id="the-sql-database">The SQL Database</h2>
+<p>Login to the new SQL database using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo mysql -uroot
+</span></span></code></pre></div><p>Next, run the following commands changing <code>EnterPassword</code> to your desired password. In SQL, each line ends with <code>;</code>, so you can run them one at a time if you want. NOte: this is a little updated from the original formr installation instructions because the MySQL syntax has changed a little bit.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CREATE DATABASE formr DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+</span></span><span class="line"><span class="cl">CREATE USER &#39;formr&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;EnterPassword&#39;;
+</span></span><span class="line"><span class="cl">GRANT ALL PRIVILEGES ON formr.* TO formr@localhost;
+</span></span><span class="line"><span class="cl">FLUSH PRIVILEGES;
+</span></span><span class="line"><span class="cl">quit;
+</span></span></code></pre></div><p>Next, import the initial required database structure by running (remember change <code>EnterPassword</code>, but leave the -p there!):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">mysql</span> <span class="n">formr</span> <span class="o">-</span><span class="n">uformr</span> <span class="o">-</span><span class="n">pEnterPassword</span> <span class="o">&lt;</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">sql</span><span class="o">/</span><span class="n">schema</span><span class="o">.</span><span class="n">sql</span>
+</span></span></code></pre></div><p>As of now, all the patches have been applied - I used ChatGPT to help me figure out if they had been!</p>
+<h2 id="configuration-steps">Configuration Steps</h2>
+<h3 id="configuration-folder">Configuration Folder</h3>
+<p>Duplicate <em>(don&rsquo;t rename)</em> the folder <code>config-dist</code>, name it <code>config</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span> <span class="c1">#change to the right folder</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">cp</span> <span class="o">-</span><span class="n">avr</span> <span class="n">config</span><span class="o">-</span><span class="n">dist</span> <span class="n">config</span> <span class="c1">#copy the folder</span>
+</span></span></code></pre></div><p>You can type <code>ls</code> to show the folders in this formr.org folder if you want to make sure both folders are still there.</p>
+<h3 id="settingsphp">Settings.php</h3>
+<p>Open the configuration file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">settings</span><span class="o">.</span><span class="n">php</span>
+</span></span></code></pre></div><ul>
+<li>Under the top settings:
+<ul>
+<li>$settings[&lsquo;use_study_subdomains&rsquo;] = false; (our instance is already at a subdomain, so we turned this off, generally I wouldn&rsquo;t do this)</li>
+<li>$settings[&lsquo;admin_domain&rsquo;] = &ldquo;<a href="https://www.example.com">www.example.com</a>&rdquo;; (change this to your ip/url)</li>
+<li>$settings[&lsquo;study_domain&rsquo;] = &ldquo;*.example.com&rdquo;; (change this to your ip/url)</li>
+<li>$settings[&rsquo;timezone&rsquo;] = &lsquo;America/New_York&rsquo;;</li>
+</ul>
+</li>
+<li>Here&rsquo;s a list of everything I changed under database settings:
+<ul>
+<li>login =&gt; &lsquo;formr&rsquo;</li>
+<li>password =&gt; &lsquo;EnterPassword&rsquo; #from above!</li>
+<li>database =&gt; &lsquo;formr&rsquo;</li>
+</ul>
+</li>
+<li>Under the email settings:
+<ul>
+<li>host (email) =&gt; &lsquo;smtp.sendgrid.net&rsquo;</li>
+<li>from (email) =&gt; our gmail account</li>
+<li>username/password for email/api</li>
+</ul>
+</li>
+</ul>
+<p>If you are using gmail, you may need to set up <a href="https://knowledge.workspace.google.com/kb/how-to-create-app-passwords-000009237">App Passwords</a>.</p>
+<h3 id="set-paths-and-permissions">Set paths and permissions</h3>
+<p>The following folders (and their sub-folders) have to be writable: <code>/tmp</code> and <code>/webroot/assets/tmp</code>. Use the following code (note: 777 necessary, I have tested it!):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">-</span><span class="n">R</span> <span class="mi">777</span> <span class="o">/</span><span class="n">tmp</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">-</span><span class="n">R</span> <span class="mi">777</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">webroot</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">tmp</span>
+</span></span></code></pre></div><h3 id="cron-jobs">Cron Jobs</h3>
+<p>To install the formr crontab in a linux system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">formr_crontab</span>
+</span></span></code></pre></div><p>Delete the <code>#</code> from the line: <code>\*/10 ... cron.php</code>. Use <code>ctrl + X</code> to exit and then run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">formr</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">formr_crontab</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">cron</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">formr</span>
+</span></span></code></pre></div><h2 id="set-up-https">Set up https</h2>
+<p>Use <code>certbot</code> to set up your domain to work over https for encrypted traffic.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get install certbot python3-certbot-apache
+</span></span><span class="line"><span class="cl">sudo certbot --apache
+</span></span></code></pre></div><p>Pick the host at <code>000-default.conf</code> when prompted.</p>
+<p>Now, restart apache one more time for good measure: <code>sudo systemctl restart apache2</code>.</p>
+<h2 id="set-yourself-up">Set Yourself Up</h2>
+<ul>
+<li>Go to the site and register yourself as a user.</li>
+</ul>
+<p>At this point, my site said it couldn&rsquo;t connect to the database (503: data source unavailable). Through the magic of &ldquo;ask a smarter friend&rdquo;, we found that the <code>php.ini</code> file needed to be set up to connect the dots to mysql. So run this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">php --ini
+</span></span></code></pre></div><p>And look for:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Configuration File (php.ini) Path: /etc/php/8.3/cli 
+</span></span><span class="line"><span class="cl">Loaded Configuration File: /etc/php/8.3/cli/php.ini
+</span></span></code></pre></div><p>And then run: (note I changed this to apache2, this is the one you want to edit)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nano /etc/php/8.3/apache2/php.ini
+</span></span></code></pre></div><p>There&rsquo;s a long section that talks about extensions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">The</span> <span class="n">ldap</span> <span class="n">extension</span> <span class="n">must</span> <span class="n">be</span> <span class="n">before</span> <span class="n">curl</span> <span class="k">if</span> <span class="n">OpenSSL</span> <span class="mf">1.0</span><span class="o">.</span><span class="mi">2</span> <span class="ow">and</span> <span class="n">OpenLDAP</span> <span class="n">is</span> <span class="n">used</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> <span class="n">otherwise</span> <span class="n">it</span> <span class="n">results</span> <span class="ow">in</span> <span class="n">segfault</span> <span class="n">when</span> <span class="n">unloading</span> <span class="n">after</span> <span class="n">using</span> <span class="n">SASL</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> <span class="n">See</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">src</span><span class="o">/</span><span class="n">issues</span><span class="o">/</span><span class="mi">8620</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span><span class="n">extension</span><span class="o">=</span><span class="n">ldap</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span><span class="n">extension</span><span class="o">=</span><span class="n">curl</span>
+</span></span></code></pre></div><p>Remove any ; at the start of a line that includes pdo, mysqli, odbc. Restart apache2. Website!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">extension=mysqli
+</span></span><span class="line"><span class="cl">;extension=oci8_12c  ; Use with Oracle Database 12c Instant Client
+</span></span><span class="line"><span class="cl">;extension=oci8_19  ; Use with Oracle Database 19 Instant Client
+</span></span><span class="line"><span class="cl">extension=odbc
+</span></span><span class="line"><span class="cl">;extension=openssl
+</span></span><span class="line"><span class="cl">extension=pdo_firebird
+</span></span><span class="line"><span class="cl">extension=pdo_mysql
+</span></span><span class="line"><span class="cl">extension=pdo_oci
+</span></span><span class="line"><span class="cl">extension=pdo_odbc
+</span></span><span class="line"><span class="cl">extension=pdo_pgsql
+</span></span><span class="line"><span class="cl">extension=pdo_sqlite
+</span></span></code></pre></div><ul>
+<li>Go back to the terminal to set up yourself as the administrator.</li>
+<li>Since the complete layout of the formr database may not be clear to those who didn&rsquo;t write it, here&rsquo;s some steps you can take to understand it:
+<ul>
+<li>Log in to mysql (see above).</li>
+<li>Run <code>SHOW DATABASES;</code> to see what&rsquo;s available:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; SHOW DATABASES;
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl">| Database           |
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl">| information_schema |
+</span></span><span class="line"><span class="cl">| formr              |
+</span></span><span class="line"><span class="cl">| mysql              |
+</span></span><span class="line"><span class="cl">| performance_schema |
+</span></span><span class="line"><span class="cl">| sys                |
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl">5 rows in set (0.00 sec)
+</span></span></code></pre></div><ul>
+<li>Select the formr database by using <code>USE formr;</code>.</li>
+<li>To see what&rsquo;s in that database use <code>SHOW TABLES;</code>. I&rsquo;m not showing the output here because it&rsquo;s long, but we are likely interested here <code>survey_users</code>. When you register, it sticks you into that table.</li>
+<li>Use <code>DESCRIBE survey_users;</code> to see the columns in that table.</li>
+<li>Use <code>SELECT * FROM survey_users;</code> to see all the data in that table.</li>
+<li>Use <code>SELECT admin FROM survey_users;</code> to show that you are not an admin:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; SELECT admin FROM survey_users;
+</span></span><span class="line"><span class="cl">+-------+
+</span></span><span class="line"><span class="cl">| admin |
+</span></span><span class="line"><span class="cl">+-------+
+</span></span><span class="line"><span class="cl">|     0 |
+</span></span><span class="line"><span class="cl">+-------+
+</span></span><span class="line"><span class="cl">1 row in set (0.00 sec)
+</span></span></code></pre></div><ul>
+<li>To make yourself an admin, run <code>UPDATE survey_users SET admin = 100 WHERE id = 1;</code> (the assumption here is that you are the only row in the table and are therefore, id number 1).</li>
+<li>You should get a message that you updated your row but you can check it out with <code>SELECT admin FROM survey_users;</code> to make sure it ran.</li>
+<li>Now, when I log into my formr instance, I have rights to make surveys and manage users!</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://doomlab.github.io/tags/formr/">formr</a>&nbsp;
+            
+              <a href="https://doomlab.github.io/tags/installation/">installation</a>&nbsp;
+            
+              <a href="https://doomlab.github.io/tags/how-to/">how-to</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://doomlab.github.io/post/updated-cv/" data-toggle="tooltip" data-placement="top" title="Updated CV">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+          
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aggieerin" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+          
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://doomlab.github.io">Dr. Erin Buchanan</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.120.4</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://doomlab.github.io/js/main.js"></script>
+<script src="https://doomlab.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://doomlab.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
