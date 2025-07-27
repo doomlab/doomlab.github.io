@@ -60,7 +60,7 @@ First, I took all the times I had taught memory and cognition post Ph."><script 
   "headline": "Intuitions about Grades",
   "description" : "Are my intuitions about grades correct?\nI was recently talking to a colleague about how utterly terrible my students were doing in my online class this semester and that nearly half were failing the class. We are in our last week of the semester, and I am completely over packing, so I thought I would examine if the judgments I had made about this semester are accurate.\nFirst, I took all the times I had taught memory and cognition post Ph.",
   "inLanguage" : "en",
-  "wordCount":  1138 ,
+  "wordCount":  1171 ,
   "datePublished" : "2018-12-02T00:00:00",
   "dateModified" : "2018-12-02T00:00:00",
   "image" : "https:\/\/doomlab.github.io\/img\/header.jpg",
@@ -314,8 +314,6 @@ I was recently talking to a colleague about how utterly terrible my students wer
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>Are my intuitions about grades correct?</p>
@@ -365,7 +363,7 @@ table(master$tempyear, master$Letter)</code></pre>
 ##   TRUE    4   7   5   4   8</code></pre>
 <pre class="r"><code>chisq.test(master$tempyear, master$Letter)</code></pre>
 <pre><code>## 
-##  Pearson&#39;s Chi-squared test
+## 	Pearson&#39;s Chi-squared test
 ## 
 ## data:  master$tempyear and master$Letter
 ## X-squared = 31.73, df = 4, p-value = 2.172e-06</code></pre>
@@ -426,7 +424,11 @@ ggplot(master, aes(as.factor(Year), Score, color = type)) +
   stat_summary(fun.y=mean, geom=&quot;point&quot;, shape=23, size=4, color = &quot;blue&quot;) +
   xlab(&quot;Year of Course&quot;) + 
   ylab(&quot;Final Class Scores&quot;)</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: The `fun.y` argument of `stat_summary()` is deprecated as of ggplot2 3.3.0.
+## ℹ Please use the `fun` argument instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <p><img src="/post/2018-12-02-intuitions-about-grades_files/figure-html/meansbyyear-1.png" width="672" /></p>
 <p>So, the short answer is that things appear to have run off the rails especially this semester, and I my intuitions appear somewhat correct about how students seem to do worse with ostensibly easier tests. Also, a large chunk of this semester poor scoring is likely due to students just not turning anything in - don’t have the time to dig into the assignment level data to determine if that’s more than normal (but likely it’s a culprit as well). The switch in the last two semesters back to multiple choice tests was because I was tired of filling out academic integrity forms - sometimes up to 10 incidents a semester on these essay tests. Not sure that it helped anyone but me though!</p>
 

@@ -14,6 +14,14 @@ subtitle: ''
 
 Hi guys! I have finally done it! I updated my CV with Rmarkdown using [Steve's Markdown Templates](https://github.com/svmiller/svm-r-markdown-templates). I was tempted to use the new `vitae` package, but I had already gone down this path before that came out, just finally getting back to it. 
 
+```{r echo = F, message = F, warning = F, results = 'hide'}
+library(rorcid)
+
+suppressMessages(orcid_auth(client_id = Sys.getenv("ORCID_CLIENT_ID"),
+           client_secret = Sys.getenv("ORCID_CLIENT_SECRET"),
+           scope = "/read-public"))
+```
+
 Link to the entire CV folder for you to use/view do stuff with: [CV](https://github.com/doomlab/doomlab.github.io/tree/master/cv). Please ignore the html files in that folder, it does "knit" automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part. 
 
 I decided to do my publications + presentations as an Excel database type file, rather than using a BibTex file. Partially because I dislike BibTex type things, and partially because I like being able to update papers and such as part of a R script (with a little bit of manual control). The slowest part of this process was putting all my current pubs and presentations into the Excel document with my coding system. Let's look at it:
@@ -39,7 +47,7 @@ erinpubs = get_publications("ReD-s38AAAAJ&hl", #my scholar id
 
 # pull information from orcid ---------------------------------------------
 library(rorcid)
-erinorc = works(orcid_id("0000-0002-9689-4189")) #my orcid
+erinorc = works(orcid_id("0000-0002-9689-4189"))#my orcid
 #note you will have to authorize your orcid for each folder you use this file in
 ```
 

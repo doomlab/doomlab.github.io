@@ -59,7 +59,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   "headline": "Updating Your CV with Packages",
   "description" : "Hi guys! I have finally done it! I updated my CV with Rmarkdown using Steve’s Markdown Templates. I was tempted to use the new vitae package, but I had already gone down this path before that came out, just finally getting back to it.\nLink to the entire CV folder for you to use\/view do stuff with: CV. Please ignore the html files in that folder, it does “knit” automatically as part of the website build using markdown - you should be using PDF and LaTex for the CV part.",
   "inLanguage" : "en",
-  "wordCount":  1813 ,
+  "wordCount":  2242 ,
   "datePublished" : "2019-04-03T00:00:00",
   "dateModified" : "2019-04-03T00:00:00",
   "image" : "https:\/\/doomlab.github.io\/img\/header.jpg",
@@ -283,7 +283,7 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
   <i class="fas fa-calendar"></i>&nbsp;Posted on April 3, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;11&nbsp;minutes
   
   
   
@@ -311,8 +311,6 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>Hi guys! I have finally done it! I updated my CV with Rmarkdown using <a href="https://github.com/svmiller/svm-r-markdown-templates">Steve’s Markdown Templates</a>. I was tempted to use the new <code>vitae</code> package, but I had already gone down this path before that came out, just finally getting back to it.</p>
@@ -321,10 +319,11 @@ Link to the entire CV folder for you to use/view do stuff with: CV. Please ignor
 <pre class="r"><code>library(readxl)
 curated = as.data.frame(read_excel(&quot;../cv/cv_pubs.xlsx&quot;))
 names(curated)</code></pre>
-<pre><code>##  [1] &quot;done&quot;       &quot;doi&quot;        &quot;title&quot;      &quot;osfdoi&quot;     &quot;author&quot;    
-##  [6] &quot;journal&quot;    &quot;volume&quot;     &quot;issue&quot;      &quot;pages&quot;      &quot;year&quot;      
-## [11] &quot;pubid&quot;      &quot;put-code&quot;   &quot;pubtype&quot;    &quot;pubstatus&quot;  &quot;authortype&quot;
-## [16] &quot;category&quot;   &quot;link&quot;</code></pre>
+<pre><code>##  [1] &quot;done&quot;          &quot;doi&quot;           &quot;title&quot;         &quot;osfdoi&quot;       
+##  [5] &quot;author&quot;        &quot;journal&quot;       &quot;volume&quot;        &quot;issue&quot;        
+##  [9] &quot;pages&quot;         &quot;year&quot;          &quot;pubid&quot;         &quot;put-code&quot;     
+## [13] &quot;pubtype&quot;       &quot;pubstatus&quot;     &quot;authortype&quot;    &quot;category&quot;     
+## [17] &quot;link&quot;          &quot;folder_number&quot;</code></pre>
 <p>So, I have coded “real” dois (digital object identifiers, like the ones from journals), the title of the paper/prez, the Open Science Framework doi, authors, journal/conference information, volume, issue, pages, and year for citation purposes. Next, I included information from Google Scholar (<code>pubid</code>) and ORCID (<code>put-code</code>). These are useful for updating information, see below. The last was hand coded pubtype (package, article, presentation), pubstatus (published, preprint), authortype (none, under for undergraduate authors, grad for graduate authors, and both), category (psycho and stats), and link for finding the paper or presentation (open science FTW!). I added these categories to be able to format my CV with different groupings based on the current status of a paper, the type of paper (psychological/cognitive science versus statistics), and include a marker of what type of authors there are (hint: loads of students working with me). I use these columns to dynamically create my CV and some of the website pages, since this information updates somewhat frequently. You can view that by looking at the cv markdown, which I can blog about another time.</p>
 <p>This post is about how to update your CV with Scholar and ORCID - but using these packages directly gives you a LOT of nonsense (mostly because I don’t spend all data updating the information to be correct on either of these sites, nor do I control what the heck CrossRef/doi.org does when they input the information for dois). Once you have at least one thing entered into an file, you can use this script to update your information, and see what is out there on these two big indexing sites. You would need accounts with Google/ORCID, and I highly recommend both of them to scholars. I have my ORCID to cross reference with CrossRef to add/update entries, and Google Scholar automatically adds all my OSF pre-prints to my site. They also combine references when it’s clear they are the same one (like an OSF page for a project, the journal page for the same paper, etc.).</p>
 <p>Start by importing your information from each site:</p>
@@ -333,11 +332,12 @@ library(scholar)
 erinpubs = get_publications(&quot;ReD-s38AAAAJ&amp;hl&quot;, #my scholar id
                  cstart = 0, #get everything
                  pagesize = 1000, #max amount of things to get
-                 flush = F) #caching parameter
-
-# pull information from orcid ---------------------------------------------
+                 flush = F) #caching parameter</code></pre>
+<pre><code>## Warning in get_publications(&quot;ReD-s38AAAAJ&amp;hl&quot;, cstart = 0, pagesize = 1000, :
+## pagesize: 1000 exceeds Google Scholar maximum. Setting to 100.</code></pre>
+<pre class="r"><code># pull information from orcid ---------------------------------------------
 library(rorcid)
-erinorc = works(orcid_id(&quot;0000-0002-9689-4189&quot;)) #my orcid
+erinorc = works(orcid_id(&quot;0000-0002-9689-4189&quot;))#my orcid
 #note you will have to authorize your orcid for each folder you use this file in</code></pre>
 <p>Each of these creates a data.frame with different pieces of information - I encourage you to investigate your own. The next thing I did was set up the ORC pages to merge with the Scholar pages. Unfortunately, the ORCID one pulls in a column that’s a list within each cell, so I converted that into a doi (the only variable I wanted) column separately.</p>
 <pre class="r"><code># set up dois -------------------------------------------------------------
@@ -398,11 +398,41 @@ curated_check$`put-code` = newrows$`put-code`
 #write.csv(curated_check, &quot;check_these.csv&quot;, row.names = F)</code></pre>
 <p><code>setdiff</code> takes the ones that are in the final dataset (f) but aren’t in the curated dataset (c). Then I grabbed the rows in the final dataset that were in the “haven’t seen these yet” pile using <code>%in%</code>. <code>newrows</code> is a list of information found in both of these services that aren’t in your CV. I use the word “new” loosely here. Let’s see what it found, as I’ve just updated my cv.</p>
 <pre class="r"><code>newrows$title</code></pre>
-<pre><code>## [1] &quot;A novel dissemination effort for prolonged exposure: Practice and dissemination curriculum.&quot;                                                                                    
-## [2] &quot;Acknowledgment to our Reviewers&quot;                                                                                                                                                
-## [3] &quot;Acknowledgment to Reviewers&quot;                                                                                                                                                    
-## [4] &quot;Nathan Evans: We have reached a decision regarding your submission to Meta-Psychology,\&quot; What factors are most important in finding the best model of a psychological process …&quot;
-## [5] &quot;State of Science Paper Guide&quot;</code></pre>
+<pre><code>##  [1] &quot;Autism Spectrum Disorder and Mitochondrial Dysfunction: The Role of Mitochondrial Dynamics&quot;                                                                                      
+##  [2] &quot;Clinical practice guideline: Ménière’s disease&quot;                                                                                                                                  
+##  [3] &quot;Clinical practice guideline: Ménière’s disease executive summary&quot;                                                                                                                
+##  [4] &quot;Code for: Semantic Priming Across Many Languages&quot;                                                                                                                                
+##  [5] &quot;Consequences of a telomerase-related fitness defect and chromosome substitution technology in yeast synIX strains&quot;                                                               
+##  [6] &quot;DNA methylation of PGC-1α is associated with elevated mtDNA copy number and altered urinary metabolites in autism spectrum disorder&quot;                                             
+##  [7] &quot;Dysfibrinogenaemia and caesarean delivery: a case report&quot;                                                                                                                        
+##  [8] &quot;Erratum to “A pilot randomized controlled trial testing supplements of omega-3 fatty acids, probiotics, combination or placebo on symptoms of depression, anxiety and stress …&quot;  
+##  [9] &quot;Erratum: Publisher Correction: Situational factors shape moral judgements in the trolley dilemma in Eastern, Southern and Western countries in a culturally diverse sample …&quot;    
+## [10] &quot;Exploring Metacognition in Statistics Courses&quot;                                                                                                                                   
+## [11] &quot;Exploring semantic and executive flexibility interplay in task switching&quot;                                                                                                        
+## [12] &quot;Increased Mitochondrial Copy Number and Differential DNA Methylation of Mitochondrial Biogenesis and Fusion Genes in a South African ASD Cohort&quot;                                 
+## [13] &quot;Many Analysts Project: Gender-inclusive language&quot;                                                                                                                                
+## [14] &quot;Metacognition and Learning During Statistics Courses&quot;                                                                                                                            
+## [15] &quot;Molecular autism research in Africa: a scoping review comparing publication outputs to Brazil, India, the UK, and the USA&quot;                                                       
+## [16] &quot;Molecular autism research in Africa: emerging themes and prevailing disparities&quot;                                                                                                 
+## [17] &quot;MSU Group Accelerated CREP--Turri, Buckwalter, Blouw (2015)&quot;                                                                                                                     
+## [18] &quot;Nathan Evans: We have reached a decision regarding your submission to Meta-Psychology,\&quot; What factors are most important in finding the best model of a psychological process …&quot; 
+## [19] &quot;Peer Review Report&quot;                                                                                                                                                              
+## [20] &quot;Project IRB Materials&quot;                                                                                                                                                           
+## [21] &quot;Propionic acid induces alterations in mitochondrial morphology and dynamics in SH-SY5Y cells&quot;                                                                                    
+## [22] &quot;Reliability Grades Analysis&quot;                                                                                                                                                     
+## [23] &quot;Replication of a research claim from Al-Tammemi et al, 2020&quot;                                                                                                                     
+## [24] &quot;Revise 1&quot;                                                                                                                                                                        
+## [25] &quot;Safety and efficacy of non-steroidal anti-inflammatory drugs to reduce ileus after colorectal surgery&quot;                                                                           
+## [26] &quot;Safety of hospital discharge before return of bowel function after elective colorectal surgery&quot;                                                                                  
+## [27] &quot;State of Science Paper Guide&quot;                                                                                                                                                    
+## [28] &quot;Survey_results. Rmd&quot;                                                                                                                                                             
+## [29] &quot;tag-fig-1. pdf&quot;                                                                                                                                                                  
+## [30] &quot;This is the author&#39;s accepted manuscript of an article accepted in Scientific Reports on June 30th, 2025. The final version of record is available online at: https://doi. org …&quot;
+## [31] &quot;Timing of nasogastric tube insertion and the risk of postoperative pneumonia: an international, prospective cohort study&quot;                                                        
+## [32] &quot;Transmission Electron Microscopy Reveals Propionic Acid-induced Alterations to Mitochondrial Morphology in SH-SY5Y Cells&quot;                                                        
+## [33] &quot;Updated Registration-Big Team Science&quot;                                                                                                                                           
+## [34] &quot;Validation of the OAKS prognostic model for acute kidney injury after gastrointestinal surgery&quot;                                                                                  
+## [35] &quot;word-fig-1. png&quot;</code></pre>
 <p>These three are 1) OSF page for an Accelerated CREP I am on, but I haven’t added it yet to my CV because it’s a bit early to be sharing (i.e., waiting until there’s more of real paper there), 2) a “preprint” project we did for one of my classes, and 3) I have no idea, since that doi is linked to APA’s website, which I don’t have access to. Probably a doi for a conference presentation, but I don’t really know or care much. I could exclude these from future searches by adding a line to my curated excel sheet that includes these pubids and put-codes. Because I use the pubtype columns to print things out on my CV, they would get ignored as things not to print.</p>
 <p>This next part is set up to help me figure out when articles actually go to press to update their volume information, but you could change the next bit of code to find any differences in your information you might be interested in. Scholar does give you citation rates, but that’s not really my thing to track (however, for some folks working at institutions that do care, you could update that over time using something like this code).</p>
 <pre class="r"><code>#update any X or XX that were place holders for the pages
@@ -410,16 +440,18 @@ temp = na.omit(curated[ , c(&quot;pubid&quot;, &quot;volume&quot;)])
 update = temp$pubid[temp$volume == &quot;X&quot;]
 
 final[final$pubid %in% update, c(&quot;title&quot;, &quot;number&quot;)]</code></pre>
-<pre><code>##                                                                                                               title
-## 50                               Differential Effects of Association and Semantics on Priming and Memory Judgments.
-## 55                                                                                      Editorial Into a new decade
-## 63  Examining daily-level associations between nightly alcohol use and next-day valued behavior in college students
-## 162                                            Using Word Frequencies to Analyze Political Language and Moral Focus
-##     number
-## 50        
-## 55     1-3
-## 63     1-5
-## 162</code></pre>
+<pre><code>##                                                                                                title
+## 82                Differential Effects of Association and Semantics on Priming and Memory Judgments.
+## 95  Evaluating interventions: A practical primer for specifying the smallest effect size of interest
+## 141                                     Investigating object orientation effects across 18 languages
+## 237                                                                Semantic Feature Production Norms
+## 267                                               The reliability of student evaluations of teaching
+##      number
+## 82         
+## 95  127-135
+## 141        
+## 237        
+## 267    1-15</code></pre>
 <p>None of these have new volume or page numbers, so I am good to go here. Because I have this as an excel sheet, I can do some fun visualizations:</p>
 <pre class="r"><code>library(ggplot2)
 
@@ -433,7 +465,8 @@ ggplot(curated[ curated$pubtype == &quot;article&quot; &amp; curated$pubstatus =
   geom_vline(xintercept = 2018, color = &quot;green&quot;) + 
   ylab(&quot;Pub Count&quot;) + 
   xlab(&quot;Year&quot;)</code></pre>
-<pre><code>## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
+<pre><code>## Warning in geom_histogram(stat = &quot;count&quot;, bins = 1): Ignoring unknown
+## parameters: `binwidth`, `bins`, and `pad`</code></pre>
 <p><img src="/post/2019-04-03-updating-your-cv-with-packages_files/figure-html/graph-1.png" width="672" /></p>
 <p>Publication rates over years don’t always make sense to me because often the year something is “published” is one to two years after it was finally accepted - and let’s not even talk about how long that can take sometimes to get from just submitted to accepted. But it’s fun to look at sometimes … major career events are marked on the graph:</p>
 <ul>
@@ -454,7 +487,8 @@ ggplot(curated[ curated$pubtype == &quot;article&quot; &amp; curated$pubstatus =
   theme_bw() + 
   ylab(&quot;Pub Count&quot;) +
   xlab(&quot;Authorship Type&quot;)</code></pre>
-<pre><code>## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
+<pre><code>## Warning in geom_histogram(stat = &quot;count&quot;, bins = 1): Ignoring unknown
+## parameters: `binwidth`, `bins`, and `pad`</code></pre>
 <p><img src="/post/2019-04-03-updating-your-cv-with-packages_files/figure-html/graph2-1.png" width="672" /></p>
 <p>Students are a priority! Thank you for coming to my TED talk. I don’t even know that I could graph the conference presentations in a good way, but it follows the same trend. And that’s a much better statistic to be proud of than counts per year.</p>
 <p>Hope you can use these code bits to help with your bean counting - questions welcome and more on the markdown template later.</p>

@@ -115,4 +115,4 @@ library(kableExtra)
 
 ### Applied Statistics
 
-`r kable(curated[ curated$pubtype == "present" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link"), escape = F, format = "html") %>% kable_styling(bootstrap_options = c("hover"))`
+`r kable(curated[ curated$pubtype == "present" & curated$category == "stats", c("citation", "link2") ], row.names = F, col.names = c("Citation", "Link"), escape = F, format = "html") %>% kable_styling(bootstrap_options = c("hover"))` 
