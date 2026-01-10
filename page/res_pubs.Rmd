@@ -7,7 +7,7 @@ pagetitle: "Research Publications"
 .table-hover > tbody > tr:hover { 
   background-color: #bebcff;
 }
-</style>
+</style> 
 
 ## Publications 
 

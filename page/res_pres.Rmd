@@ -7,7 +7,7 @@ pagetitle: "Research Presentations"
 .table-hover > tbody > tr:hover { 
   background-color: #bebcff;
 }
-</style>
+</style> 
 
 
 ```{r print-pubs, include = FALSE}

@@ -381,19 +381,24 @@ These articles have been accepted in principle as a registered report, but have 
 
 ## Psycholinguistics, Cognitive Science
 
-Partner Institution Faculty Mentor. Information control processes: an alternative and multidimensional approach to study their development. Horizon MSCA. (12/01/2025-12/01/2027).
+Co-Principal Investigator. OpenNorms: Building an Open, FAIR, and Scalable Portal for Multilingual Normed Data. Dutch escience center (2025, submitted). €381,510. 
 
-Principal Investigator. A multilinguistic database of semantic priming and tackling linguistic's WEIRD problem. National Science Foundation (2024, submitted). $473,434.
+Co-Principal Investigator. Co-LLECT: Collaborative Language Data Collection and Technology. OSCARS. (2025, submitted). $291,500.
 
-Principal Investigator. Measuring the Lexicon: Computational Approaches to Quantifying Similarity Among Cognitive Representations. Psychonomic Society Estes Grants. (2019, submitted). $19,000.00
+Partner Institution Faculty Mentor. Information control processes: an alternative and multidimensional approach to study their development. Horizon MSCA. (12/01/2025-12/01/2027). €288,859.
 
-Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.00
+Principal Investigator. Many Languages, One Network: Cross-Linguistic Semantic Priming
+Effects in 45 Languages and Large Language Models (06/01/2025-06/01/2027). $473,434.
+
+Principal Investigator. Measuring the Lexicon: Computational Approaches to Quantifying Similarity Among Cognitive Representations. Psychonomic Society Estes Grants. (2019, submitted). $19,000.
+
+Co-Principal Investigator. To see or not to see: Perceptual learning in organic chemistry. National Science Foundation (2015, submitted). $980,730.
 
 Principal Investigator. Using Language to Understand Congressional Voting Behaviors. National Science Foundation (2014, submitted). $176,098.
 
 Principal Investigator. Studying Semantic Memory of Intelligent Design Systems. IBM's Watson Group. (2014). Applied for access to database.
 
-Principal Investigator. Counting tweets: How social media word frequency enhances our understanding of cognition. Twitter Grant Competition. (2014, submitted). Applied for access to database.
+Principal Investigator. Counting tweets: How social media word frequency enhances our understanding of cognition. Twitter Grant Competition. (2014). Applied for access to database.
 
 Principal Investigator. Memory as a Complex System: Creating Online, Dynamic  Semantic Memory Models. James S. McDonnell Foundation Scholar Award in Complex Systems. (2014, submitted). $450,000.
 
@@ -413,7 +418,21 @@ Principal Investigator: Understanding Language Learning in the Brain: Using EEG 
 
 ## Applied Statistics
 
-Principal Investigator. STAPLE - Science Tracking Across Project Lifespan. National Science Founation. (2024, submitted).  $241,776.
+Co-Principal Investigator. Comparative Effectiveness of an AI-Generated Personalized Migraine Report to Support Shared Decision Making and Treatment Adherence. PCORI PLACER (2026, submitted). $1,400,000.
+
+Statistician. Randomized controlled feasibility trial of a just-in-time intervention and mobile application for adults with misophonia. (2026). LOI accepted. 
+
+Principal Investigator. STAPLE Metadata Commons: A Community-Driven Library for Open, Reusable Metadata Standards. ORCA Catalytic Awards Program (2025, submitted). $15,000.
+
+Co-Principal Investigator. Empowering Migraine Patients and Optimizing Wellness through Evidence-based, Real-time Personal Health Informatics (EMPOWER). National Institutes of Health (2025, submitted). $1,106,420. 
+
+Principal Investigator. Empowering Shared Decision-Making through Customized Reports to Lower Unmet Disease Burden. Pfizer. (2025, submitted). $197,643.
+
+Statistician. Examining momentary and longitudinal associations between misophonia and emotion regulation: an intensive experience sampling approach. (06/25/2025-06/25/2026). $70,000.
+
+Principal Investigator. STAPLE+: Advancing Open Science through Interoperability, Collaboration, and Community. OSCARS. (2025, submitted). $223,409.
+
+Principal Investigator. STAPLE - Science Tracking Across Project Lifespan. National Science Foundation. (2024, submitted). $241,776.
 
 Principal Investigator. STAPLE - Science Tracking Across Project Lifespan. NASA ROSES. (10/01/2023-10/01/2024) $97,059. 
 
@@ -573,7 +592,7 @@ Graduate and Professional Student Association
 
 Behavior Research Methods, Editor in Chief \hfill 2024-Current
 
-Psychological Science, Consulting Editor, \hfill 2024-Current
+Psychological Science, Consulting Editor \hfill 2024-Current
 
 Assessment, Consulting Editor \hfill 2022-Current
 
