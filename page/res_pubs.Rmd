@@ -13,7 +13,7 @@ pagetitle: "Research Publications"
 
 ```{r print-pubs, include = FALSE}
 library(readxl)
-curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx"))
+curated = as.data.frame(read_excel("../cv/cv_pubs.xlsx")) 
   
   curated$citation = NA
   
